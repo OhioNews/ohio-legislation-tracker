@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohio Legislation Tracker - Signal Ohio</title>
+    <style>
+        :root {
+            --signal-yellow: #f4c913;
+            --signal-dark: #404f54;
+            --signal-light: #ccd8db;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --border-color: #ddd;
+            --highlight-bg: #fff9e6;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: var(--text-dark);
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .tracker-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .tracker-header {
+            background: var(--signal-dark);
+            color: white;
+            padding: 24px 32px;
+            border-bottom: 4px solid var(--signal-yellow);
+        }
+
+        .tracker-header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .tracker-header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+
+        .data-attribution {
+            font-size: 12px;
+            opacity: 0.8;
+            margin-top: 8px;
+        }
+
+        .controls-section {
+            padding: 24px 32px;
+            background: #fafafa;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid var(--signal-light);
+            border-radius: 6px;
+            font-size: 16px;
+            margin-bottom: 16px;
+            transition: border-color 0.2s;
+        }
+
+        .search-bar:focus {
+            outline: none;
+            border-color: var(--signal-yellow);
+        }
+
+        .filter-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-group label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--signal-dark);
+        }
+
+        .filter-select {
+            padding: 8px 12px;
+            border: 2px solid var(--signal-light);
+            border-radius: 4px;
+            font-size: 14px;
+            background: white;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        .filter-select:hover {
+            border-color: var(--signal-yellow);
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--signal-yellow);
+        }
+
+        .advanced-toggle {
+            background: var(--signal-yellow);
+            color: var(--signal-dark);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .advanced-toggle:hover {
+            opacity: 0.9;
+        }
+
+        .advanced-filters {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .advanced-filters.open {
+            max-height: 200px;
+            margin-top: 16px;
+        }
+
+        .advanced-filters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            padding: 16px;
+            background: white;
+            border-radius: 6px;
+            border: 1px solid var(--signal-light);
+        }
+
+        .stats-bar {
+            padding: 16px 32px;
+            background: var(--highlight-bg);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .stats-item {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .stats-item strong {
+            color: var(--signal-dark);
+            font-size: 18px;
+        }
+
+        .bills-list {
+            padding: 0;
+        }
+
+        .bill-item {
+            padding: 24px 32px;
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.2s;
+        }
+
+        .bill-item:hover {
+            background: #fafafa;
+        }
+
+        .bill-item.highlighted {
+            background: var(--highlight-bg);
+            border-left: 4px solid var(--signal-yellow);
+            padding-left: 28px;
+        }
+
+        .bill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            gap: 16px;
+        }
+
+        .bill-number {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--signal-dark);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .bill-number:hover {
+            color: var(--signal-yellow);
+        }
+
+        .bill-badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .badge-chamber {
+            background: var(--signal-light);
+            color: var(--signal-dark);
+        }
+
+        .badge-status {
+            background: var(--signal-dark);
+            color: white;
+        }
+
+        .badge-status.passed {
+            background: #22c55e;
+        }
+
+        .badge-status.failed {
+            background: #ef4444;
+        }
+
+        .badge-priority {
+            background: var(--signal-yellow);
+            color: var(--signal-dark);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .bill-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .bill-description {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .bill-meta {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .meta-label {
+            font-weight: 600;
+            color: var(--signal-dark);
+        }
+
+        .bill-footer {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-color);
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .no-results {
+            padding: 48px 32px;
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .no-results h3 {
+            margin-bottom: 8px;
+            color: var(--signal-dark);
+        }
+
+        .loading {
+            padding: 48px 32px;
+            text-align: center;
+            color: var(--signal-dark);
+        }
+
+        .spinner {
+            border: 3px solid var(--signal-light);
+            border-top: 3px solid var(--signal-yellow);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error-message {
+            padding: 24px 32px;
+            background: #fee;
+            border-left: 4px solid #f00;
+            color: #600;
+        }
+
+        @media (max-width: 768px) {
+            .tracker-header, .controls-section, .stats-bar, .bill-item {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .filter-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .bill-header {
+                flex-direction: column;
+            }
+
+            .bill-meta {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="tracker-container">
+        <div class="tracker-header">
+            <h1>Ohio Legislation Tracker</h1>
+            <p>136th General Assembly (2025-2026) • Powered by Signal Ohio</p>
+            <p class="data-attribution">Data provided by LegiScan</p>
+        </div>
+
+        <div class="controls-section">
+            <input 
+                type="text" 
+                class="search-bar" 
+                id="searchInput" 
+                placeholder="Search by bill number, title, sponsor, or keyword..."
+            >
+            
+            <div class="filter-row">
+                <div class="filter-group">
+                    <label for="chamberFilter">Chamber:</label>
+                    <select id="chamberFilter" class="filter-select">
+                        <option value="all">All</option>
+                        <option value="house">House</option>
+                        <option value="senate">Senate</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="statusFilter">Status:</label>
+                    <select id="statusFilter" class="filter-select">
+                        <option value="all">All</option>
+                        <option value="introduced">Introduced</option>
+                        <option value="in-committee">In Committee</option>
+                        <option value="passed-chamber">Passed Chamber</option>
+                        <option value="passed">Passed Both</option>
+                        <option value="vetoed">Vetoed</option>
+                        <option value="failed">Failed</option>
+                    </select>
+                </div>
+
+                <button class="advanced-toggle" id="advancedToggle">
+                    Advanced Filters ▼
+                </button>
+            </div>
+
+            <div class="advanced-filters" id="advancedFilters">
+                <div class="advanced-filters-grid">
+                    <div class="filter-group">
+                        <label for="subjectFilter">Subject:</label>
+                        <select id="subjectFilter" class="filter-select">
+                            <option value="all">All Subjects</option>
+                            <option value="education">Education</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="budget">Budget & Taxation</option>
+                            <option value="environment">Environment</option>
+                            <option value="transportation">Transportation</option>
+                            <option value="criminal-justice">Criminal Justice</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="committeeFilter">Committee:</label>
+                        <select id="committeeFilter" class="filter-select">
+                            <option value="all">All Committees</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="sponsorFilter">Sponsor:</label>
+                        <select id="sponsorFilter" class="filter-select">
+                            <option value="all">All Sponsors</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stats-item">
+                Showing <strong id="displayCount">0</strong> of <strong id="totalCount">0</strong> bills
+            </div>
+            <div class="stats-item">
+                Last updated: <strong id="lastUpdate">Loading...</strong>
+            </div>
+        </div>
+
+        <div class="bills-list" id="billsList">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Loading legislation data...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Configuration - Add bill numbers here to highlight as priority
+        const PRIORITY_BILLS = ['HB 1', 'SB 5'];
+
+        // Path to your data file - UPDATE THIS if your file is in a different location
+        const DATA_FILE_PATH = 'ohio_legislation_data/bills.json';
+
+        // State management
+        let allBills = [];
+        let filteredBills = [];
+        let currentFilters = {
+            search: '',
+            chamber: 'all',
+            status: 'all',
+            subject: 'all',
+            committee: 'all',
+            sponsor: 'all'
+        };
+
+        // DOM elements
+        const searchInput = document.getElementById('searchInput');
+        const chamberFilter = document.getElementById('chamberFilter');
+        const statusFilter = document.getElementById('statusFilter');
+        const subjectFilter = document.getElementById('subjectFilter');
+        const committeeFilter = document.getElementById('committeeFilter');
+        const sponsorFilter = document.getElementById('sponsorFilter');
+        const advancedToggle = document.getElementById('advancedToggle');
+        const advancedFilters = document.getElementById('advancedFilters');
+        const billsList = document.getElementById('billsList');
+        const displayCount = document.getElementById('displayCount');
+        const totalCount = document.getElementById('totalCount');
+        const lastUpdate = document.getElementById('lastUpdate');
+
+        // Initialize
+        function init() {
+            loadBills();
+            setupEventListeners();
+        }
+
+        // Load bills from JSON file
+        async function loadBills() {
+            try {
+                const response = await fetch(DATA_FILE_PATH);
+                
+                if (!response.ok) {
+                    throw new Error(`Failed to load data: ${response.status}`);
+                }
+                
+                const bills = await response.json();
+                
+                if (!Array.isArray(bills)) {
+                    throw new Error('Invalid data format');
+                }
+                
+                allBills = bills;
+                filteredBills = allBills;
+                updateDisplay();
+                updateLastUpdate();
+                populateCommitteeFilter();
+                populateSponsorFilter();
+                
+            } catch (error) {
+                console.error('Error loading bills:', error);
+                billsList.innerHTML = `
+                    <div class="error-message">
+                        <h3>Unable to Load Data</h3>
+                        <p>Could not load legislation data from ${DATA_FILE_PATH}</p>
+                        <p>Error: ${error.message}</p>
+                        <p><strong>Make sure:</strong></p>
+                        <ul style="margin-top: 8px; margin-left: 20px;">
+                            <li>You've run the Python script to generate the data</li>
+                            <li>The bills.json file exists in the ohio_legislation_data folder</li>
+                            <li>This HTML file is in the same folder as ohio_legislation_data</li>
+                        </ul>
+                    </div>
+                `;
+            }
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            searchInput.addEventListener('input', handleSearch);
+            chamberFilter.addEventListener('change', handleFilterChange);
+            statusFilter.addEventListener('change', handleFilterChange);
+            subjectFilter.addEventListener('change', handleFilterChange);
+            committeeFilter.addEventListener('change', handleFilterChange);
+            sponsorFilter.addEventListener('change', handleFilterChange);
+            advancedToggle.addEventListener('click', toggleAdvancedFilters);
+        }
+
+        // Handle search
+        function handleSearch(e) {
+            currentFilters.search = e.target.value.toLowerCase();
+            applyFilters();
+        }
+
+        // Handle filter change
+        function handleFilterChange(e) {
+            const filterId = e.target.id.replace('Filter', '');
+            currentFilters[filterId] = e.target.value;
+            applyFilters();
+        }
+
+        // Toggle advanced filters
+        function toggleAdvancedFilters() {
+            advancedFilters.classList.toggle('open');
+            const isOpen = advancedFilters.classList.contains('open');
+            advancedToggle.textContent = isOpen ? 'Advanced Filters ▲' : 'Advanced Filters ▼';
+        }
+
+        // Apply all filters
+        function applyFilters() {
+            filteredBills = allBills.filter(bill => {
+                // Search filter
+                if (currentFilters.search) {
+                    const searchTerm = currentFilters.search;
+                    const searchableText = [
+                        bill.number,
+                        bill.title,
+                        bill.description,
+                        bill.sponsor
+                    ].join(' ').toLowerCase();
+                    
+                    if (!searchableText.includes(searchTerm)) {
+                        return false;
+                    }
+                }
+
+                // Chamber filter
+                if (currentFilters.chamber !== 'all' && bill.chamber !== currentFilters.chamber) {
+                    return false;
+                }
+
+                // Status filter
+                if (currentFilters.status !== 'all' && bill.status !== currentFilters.status) {
+                    return false;
+                }
+
+                // Subject filter
+                if (currentFilters.subject !== 'all' && bill.subject !== currentFilters.subject) {
+                    return false;
+                }
+
+                // Committee filter
+                if (currentFilters.committee !== 'all') {
+                    if (!bill.committee || bill.committee.toLowerCase() !== currentFilters.committee.toLowerCase()) {
+                        return false;
+                    }
+                }
+
+                // Sponsor filter
+                if (currentFilters.sponsor !== 'all' && !bill.sponsor.includes(currentFilters.sponsor)) {
+                    return false;
+                }
+
+                return true;
+            });
+
+            updateDisplay();
+        }
+
+        // Update display
+        function updateDisplay() {
+            displayCount.textContent = filteredBills.length;
+            totalCount.textContent = allBills.length;
+
+            if (filteredBills.length === 0) {
+                billsList.innerHTML = `
+                    <div class="no-results">
+                        <h3>No bills found</h3>
+                        <p>Try adjusting your filters or search terms</p>
+                    </div>
+                `;
+                return;
+            }
+
+            // Sort: priority bills first
+            const sortedBills = [...filteredBills].sort((a, b) => {
+                const aIsPriority = PRIORITY_BILLS.includes(a.number);
+                const bIsPriority = PRIORITY_BILLS.includes(b.number);
+                
+                if (aIsPriority && !bIsPriority) return -1;
+                if (!aIsPriority && bIsPriority) return 1;
+                return 0;
+            });
+
+            billsList.innerHTML = sortedBills.map(bill => createBillHTML(bill)).join('');
+        }
+
+        // Create HTML for a single bill
+        function createBillHTML(bill) {
+            const isPriority = PRIORITY_BILLS.includes(bill.number);
+            const statusText = formatStatus(bill.status);
+            const chamberText = bill.chamber === 'house' ? 'House' : 'Senate';
+            
+            return `
+                <div class="bill-item ${isPriority ? 'highlighted' : ''}">
+                    <div class="bill-header">
+                        <a href="${bill.url}" target="_blank" class="bill-number">${bill.number}</a>
+                        <div class="bill-badges">
+                            ${isPriority ? '<span class="badge badge-priority">⭐ PRIORITY</span>' : ''}
+                            <span class="badge badge-chamber">${chamberText}</span>
+                            <span class="badge badge-status ${bill.status === 'passed' ? 'passed' : bill.status === 'failed' ? 'failed' : ''}">${statusText}</span>
+                        </div>
+                    </div>
+                    
+                    <h3 class="bill-title">${bill.title}</h3>
+                    <p class="bill-description">${bill.description}</p>
+                    
+                    <div class="bill-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Sponsor:</span>
+                            <span>${bill.sponsor}</span>
+                        </div>
+                        ${bill.committee ? `
+                        <div class="meta-item">
+                            <span class="meta-label">Committee:</span>
+                            <span>${bill.committee}</span>
+                        </div>
+                        ` : ''}
+                        <div class="meta-item">
+                            <span class="meta-label">Status Date:</span>
+                            <span>${formatDate(bill.status_date)}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bill-footer">
+                        <strong>Last Action (${formatDate(bill.last_action_date)}):</strong> ${bill.last_action}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Format status text
+        function formatStatus(status) {
+            const statusMap = {
+                'introduced': 'Introduced',
+                'in-committee': 'In Committee',
+                'passed-chamber': 'Passed One Chamber',
+                'passed': 'Passed Both Chambers',
+                'vetoed': 'Vetoed',
+                'failed': 'Failed'
+            };
+            return statusMap[status] || status;
+        }
+
+        // Format date
+        function formatDate(dateString) {
+            if (!dateString) return 'N/A';
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', { 
+                month: 'short', 
+                day: 'numeric', 
+                year: 'numeric' 
+            });
+        }
+
+        // Update last update timestamp
+        function updateLastUpdate() {
+            const now = new Date();
+            lastUpdate.textContent = now.toLocaleDateString('en-US', { 
+                month: 'short', 
+                day: 'numeric', 
+                year: 'numeric',
+                hour: 'numeric',
+                minute: '2-digit'
+            });
+        }
+
+        // Populate committee filter
+        function populateCommitteeFilter() {
+            const committees = [...new Set(
+                allBills
+                    .map(bill => bill.committee)
+                    .filter(c => c)
+            )].sort();
+
+            committeeFilter.innerHTML = '<option value="all">All Committees</option>' +
+                committees.map(committee => `<option value="${committee}">${committee}</option>`).join('');
+        }
+
+        // Populate sponsor filter
+        function populateSponsorFilter() {
+            const sponsors = [...new Set(allBills.map(bill => {
+                const match = bill.sponsor.match(/^(Rep\.|Sen\.)\s+([^(]+)/);
+                return match ? match[0].trim() : bill.sponsor;
+            }))].sort();
+
+            sponsorFilter.innerHTML = '<option value="all">All Sponsors</option>' +
+                sponsors.map(sponsor => `<option value="${sponsor}">${sponsor}</option>`).join('');
+        }
+
+        // Start the app
+        init();
+    </script>
+</body>
+</html>

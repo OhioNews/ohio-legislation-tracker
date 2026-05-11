@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohio Committee Hearings - Signal Ohio</title>
+    <style>
+        :root {
+            --signal-yellow: #f4c913;
+            --signal-dark: #404f54;
+            --signal-light: #ccd8db;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --border-color: #ddd;
+            --highlight-bg: #fff9e6;
+            --urgent-red: #ef4444;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: var(--text-dark);
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .tracker-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .tracker-header {
+            background: var(--signal-dark);
+            color: white;
+            padding: 24px 32px;
+            border-bottom: 4px solid var(--signal-yellow);
+        }
+
+        .tracker-header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        .tracker-header p {
+            opacity: 0.9;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+
+        .header-highlight {
+            background: var(--signal-yellow);
+            color: var(--signal-dark);
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 13px;
+            margin-top: 12px;
+        }
+
+        .data-attribution {
+            font-size: 12px;
+            opacity: 0.8;
+            margin-top: 8px;
+        }
+
+        .controls-section {
+            padding: 20px 32px;
+            background: #fafafa;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .filter-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-group label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--signal-dark);
+        }
+
+        .filter-select {
+            padding: 8px 12px;
+            border: 2px solid var(--signal-light);
+            border-radius: 4px;
+            font-size: 14px;
+            background: white;
+            cursor: pointer;
+            transition: border-color 0.2s;
+        }
+
+        .filter-select:hover {
+            border-color: var(--signal-yellow);
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--signal-yellow);
+        }
+
+        .view-toggle {
+            display: flex;
+            background: white;
+            border: 2px solid var(--signal-light);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .view-toggle button {
+            padding: 8px 16px;
+            border: none;
+            background: white;
+            color: var(--text-dark);
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .view-toggle button.active {
+            background: var(--signal-yellow);
+            color: var(--signal-dark);
+        }
+
+        .stats-bar {
+            padding: 16px 32px;
+            background: var(--highlight-bg);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .stats-item {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .stats-item strong {
+            color: var(--signal-dark);
+            font-size: 18px;
+        }
+
+        .hearings-list {
+            padding: 0;
+        }
+
+        .date-section {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .date-header {
+            padding: 16px 32px;
+            background: var(--signal-dark);
+            color: white;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .date-header.today {
+            background: var(--signal-yellow);
+            color: var(--signal-dark);
+        }
+
+        .date-header.soon {
+            background: linear-gradient(to right, var(--signal-dark), #5a6b72);
+        }
+
+        .day-name {
+            font-size: 18px;
+        }
+
+        .full-date {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .hearing-item {
+            padding: 24px 32px;
+            border-bottom: 1px solid #f0f0f0;
+            transition: background-color 0.2s;
+        }
+
+        .hearing-item:hover {
+            background: #fafafa;
+        }
+
+        .hearing-item:last-child {
+            border-bottom: none;
+        }
+
+        .hearing-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            gap: 16px;
+        }
+
+        .hearing-time {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--signal-dark);
+            min-width: 100px;
+        }
+
+        .hearing-info {
+            flex: 1;
+        }
+
+        .committee-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--signal-dark);
+            margin-bottom: 4px;
+        }
+
+        .hearing-type {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            background: var(--signal-light);
+            color: var(--signal-dark);
+            margin-bottom: 8px;
+        }
+
+        .hearing-location {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        .location-icon {
+            display: inline-block;
+            margin-right: 6px;
+        }
+
+        .bills-being-heard {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .bills-header {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--signal-dark);
+            margin-bottom: 8px;
+        }
+
+        .bill-chip {
+            display: inline-block;
+            margin: 4px 8px 4px 0;
+            padding: 6px 12px;
+            background: white;
+            border: 2px solid var(--signal-light);
+            border-radius: 6px;
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 13px;
+            transition: all 0.2s;
+        }
+
+        .bill-chip:hover {
+            border-color: var(--signal-yellow);
+            background: var(--highlight-bg);
+        }
+
+        .bill-number {
+            font-weight: 700;
+            color: var(--signal-dark);
+        }
+
+        .bill-title {
+            font-size: 12px;
+            color: var(--text-light);
+            display: block;
+            margin-top: 2px;
+        }
+
+        .testify-section {
+            margin-top: 16px;
+            padding: 16px;
+            background: var(--highlight-bg);
+            border-radius: 6px;
+            border-left: 4px solid var(--signal-yellow);
+        }
+
+        .testify-header {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--signal-dark);
+            margin-bottom: 8px;
+        }
+
+        .testify-info {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+
+        .testify-buttons {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .testify-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            background: var(--signal-dark);
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        .testify-button:hover {
+            opacity: 0.9;
+        }
+
+        .testify-button.primary {
+            background: var(--signal-yellow);
+            color: var(--signal-dark);
+        }
+
+        .urgent-notice {
+            display: inline-block;
+            background: var(--urgent-red);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-left: 8px;
+        }
+
+        .no-hearings {
+            padding: 48px 32px;
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .no-hearings h3 {
+            margin-bottom: 8px;
+            color: var(--signal-dark);
+        }
+
+        .loading {
+            padding: 48px 32px;
+            text-align: center;
+            color: var(--signal-dark);
+        }
+
+        .spinner {
+            border: 3px solid var(--signal-light);
+            border-top: 3px solid var(--signal-yellow);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .committee-section {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .committee-header {
+            padding: 16px 32px;
+            background: var(--signal-light);
+            color: var(--signal-dark);
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .error-message {
+            padding: 24px 32px;
+            background: #fee;
+            border-left: 4px solid #f00;
+            color: #600;
+        }
+
+        @media (max-width: 768px) {
+            .tracker-header, .controls-section, .stats-bar, .hearing-item, .date-header, .committee-header {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .filter-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .hearing-header {
+                flex-direction: column;
+            }
+
+            .hearing-time {
+                min-width: auto;
+            }
+
+            .testify-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="tracker-container">
+        <div class="tracker-header">
+            <h1>Committee Hearings & Public Testimony</h1>
+            <p>Ohio General Assembly • 136th Session</p>
+            <p>Upcoming hearings where you can testify on legislation</p>
+            <div class="header-highlight">📢 Public testimony is open to all Ohio residents</div>
+            <p class="data-attribution">Data provided by LegiScan</p>
+        </div>
+
+        <div class="controls-section">
+            <div class="filter-row">
+                <div class="filter-group">
+                    <label for="chamberFilter">Chamber:</label>
+                    <select id="chamberFilter" class="filter-select">
+                        <option value="all">All</option>
+                        <option value="house">House</option>
+                        <option value="senate">Senate</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="committeeFilter">Committee:</label>
+                    <select id="committeeFilter" class="filter-select">
+                        <option value="all">All Committees</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label>View:</label>
+                    <div class="view-toggle">
+                        <button class="active" data-view="date">By Date</button>
+                        <button data-view="committee">By Committee</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stats-item">
+                Showing <strong id="displayCount">0</strong> hearings in the next <strong>14 days</strong>
+            </div>
+            <div class="stats-item">
+                Last updated: <strong id="lastUpdate">Loading...</strong>
+            </div>
+        </div>
+
+        <div class="hearings-list" id="hearingsList">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Loading committee hearing schedule...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Path to your data file - UPDATE THIS if your file is in a different location
+        const DATA_FILE_PATH = 'ohio_legislation_data/hearings.json';
+
+        // State management
+        let allHearings = [];
+        let filteredHearings = [];
+        let currentView = 'date';
+        let currentFilters = {
+            chamber: 'all',
+            committee: 'all'
+        };
+
+        // DOM elements
+        const chamberFilter = document.getElementById('chamberFilter');
+        const committeeFilter = document.getElementById('committeeFilter');
+        const viewToggleButtons = document.querySelectorAll('.view-toggle button');
+        const hearingsList = document.getElementById('hearingsList');
+        const displayCount = document.getElementById('displayCount');
+        const lastUpdate = document.getElementById('lastUpdate');
+
+        // Initialize
+        function init() {
+            loadHearings();
+            setupEventListeners();
+        }
+
+        // Load hearings from JSON file
+        async function loadHearings() {
+            try {
+                const response = await fetch(DATA_FILE_PATH);
+                
+                if (!response.ok) {
+                    throw new Error(`Failed to load data: ${response.status}`);
+                }
+                
+                const hearings = await response.json();
+                
+                if (!Array.isArray(hearings)) {
+                    throw new Error('Invalid data format');
+                }
+                
+                allHearings = hearings;
+                filteredHearings = allHearings;
+                updateDisplay();
+                updateLastUpdate();
+                populateCommitteeFilter();
+                
+            } catch (error) {
+                console.error('Error loading hearings:', error);
+                hearingsList.innerHTML = `
+                    <div class="error-message">
+                        <h3>Unable to Load Data</h3>
+                        <p>Could not load hearing data from ${DATA_FILE_PATH}</p>
+                        <p>Error: ${error.message}</p>
+                        <p><strong>Make sure:</strong></p>
+                        <ul style="margin-top: 8px; margin-left: 20px;">
+                            <li>You've run the Python script to generate the data</li>
+                            <li>The hearings.json file exists in the ohio_legislation_data folder</li>
+                            <li>This HTML file is in the same folder as ohio_legislation_data</li>
+                        </ul>
+                    </div>
+                `;
+            }
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            chamberFilter.addEventListener('change', handleFilterChange);
+            committeeFilter.addEventListener('change', handleFilterChange);
+            
+            viewToggleButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    viewToggleButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+                    currentView = button.dataset.view;
+                    updateDisplay();
+                });
+            });
+        }
+
+        // Handle filter change
+        function handleFilterChange(e) {
+            const filterId = e.target.id.replace('Filter', '');
+            currentFilters[filterId] = e.target.value;
+            applyFilters();
+        }
+
+        // Apply filters
+        function applyFilters() {
+            filteredHearings = allHearings.filter(hearing => {
+                if (currentFilters.chamber !== 'all' && hearing.chamber !== currentFilters.chamber) {
+                    return false;
+                }
+                if (currentFilters.committee !== 'all' && hearing.committee !== currentFilters.committee) {
+                    return false;
+                }
+                return true;
+            });
+            updateDisplay();
+        }
+
+        // Update display
+        function updateDisplay() {
+            displayCount.textContent = filteredHearings.length;
+
+            if (filteredHearings.length === 0) {
+                hearingsList.innerHTML = `
+                    <div class="no-hearings">
+                        <h3>No hearings scheduled</h3>
+                        <p>Check back soon or adjust your filters</p>
+                    </div>
+                `;
+                return;
+            }
+
+            if (currentView === 'date') {
+                renderByDate();
+            } else {
+                renderByCommittee();
+            }
+        }
+
+        // Render by date
+        function renderByDate() {
+            const grouped = groupByDate(filteredHearings);
+            const today = new Date().toISOString().split('T')[0];
+            const tomorrow = new Date(Date.now() + 86400000).toISOString().split('T')[0];
+
+            let html = '';
+            for (const [date, hearings] of Object.entries(grouped)) {
+                const dateObj = new Date(date + 'T12:00:00');
+                const dayName = dateObj.toLocaleDateString('en-US', { weekday: 'long' });
+                const fullDate = dateObj.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+                
+                let dateClass = '';
+                let dateLabel = '';
+                if (date === today) {
+                    dateClass = 'today';
+                    dateLabel = ' - TODAY';
+                } else if (date === tomorrow) {
+                    dateClass = 'soon';
+                    dateLabel = ' - TOMORROW';
+                }
+
+                html += `
+                    <div class="date-section">
+                        <div class="date-header ${dateClass}">
+                            <span class="day-name">${dayName}${dateLabel}</span>
+                            <span class="full-date">${fullDate}</span>
+                        </div>
+                        ${hearings.map(hearing => createHearingHTML(hearing)).join('')}
+                    </div>
+                `;
+            }
+            hearingsList.innerHTML = html;
+        }
+
+        // Render by committee
+        function renderByCommittee() {
+            const grouped = groupByCommittee(filteredHearings);
+
+            let html = '';
+            for (const [committee, hearings] of Object.entries(grouped)) {
+                html += `
+                    <div class="committee-section">
+                        <div class="committee-header">${committee}</div>
+                        ${hearings.map(hearing => createHearingHTML(hearing, true)).join('')}
+                    </div>
+                `;
+            }
+            hearingsList.innerHTML = html;
+        }
+
+        // Create HTML for a single hearing
+        function createHearingHTML(hearing, showDate = false) {
+            const today = new Date().toISOString().split('T')[0];
+            const tomorrow = new Date(Date.now() + 86400000).toISOString().split('T')[0];
+            const isUrgent = hearing.date === today || hearing.date === tomorrow;
+
+            const dateDisplay = showDate ? `
+                <div style="font-size: 14px; color: var(--text-light); margin-bottom: 8px;">
+                    📅 ${formatDate(hearing.date)} at ${hearing.time || 'TBA'}
+                </div>
+            ` : '';
+
+            const billsHTML = hearing.bills.map(bill => `
+                <a href="${bill.url}" target="_blank" class="bill-chip">
+                    <span class="bill-number">${bill.number}</span>
+                    <span class="bill-title">${bill.title}</span>
+                </a>
+            `).join('');
+
+            const testimonyDeadline = isUrgent ? '<span class="urgent-notice">Soon!</span>' : '';
+
+            return `
+                <div class="hearing-item">
+                    ${showDate ? dateDisplay : ''}
+                    <div class="hearing-header">
+                        ${!showDate && hearing.time ? `<div class="hearing-time">${hearing.time}</div>` : ''}
+                        <div class="hearing-info">
+                            <div class="committee-name">${hearing.committee_full}</div>
+                            <span class="hearing-type">${hearing.type}</span>
+                            ${hearing.location ? `
+                            <div class="hearing-location">
+                                <span class="location-icon">📍</span>${hearing.location}
+                            </div>
+                            ` : ''}
+                        </div>
+                    </div>
+
+                    <div class="bills-being-heard">
+                        <div class="bills-header">Bills Being Heard:</div>
+                        ${billsHTML}
+                    </div>
+
+                    <div class="testify-section">
+                        <div class="testify-header">Want to Testify? ${testimonyDeadline}</div>
+                        <div class="testify-info">
+                            Ohio residents can submit written or oral testimony on any bill before a committee. 
+                            Testimony is typically due 24 hours before the hearing.
+                        </div>
+                        <div class="testify-buttons">
+                            <a href="${getWitnessFormURL(hearing.chamber)}" target="_blank" class="testify-button primary">
+                                ✍️ Submit Testimony
+                            </a>
+                            <a href="${getCommitteeInfoURL(hearing.chamber, hearing.committee)}" target="_blank" class="testify-button">
+                                ℹ️ Committee Info
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Get witness form URL
+        function getWitnessFormURL(chamber) {
+            if (chamber === 'house') {
+                return 'https://www.ohiohouse.gov/assets/committees/witness-information-form-writable.pdf';
+            } else {
+                return 'https://www.ohiosenate.gov/committees/witness-slip';
+            }
+        }
+
+        // Get committee info URL
+        function getCommitteeInfoURL(chamber, committee) {
+            const baseURL = chamber === 'house' 
+                ? 'https://www.ohiohouse.gov/committees'
+                : 'https://www.ohiosenate.gov/committees';
+            return baseURL;
+        }
+
+        // Group hearings by date
+        function groupByDate(hearings) {
+            const grouped = {};
+            hearings.forEach(hearing => {
+                if (!grouped[hearing.date]) {
+                    grouped[hearing.date] = [];
+                }
+                grouped[hearing.date].push(hearing);
+            });
+            
+            // Sort by time within each date
+            Object.keys(grouped).forEach(date => {
+                grouped[date].sort((a, b) => {
+                    return (a.time || '').localeCompare(b.time || '');
+                });
+            });
+            
+            return grouped;
+        }
+
+        // Group hearings by committee
+        function groupByCommittee(hearings) {
+            const grouped = {};
+            hearings.forEach(hearing => {
+                const key = hearing.committee_full;
+                if (!grouped[key]) {
+                    grouped[key] = [];
+                }
+                grouped[key].push(hearing);
+            });
+            
+            // Sort by date within each committee
+            Object.keys(grouped).forEach(committee => {
+                grouped[committee].sort((a, b) => {
+                    if (a.date !== b.date) {
+                        return a.date.localeCompare(b.date);
+                    }
+                    return (a.time || '').localeCompare(b.time || '');
+                });
+            });
+            
+            return grouped;
+        }
+
+        // Populate committee filter
+        function populateCommitteeFilter() {
+            const committees = [...new Set(
+                allHearings.map(h => h.committee).filter(c => c)
+            )].sort();
+
+            committeeFilter.innerHTML = '<option value="all">All Committees</option>' +
+                committees.map(committee => `<option value="${committee}">${committee}</option>`).join('');
+        }
+
+        // Format date
+        function formatDate(dateString) {
+            const date = new Date(dateString + 'T12:00:00');
+            return date.toLocaleDateString('en-US', { 
+                weekday: 'long',
+                month: 'long', 
+                day: 'numeric'
+            });
+        }
+
+        // Update last update timestamp
+        function updateLastUpdate() {
+            const now = new Date();
+            lastUpdate.textContent = now.toLocaleDateString('en-US', { 
+                month: 'short', 
+                day: 'numeric', 
+                year: 'numeric',
+                hour: 'numeric',
+                minute: '2-digit'
+            });
+        }
+
+        // Start the app
+        init();
+    </script>
+</body>
+</html>

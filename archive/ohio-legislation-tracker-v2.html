@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohio Legislation Tracker - Signal Ohio</title>
+    <style>
+        :root {
+            --signal-yellow: #f4c913;
+            --signal-dark: #404f54;
+            --signal-light: #ccd8db;
+            --text-dark: #1a1a1a;
+            --text-light: #666;
+            --border-color: #ddd;
+            --highlight-bg: #fff9e6;
+            --progress-active: #22c55e;
+            --progress-inactive: #e5e7eb;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: var(--text-dark);
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+        }
+
+        .tracker-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .tracker-header {
+            background: var(--signal-dark);
+            color: white;
+            padding: 24px 32px;
+            border-bottom: 4px solid var(--signal-yellow);
+        }
+
+        .tracker-header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .tracker-header {
+                padding: 20px;
+            }
+            
+            .tracker-header h1 {
+                font-size: 22px;
+            }
+        }
+
+        .tracker-header p {
+            opacity: 0.9;
+            font-size: 14px;
+        }
+
+        .data-attribution {
+            font-size: 12px;
+            opacity: 0.8;
+            margin-top: 8px;
+        }
+
+        .new-this-week {
+            background: var(--highlight-bg);
+            border-bottom: 3px solid var(--signal-yellow);
+            padding: 20px 32px;
+        }
+
+        .new-this-week h2 {
+            font-size: 18px;
+            color: var(--signal-dark);
+            margin-bottom: 4px;
+        }
+
+        .new-this-week p {
+            font-size: 13px;
+            color: var(--text-light);
+            margin-bottom: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .new-this-week {
+                padding: 16px 20px;
+            }
+            
+            .new-this-week h2 {
+                font-size: 16px;
+            }
+        }
+
+        .new-bills-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .new-bill-chip {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 10px 14px;
+            background: white;
+            border: 2px solid var(--signal-light);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+
+        @media (max-width: 768px) {
+            .new-bill-chip {
+                padding: 12px 16px;
+                gap: 10px;
+            }
+        }
+
+        .new-bill-chip:hover {
+            border-color: var(--signal-yellow);
+            background: #fffdf0;
+            transform: translateX(4px);
+        }
+
+        .new-bill-number {
+            font-weight: 700;
+            color: var(--signal-dark);
+            font-size: 14px;
+            min-width: 70px;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .new-bill-number {
+                font-size: 15px;
+                min-width: 65px;
+            }
+        }
+
+        .new-bill-title {
+            flex: 1;
+            font-size: 14px;
+            color: var(--text-dark);
+            line-height: 1.3;
+        }
+
+        @media (max-width: 768px) {
+            .new-bill-title {
+                font-size: 13px;
+            }
+        }
+
+        .new-bill-arrow {
+            font-size: 18px;
+            color: var(--signal-dark);
+            opacity: 0.5;
+            transition: opacity 0.2s;
+        }
+
+        .new-bill-chip:hover .new-bill-arrow {
+            opacity: 1;
+        }
+
+        .jump-indicator {
+            text-align: center;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--signal-light);
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .show-more-button {
+            display: block;
+            width: 100%;
+            padding: 10px 16px;
+            margin-top: 12px;
+            background: white;
+            border: 2px solid var(--signal-dark);
+            color: var(--signal-dark);
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            min-height: 44px;
+        }
+
+        .show-more-button:hover {
+            background: var(--signal-dark);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .show-more-button {
+                padding: 12px;
+                font-size: 16px;
+            }
+        }
+
+        /* Highlight animation when jumping to a bill */
+        @keyframes highlight-flash {
+            0% { background-color: var(--highlight-bg); }
+            50% { background-color: #fef08a; }
+            100% { background-color: var(--highlight-bg); }
+        }
+
+        .bill-item.flash-highlight {
+            animation: highlight-flash 1.5s ease;
+        }
+
+        .controls-section {
+            padding: 24px 32px;
+            background: #fafafa;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 768px) {
+            .controls-section {
+                padding: 20px;
+            }
+        }
+
+        .search-section {
+            padding: 20px 32px;
+            background: white;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        @media (max-width: 768px) {
+            .search-section {
+                padding: 16px 20px;
+            }
+        }
+
+        .search-bar {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--signal-light);
+            border-radius: 6px;
+            font-size: 16px;
+            transition: border-color 0.2s;
+        }
+
+        @media (max-width: 768px) {
+            .search-bar {
+                padding: 16px;
+                font-size: 16px; /* Prevents zoom on iOS */
+            }
+        }
+
+        .search-bar:focus {
+            outline: none;
+            border-color: var(--signal-yellow);
+        }
+
+        .filter-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        @media (max-width: 768px) {
+            .filter-row {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 10px;
+            }
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .filter-group {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .filter-group label {
+                font-size: 13px;
+            }
+        }
+
+        .filter-group label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--signal-dark);
+        }
+
+        .filter-select {
+            padding: 10px 12px;
+            border: 2px solid var(--signal-light);
+            border-radius: 4px;
+            font-size: 14px;
+            background: white;
+            cursor: pointer;
+            transition: border-color 0.2s;
+            min-height: 44px; /* Better touch target */
+        }
+
+        @media (max-width: 768px) {
+            .filter-select {
+                width: 100%;
+                padding: 12px;
+                font-size: 16px; /* Prevents zoom on iOS */
+            }
+        }
+
+        .filter-select:hover {
+            border-color: var(--signal-yellow);
+        }
+
+        .filter-select:focus {
+            outline: none;
+            border-color: var(--signal-yellow);
+        }
+
+        .advanced-toggle {
+            background: var(--signal-yellow);
+            color: var(--signal-dark);
+            border: none;
+            padding: 10px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+            min-height: 44px; /* Better touch target */
+        }
+
+        @media (max-width: 768px) {
+            .advanced-toggle {
+                width: 100%;
+                padding: 12px;
+                font-size: 16px;
+            }
+        }
+
+        .advanced-toggle:hover {
+            opacity: 0.9;
+        }
+
+        .advanced-filters {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .advanced-filters.open {
+            max-height: 400px;
+            margin-top: 16px;
+        }
+
+        .advanced-filters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 12px;
+            padding: 16px;
+            background: white;
+            border-radius: 6px;
+            border: 1px solid var(--signal-light);
+        }
+
+        @media (max-width: 768px) {
+            .advanced-filters-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .stats-bar {
+            padding: 16px 32px;
+            background: var(--highlight-bg);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        @media (max-width: 768px) {
+            .stats-bar {
+                padding: 16px 20px;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        .stats-item {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .stats-item strong {
+            color: var(--signal-dark);
+            font-size: 18px;
+        }
+
+        .bills-list {
+            padding: 0;
+        }
+
+        .bill-item {
+            padding: 24px 32px;
+            border-bottom: 1px solid var(--border-color);
+            transition: background-color 0.2s;
+        }
+
+        @media (max-width: 768px) {
+            .bill-item {
+                padding: 20px;
+            }
+        }
+
+        .bill-item:hover {
+            background: #fafafa;
+        }
+
+        .bill-item.highlighted {
+            background: var(--highlight-bg);
+            border-left: 4px solid var(--signal-yellow);
+            padding-left: 28px;
+        }
+
+        @media (max-width: 768px) {
+            .bill-item.highlighted {
+                padding-left: 16px;
+            }
+        }
+
+        .bill-item.new-this-week-item {
+            background: #fefce8;
+        }
+
+        .bill-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            gap: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .bill-header {
+                flex-direction: column;
+                gap: 12px;
+            }
+        }
+
+        .bill-number {
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--signal-dark);
+            text-decoration: none;
+            transition: color 0.2s;
+            min-height: 44px; /* Better touch target */
+            display: flex;
+            align-items: center;
+        }
+
+        .bill-number:hover {
+            color: var(--signal-yellow);
+        }
+
+        .bill-badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        @media (max-width: 768px) {
+            .badge {
+                padding: 8px 14px;
+                font-size: 13px;
+            }
+        }
+
+        .badge-chamber {
+            background: var(--signal-light);
+            color: var(--signal-dark);
+        }
+
+        .badge-new {
+            background: #fbbf24;
+            color: var(--text-dark);
+            animation: pulse 2s infinite;
+        }
+
+        .badge-priority {
+            background: var(--signal-yellow);
+            color: var(--signal-dark);
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        .bill-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .bill-description {
+            font-size: 14px;
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 12px;
+            margin-top: 8px;
+        }
+
+        .bill-description.collapsed {
+            display: none;
+        }
+
+        .description-toggle {
+            background: none;
+            border: none;
+            color: var(--signal-dark);
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            padding: 4px 0;
+            text-decoration: underline;
+            margin-bottom: 12px;
+            min-height: 32px;
+        }
+
+        .description-toggle:hover {
+            color: var(--signal-yellow);
+        }
+
+        @media (max-width: 768px) {
+            .description-toggle {
+                font-size: 14px;
+                min-height: 44px;
+            }
+        }
+
+        /* PROGRESS BAR */
+        .progress-container {
+            margin-bottom: 16px;
+            padding: 16px;
+            background: #f9fafb;
+            border-radius: 6px;
+        }
+
+        .progress-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .progress-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            position: relative;
+        }
+
+        @media (max-width: 768px) {
+            .progress-bar {
+                flex-wrap: wrap;
+                gap: 4px;
+            }
+        }
+
+        .progress-step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+
+        .progress-dot {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--progress-inactive);
+            margin: 0 auto 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            position: relative;
+            z-index: 2;
+        }
+
+        @media (max-width: 768px) {
+            .progress-dot {
+                width: 20px;
+                height: 20px;
+                font-size: 10px;
+            }
+        }
+
+        .progress-dot.active {
+            background: var(--progress-active);
+            color: white;
+        }
+
+        .progress-dot.current {
+            background: var(--signal-yellow);
+            color: var(--signal-dark);
+            box-shadow: 0 0 0 4px rgba(244, 201, 19, 0.2);
+        }
+
+        .progress-label {
+            font-size: 11px;
+            color: var(--text-light);
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .progress-label {
+                font-size: 9px;
+            }
+        }
+
+        .progress-label.active {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .progress-connector {
+            position: absolute;
+            top: 12px;
+            left: 50%;
+            right: -50%;
+            height: 2px;
+            background: var(--progress-inactive);
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .progress-connector {
+                top: 10px;
+            }
+        }
+
+        .progress-connector.active {
+            background: var(--progress-active);
+        }
+
+        .progress-step:last-child .progress-connector {
+            display: none;
+        }
+
+        .bill-meta {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        @media (max-width: 768px) {
+            .bill-meta {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .meta-label {
+            font-weight: 600;
+            color: var(--signal-dark);
+        }
+
+        .bill-footer {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid var(--border-color);
+            font-size: 13px;
+            color: var(--text-light);
+        }
+
+        .no-results {
+            padding: 48px 32px;
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .no-results h3 {
+            margin-bottom: 8px;
+            color: var(--signal-dark);
+        }
+
+        .loading {
+            padding: 48px 32px;
+            text-align: center;
+            color: var(--signal-dark);
+        }
+
+        .spinner {
+            border: 3px solid var(--signal-light);
+            border-top: 3px solid var(--signal-yellow);
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 16px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .error-message {
+            padding: 24px 32px;
+            background: #fee;
+            border-left: 4px solid #f00;
+            color: #600;
+        }
+    </style>
+</head>
+<body>
+    <div class="tracker-container">
+        <div class="tracker-header">
+            <h1>Ohio Legislation Tracker</h1>
+            <p>136th General Assembly (2025-2026) • Powered by Signal Ohio</p>
+            <p class="data-attribution">Data provided by LegiScan</p>
+        </div>
+
+        <div class="search-section">
+            <input 
+                type="text" 
+                class="search-bar" 
+                id="searchInput" 
+                placeholder="Search by bill number, title, sponsor, or keyword..."
+            >
+        </div>
+
+        <div class="new-this-week" id="newThisWeekSection" style="display: none;">
+            <h2>📰 New & Active This Week</h2>
+            <p>Recent activity in the past 7 days — Click to jump to full details</p>
+            <div id="newThisWeekList"></div>
+        </div>
+
+        <div class="controls-section">
+            <div class="filter-row">
+                <div class="filter-group">
+                    <label for="chamberFilter">Chamber:</label>
+                    <select id="chamberFilter" class="filter-select">
+                        <option value="all">All</option>
+                        <option value="house">House</option>
+                        <option value="senate">Senate</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="statusFilter">Status:</label>
+                    <select id="statusFilter" class="filter-select">
+                        <option value="all">All</option>
+                        <option value="introduced">Introduced</option>
+                        <option value="in-committee">In Committee</option>
+                        <option value="passed-chamber">Passed Chamber</option>
+                        <option value="passed">Passed Both</option>
+                        <option value="vetoed">Vetoed</option>
+                        <option value="failed">Failed</option>
+                    </select>
+                </div>
+
+                <button class="advanced-toggle" id="advancedToggle">
+                    Advanced Filters ▼
+                </button>
+            </div>
+
+            <div class="advanced-filters" id="advancedFilters">
+                <div class="advanced-filters-grid">
+                    <div class="filter-group">
+                        <label for="subjectFilter">Subject:</label>
+                        <select id="subjectFilter" class="filter-select">
+                            <option value="all">All Subjects</option>
+                            <option value="education">Education</option>
+                            <option value="healthcare">Healthcare</option>
+                            <option value="budget">Budget & Taxation</option>
+                            <option value="environment">Environment</option>
+                            <option value="transportation">Transportation</option>
+                            <option value="criminal-justice">Criminal Justice</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="committeeFilter">Committee:</label>
+                        <select id="committeeFilter" class="filter-select">
+                            <option value="all">All Committees</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="sponsorFilter">Sponsor:</label>
+                        <select id="sponsorFilter" class="filter-select">
+                            <option value="all">All Sponsors</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stats-item">
+                Showing <strong id="displayCount">0</strong> of <strong id="totalCount">0</strong> bills
+            </div>
+            <div class="stats-item">
+                Last updated: <strong id="lastUpdate">Loading...</strong>
+            </div>
+        </div>
+
+        <div class="bills-list" id="billsList">
+            <div class="loading">
+                <div class="spinner"></div>
+                <p>Loading legislation data...</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Configuration
+        const PRIORITY_BILLS = ['HB 1', 'SB 5'];
+        const DATA_FILE_PATH = 'ohio_legislation_data/bills.json';
+        const DAYS_FOR_NEW = 7; // Show as "new" if activity within this many days
+
+        // State management
+        let allBills = [];
+        let filteredBills = [];
+        let currentFilters = {
+            search: '',
+            chamber: 'all',
+            status: 'all',
+            subject: 'all',
+            committee: 'all',
+            sponsor: 'all'
+        };
+
+        // DOM elements
+        const searchInput = document.getElementById('searchInput');
+        const chamberFilter = document.getElementById('chamberFilter');
+        const statusFilter = document.getElementById('statusFilter');
+        const subjectFilter = document.getElementById('subjectFilter');
+        const committeeFilter = document.getElementById('committeeFilter');
+        const sponsorFilter = document.getElementById('sponsorFilter');
+        const advancedToggle = document.getElementById('advancedToggle');
+        const advancedFilters = document.getElementById('advancedFilters');
+        const billsList = document.getElementById('billsList');
+        const displayCount = document.getElementById('displayCount');
+        const totalCount = document.getElementById('totalCount');
+        const lastUpdate = document.getElementById('lastUpdate');
+        const newThisWeekSection = document.getElementById('newThisWeekSection');
+        const newThisWeekList = document.getElementById('newThisWeekList');
+
+        // Initialize
+        function init() {
+            loadBills();
+            setupEventListeners();
+        }
+
+        // Load bills from JSON file
+        async function loadBills() {
+            try {
+                const response = await fetch(DATA_FILE_PATH);
+                
+                if (!response.ok) {
+                    throw new Error(`Failed to load data: ${response.status}`);
+                }
+                
+                const bills = await response.json();
+                
+                if (!Array.isArray(bills)) {
+                    throw new Error('Invalid data format');
+                }
+                
+                allBills = bills;
+                filteredBills = allBills;
+                updateDisplay();
+                updateLastUpdate();
+                populateCommitteeFilter();
+                populateSponsorFilter();
+                displayNewThisWeek();
+                
+            } catch (error) {
+                console.error('Error loading bills:', error);
+                billsList.innerHTML = `
+                    <div class="error-message">
+                        <h3>Unable to Load Data</h3>
+                        <p>Could not load legislation data from ${DATA_FILE_PATH}</p>
+                        <p>Error: ${error.message}</p>
+                        <p><strong>Make sure:</strong></p>
+                        <ul style="margin-top: 8px; margin-left: 20px;">
+                            <li>You've run the Python script to generate the data</li>
+                            <li>The bills.json file exists in the ohio_legislation_data folder</li>
+                            <li>This HTML file is in the same folder as ohio_legislation_data</li>
+                        </ul>
+                    </div>
+                `;
+            }
+        }
+
+        // Setup event listeners
+        function setupEventListeners() {
+            searchInput.addEventListener('input', handleSearch);
+            chamberFilter.addEventListener('change', handleFilterChange);
+            statusFilter.addEventListener('change', handleFilterChange);
+            subjectFilter.addEventListener('change', handleFilterChange);
+            committeeFilter.addEventListener('change', handleFilterChange);
+            sponsorFilter.addEventListener('change', handleFilterChange);
+            advancedToggle.addEventListener('click', toggleAdvancedFilters);
+        }
+
+        // Handle search
+        function handleSearch(e) {
+            currentFilters.search = e.target.value.toLowerCase();
+            applyFilters();
+        }
+
+        // Handle filter change
+        function handleFilterChange(e) {
+            const filterId = e.target.id.replace('Filter', '');
+            currentFilters[filterId] = e.target.value;
+            applyFilters();
+        }
+
+        // Toggle advanced filters
+        function toggleAdvancedFilters() {
+            advancedFilters.classList.toggle('open');
+            const isOpen = advancedFilters.classList.contains('open');
+            advancedToggle.textContent = isOpen ? 'Advanced Filters ▲' : 'Advanced Filters ▼';
+        }
+
+        // Apply all filters
+        function applyFilters() {
+            filteredBills = allBills.filter(bill => {
+                if (currentFilters.search) {
+                    const searchTerm = currentFilters.search;
+                    const searchableText = [
+                        bill.number,
+                        bill.title,
+                        bill.description,
+                        bill.sponsor
+                    ].join(' ').toLowerCase();
+                    
+                    if (!searchableText.includes(searchTerm)) {
+                        return false;
+                    }
+                }
+
+                if (currentFilters.chamber !== 'all' && bill.chamber !== currentFilters.chamber) {
+                    return false;
+                }
+
+                if (currentFilters.status !== 'all' && bill.status !== currentFilters.status) {
+                    return false;
+                }
+
+                if (currentFilters.subject !== 'all' && bill.subject !== currentFilters.subject) {
+                    return false;
+                }
+
+                if (currentFilters.committee !== 'all') {
+                    if (!bill.committee || bill.committee.toLowerCase() !== currentFilters.committee.toLowerCase()) {
+                        return false;
+                    }
+                }
+
+                if (currentFilters.sponsor !== 'all' && !bill.sponsor.includes(currentFilters.sponsor)) {
+                    return false;
+                }
+
+                return true;
+            });
+
+            updateDisplay();
+        }
+
+        // Check if bill is new this week
+        function isNewThisWeek(bill) {
+            if (!bill.last_action_date) return false;
+            
+            const actionDate = new Date(bill.last_action_date);
+            const daysAgo = (new Date() - actionDate) / (1000 * 60 * 60 * 24);
+            
+            return daysAgo <= DAYS_FOR_NEW;
+        }
+
+        // Display new this week section
+        function displayNewThisWeek() {
+            const newBills = allBills.filter(isNewThisWeek).slice(0, 8);
+            
+            if (newBills.length === 0) {
+                newThisWeekSection.style.display = 'none';
+                return;
+            }
+            
+            newThisWeekSection.style.display = 'block';
+            
+            // Show only first 4 initially
+            const initialBills = newBills.slice(0, 4);
+            const remainingBills = newBills.slice(4);
+            
+            const createChip = (bill) => {
+                const billId = `bill-${bill.number.replace(/\s+/g, '-')}`;
+                return `
+                    <div class="new-bill-chip" onclick="jumpToBill('${billId}')">
+                        <span class="new-bill-number">${bill.number}</span>
+                        <span class="new-bill-title">${bill.title}</span>
+                        <span class="new-bill-arrow">→</span>
+                    </div>
+                `;
+            };
+            
+            const initialChipsHTML = initialBills.map(createChip).join('');
+            const remainingChipsHTML = remainingBills.map(createChip).join('');
+            
+            newThisWeekList.innerHTML = `
+                <div class="new-bills-list" id="initialNewBills">
+                    ${initialChipsHTML}
+                </div>
+                ${remainingBills.length > 0 ? `
+                    <div class="new-bills-list" id="moreNewBills" style="display: none; margin-top: 6px;">
+                        ${remainingChipsHTML}
+                    </div>
+                    <button class="show-more-button" id="showMoreNewBills" onclick="toggleMoreNewBills()">
+                        Show ${remainingBills.length} more ▼
+                    </button>
+                ` : ''}
+                <div class="jump-indicator">
+                    ↓ Click any bill to see full details below ↓
+                </div>
+            `;
+        }
+
+        // Toggle showing more new bills
+        function toggleMoreNewBills() {
+            const moreSection = document.getElementById('moreNewBills');
+            const button = document.getElementById('showMoreNewBills');
+            
+            if (moreSection.style.display === 'none') {
+                moreSection.style.display = 'flex';
+                button.textContent = 'Show less ▲';
+            } else {
+                moreSection.style.display = 'none';
+                const remainingCount = moreSection.querySelectorAll('.new-bill-chip').length;
+                button.textContent = `Show ${remainingCount} more ▼`;
+            }
+        }
+
+        // Jump to a bill in the main list
+        function jumpToBill(billId) {
+            const billElement = document.getElementById(billId);
+            if (billElement) {
+                // Smooth scroll to the bill
+                billElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                
+                // Add flash animation
+                billElement.classList.add('flash-highlight');
+                setTimeout(() => {
+                    billElement.classList.remove('flash-highlight');
+                }, 1500);
+            }
+        }
+
+        // Update display
+        function updateDisplay() {
+            displayCount.textContent = filteredBills.length;
+            totalCount.textContent = allBills.length;
+
+            if (filteredBills.length === 0) {
+                billsList.innerHTML = `
+                    <div class="no-results">
+                        <h3>No bills found</h3>
+                        <p>Try adjusting your filters or search terms</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const sortedBills = [...filteredBills].sort((a, b) => {
+                const aIsPriority = PRIORITY_BILLS.includes(a.number);
+                const bIsPriority = PRIORITY_BILLS.includes(b.number);
+                
+                if (aIsPriority && !bIsPriority) return -1;
+                if (!aIsPriority && bIsPriority) return 1;
+                return 0;
+            });
+
+            billsList.innerHTML = sortedBills.map(bill => createBillHTML(bill)).join('');
+        }
+
+        // Create progress bar HTML
+        function createProgressBar(status) {
+            const steps = [
+                { key: 'introduced', label: 'Introduced', icon: '📄' },
+                { key: 'in-committee', label: 'Committee', icon: '👥' },
+                { key: 'passed-chamber', label: 'Passed One', icon: '✓' },
+                { key: 'passed', label: 'Passed Both', icon: '✓✓' },
+                { key: 'governor', label: 'Governor', icon: '🖊️' }
+            ];
+
+            const statusOrder = ['introduced', 'in-committee', 'passed-chamber', 'passed', 'vetoed', 'failed'];
+            const currentIndex = statusOrder.indexOf(status);
+
+            let html = '<div class="progress-container"><div class="progress-title">Bill Progress</div><div class="progress-bar">';
+
+            steps.forEach((step, index) => {
+                const isActive = index < currentIndex;
+                const isCurrent = index === currentIndex;
+                const dotClass = isCurrent ? 'current' : (isActive ? 'active' : '');
+                const labelClass = (isActive || isCurrent) ? 'active' : '';
+                const connectorClass = isActive ? 'active' : '';
+
+                html += `
+                    <div class="progress-step">
+                        <div class="progress-dot ${dotClass}">${(isActive || isCurrent) ? step.icon : ''}</div>
+                        <div class="progress-label ${labelClass}">${step.label}</div>
+                        <div class="progress-connector ${connectorClass}"></div>
+                    </div>
+                `;
+            });
+
+            html += '</div></div>';
+            return html;
+        }
+
+        // Create HTML for a single bill
+        function createBillHTML(bill, isInNewSection = false) {
+            const isPriority = PRIORITY_BILLS.includes(bill.number);
+            const isNew = !isInNewSection && isNewThisWeek(bill);
+            const chamberText = bill.chamber === 'house' ? 'House' : 'Senate';
+            const descId = `desc-${bill.number.replace(/\s+/g, '-')}`;
+            const billId = `bill-${bill.number.replace(/\s+/g, '-')}`;
+            
+            // Show toggle if there's any description
+            const hasDescription = bill.description && bill.description.trim().length > 0;
+            
+            return `
+                <div class="bill-item ${isPriority ? 'highlighted' : ''} ${isInNewSection ? 'new-this-week-item' : ''}" id="${billId}">>
+                    <div class="bill-header">
+                        <a href="${bill.url}" target="_blank" class="bill-number">${bill.number}</a>
+                        <div class="bill-badges">
+                            ${isPriority ? '<span class="badge badge-priority">⭐ PRIORITY</span>' : ''}
+                            ${isNew ? '<span class="badge badge-new">🆕 NEW</span>' : ''}
+                            <span class="badge badge-chamber">${chamberText}</span>
+                        </div>
+                    </div>
+                    
+                    <h3 class="bill-title">${bill.title}</h3>
+                    ${hasDescription ? `
+                        <button class="description-toggle" onclick="toggleDescription('${descId}', this)">Read more ▼</button>
+                        <p class="bill-description collapsed" id="${descId}">${bill.description}</p>
+                    ` : ''}
+                    
+                    ${createProgressBar(bill.status)}
+                    
+                    <div class="bill-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Sponsor:</span>
+                            <span>${bill.sponsor}</span>
+                        </div>
+                        ${bill.committee ? `
+                        <div class="meta-item">
+                            <span class="meta-label">Committee:</span>
+                            <span>${bill.committee}</span>
+                        </div>
+                        ` : ''}
+                        <div class="meta-item">
+                            <span class="meta-label">Status Date:</span>
+                            <span>${formatDate(bill.status_date)}</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bill-footer">
+                        <strong>Last Action (${formatDate(bill.last_action_date)}):</strong> ${translateAction(bill.last_action)}
+                        ${translateAction(bill.last_action) !== bill.last_action ? `<span style="color: var(--text-light); font-size: 12px; display: block; margin-top: 4px;">Official language: "${bill.last_action}"</span>` : ''}
+                    </div>
+                </div>
+            `;
+        }
+
+        // Format date
+        function formatDate(dateString) {
+            if (!dateString) return 'N/A';
+            const date = new Date(dateString);
+            return date.toLocaleDateString('en-US', { 
+                month: 'short', 
+                day: 'numeric', 
+                year: 'numeric' 
+            });
+        }
+
+        // Update last update timestamp
+        function updateLastUpdate() {
+            const now = new Date();
+            lastUpdate.textContent = now.toLocaleDateString('en-US', { 
+                month: 'short', 
+                day: 'numeric', 
+                year: 'numeric',
+                hour: 'numeric',
+                minute: '2-digit'
+            });
+        }
+
+        // Populate committee filter
+        function populateCommitteeFilter() {
+            const committees = [...new Set(
+                allBills
+                    .map(bill => bill.committee)
+                    .filter(c => c)
+            )].sort();
+
+            committeeFilter.innerHTML = '<option value="all">All Committees</option>' +
+                committees.map(committee => `<option value="${committee}">${committee}</option>`).join('');
+        }
+
+        // Populate sponsor filter
+        function populateSponsorFilter() {
+            const sponsors = [...new Set(allBills.map(bill => {
+                const match = bill.sponsor.match(/^(Rep\.|Sen\.)\s+([^(]+)/);
+                return match ? match[0].trim() : bill.sponsor;
+            }))].sort();
+
+            sponsorFilter.innerHTML = '<option value="all">All Sponsors</option>' +
+                sponsors.map(sponsor => `<option value="${sponsor}">${sponsor}</option>`).join('');
+        }
+
+        // Translate legislative jargon to plain language
+        function translateAction(action) {
+            if (!action) return 'No recent action';
+            
+            const lowerAction = action.toLowerCase();
+            
+            // Exact matches first
+            const exactMatches = {
+                'introduced': 'Newly filed in legislature',
+                'to governor': 'Sent to Governor for signature',
+                'signed by governor': 'Signed into law by Governor',
+                'vetoed': 'Rejected by Governor',
+                'effective': 'Now in effect as law',
+                'passed': 'Approved',
+                'failed': 'Did not pass'
+            };
+            
+            if (exactMatches[lowerAction]) {
+                return exactMatches[lowerAction];
+            }
+            
+            // Pattern matches (contains keywords)
+            if (lowerAction.includes('referred to') || lowerAction.includes('to committee')) {
+                const committee = action.match(/(?:to|on)\s+(.+?)(?:\s+committee)?$/i);
+                if (committee && committee[1]) {
+                    return `Sent to ${committee[1]} Committee for review`;
+                }
+                return 'Sent to committee for review';
+            }
+            
+            if (lowerAction.includes('reported') && lowerAction.includes('favorable')) {
+                return 'Committee approved, moving forward';
+            }
+            
+            if (lowerAction.includes('reported') && lowerAction.includes('without recommendation')) {
+                return 'Committee sent forward without taking position';
+            }
+            
+            if (lowerAction.includes('reported') && lowerAction.includes('amended')) {
+                return 'Committee approved with changes';
+            }
+            
+            if (lowerAction.includes('reported')) {
+                return 'Committee sent to full chamber';
+            }
+            
+            if (lowerAction.includes('passed') && lowerAction.includes('amended')) {
+                return 'Approved with changes';
+            }
+            
+            if (lowerAction.includes('passed') && (lowerAction.includes('house') || lowerAction.includes('senate'))) {
+                const chamber = lowerAction.includes('house') ? 'House' : 'Senate';
+                return `Approved by ${chamber}`;
+            }
+            
+            if (lowerAction.includes('first consideration') || lowerAction.includes('first reading')) {
+                return 'First reading completed';
+            }
+            
+            if (lowerAction.includes('second consideration') || lowerAction.includes('second reading')) {
+                return 'Second reading completed';
+            }
+            
+            if (lowerAction.includes('third consideration') || lowerAction.includes('third reading')) {
+                return 'Final vote scheduled';
+            }
+            
+            if (lowerAction.includes('hearing') && lowerAction.includes('scheduled')) {
+                return 'Public hearing scheduled';
+            }
+            
+            if (lowerAction.includes('hearing') && lowerAction.includes('held')) {
+                return 'Public hearing completed';
+            }
+            
+            if (lowerAction.includes('amendment') && lowerAction.includes('adopted')) {
+                return 'Changes approved';
+            }
+            
+            if (lowerAction.includes('amendment') && lowerAction.includes('rejected')) {
+                return 'Proposed changes rejected';
+            }
+            
+            if (lowerAction.includes('tabled')) {
+                return 'Postponed indefinitely';
+            }
+            
+            if (lowerAction.includes('withdrawn')) {
+                return 'Sponsor withdrew bill';
+            }
+            
+            if (lowerAction.includes('override') && lowerAction.includes('successful')) {
+                return 'Veto overridden by legislature';
+            }
+            
+            if (lowerAction.includes('override') && lowerAction.includes('failed')) {
+                return 'Veto override failed';
+            }
+            
+            if (lowerAction.includes('engrossed')) {
+                return 'Officially recorded after passing chamber';
+            }
+            
+            if (lowerAction.includes('enrolled')) {
+                return 'Finalized after passing both chambers';
+            }
+            
+            if (lowerAction.includes('concurred')) {
+                return 'Other chamber agreed to changes';
+            }
+            
+            if (lowerAction.includes('committee substitute')) {
+                return 'Committee created new version';
+            }
+            
+            if (lowerAction.includes('rules') && lowerAction.includes('suspended')) {
+                return 'Fast-tracked for vote';
+            }
+            
+            // If no match found, return original
+            return action;
+        }
+
+        // Toggle description expand/collapse
+        function toggleDescription(descId, button) {
+            const description = document.getElementById(descId);
+            const isCollapsed = description.classList.contains('collapsed');
+            
+            if (isCollapsed) {
+                description.classList.remove('collapsed');
+                button.textContent = 'Show less ▲';
+            } else {
+                description.classList.add('collapsed');
+                button.textContent = 'Read more ▼';
+            }
+        }
+
+        // Start the app
+        init();
+    </script>
+</body>
+</html>

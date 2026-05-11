@@ -1,0 +1,83 @@
+name: Fetch Ohio Legislature Hearings
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'  # Every 6 hours
+  workflow_dispatch:         # Allow manual trigger
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch hearing data from Ohio Legislature
+        run: |
+          python3 - <<'EOF'
+          import json
+          import ssl
+          import urllib.parse
+          import urllib.request
+          from datetime import datetime, timedelta
+          from zoneinfo import ZoneInfo
+
+          # Build date range: today through 21 days out (Eastern time, DST-aware)
+          eastern = ZoneInfo('America/New_York')
+          now = datetime.now(tz=eastern)
+          start = now.replace(hour=0, minute=0, second=0, microsecond=0)
+          end = (now + timedelta(days=21)).replace(hour=23, minute=59, second=59, microsecond=0)
+
+          def fmt(dt):
+              return dt.isoformat()
+
+          url = (
+              'https://www.legislature.ohio.gov/schedules/calendar-data'
+              '?start=' + urllib.parse.quote(fmt(start)) +
+              '&end=' + urllib.parse.quote(fmt(end))
+          )
+
+          # SSL note: legislature.ohio.gov's server does not send its full cert chain
+          # (missing intermediate CA). Chrome silently recovers via AIA fetching;
+          # Python/OpenSSL does not. Verification is disabled as a deliberate workaround
+          # for this server-side misconfiguration -- not a lazy shortcut. Re-check if
+          # the legislature site's cert setup ever changes.
+          ctx = ssl.create_default_context()
+          ctx.check_hostname = False
+          ctx.verify_mode = ssl.CERT_NONE
+          req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+          with urllib.request.urlopen(req, timeout=30, context=ctx) as resp:
+              data = json.loads(resp.read())
+
+          # Filter to committee meetings only
+          meetings = [
+              e for e in data
+              if e.get('backgroundColor') == '#476b9c'
+              or (e.get('title', '').lower().find('committee') >= 0)
+          ]
+
+          output = {
+              'fetched_at': datetime.utcnow().isoformat() + 'Z',
+              'source': 'https://www.legislature.ohio.gov/schedules/calendar-data',
+              'events': meetings
+          }
+
+          import os
+          os.makedirs('ohio_legislation_data', exist_ok=True)
+          with open('ohio_legislation_data/hearings_live.json', 'w') as f:
+              json.dump(output, f, indent=2)
+
+          print(f'Saved {len(meetings)} committee meetings')
+          EOF
+
+      - name: Commit if data changed
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add ohio_legislation_data/hearings_live.json
+          git diff --staged --quiet || git commit -m "Auto-update hearing data [skip ci]"
+          git push

@@ -934,6 +934,17 @@
                     </select>
                 </div>
 
+                <div class="filter-group">
+                    <label for="typeFilter">Show:</label>
+                    <select id="typeFilter" class="filter-select">
+                        <option value="bills-and-ballot">Bills &amp; Ballot Measures</option>
+                        <option value="bills">Bills only</option>
+                        <option value="ballot">Ballot Measures only</option>
+                        <option value="resolutions">Resolutions only</option>
+                        <option value="all">All legislation</option>
+                    </select>
+                </div>
+
                 <button class="advanced-toggle" id="advancedToggle">
                     Advanced Filters ▼
                 </button>
@@ -967,8 +978,14 @@
         </div>
 
         <div class="stats-bar">
-            <div class="stats-item">
-                Showing <strong id="displayCount">0</strong> of <strong id="totalCount">0</strong> bills
+            <div>
+                <div class="stats-item">
+                    Showing <strong id="displayCount">0</strong> of <strong id="totalCount">0</strong> <span id="typeLabel">bills and ballot measures</span>
+                </div>
+                <div id="resolutionsNote" style="display:none; font-size:13px; color:var(--text-light); margin-top:4px;">
+                    <strong id="hiddenCount">0</strong> resolutions not shown —
+                    <button onclick="showAllLegislation()" style="background:none;border:none;color:var(--signal-dark);font-size:13px;font-weight:600;cursor:pointer;text-decoration:underline;padding:0;">show all legislation</button>
+                </div>
             </div>
             <div class="stats-item">
                 Last updated: <strong id="lastUpdate">Loading...</strong>
@@ -1014,7 +1031,8 @@
             subject: 'all',
             committee: 'all',
             sponsor: 'all',
-            sort: 'priority'
+            sort: 'priority',
+            type: 'bills-and-ballot'
         };
 
         // DOM elements
@@ -1034,6 +1052,10 @@
         const newThisWeekSection = document.getElementById('newThisWeekSection');
         const newThisWeekList = document.getElementById('newThisWeekList');
         const sortSelect = document.getElementById('sortSelect');
+        const typeFilter = document.getElementById('typeFilter');
+        const resolutionsNote = document.getElementById('resolutionsNote');
+        const hiddenCount = document.getElementById('hiddenCount');
+        const typeLabel = document.getElementById('typeLabel');
         const clearFiltersBtn = document.getElementById('clearFiltersBtn');
 
         // Initialize
@@ -1094,6 +1116,7 @@
             committeeFilter.addEventListener('change', handleFilterChange);
             sponsorFilter.addEventListener('change', handleFilterChange);
             sortSelect.addEventListener('change', (e) => { currentFilters.sort = e.target.value; visibleCount = PAGE_SIZE; updateDisplay(); });
+            typeFilter.addEventListener('change', (e) => { currentFilters.type = e.target.value; visibleCount = PAGE_SIZE; applyFilters(); });
             advancedToggle.addEventListener('click', toggleAdvancedFilters);
         }
 
@@ -1129,6 +1152,7 @@
             currentFilters.subject = 'all';
             currentFilters.committee = 'all';
             currentFilters.sponsor = 'all';
+            currentFilters.type = 'bills-and-ballot';
 
             searchInput.value = '';
             chamberFilter.value = 'all';
@@ -1136,9 +1160,18 @@
             subjectFilter.value = 'all';
             committeeFilter.value = 'all';
             sponsorFilter.value = 'all';
+            typeFilter.value = 'bills-and-ballot';
 
             searchFeedback.className = 'search-feedback';
             clearFiltersBtn.classList.remove('visible');
+            applyFilters();
+        }
+
+        // "Show all legislation" link in stats bar
+        function showAllLegislation() {
+            currentFilters.type = 'all';
+            typeFilter.value = 'all';
+            visibleCount = PAGE_SIZE;
             applyFilters();
         }
 
@@ -1189,6 +1222,14 @@
                     return false;
                 }
 
+                if (currentFilters.type !== 'all') {
+                    const bt = getBillType(bill.number);
+                    if (currentFilters.type === 'bills-and-ballot' && bt !== 'bill' && bt !== 'joint-resolution') return false;
+                    if (currentFilters.type === 'bills'     && bt !== 'bill')             return false;
+                    if (currentFilters.type === 'ballot'    && bt !== 'joint-resolution') return false;
+                    if (currentFilters.type === 'resolutions' && bt !== 'simple-resolution' && bt !== 'concurrent-resolution') return false;
+                }
+
                 return true;
             });
 
@@ -1210,13 +1251,14 @@
                 searchFeedback.className = 'search-feedback';
             }
 
-            // Show clear button when any filter is active
+            // Show clear button when any non-default filter is active
             const hasActiveFilters = currentFilters.search ||
                 currentFilters.chamber !== 'all' ||
                 currentFilters.status !== 'all' ||
                 currentFilters.subject !== 'all' ||
                 currentFilters.committee !== 'all' ||
-                currentFilters.sponsor !== 'all';
+                currentFilters.sponsor !== 'all' ||
+                currentFilters.type !== 'bills-and-ballot';
             clearFiltersBtn.classList.toggle('visible', !!hasActiveFilters);
 
             updateDisplay();
@@ -1312,7 +1354,27 @@
         // Update display
         function updateDisplay() {
             displayCount.textContent = filteredBills.length;
-            totalCount.textContent = allBills.length;
+
+            // Stats bar: type-aware label and totals
+            const typeTotals = {
+                'bills-and-ballot': { label: 'bills and ballot measures', filter: b => { const t = getBillType(b.number); return t === 'bill' || t === 'joint-resolution'; } },
+                'bills':            { label: 'bills',                     filter: b => getBillType(b.number) === 'bill' },
+                'ballot':           { label: 'ballot measures',           filter: b => getBillType(b.number) === 'joint-resolution' },
+                'resolutions':      { label: 'resolutions',               filter: b => { const t = getBillType(b.number); return t === 'simple-resolution' || t === 'concurrent-resolution'; } },
+                'all':              { label: 'items',                     filter: () => true }
+            };
+            const current = typeTotals[currentFilters.type] || typeTotals['all'];
+            const typeTotal = allBills.filter(current.filter).length;
+            totalCount.textContent = typeTotal;
+            typeLabel.textContent = current.label;
+
+            if (currentFilters.type === 'bills-and-ballot') {
+                const resCount = allBills.filter(b => { const t = getBillType(b.number); return t === 'simple-resolution' || t === 'concurrent-resolution'; }).length;
+                hiddenCount.textContent = resCount;
+                resolutionsNote.style.display = 'block';
+            } else {
+                resolutionsNote.style.display = 'none';
+            }
 
             if (filteredBills.length === 0) {
                 billsList.innerHTML = `

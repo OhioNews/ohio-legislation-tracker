@@ -1149,9 +1149,11 @@
             if (hearingNum >= 4) badgeClass = 'vote-stage';
             else if (hearingNum >= 3) badgeClass = 'late-stage';
 
-            // Try to link to the bill in the tracker via billsById
-            const bill = billsById.get((item.id || '').toLowerCase());
-            const billHref = bill ? bill.url : null;
+            // Link to the official bill page on legislature.ohio.gov
+            // item.id is like "hb504" or "sb328" — maps directly to the URL pattern
+            const billHref = item.id
+                ? `https://www.legislature.ohio.gov/legislation/136/${item.id}`
+                : null;
             const headline = billHref
                 ? `<a href="${billHref}" target="_blank" class="agenda-bill-number">${item.headline}</a>`
                 : `<span class="agenda-bill-number">${item.headline}</span>`;

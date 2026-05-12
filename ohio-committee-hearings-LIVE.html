@@ -602,6 +602,11 @@
         let billsByKey = new Map(); // "chamber:committee-name" -> [bills]
         let billsById = new Map();  // "hb504" -> bill object, for agenda cross-reference
 
+        const BILLS_SHOW_MAX = 6;
+        let _today = '';
+        let _tomorrow = '';
+        let _lastDateChipsDates = '';
+
         // DOM elements
         const chamberFilter = document.getElementById('chamberFilter');
         const viewToggleButtons = document.querySelectorAll('.view-toggle button');
@@ -660,9 +665,11 @@
 
             // Parse time from ISO start string
             let timeDisplay = 'TBA';
+            let timeMinutes = 9999; // TBA sorts to end
             if (event.start.length > 10) {
                 const timePart = event.start.split('T')[1];
                 const [hours, minutes] = timePart.split(':').map(Number);
+                timeMinutes = hours * 60 + minutes;
                 const ampm = hours >= 12 ? 'PM' : 'AM';
                 const h = hours % 12 || 12;
                 timeDisplay = h + ':' + String(minutes).padStart(2, '0') + ' ' + ampm;
@@ -704,6 +711,7 @@
             return {
                 date: dateStr,
                 time: timeDisplay,
+                timeMinutes: timeMinutes,
                 chamber: chamber,
                 committee: committee,
                 committee_full: committee_full,
@@ -735,7 +743,7 @@
                 .map(transformEvent)
                 .filter(h => h.date >= today && h.date <= cutoffStr);
 
-            transformed.sort((a, b) => a.date.localeCompare(b.date) || a.time.localeCompare(b.time));
+            transformed.sort((a, b) => a.date.localeCompare(b.date) || a.timeMinutes - b.timeMinutes);
             return transformed;
         }
 
@@ -830,6 +838,11 @@
 
         // Update display
         function updateDisplay() {
+            const _now = new Date();
+            _today = _now.toISOString().split('T')[0];
+            const _tmrwDate = new Date(_now); _tmrwDate.setDate(_tmrwDate.getDate() + 1);
+            _tomorrow = _tmrwDate.toISOString().split('T')[0];
+
             displayCount.textContent = filteredHearings.length;
 
             if (filteredHearings.length === 0) {
@@ -853,8 +866,6 @@
         // Render by date
         function renderByDate() {
             const grouped = groupByDate(filteredHearings);
-            const today = new Date().toISOString().split('T')[0];
-            const tomorrow = new Date(Date.now() + 86400000).toISOString().split('T')[0];
 
             let html = '';
             for (const [date, hearings] of Object.entries(grouped)) {
@@ -863,8 +874,8 @@
                 const fullDate = dateObj.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 
                 let dateClass = '', dateLabel = '';
-                if (date === today) { dateClass = 'today'; dateLabel = ' — TODAY'; }
-                else if (date === tomorrow) { dateClass = 'soon'; dateLabel = ' — TOMORROW'; }
+                if (date === _today) { dateClass = 'today'; dateLabel = ' — TODAY'; }
+                else if (date === _tomorrow) { dateClass = 'soon'; dateLabel = ' — TOMORROW'; }
 
                 html += `
                     <div class="date-section" id="date-section-${date}">
@@ -878,7 +889,7 @@
             }
             hearingsList.innerHTML = html;
             const jumpBtn = document.getElementById('jumpTodayBtn');
-            if (jumpBtn) jumpBtn.style.display = document.getElementById('date-section-' + today) ? 'inline-block' : 'none';
+            if (jumpBtn) jumpBtn.style.display = document.getElementById('date-section-' + _today) ? 'inline-block' : 'none';
             renderDateChips();
         }
 
@@ -903,9 +914,7 @@
 
         // Create HTML for a single hearing
         function createHearingHTML(hearing, showDate = false) {
-            const today = new Date().toISOString().split('T')[0];
-            const tomorrow = new Date(Date.now() + 86400000).toISOString().split('T')[0];
-            const isUrgent = hearing.date === today || hearing.date === tomorrow;
+            const isUrgent = hearing.date === _today || hearing.date === _tomorrow;
 
             const dateDisplay = showDate ? `
                 <div style="font-size: 14px; color: var(--text-light); margin-bottom: 8px;">
@@ -968,7 +977,7 @@
                 grouped[h.date].push(h);
             });
             Object.keys(grouped).forEach(date => {
-                grouped[date].sort((a, b) => a.time.localeCompare(b.time));
+                grouped[date].sort((a, b) => a.timeMinutes - b.timeMinutes);
             });
             return grouped;
         }
@@ -982,7 +991,7 @@
             });
             Object.keys(grouped).forEach(committee => {
                 grouped[committee].sort((a, b) =>
-                    a.date.localeCompare(b.date) || a.time.localeCompare(b.time)
+                    a.date.localeCompare(b.date) || a.timeMinutes - b.timeMinutes
                 );
             });
             return grouped;
@@ -1090,12 +1099,15 @@
             if (!bar) return;
             if (currentView !== 'date' || filteredHearings.length === 0) {
                 bar.classList.remove('visible');
+                _lastDateChipsDates = '';
                 return;
             }
-            const today = new Date().toISOString().split('T')[0];
             const dates = [...new Set(filteredHearings.map(h => h.date))].sort();
+            const datesKey = dates.join(',');
+            if (datesKey === _lastDateChipsDates && bar.classList.contains('visible')) return;
+            _lastDateChipsDates = datesKey;
             bar.innerHTML = dates.map(date => {
-                const isToday = date === today;
+                const isToday = date === _today;
                 const d = new Date(date + 'T12:00:00');
                 const day = isToday ? 'Today' : d.toLocaleDateString('en-US', { weekday: 'short' });
                 const mo = isToday ? '' : d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
@@ -1114,7 +1126,11 @@
                 if (!response.ok) return;
                 const bills = await response.json();
                 buildBillsIndex(bills);
-                if (filteredHearings.length > 0) updateDisplay();
+                if (filteredHearings.length > 0) {
+                    const savedScrollY = window.scrollY;
+                    updateDisplay();
+                    window.scrollTo(0, savedScrollY);
+                }
             } catch (e) {
                 // Bills data is optional
             }

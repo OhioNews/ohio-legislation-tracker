@@ -452,9 +452,10 @@
         .agenda-section-header { font-size: 14px; font-weight: 700; color: var(--signal-dark); margin-bottom: 10px; }
         .agenda-item { padding: 10px 12px; border: 1px solid var(--border-color); border-radius: 6px; margin-bottom: 8px; background: white; }
         .agenda-item:last-child { margin-bottom: 0; }
-        .agenda-item-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+        .agenda-item-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 4px; }
         .agenda-bill-number { font-size: 15px; font-weight: 700; color: var(--signal-dark); text-decoration: none; }
         .agenda-bill-number:hover { text-decoration: underline; }
+        .agenda-bill-title { font-size: 13px; color: var(--text-light); margin-bottom: 6px; line-height: 1.4; }
         .agenda-hearing-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; background: var(--signal-light); color: var(--signal-dark); }
         .agenda-hearing-badge.late-stage { background: #fef3c7; color: #92400e; }
         .agenda-hearing-badge.vote-stage { background: #fee2e2; color: #991b1b; }
@@ -1158,6 +1159,12 @@
                 ? `<a href="${billHref}" target="_blank" class="agenda-bill-number">${item.headline}</a>`
                 : `<span class="agenda-bill-number">${item.headline}</span>`;
 
+            // Short topic title from bills.json
+            const bill = billsById.get((item.id || '').toLowerCase());
+            const titleLine = bill && bill.title
+                ? `<div class="agenda-bill-title">${bill.title}</div>`
+                : '';
+
             // Testify badges
             let badges = '';
             if (item.sponsor) {
@@ -1176,6 +1183,7 @@
                         ${headline}
                         ${item.status ? `<span class="agenda-hearing-badge ${badgeClass}">${item.status}</span>` : ''}
                     </div>
+                    ${titleLine}
                     <div class="agenda-testify-badges">${badges}</div>
                 </div>`;
         }

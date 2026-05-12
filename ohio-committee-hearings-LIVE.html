@@ -914,25 +914,6 @@
 
             const testimonyDeadline = isUrgent ? '<span class="urgent-notice">Deadline Soon!</span>' : '';
 
-            // Committee bills cross-reference
-            const committeeBills = getBillsForHearing(hearing);
-            const SHOW_MAX = 6;
-            const shownBills = committeeBills.slice(0, SHOW_MAX);
-            const moreBills = committeeBills.length - SHOW_MAX;
-            const billsSection = committeeBills.length > 0 ? `
-                <div class="committee-bills">
-                    <div class="committee-bills-header">Bills in this committee:</div>
-                    ${shownBills.map(b => `
-                        <a href="${b.url}" target="_blank" class="committee-bill-item">
-                            <span class="cbill-number">${b.number}</span>
-                            <span class="cbill-title">${b.title}</span>
-                            <span class="cbill-status${b.status === 'in-committee' ? ' in-committee' : ''}">${statusLabel(b.status)}</span>
-                        </a>
-                    `).join('')}
-                    ${moreBills > 0 ? `<div class="committee-bills-more">+ ${moreBills} more bill${moreBills === 1 ? '' : 's'} in this committee</div>` : ''}
-                    <div class="committee-bills-note">Bills assigned to this committee — not necessarily on today's agenda</div>
-                </div>
-            ` : '';
 
             return `
                 <div class="hearing-item">
@@ -961,8 +942,6 @@
                             : `<div class="agenda-none">Agenda not yet posted — check back closer to the hearing date.</div>`
                         }
                     </div>
-
-                    ${hearing.agenda_items && hearing.agenda_items.length > 0 ? '' : billsSection}
 
                     <div class="testify-section">
                         <div class="testify-header">Want to Testify? ${testimonyDeadline}</div>

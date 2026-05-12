@@ -20,11 +20,15 @@ jobs:
         run: |
           python3 - <<'EOF'
           import json
+          import re
           import ssl
           import urllib.parse
           import urllib.request
           from datetime import datetime, timedelta
           from zoneinfo import ZoneInfo
+
+          # Update to 137 starting Jan 2027
+          GENERAL_ASSEMBLY = 136
 
           # Build date range: today through 21 days out (Eastern time, DST-aware)
           eastern = ZoneInfo('America/New_York')
@@ -35,12 +39,6 @@ jobs:
           def fmt(dt):
               return dt.isoformat()
 
-          url = (
-              'https://www.legislature.ohio.gov/schedules/calendar-data'
-              '?start=' + urllib.parse.quote(fmt(start)) +
-              '&end=' + urllib.parse.quote(fmt(end))
-          )
-
           # SSL note: legislature.ohio.gov's server does not send its full cert chain
           # (missing intermediate CA). Chrome silently recovers via AIA fetching;
           # Python/OpenSSL does not. Verification is disabled as a deliberate workaround
@@ -49,9 +47,18 @@ jobs:
           ctx = ssl.create_default_context()
           ctx.check_hostname = False
           ctx.verify_mode = ssl.CERT_NONE
-          req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-          with urllib.request.urlopen(req, timeout=30, context=ctx) as resp:
-              data = json.loads(resp.read())
+
+          def fetch_json(url):
+              req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
+              with urllib.request.urlopen(req, timeout=30, context=ctx) as resp:
+                  return json.loads(resp.read())
+
+          url = (
+              'https://www.legislature.ohio.gov/schedules/calendar-data'
+              '?start=' + urllib.parse.quote(fmt(start)) +
+              '&end=' + urllib.parse.quote(fmt(end))
+          )
+          data = fetch_json(url)
 
           # Filter to committee meetings only
           meetings = [
@@ -60,8 +67,55 @@ jobs:
               or (e.get('title', '').lower().find('committee') >= 0)
           ]
 
+          def extract_ids(event_url):
+              """Pull meeting_id and committee_id out of a calendar event URL.
+              URL format: 'calendar/events/cmte_h_wm_1_2026-05-13-1130_1286'
+              """
+              if not event_url:
+                  return None, None
+              parts = event_url.split('/events/')
+              if len(parts) < 2:
+                  return None, None
+              meeting_id = parts[1].strip('/')
+              m = re.match(r'^(.+?)_\d{4}-\d{2}-\d{2}', meeting_id)
+              committee_id = m.group(1) if m else None
+              return meeting_id, committee_id
+
+          # Fetch agenda items for each meeting from the Ohio LIS API
+          for event in meetings:
+              meeting_id, committee_id = extract_ids(event.get('url', ''))
+              if not meeting_id or not committee_id:
+                  event['agenda_items'] = []
+                  continue
+              agenda_url = (
+                  f'https://search-prod.lis.state.oh.us/api/v2/'
+                  f'general_assembly_{GENERAL_ASSEMBLY}/committees/{committee_id}/'
+                  f'meetings/{meeting_id}/agenda_items/'
+              )
+              try:
+                  items = fetch_json(agenda_url)
+                  event['agenda_items'] = sorted([
+                      {
+                          'id': item.get('id', ''),
+                          'headline': item.get('headline', ''),
+                          'status': item.get('status', ''),
+                          'proponent': item.get('proponent', False),
+                          'opponent': item.get('opponent', False),
+                          'interested_party': item.get('interested_party', False),
+                          'sponsor': item.get('sponsor', False),
+                          'index': item.get('index', 0),
+                      }
+                      for item in (items if isinstance(items, list) else [])
+                  ], key=lambda x: x['index'])
+                  count = len(event['agenda_items'])
+                  print(f'  {meeting_id}: {count} agenda item{"s" if count != 1 else ""}')
+              except Exception as e:
+                  print(f'  {meeting_id}: agenda unavailable ({e})')
+                  event['agenda_items'] = []
+
           output = {
               'fetched_at': datetime.utcnow().isoformat() + 'Z',
+              'general_assembly': GENERAL_ASSEMBLY,
               'source': 'https://www.legislature.ohio.gov/schedules/calendar-data',
               'events': meetings
           }
@@ -71,7 +125,7 @@ jobs:
           with open('ohio_legislation_data/hearings_live.json', 'w') as f:
               json.dump(output, f, indent=2)
 
-          print(f'Saved {len(meetings)} committee meetings')
+          print(f'Saved {len(meetings)} committee meetings with agenda items')
           EOF
 
       - name: Commit if data changed

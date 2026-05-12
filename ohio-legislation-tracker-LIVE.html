@@ -1081,6 +1081,7 @@
                 
                 allBills = bills;
                 filteredBills = allBills;
+                syncStatusLabels();
                 applyFilters();
                 const lastModified = response.headers.get('Last-Modified');
                 updateLastUpdate(lastModified ? new Date(lastModified) : null);
@@ -1116,8 +1117,26 @@
             committeeFilter.addEventListener('change', handleFilterChange);
             sponsorFilter.addEventListener('change', handleFilterChange);
             sortSelect.addEventListener('change', (e) => { currentFilters.sort = e.target.value; visibleCount = PAGE_SIZE; updateDisplay(); });
-            typeFilter.addEventListener('change', (e) => { currentFilters.type = e.target.value; visibleCount = PAGE_SIZE; applyFilters(); });
+            typeFilter.addEventListener('change', (e) => { currentFilters.type = e.target.value; visibleCount = PAGE_SIZE; syncStatusLabels(); applyFilters(); });
             advancedToggle.addEventListener('click', toggleAdvancedFilters);
+        }
+
+        // Relabel status filter options to match the current legislation type
+        function syncStatusLabels() {
+            const t = currentFilters.type;
+            const isResolutions = t === 'resolutions';
+            const isBallot      = t === 'ballot';
+
+            const relabels = {
+                'passed-chamber': isResolutions ? 'Adopted (One Chamber)' : isBallot ? 'Adopted One Chamber' : 'Passed Chamber',
+                'passed':         isResolutions ? 'Adopted'               : isBallot ? 'Adopted Both'        : 'Passed Both',
+                'vetoed':         (isResolutions || isBallot) ? 'Vetoed (bills only)' : 'Vetoed'
+            };
+
+            Object.entries(relabels).forEach(([value, label]) => {
+                const opt = statusFilter.querySelector(`option[value="${value}"]`);
+                if (opt) opt.textContent = label;
+            });
         }
 
         // Handle search with debouncing
@@ -1164,6 +1183,7 @@
 
             searchFeedback.className = 'search-feedback';
             clearFiltersBtn.classList.remove('visible');
+            syncStatusLabels();
             applyFilters();
         }
 

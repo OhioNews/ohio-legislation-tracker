@@ -446,6 +446,25 @@
         .chip-remove:hover { opacity: 1; }
         .chips-clear { font-size: 12px; color: var(--text-light); background: none; border: none; cursor: pointer; text-decoration: underline; padding: 4px 0; }
         .chips-clear:hover { color: var(--text-dark); }
+
+        /* Agenda items */
+        .agenda-section { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-color); }
+        .agenda-section-header { font-size: 14px; font-weight: 700; color: var(--signal-dark); margin-bottom: 10px; }
+        .agenda-item { padding: 10px 12px; border: 1px solid var(--border-color); border-radius: 6px; margin-bottom: 8px; background: white; }
+        .agenda-item:last-child { margin-bottom: 0; }
+        .agenda-item-top { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 6px; }
+        .agenda-bill-number { font-size: 15px; font-weight: 700; color: var(--signal-dark); text-decoration: none; }
+        .agenda-bill-number:hover { text-decoration: underline; }
+        .agenda-hearing-badge { font-size: 11px; font-weight: 600; padding: 2px 8px; border-radius: 10px; background: var(--signal-light); color: var(--signal-dark); }
+        .agenda-hearing-badge.late-stage { background: #fef3c7; color: #92400e; }
+        .agenda-hearing-badge.vote-stage { background: #fee2e2; color: #991b1b; }
+        .agenda-testify-badges { display: flex; gap: 6px; flex-wrap: wrap; }
+        .testify-badge { font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 10px; }
+        .testify-badge.proponent { background: #dcfce7; color: #166534; }
+        .testify-badge.opponent { background: #fee2e2; color: #991b1b; }
+        .testify-badge.interested { background: #dbeafe; color: #1e40af; }
+        .testify-badge.closed { background: var(--signal-light); color: var(--signal-dark); }
+        .agenda-none { font-size: 13px; color: var(--text-light); font-style: italic; padding: 4px 0; }
     </style>
 </head>
 <body>
@@ -580,6 +599,7 @@
         let committeeIndex = []; // [{slug, full}] sorted, built after data loads
         let highlightedIdx = -1;
         let billsByKey = new Map(); // "chamber:committee-name" -> [bills]
+        let billsById = new Map();  // "hb504" -> bill object, for agenda cross-reference
 
         // DOM elements
         const chamberFilter = document.getElementById('chamberFilter');
@@ -669,6 +689,17 @@
                 ? 'https://www.legislature.ohio.gov/schedules/' + event.url
                 : 'https://www.legislature.ohio.gov/schedules/calendar';
 
+            // Extract meeting and committee IDs for agenda API calls
+            let meetingId = null, committeeId = null;
+            if (event.url) {
+                const eventParts = event.url.split('/events/');
+                if (eventParts.length >= 2) {
+                    meetingId = eventParts[1].replace(/\/+$/, '');
+                    const m = meetingId.match(/^(.+?)_\d{4}-\d{2}-\d{2}/);
+                    committeeId = m ? m[1] : null;
+                }
+            }
+
             return {
                 date: dateStr,
                 time: timeDisplay,
@@ -678,7 +709,10 @@
                 type: 'Committee Meeting',
                 location: '',
                 status: event.status || 'Scheduled',
-                eventUrl: eventUrl
+                eventUrl: eventUrl,
+                meetingId: meetingId,
+                committeeId: committeeId,
+                agenda_items: event.agenda_items || []
             };
         }
 
@@ -718,6 +752,7 @@
                 updateDisplay();
                 updateLastUpdate('Live');
                 populateCommitteeFilter();
+                enrichWithAgendaItems(); // attempt agenda fetch; silently no-ops if CORS unavailable
                 return;
             } catch (liveError) {
                 console.log('Live API unavailable (' + liveError.message + '), trying cached data...');
@@ -736,6 +771,7 @@
                     : 'recently';
                 updateLastUpdate('Cached ' + cacheDate);
                 populateCommitteeFilter();
+                enrichWithAgendaItems(); // fetch agenda items live even when calendar is from cache
                 return;
             } catch (cacheError) {
                 console.error('Both live and cached data failed:', cacheError);
@@ -878,25 +914,6 @@
 
             const testimonyDeadline = isUrgent ? '<span class="urgent-notice">Deadline Soon!</span>' : '';
 
-            // Committee bills cross-reference
-            const committeeBills = getBillsForHearing(hearing);
-            const SHOW_MAX = 6;
-            const shownBills = committeeBills.slice(0, SHOW_MAX);
-            const moreBills = committeeBills.length - SHOW_MAX;
-            const billsSection = committeeBills.length > 0 ? `
-                <div class="committee-bills">
-                    <div class="committee-bills-header">Bills in this committee:</div>
-                    ${shownBills.map(b => `
-                        <a href="${b.url}" target="_blank" class="committee-bill-item">
-                            <span class="cbill-number">${b.number}</span>
-                            <span class="cbill-title">${b.title}</span>
-                            <span class="cbill-status${b.status === 'in-committee' ? ' in-committee' : ''}">${statusLabel(b.status)}</span>
-                        </a>
-                    `).join('')}
-                    ${moreBills > 0 ? `<div class="committee-bills-more">+ ${moreBills} more bill${moreBills === 1 ? '' : 's'} in this committee</div>` : ''}
-                    <div class="committee-bills-note">Bills assigned to this committee — not necessarily on today's agenda</div>
-                </div>
-            ` : '';
 
             return `
                 <div class="hearing-item">
@@ -914,11 +931,17 @@
 
                     <div class="bills-being-heard">
                         <a href="${hearing.eventUrl}" target="_blank" class="view-agenda-link">
-                            📋 View full agenda on legislature.ohio.gov →
+                            📋 View full agenda &amp; notice on legislature.ohio.gov →
                         </a>
                     </div>
 
-                    ${billsSection}
+                    <div class="agenda-section" id="agenda-${hearing.meetingId || ''}">
+                        ${hearing.agenda_items && hearing.agenda_items.length > 0
+                            ? `<div class="agenda-section-header">Bills on This Agenda:</div>
+                               ${hearing.agenda_items.map(renderAgendaItem).join('')}`
+                            : `<div class="agenda-none">Agenda not yet posted — check back closer to the hearing date.</div>`
+                        }
+                    </div>
 
                     <div class="testify-section">
                         <div class="testify-header">Want to Testify? ${testimonyDeadline}</div>
@@ -1099,7 +1122,13 @@
         // Build lookup: "chamber:committee-name" -> [bills], sorted by most recent activity
         function buildBillsIndex(bills) {
             billsByKey.clear();
+            billsById.clear();
             bills.forEach(bill => {
+                // Index by normalized bill number ("HB 504" -> "hb504") for agenda cross-reference
+                if (bill.bill_number) {
+                    const id = bill.bill_number.toLowerCase().replace(/\s+/g, '');
+                    billsById.set(id, bill);
+                }
                 const committee = (bill.committee || '').trim();
                 if (!committee || !bill.chamber) return;
                 const key = bill.chamber + ':' + committee.toLowerCase();
@@ -1109,6 +1138,76 @@
             billsByKey.forEach(list => {
                 list.sort((a, b) => (b.last_action_date || '').localeCompare(a.last_action_date || ''));
             });
+        }
+
+        // Render a single agenda item row
+        function renderAgendaItem(item) {
+            // Parse hearing number from status like "4th Hearing"
+            const numMatch = (item.status || '').match(/^(\d+)/);
+            const hearingNum = numMatch ? parseInt(numMatch[1]) : 0;
+            let badgeClass = '';
+            if (hearingNum >= 4) badgeClass = 'vote-stage';
+            else if (hearingNum >= 3) badgeClass = 'late-stage';
+
+            // Try to link to the bill in the tracker via billsById
+            const bill = billsById.get((item.id || '').toLowerCase());
+            const billHref = bill ? bill.url : null;
+            const headline = billHref
+                ? `<a href="${billHref}" target="_blank" class="agenda-bill-number">${item.headline}</a>`
+                : `<span class="agenda-bill-number">${item.headline}</span>`;
+
+            // Testify badges
+            let badges = '';
+            if (item.sponsor) {
+                badges = '<span class="testify-badge closed">Sponsor presentation</span>';
+            } else if (item.proponent || item.opponent || item.interested_party) {
+                if (item.proponent) badges += '<span class="testify-badge proponent">✓ Proponent testimony open</span>';
+                if (item.opponent) badges += '<span class="testify-badge opponent">✓ Opponent testimony open</span>';
+                if (item.interested_party) badges += '<span class="testify-badge interested">✓ Interested party welcome</span>';
+            } else {
+                badges = '<span class="testify-badge closed">No public testimony this hearing</span>';
+            }
+
+            return `
+                <div class="agenda-item">
+                    <div class="agenda-item-top">
+                        ${headline}
+                        ${item.status ? `<span class="agenda-hearing-badge ${badgeClass}">${item.status}</span>` : ''}
+                    </div>
+                    <div class="agenda-testify-badges">${badges}</div>
+                </div>`;
+        }
+
+        // After a live API load, try to fetch agenda items from the Ohio LIS API.
+        // search-prod.lis.state.oh.us may allow CORS — if not, this silently no-ops.
+        async function enrichWithAgendaItems() {
+            const GA = 136;
+            await Promise.allSettled(allHearings.map(async hearing => {
+                if (!hearing.meetingId || !hearing.committeeId || hearing.agenda_items.length > 0) return;
+                try {
+                    const url = `https://search-prod.lis.state.oh.us/api/v2/general_assembly_${GA}/committees/${hearing.committeeId}/meetings/${hearing.meetingId}/agenda_items/`;
+                    const resp = await fetch(url);
+                    if (!resp.ok) return;
+                    const items = await resp.json();
+                    if (!Array.isArray(items) || !items.length) return;
+                    hearing.agenda_items = items.map(item => ({
+                        id: item.id || '',
+                        headline: item.headline || '',
+                        status: item.status || '',
+                        proponent: item.proponent || false,
+                        opponent: item.opponent || false,
+                        interested_party: item.interested_party || false,
+                        sponsor: item.sponsor || false,
+                        index: item.index || 0,
+                    })).sort((a, b) => a.index - b.index);
+                    const agendaDiv = document.getElementById('agenda-' + hearing.meetingId);
+                    if (agendaDiv) {
+                        agendaDiv.innerHTML =
+                            '<div class="agenda-section-header">Bills on This Agenda:</div>' +
+                            hearing.agenda_items.map(renderAgendaItem).join('');
+                    }
+                } catch (e) { /* CORS unavailable — silently skip */ }
+            }));
         }
 
         // Extract bare committee name from hearing for bills lookup

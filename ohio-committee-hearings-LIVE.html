@@ -369,6 +369,67 @@
         .header-nav a { color: var(--signal-yellow); font-size: 13px; font-weight: 600; text-decoration: none; opacity: 0.9; }
         .header-nav a:hover { opacity: 1; text-decoration: underline; }
 
+        /* Date navigation chips */
+        .date-chips-bar {
+            padding: 12px 32px;
+            background: #fafafa;
+            border-bottom: 1px solid var(--border-color);
+            display: none;
+            overflow-x: auto;
+            gap: 8px;
+            scrollbar-width: none;
+            align-items: center;
+        }
+        .date-chips-bar::-webkit-scrollbar { display: none; }
+        .date-chips-bar.visible { display: flex; }
+        @media (max-width: 768px) { .date-chips-bar { padding: 10px 16px; } }
+
+        .date-chip {
+            flex-shrink: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 7px 13px;
+            background: white;
+            border: 2px solid var(--signal-light);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.15s;
+            min-width: 58px;
+            font-family: inherit;
+        }
+        .date-chip:hover { border-color: var(--signal-dark); }
+        .date-chip.is-today { background: var(--signal-yellow); border-color: var(--signal-yellow); }
+        .date-chip-day { font-size: 10px; font-weight: 700; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px; }
+        .date-chip.is-today .date-chip-day { color: var(--signal-dark); }
+        .date-chip-date { font-size: 13px; font-weight: 700; color: var(--text-dark); margin-top: 2px; }
+        .date-chip.is-today .date-chip-date { color: var(--signal-dark); }
+
+        /* Committee bills cross-reference */
+        .committee-bills {
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid var(--border-color);
+        }
+        .committee-bills-header { font-size: 13px; font-weight: 700; color: var(--signal-dark); margin-bottom: 8px; }
+        .committee-bill-item {
+            display: flex;
+            align-items: baseline;
+            gap: 8px;
+            padding: 5px 0;
+            border-bottom: 1px solid #f3f4f6;
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+        .committee-bill-item:last-of-type { border-bottom: none; }
+        .committee-bill-item:hover .cbill-number { text-decoration: underline; }
+        .cbill-number { font-size: 13px; font-weight: 700; color: var(--signal-dark); min-width: 55px; flex-shrink: 0; }
+        .cbill-title { font-size: 12px; color: var(--text-light); flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .cbill-status { font-size: 11px; font-weight: 600; padding: 2px 7px; border-radius: 10px; flex-shrink: 0; background: var(--signal-light); color: var(--signal-dark); }
+        .cbill-status.in-committee { background: #dbeafe; color: #1e40af; }
+        .committee-bills-more { font-size: 12px; color: var(--text-light); margin-top: 6px; padding-top: 4px; }
+        .committee-bills-note { font-size: 11px; color: var(--text-light); margin-top: 6px; font-style: italic; }
+
         /* Committee chip filter */
         .committee-search-wrapper { position: relative; flex: 1; min-width: 220px; }
         .committee-search-input { width: 100%; padding: 10px 12px; border: 2px solid var(--signal-light); border-radius: 6px; font-size: 14px; background: white; color: var(--text-dark); outline: none; transition: border-color 0.2s; }
@@ -495,6 +556,8 @@
             </div>
         </div>
 
+        <div class="date-chips-bar" id="dateChipsBar"></div>
+
         <div class="hearings-list" id="hearingsList">
             <div class="loading">
                 <div class="spinner"></div>
@@ -516,6 +579,7 @@
         let selectedCommittees = new Map(); // slug -> full name
         let committeeIndex = []; // [{slug, full}] sorted, built after data loads
         let highlightedIdx = -1;
+        let billsByKey = new Map(); // "chamber:committee-name" -> [bills]
 
         // DOM elements
         const chamberFilter = document.getElementById('chamberFilter');
@@ -547,6 +611,7 @@
         // Initialize
         function init() {
             loadHearings();
+            loadBillsData(); // parallel — enhances hearings with bill context, optional
             setupEventListeners();
         }
 
@@ -737,6 +802,7 @@
                         <p>Check back soon or adjust your filters. You can also <a href="https://www.legislature.ohio.gov/schedules/calendar" target="_blank" style="color: var(--signal-dark); font-weight: 600;">view the full calendar on legislature.ohio.gov</a>.</p>
                     </div>
                 `;
+                renderDateChips();
                 return;
             }
 
@@ -764,7 +830,7 @@
                 else if (date === tomorrow) { dateClass = 'soon'; dateLabel = ' — TOMORROW'; }
 
                 html += `
-                    <div class="date-section"${date === today ? ' id="today-section"' : ''}>
+                    <div class="date-section" id="date-section-${date}">
                         <div class="date-header ${dateClass}">
                             <span class="day-name">${dayName}${dateLabel}</span>
                             <span class="full-date">${fullDate}</span>
@@ -775,7 +841,8 @@
             }
             hearingsList.innerHTML = html;
             const jumpBtn = document.getElementById('jumpTodayBtn');
-            if (jumpBtn) jumpBtn.style.display = document.getElementById('today-section') ? 'inline-block' : 'none';
+            if (jumpBtn) jumpBtn.style.display = document.getElementById('date-section-' + today) ? 'inline-block' : 'none';
+            renderDateChips();
         }
 
         // Render by committee
@@ -794,6 +861,7 @@
             hearingsList.innerHTML = html;
             const jumpBtn = document.getElementById('jumpTodayBtn');
             if (jumpBtn) jumpBtn.style.display = 'none';
+            renderDateChips();
         }
 
         // Create HTML for a single hearing
@@ -809,6 +877,26 @@
             ` : '';
 
             const testimonyDeadline = isUrgent ? '<span class="urgent-notice">Deadline Soon!</span>' : '';
+
+            // Committee bills cross-reference
+            const committeeBills = getBillsForHearing(hearing);
+            const SHOW_MAX = 6;
+            const shownBills = committeeBills.slice(0, SHOW_MAX);
+            const moreBills = committeeBills.length - SHOW_MAX;
+            const billsSection = committeeBills.length > 0 ? `
+                <div class="committee-bills">
+                    <div class="committee-bills-header">Bills in this committee:</div>
+                    ${shownBills.map(b => `
+                        <a href="${b.url}" target="_blank" class="committee-bill-item">
+                            <span class="cbill-number">${b.number}</span>
+                            <span class="cbill-title">${b.title}</span>
+                            <span class="cbill-status${b.status === 'in-committee' ? ' in-committee' : ''}">${statusLabel(b.status)}</span>
+                        </a>
+                    `).join('')}
+                    ${moreBills > 0 ? `<div class="committee-bills-more">+ ${moreBills} more bill${moreBills === 1 ? '' : 's'} in this committee</div>` : ''}
+                    <div class="committee-bills-note">Bills assigned to this committee — not necessarily on today's agenda</div>
+                </div>
+            ` : '';
 
             return `
                 <div class="hearing-item">
@@ -829,6 +917,8 @@
                             📋 View full agenda on legislature.ohio.gov →
                         </a>
                     </div>
+
+                    ${billsSection}
 
                     <div class="testify-section">
                         <div class="testify-header">Want to Testify? ${testimonyDeadline}</div>
@@ -961,8 +1051,96 @@
 
         // Jump to today's section in the by-date view
         function jumpToToday() {
-            const todaySection = document.getElementById('today-section');
-            if (todaySection) todaySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            jumpToDate(new Date().toISOString().split('T')[0]);
+        }
+
+        // Jump to any date section
+        function jumpToDate(date) {
+            const section = document.getElementById('date-section-' + date);
+            if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Render date navigation chip strip (date view only)
+        function renderDateChips() {
+            const bar = document.getElementById('dateChipsBar');
+            if (!bar) return;
+            if (currentView !== 'date' || filteredHearings.length === 0) {
+                bar.classList.remove('visible');
+                return;
+            }
+            const today = new Date().toISOString().split('T')[0];
+            const dates = [...new Set(filteredHearings.map(h => h.date))].sort();
+            bar.innerHTML = dates.map(date => {
+                const isToday = date === today;
+                const d = new Date(date + 'T12:00:00');
+                const day = isToday ? 'Today' : d.toLocaleDateString('en-US', { weekday: 'short' });
+                const mo = isToday ? '' : d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+                return `<button class="date-chip${isToday ? ' is-today' : ''}" onclick="jumpToDate('${date}')">
+                    <span class="date-chip-day">${day}</span>
+                    ${mo ? `<span class="date-chip-date">${mo}</span>` : ''}
+                </button>`;
+            }).join('');
+            bar.classList.add('visible');
+        }
+
+        // Load bills.json for committee cross-reference (optional — gracefully skipped if unavailable)
+        async function loadBillsData() {
+            try {
+                const response = await fetch('ohio_legislation_data/bills.json');
+                if (!response.ok) return;
+                const bills = await response.json();
+                buildBillsIndex(bills);
+                if (filteredHearings.length > 0) updateDisplay();
+            } catch (e) {
+                // Bills data is optional
+            }
+        }
+
+        // Build lookup: "chamber:committee-name" -> [bills], sorted by most recent activity
+        function buildBillsIndex(bills) {
+            billsByKey.clear();
+            bills.forEach(bill => {
+                const committee = (bill.committee || '').trim();
+                if (!committee || !bill.chamber) return;
+                const key = bill.chamber + ':' + committee.toLowerCase();
+                if (!billsByKey.has(key)) billsByKey.set(key, []);
+                billsByKey.get(key).push(bill);
+            });
+            billsByKey.forEach(list => {
+                list.sort((a, b) => (b.last_action_date || '').localeCompare(a.last_action_date || ''));
+            });
+        }
+
+        // Extract bare committee name from hearing for bills lookup
+        function extractCommitteeName(hearing) {
+            // committee_full is like "House Education Committee"
+            let name = hearing.committee_full;
+            name = name.replace(/^(House|Senate|Joint)\s+/i, '');
+            name = name.replace(/\s+Committee$/i, '');
+            return name.trim().toLowerCase();
+        }
+
+        // Get bills currently assigned to a hearing's committee (in-committee or introduced only)
+        function getBillsForHearing(hearing) {
+            if (!billsByKey.size || !hearing.chamber || hearing.chamber === 'unknown') return [];
+            const name = extractCommitteeName(hearing);
+            const key = hearing.chamber + ':' + name;
+            const bills = billsByKey.get(key) || [];
+            return bills.filter(b => b.status === 'in-committee' || b.status === 'introduced');
+        }
+
+        // Human-readable status label
+        function statusLabel(status) {
+            const map = {
+                'introduced': 'Introduced',
+                'in-committee': 'In Committee',
+                'passed-chamber': 'Passed One',
+                'passed': 'Passed Both',
+                'vetoed': 'Vetoed',
+                'failed': 'Failed',
+                'governor': 'Governor'
+            };
+            return map[status] || status;
         }
 
         // Format date for display

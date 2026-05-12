@@ -53,15 +53,19 @@ jobs:
               with urllib.request.urlopen(req, timeout=30, context=ctx) as resp:
                   return json.loads(resp.read())
 
-          # Build bill title lookup from bills.json (already in the repo)
-          bills_title = {}
+          # Build bill info lookup from bills.json (already in the repo)
+          bills_info = {}
           try:
               with open('ohio_legislation_data/bills.json') as f:
                   for bill in json.load(f):
                       num = (bill.get('number') or '').lower().replace(' ', '')
-                      if num and bill.get('title'):
-                          bills_title[num] = bill['title']
-              print(f'Loaded {len(bills_title)} bill titles from bills.json')
+                      if num:
+                          subj = bill.get('subject', '')
+                          bills_info[num] = {
+                              'title': bill.get('title', ''),
+                              'subject': subj if subj and subj != 'general' else '',
+                          }
+              print(f'Loaded {len(bills_info)} bill records from bills.json')
           except Exception as e:
               print(f'Warning: could not load bills.json ({e})')
 
@@ -110,7 +114,8 @@ jobs:
                       {
                           'id': item.get('id', ''),
                           'headline': item.get('headline', ''),
-                          'title': bills_title.get((item.get('id') or '').lower(), ''),
+                          'title': bills_info.get((item.get('id') or '').lower(), {}).get('title', ''),
+                          'subject': bills_info.get((item.get('id') or '').lower(), {}).get('subject', ''),
                           'status': item.get('status', ''),
                           'proponent': item.get('proponent', False),
                           'opponent': item.get('opponent', False),

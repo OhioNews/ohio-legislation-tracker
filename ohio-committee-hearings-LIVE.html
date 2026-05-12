@@ -467,6 +467,10 @@
         .testify-badge.interested { background: #dbeafe; color: #1e40af; }
         .testify-badge.closed { background: var(--signal-light); color: var(--signal-dark); }
         .agenda-none { font-size: 13px; color: var(--text-light); font-style: italic; padding: 4px 0; }
+        .testimony-summary { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; padding: 5px 10px; border-radius: 6px; margin-bottom: 12px; }
+        .testimony-summary.open { background: #dcfce7; color: #166534; }
+        .testimony-summary.closed { background: var(--signal-light); color: var(--signal-dark); }
+        .bill-subject-tag { font-size: 11px; font-weight: 600; padding: 2px 7px; border-radius: 10px; background: #e0f2fe; color: #075985; text-transform: capitalize; }
     </style>
 </head>
 <body>
@@ -915,15 +919,11 @@
 
         // Create HTML for a single hearing
         function createHearingHTML(hearing, showDate = false) {
-            const isUrgent = hearing.date === _today || hearing.date === _tomorrow;
-
             const dateDisplay = showDate ? `
                 <div style="font-size: 14px; color: var(--text-light); margin-bottom: 8px;">
                     📅 ${formatDate(hearing.date)} at ${hearing.time}
                 </div>
             ` : '';
-
-            const testimonyDeadline = isUrgent ? '<span class="urgent-notice">Deadline Soon!</span>' : '';
 
 
             return `
@@ -947,15 +947,16 @@
                     </div>
 
                     <div class="agenda-section" id="agenda-${hearing.meetingId || ''}">
-                        ${hearing.agenda_items && hearing.agenda_items.length > 0
-                            ? `<div class="agenda-section-header">Bills on This Agenda:</div>
-                               ${hearing.agenda_items.map(renderAgendaItem).join('')}`
-                            : `<div class="agenda-none">Agenda not yet posted — check back closer to the hearing date.</div>`
-                        }
+                        ${hearing.agenda_items && hearing.agenda_items.length > 0 ? (() => {
+                            const summary = getTestimonySummary(hearing.agenda_items);
+                            return (summary ? `<div class="testimony-summary ${summary.cls}">${summary.cls === 'open' ? '✓' : '—'} ${summary.text}</div>` : '') +
+                                `<div class="agenda-section-header">Bills on This Agenda:</div>` +
+                                hearing.agenda_items.map(renderAgendaItem).join('');
+                        })() : `<div class="agenda-none">Agenda not yet posted — check back closer to the hearing date.</div>`}
                     </div>
 
                     <div class="testify-section">
-                        <div class="testify-header">Want to Testify? ${testimonyDeadline}</div>
+                        <div class="testify-header">Want to Testify?</div>
                         <div class="testify-info">
                             Share your perspective with Ohio legislators. Written and oral testimony typically due 24 hours before the hearing.
                         </div>
@@ -1159,6 +1160,16 @@
         }
 
         // Render a single agenda item row
+        // Returns a summary of testimony availability across all agenda items
+        function getTestimonySummary(agendaItems) {
+            if (!agendaItems || !agendaItems.length) return null;
+            const open = agendaItems.filter(i => !i.sponsor && (i.proponent || i.opponent || i.interested_party));
+            const total = agendaItems.length;
+            if (open.length === 0) return { text: 'No public testimony this hearing', cls: 'closed' };
+            if (open.length === total) return { text: `All ${total} bill${total === 1 ? '' : 's'} open for public testimony`, cls: 'open' };
+            return { text: `${open.length} of ${total} bills open for public testimony`, cls: 'open' };
+        }
+
         function renderAgendaItem(item) {
             // Parse hearing number from status like "4th Hearing"
             const numMatch = (item.status || '').match(/^(\d+)/);
@@ -1193,11 +1204,16 @@
                 badges = '<span class="testify-badge closed">No public testimony this hearing</span>';
             }
 
+            const subjectTag = item.subject
+                ? `<span class="bill-subject-tag">${item.subject.replace(/-/g, ' ')}</span>`
+                : '';
+
             return `
                 <div class="agenda-item">
                     <div class="agenda-item-top">
                         ${headline}
                         ${item.status ? `<span class="agenda-hearing-badge ${badgeClass}">${item.status}</span>` : ''}
+                        ${subjectTag}
                     </div>
                     ${titleLine}
                     <div class="agenda-testify-badges">${badges}</div>

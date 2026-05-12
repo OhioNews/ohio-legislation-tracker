@@ -365,6 +365,10 @@
 
         .error-message { padding: 24px 32px; background: #fee; border-left: 4px solid #f00; color: #600; }
 
+        .header-nav { margin-top: 10px; }
+        .header-nav a { color: var(--signal-yellow); font-size: 13px; font-weight: 600; text-decoration: none; opacity: 0.9; }
+        .header-nav a:hover { opacity: 1; text-decoration: underline; }
+
         /* Committee chip filter */
         .committee-search-wrapper { position: relative; flex: 1; min-width: 220px; }
         .committee-search-input { width: 100%; padding: 10px 12px; border: 2px solid var(--signal-light); border-radius: 6px; font-size: 14px; background: white; color: var(--text-dark); outline: none; transition: border-color 0.2s; }
@@ -391,6 +395,7 @@
             <p>Upcoming hearings where you can testify on legislation</p>
             <div class="header-highlight">📢 Public testimony is open to all Ohio residents</div>
             <p class="data-attribution">Data provided by the Ohio General Assembly</p>
+            <p class="header-nav"><a href="ohio-legislation-tracker-LIVE.html">Bill Tracker →</a> &nbsp;·&nbsp; <a href="index.html">← All Tools</a></p>
         </div>
 
         <div class="testimony-guide">
@@ -484,7 +489,8 @@
             <div class="stats-item">
                 Showing <strong id="displayCount">0</strong> hearings in the next <strong>14 days</strong>&nbsp;·&nbsp; <span id="committeeStatus" style="color: var(--text-light);">All committees</span>
             </div>
-            <div class="stats-item">
+            <div class="stats-item" style="display: flex; align-items: center; gap: 16px;">
+                <button id="jumpTodayBtn" onclick="jumpToToday()" style="display:none; background: var(--signal-yellow); color: var(--signal-dark); border: none; padding: 8px 14px; border-radius: 4px; font-size: 13px; font-weight: 600; cursor: pointer; min-height: 36px;">⬇ Today</button>
                 Last updated: <strong id="lastUpdate">Loading...</strong>
             </div>
         </div>
@@ -758,7 +764,7 @@
                 else if (date === tomorrow) { dateClass = 'soon'; dateLabel = ' — TOMORROW'; }
 
                 html += `
-                    <div class="date-section">
+                    <div class="date-section"${date === today ? ' id="today-section"' : ''}>
                         <div class="date-header ${dateClass}">
                             <span class="day-name">${dayName}${dateLabel}</span>
                             <span class="full-date">${fullDate}</span>
@@ -768,6 +774,8 @@
                 `;
             }
             hearingsList.innerHTML = html;
+            const jumpBtn = document.getElementById('jumpTodayBtn');
+            if (jumpBtn) jumpBtn.style.display = document.getElementById('today-section') ? 'inline-block' : 'none';
         }
 
         // Render by committee
@@ -784,6 +792,8 @@
                 `;
             }
             hearingsList.innerHTML = html;
+            const jumpBtn = document.getElementById('jumpTodayBtn');
+            if (jumpBtn) jumpBtn.style.display = 'none';
         }
 
         // Create HTML for a single hearing
@@ -815,7 +825,6 @@
                     </div>
 
                     <div class="bills-being-heard">
-                        <div class="bills-header">Bills Being Heard:</div>
                         <a href="${hearing.eventUrl}" target="_blank" class="view-agenda-link">
                             📋 View full agenda on legislature.ohio.gov →
                         </a>
@@ -939,14 +948,21 @@
             });
         }
 
-        // Populate committee filter dropdown
+        // Populate committee filter using real committee_full names (not slug reconstruction)
         function populateCommitteeFilter() {
-            const committeeSet = new Set();
-            allHearings.forEach(h => { if (h.committee) committeeSet.add(h.committee); });
-            committeeIndex = Array.from(committeeSet).sort().map(slug => ({
-                slug,
-                full: slug.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
-            }));
+            const seen = new Map(); // slug -> full name
+            allHearings.forEach(h => {
+                if (h.committee && h.committee_full) seen.set(h.committee, h.committee_full);
+            });
+            committeeIndex = Array.from(seen.entries())
+                .sort((a, b) => a[1].localeCompare(b[1]))
+                .map(([slug, full]) => ({ slug, full }));
+        }
+
+        // Jump to today's section in the by-date view
+        function jumpToToday() {
+            const todaySection = document.getElementById('today-section');
+            if (todaySection) todaySection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
 
         // Format date for display

@@ -1159,10 +1159,9 @@
                 ? `<a href="${billHref}" target="_blank" class="agenda-bill-number">${item.headline}</a>`
                 : `<span class="agenda-bill-number">${item.headline}</span>`;
 
-            // Short topic title from bills.json
-            const bill = billsById.get((item.id || '').toLowerCase());
-            const titleLine = bill && bill.title
-                ? `<div class="agenda-bill-title">${bill.title}</div>`
+            // Title is pre-baked into agenda data by the GitHub Actions fetch
+            const titleLine = item.title
+                ? `<div class="agenda-bill-title">${item.title}</div>`
                 : '';
 
             // Testify badges

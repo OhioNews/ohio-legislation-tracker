@@ -1,5 +1,6 @@
 {
-  "fetched_at": "2026-05-12T03:06:04.673167Z",
+  "fetched_at": "2026-05-12T03:12:40.269267Z",
+  "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
     {
@@ -11,7 +12,8 @@
       "title": "Senate Ohio Retirement Study Council Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_j_orsc_1_2026-05-14-1000_1272",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": []
     },
     {
       "allDay": null,
@@ -22,7 +24,8 @@
       "title": "Senate Sunset Review Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_j_sunset_1_2026-05-13-0330_1247",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": []
     },
     {
       "allDay": null,
@@ -33,7 +36,79 @@
       "title": "Senate Education Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_s_education_1_2026-05-12-0800_1280",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb328",
+          "headline": "S. B. No. 328",
+          "status": "6th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "sb311",
+          "headline": "S. B. No. 311",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb455",
+          "headline": "Sub. H. B. No. 455",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "sb326",
+          "headline": "S. B. No. 326",
+          "status": "5th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 3
+        },
+        {
+          "id": "sb272",
+          "headline": "S. B. No. 272",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 4
+        },
+        {
+          "id": "sb127",
+          "headline": "S. B. No. 127",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 5
+        },
+        {
+          "id": "sb400",
+          "headline": "S. B. No. 400",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 6
+        }
+      ]
     },
     {
       "allDay": null,
@@ -44,7 +119,29 @@
       "title": "Senate Energy Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_s_energy_1_2026-05-12-1000_1258",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb294",
+          "headline": "S. B. No. 294",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb170",
+          "headline": "Sub. H. B. No. 170",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        }
+      ]
     },
     {
       "allDay": null,
@@ -55,7 +152,49 @@
       "title": "Senate Finance Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_s_finance_1_2026-05-12-0200_1255",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb377",
+          "headline": "S. B. No. 377",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "sb315",
+          "headline": "S. B. No. 315",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "sb120",
+          "headline": "S. B. No. 120",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "hb188",
+          "headline": "Am. H. B. No. 188",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 3
+        }
+      ]
     },
     {
       "allDay": null,
@@ -66,7 +205,89 @@
       "title": "Senate Financial Institutions, Insurance and Technology Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_s_financial_institutions_1_2026-05-12-0400_1267",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb343",
+          "headline": "S. B. No. 343",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "sb227",
+          "headline": "S. B. No. 227",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "sb337",
+          "headline": "S. B. No. 337",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "scr14",
+          "headline": "S. C. R. No. 14",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 3
+        },
+        {
+          "id": "sr261",
+          "headline": "S. R. No. 261",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 4
+        },
+        {
+          "id": "hb332",
+          "headline": "Am. H. B. No. 332",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 5
+        },
+        {
+          "id": "sb160",
+          "headline": "S. B. No. 160",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 6
+        },
+        {
+          "id": "hb21",
+          "headline": "Am. H. B. No. 21",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 7
+        }
+      ]
     },
     {
       "allDay": null,
@@ -77,7 +298,49 @@
       "title": "Senate General Government Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_s_gen_govt_1_2026-05-12-0300_1288",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb333",
+          "headline": "S. B. No. 333",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "sb351",
+          "headline": "S. B. No. 351",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "sb379",
+          "headline": "S. B. No. 379",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "sb419",
+          "headline": "S. B. No. 419",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 3
+        }
+      ]
     },
     {
       "allDay": null,
@@ -88,7 +351,19 @@
       "title": "Senate Government Oversight and Reform Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_s_govt_reform_1_2026-05-13-0945_1275",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb202",
+          "headline": "S. B. No. 202",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        }
+      ]
     },
     {
       "allDay": null,
@@ -99,7 +374,89 @@
       "title": "Senate Health Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_s_health_1_2026-05-13-1030_1285",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb198",
+          "headline": "S. B. No. 198",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "sb314",
+          "headline": "S. B. No. 314",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "sb423",
+          "headline": "S. B. No. 423",
+          "status": "1st Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "sb354",
+          "headline": "S. B. No. 354",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 3
+        },
+        {
+          "id": "hb324",
+          "headline": "Sub. H. B. No. 324",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 4
+        },
+        {
+          "id": "sb375",
+          "headline": "S. B. No. 375",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 5
+        },
+        {
+          "id": "hb162",
+          "headline": "Am. H. B. No. 162",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 6
+        },
+        {
+          "id": "hb479",
+          "headline": "Sub. H. B. No. 479",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 7
+        }
+      ]
     },
     {
       "allDay": null,
@@ -110,7 +467,109 @@
       "title": "Senate Judiciary Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_s_judiciary_1_2026-05-13-0945_1283",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb105",
+          "headline": "Sub. H. B. No. 105",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "sb422",
+          "headline": "S. B. No. 422",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "sb135",
+          "headline": "S. B. No. 135",
+          "status": "5th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "sb157",
+          "headline": "S. B. No. 157",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 3
+        },
+        {
+          "id": "sb163",
+          "headline": "S. B. No. 163",
+          "status": "6th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 4
+        },
+        {
+          "id": "sb277",
+          "headline": "S. B. No. 277",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 5
+        },
+        {
+          "id": "sb341",
+          "headline": "S. B. No. 341",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 6
+        },
+        {
+          "id": "hb126",
+          "headline": "Sub. H. B. No. 126",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 7
+        },
+        {
+          "id": "sb58",
+          "headline": "S. B. No. 58",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 8
+        },
+        {
+          "id": "sb393",
+          "headline": "S. B. No. 393",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 9
+        }
+      ]
     },
     {
       "allDay": null,
@@ -121,7 +580,49 @@
       "title": "Senate Local Government Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_s_local_govt_1_2026-05-13-0230_1266",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb281",
+          "headline": "S. B. No. 281",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "sb376",
+          "headline": "S. B. No. 376",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "sb366",
+          "headline": "S. B. No. 366",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "hb428",
+          "headline": "Am. H. B. No. 428",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 3
+        }
+      ]
     },
     {
       "allDay": null,
@@ -132,7 +633,19 @@
       "title": "Senate Public Utilities Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_s_pub_utilities_1_2026-05-13-0900_1282",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb173",
+          "headline": "Sub. H. B. No. 173",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        }
+      ]
     },
     {
       "allDay": null,
@@ -143,7 +656,8 @@
       "title": "Senate Rules and Reference Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_s_rules_ref_1_2026-05-13-1130_1265",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": []
     },
     {
       "allDay": null,
@@ -154,7 +668,29 @@
       "title": "Senate Small Business and Economic Opportunity Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_s_small_business_1_2026-05-13-0315_1256",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb348",
+          "headline": "S. B. No. 348",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "sb23",
+          "headline": "S. B. No. 23",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        }
+      ]
     },
     {
       "allDay": null,
@@ -165,7 +701,49 @@
       "title": "Senate Transportation Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_s_trans_1_2026-05-13-1030_1257",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb37",
+          "headline": "H. B. No. 37",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "hb541",
+          "headline": "H. B. No. 541",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "sb358",
+          "headline": "S. B. No. 358",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "hb258",
+          "headline": "Sub. H. B. No. 258",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 3
+        }
+      ]
     },
     {
       "allDay": null,
@@ -176,7 +754,39 @@
       "title": "Senate Ways and Means Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_s_wm_1_2026-05-12-1100_1251",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb367",
+          "headline": "S. B. No. 367",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "sb285",
+          "headline": "S. B. No. 285",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "sb307",
+          "headline": "S. B. No. 307",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 2
+        }
+      ]
     },
     {
       "allDay": null,
@@ -187,7 +797,39 @@
       "title": "Senate Workforce Development Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_s_workforce_dev_1_2026-05-12-1100_1279",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb292",
+          "headline": "Sub. H. B. No. 292",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "sb331",
+          "headline": "S. B. No. 331",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb268",
+          "headline": "H. B. No. 268",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 2
+        }
+      ]
     },
     {
       "allDay": null,
@@ -198,7 +840,39 @@
       "title": "House Agriculture Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_h_agriculture_1_2026-05-13-1130_1264",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb733",
+          "headline": "H. B. No. 733",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "hb664",
+          "headline": "H. B. No. 664",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "hb163",
+          "headline": "H. B. No. 163",
+          "status": "5th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 2
+        }
+      ]
     },
     {
       "allDay": null,
@@ -209,7 +883,39 @@
       "title": "House Children and Human Services Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_h_children_human_services_1_2026-05-12-1030_1274",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb647",
+          "headline": "H. B. No. 647",
+          "status": "7th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb742",
+          "headline": "H. B. No. 742",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "hb635",
+          "headline": "H. B. No. 635",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 2
+        }
+      ]
     },
     {
       "allDay": null,
@@ -220,7 +926,29 @@
       "title": "House Community Revitalization Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_h_community_revitalization_1_2026-05-12-1000_1284",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb758",
+          "headline": "H. B. No. 758",
+          "status": "1st Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "hb585",
+          "headline": "H. B. No. 585",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        }
+      ]
     },
     {
       "allDay": null,
@@ -231,7 +959,19 @@
       "title": "House Development Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_h_development_1_2026-05-13-0945_1268",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb765",
+          "headline": "H. B. No. 765",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        }
+      ]
     },
     {
       "allDay": null,
@@ -242,7 +982,39 @@
       "title": "House Education Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_h_education_1_2026-05-12-0215_1270",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb19",
+          "headline": "Sub. S. B. No. 19",
+          "status": "5th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "sb276",
+          "headline": "Am. S. B. No. 276",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "sb7",
+          "headline": "Sub. S. B. No. 7",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 2
+        }
+      ]
     },
     {
       "allDay": null,
@@ -253,7 +1025,19 @@
       "title": "House Energy Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_h_energy_1_2026-05-13-0300_1269",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb106",
+          "headline": "Sub. S. B. No. 106",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        }
+      ]
     },
     {
       "allDay": null,
@@ -264,7 +1048,39 @@
       "title": "House Finance Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_h_finance_1_2026-05-12-1100_1253",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb413",
+          "headline": "Am. H. B. No. 413",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "hb645",
+          "headline": "H. B. No. 645",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hcr32",
+          "headline": "H. C. R. No. 32",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 2
+        }
+      ]
     },
     {
       "allDay": null,
@@ -275,7 +1091,29 @@
       "title": "House Financial Institutions Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_h_financial_institutions_1_2026-05-13-0300_1262",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb560",
+          "headline": "H. B. No. 560",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb648",
+          "headline": "H. B. No. 648",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        }
+      ]
     },
     {
       "allDay": null,
@@ -286,7 +1124,39 @@
       "title": "House Health Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_h_health_1_2026-05-13-1000_1276",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb423",
+          "headline": "H. B. No. 423",
+          "status": "5th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb525",
+          "headline": "H. B. No. 525",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "hb692",
+          "headline": "H. B. No. 692",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 2
+        }
+      ]
     },
     {
       "allDay": null,
@@ -297,7 +1167,59 @@
       "title": "House Insurance Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_h_insurance_1_2026-05-12-0930_1263",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb724",
+          "headline": "H. B. No. 724",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "hb757",
+          "headline": "H. B. No. 757",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "hb589",
+          "headline": "H. B. No. 589",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "hb652",
+          "headline": "H. B. No. 652",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 3
+        },
+        {
+          "id": "hb24",
+          "headline": "H. B. No. 24",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 4
+        }
+      ]
     },
     {
       "allDay": null,
@@ -308,7 +1230,109 @@
       "title": "House Judiciary Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_h_judiciary_1_2026-05-13-1100_1261",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb226",
+          "headline": "H. B. No. 226",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb302",
+          "headline": "H. B. No. 302",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "sb262",
+          "headline": "S. B. No. 262",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "sb61",
+          "headline": "Sub. S. B. No. 61",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 3
+        },
+        {
+          "id": "sb174",
+          "headline": "Sub. S. B. No. 174",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 4
+        },
+        {
+          "id": "hb509",
+          "headline": "H. B. No. 509",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 5
+        },
+        {
+          "id": "hb741",
+          "headline": "H. B. No. 741",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 6
+        },
+        {
+          "id": "hb720",
+          "headline": "H. B. No. 720",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 7
+        },
+        {
+          "id": "hb611",
+          "headline": "H. B. No. 611",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 8
+        },
+        {
+          "id": "hb528",
+          "headline": "H. B. No. 528",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 9
+        }
+      ]
     },
     {
       "allDay": null,
@@ -319,7 +1343,49 @@
       "title": "House Local Government Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_h_local_govt_1_2026-05-13-0900_1281",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb744",
+          "headline": "H. B. No. 744",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "hb493",
+          "headline": "H. B. No. 493",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb639",
+          "headline": "H. B. No. 639",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "hb445",
+          "headline": "H. B. No. 445",
+          "status": "2nd Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 3
+        }
+      ]
     },
     {
       "allDay": null,
@@ -330,7 +1396,19 @@
       "title": "House Medicaid Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_h_medicaid_1_2026-05-12-0400_1273",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb581",
+          "headline": "H. B. No. 581",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        }
+      ]
     },
     {
       "allDay": null,
@@ -341,7 +1419,8 @@
       "title": "House Rules and Reference Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_h_rules_ref_1_2026-05-13-0800_1227",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": []
     },
     {
       "allDay": null,
@@ -352,7 +1431,39 @@
       "title": "House Technology and Innovation Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_h_tech_innovation_1_2026-05-12-1000_1278",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb505",
+          "headline": "H. B. No. 505",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb563",
+          "headline": "H. B. No. 563",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb185",
+          "headline": "H. B. No. 185",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 2
+        }
+      ]
     },
     {
       "allDay": null,
@@ -363,7 +1474,119 @@
       "title": "House Transportation Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_h_trans_1_2026-05-12-0330_1252",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb580",
+          "headline": "H. B. No. 580",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "hb436",
+          "headline": "H. B. No. 436",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "hb451",
+          "headline": "H. B. No. 451",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "hb497",
+          "headline": "H. B. No. 497",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 3
+        },
+        {
+          "id": "hb551",
+          "headline": "H. B. No. 551",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 4
+        },
+        {
+          "id": "hb651",
+          "headline": "H. B. No. 651",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 5
+        },
+        {
+          "id": "hb681",
+          "headline": "H. B. No. 681",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 6
+        },
+        {
+          "id": "hb729",
+          "headline": "H. B. No. 729",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 7
+        },
+        {
+          "id": "hb738",
+          "headline": "H. B. No. 738",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 8
+        },
+        {
+          "id": "hb764",
+          "headline": "H. B. No. 764",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 9
+        },
+        {
+          "id": "hb463",
+          "headline": "H. B. No. 463",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 10
+        }
+      ]
     },
     {
       "allDay": null,
@@ -374,7 +1597,29 @@
       "title": "House Veterans and Military Development Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_h_vets_military_dev_1_2026-05-13-1030_1287",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb179",
+          "headline": "S. B. No. 179",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb788",
+          "headline": "H. B. No. 788",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        }
+      ]
     },
     {
       "allDay": null,
@@ -385,7 +1630,49 @@
       "title": "House Ways and Means Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_h_wm_1_2026-05-13-1130_1286",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb608",
+          "headline": "H. B. No. 608",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "hb778",
+          "headline": "H. B. No. 778",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "hb737",
+          "headline": "H. B. No. 737",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "hb504",
+          "headline": "H. B. No. 504",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 3
+        }
+      ]
     },
     {
       "allDay": null,
@@ -396,7 +1683,29 @@
       "title": "House Workforce and Higher Education Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_h_workforce_higher_ed_1_2026-05-12-1000_1277",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb666",
+          "headline": "H. B. No. 666",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb698",
+          "headline": "H. B. No. 698",
+          "status": "2nd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        }
+      ]
     },
     {
       "allDay": null,
@@ -407,7 +1716,8 @@
       "title": "House Joint Committee on Agency Rule Review Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_j_jcarr_1_2026-05-11-0130_1250",
-      "status": "Scheduled"
+      "status": "Scheduled",
+      "agenda_items": []
     }
   ]
 }

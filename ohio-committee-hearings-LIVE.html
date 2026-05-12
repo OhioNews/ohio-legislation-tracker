@@ -771,6 +771,7 @@
                     : 'recently';
                 updateLastUpdate('Cached ' + cacheDate);
                 populateCommitteeFilter();
+                enrichWithAgendaItems(); // fetch agenda items live even when calendar is from cache
                 return;
             } catch (cacheError) {
                 console.error('Both live and cached data failed:', cacheError);
@@ -961,7 +962,7 @@
                         }
                     </div>
 
-                    ${billsSection}
+                    ${hearing.agenda_items && hearing.agenda_items.length > 0 ? '' : billsSection}
 
                     <div class="testify-section">
                         <div class="testify-header">Want to Testify? ${testimonyDeadline}</div>

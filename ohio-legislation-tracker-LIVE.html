@@ -834,6 +834,26 @@
             color: #6b7280;
             border: 1px solid #d1d5db;
         }
+
+        .load-more-bar {
+            padding: 24px 32px;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+        .load-more-btn {
+            padding: 12px 28px;
+            background: white;
+            border: 2px solid var(--signal-dark);
+            color: var(--signal-dark);
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            min-height: 44px;
+        }
+        .load-more-btn:hover { background: var(--signal-dark); color: white; }
+        .load-more-count { margin-top: 8px; font-size: 13px; color: var(--text-light); }
     </style>
 </head>
 <body>
@@ -950,6 +970,10 @@
         const DATA_FILE_PATH = 'ohio_legislation_data/bills.json';
         const DAYS_FOR_NEW = 7; // Show as "new" if activity within this many days
 
+        // Pagination
+        const PAGE_SIZE = 50;
+        let visibleCount = PAGE_SIZE;
+
         // State management
         let allBills = [];
         let filteredBills = [];
@@ -1040,7 +1064,7 @@
             subjectFilter.addEventListener('change', handleFilterChange);
             committeeFilter.addEventListener('change', handleFilterChange);
             sponsorFilter.addEventListener('change', handleFilterChange);
-            sortSelect.addEventListener('change', (e) => { currentFilters.sort = e.target.value; updateDisplay(); });
+            sortSelect.addEventListener('change', (e) => { currentFilters.sort = e.target.value; visibleCount = PAGE_SIZE; updateDisplay(); });
             advancedToggle.addEventListener('click', toggleAdvancedFilters);
         }
 
@@ -1069,6 +1093,7 @@
 
         // Clear all active filters
         function clearAllFilters() {
+            visibleCount = PAGE_SIZE;
             currentFilters.search = '';
             currentFilters.chamber = 'all';
             currentFilters.status = 'all';
@@ -1097,6 +1122,7 @@
 
         // Apply all filters
         function applyFilters() {
+            visibleCount = PAGE_SIZE; // Reset to first page when filters change
             filteredBills = allBills.filter(bill => {
                 if (currentFilters.search) {
                     const searchTerm = currentFilters.search;
@@ -1290,7 +1316,22 @@
                 return 0;
             });
 
-            billsList.innerHTML = sortedBills.map(bill => createBillHTML(bill)).join('');
+            const page = sortedBills.slice(0, visibleCount);
+            const remaining = sortedBills.length - visibleCount;
+
+            const loadMoreHTML = remaining > 0 ? `
+                <div class="load-more-bar">
+                    <button class="load-more-btn" onclick="loadMoreBills()">Load ${Math.min(remaining, PAGE_SIZE)} more bills</button>
+                    <div class="load-more-count">Showing ${page.length} of ${sortedBills.length} bills</div>
+                </div>
+            ` : '';
+
+            billsList.innerHTML = page.map(bill => createBillHTML(bill)).join('') + loadMoreHTML;
+        }
+
+        function loadMoreBills() {
+            visibleCount += PAGE_SIZE;
+            updateDisplay();
         }
 
         // Create progress bar HTML

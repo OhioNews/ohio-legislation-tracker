@@ -1081,7 +1081,7 @@
                 
                 allBills = bills;
                 filteredBills = allBills;
-                updateDisplay();
+                applyFilters();
                 const lastModified = response.headers.get('Last-Modified');
                 updateLastUpdate(lastModified ? new Date(lastModified) : null);
                 populateCommitteeFilter();

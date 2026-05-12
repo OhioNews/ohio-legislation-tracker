@@ -1126,8 +1126,8 @@
             billsById.clear();
             bills.forEach(bill => {
                 // Index by normalized bill number ("HB 504" -> "hb504") for agenda cross-reference
-                if (bill.bill_number) {
-                    const id = bill.bill_number.toLowerCase().replace(/\s+/g, '');
+                if (bill.number) {
+                    const id = bill.number.toLowerCase().replace(/\s+/g, '');
                     billsById.set(id, bill);
                 }
                 const committee = (bill.committee || '').trim();

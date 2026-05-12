@@ -989,12 +989,13 @@
         const DATA_FILE_PATH = 'ohio_legislation_data/bills.json';
         const DAYS_FOR_NEW = 7; // Show as "new" if activity within this many days
 
-        // Detect legislation type from bill number prefix
+        // Detect legislation type from bill number prefix (handles both "HR4" and "HB 5" formats)
         function getBillType(number) {
-            const prefix = (number || '').split(' ')[0].toUpperCase();
-            if (prefix === 'HJR' || prefix === 'SJR') return 'joint-resolution';
-            if (prefix === 'HCR' || prefix === 'SCR') return 'concurrent-resolution';
-            if (prefix === 'HR'  || prefix === 'SR')  return 'simple-resolution';
+            const m = (number || '').match(/^([A-Za-z]+)/);
+            const p = m ? m[1].toUpperCase() : '';
+            if (p === 'HJR' || p === 'SJR') return 'joint-resolution';
+            if (p === 'HCR' || p === 'SCR') return 'concurrent-resolution';
+            if (p === 'HR'  || p === 'SR')  return 'simple-resolution';
             return 'bill';
         }
 

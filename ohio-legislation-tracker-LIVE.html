@@ -553,6 +553,16 @@
             color: var(--signal-dark);
         }
 
+        .badge-resolution {
+            background: #e0f2fe;
+            color: #0369a1;
+        }
+
+        .badge-ballot {
+            background: #ede9fe;
+            color: #5b21b6;
+        }
+
         @keyframes pulse {
             0%, 100% { opacity: 1; }
             50% { opacity: 0.7; }
@@ -836,6 +846,14 @@
             border: 1px solid #d1d5db;
         }
 
+        .progress-subtitle {
+            font-weight: 400;
+            color: var(--text-light);
+            text-transform: none;
+            letter-spacing: 0;
+            font-size: 11px;
+        }
+
         .load-more-bar {
             padding: 24px 32px;
             text-align: center;
@@ -970,6 +988,15 @@
         const PRIORITY_BILLS = ['HB 1', 'SB 5'];
         const DATA_FILE_PATH = 'ohio_legislation_data/bills.json';
         const DAYS_FOR_NEW = 7; // Show as "new" if activity within this many days
+
+        // Detect legislation type from bill number prefix
+        function getBillType(number) {
+            const prefix = (number || '').split(' ')[0].toUpperCase();
+            if (prefix === 'HJR' || prefix === 'SJR') return 'joint-resolution';
+            if (prefix === 'HCR' || prefix === 'SCR') return 'concurrent-resolution';
+            if (prefix === 'HR'  || prefix === 'SR')  return 'simple-resolution';
+            return 'bill';
+        }
 
         // Pagination
         const PAGE_SIZE = 50;
@@ -1335,35 +1362,83 @@
             updateDisplay();
         }
 
-        // Create progress bar HTML
-        function createProgressBar(status) {
+        // Create progress bar HTML — four tracks depending on legislation type
+        function createProgressBar(status, billType) {
+            const isResolution = billType !== 'bill';
+
             if (status === 'vetoed') {
                 return `<div class="progress-container"><div class="progress-title">Bill Progress</div>
                     <div class="progress-terminal vetoed">🚫 Vetoed by Governor — Bill did not become law</div></div>`;
             }
             if (status === 'failed') {
-                return `<div class="progress-container"><div class="progress-title">Bill Progress</div>
-                    <div class="progress-terminal failed">✗ Did not pass — Bill failed or was withdrawn</div></div>`;
+                const label = isResolution ? 'Resolution Progress' : 'Bill Progress';
+                const noun  = isResolution ? 'Resolution' : 'Bill';
+                return `<div class="progress-container"><div class="progress-title">${label}</div>
+                    <div class="progress-terminal failed">✗ Did not pass — ${noun} failed or was withdrawn</div></div>`;
             }
 
-            const steps = [
-                { key: 'introduced', label: 'Introduced', icon: '📄' },
-                { key: 'in-committee', label: 'Committee', icon: '👥' },
-                { key: 'passed-chamber', label: 'Passed One', icon: '✓' },
-                { key: 'passed', label: 'Passed Both', icon: '✓✓' },
-                { key: 'governor', label: 'Governor', icon: '🖊️' }
-            ];
+            let steps, statusOrder, titleText, subtitle;
 
-            const statusOrder = ['introduced', 'in-committee', 'passed-chamber', 'passed', 'governor'];
+            if (billType === 'joint-resolution') {
+                titleText  = 'Ballot Measure Progress';
+                subtitle   = 'Goes to Ohio voters if adopted by both chambers';
+                steps      = [
+                    { key: 'introduced',    label: 'Introduced',   icon: '📄' },
+                    { key: 'in-committee',  label: 'Committee',    icon: '👥' },
+                    { key: 'passed-chamber',label: 'Adopted One',  icon: '✓'  },
+                    { key: 'passed',        label: 'Adopted Both', icon: '✓✓' },
+                    { key: 'governor',      label: 'On Ballot',    icon: '🗳️' }
+                ];
+                statusOrder = ['introduced', 'in-committee', 'passed-chamber', 'passed', 'governor'];
+
+            } else if (billType === 'concurrent-resolution') {
+                titleText  = 'Resolution Progress';
+                subtitle   = 'Does not become law';
+                steps      = [
+                    { key: 'introduced',    label: 'Introduced',   icon: '📄' },
+                    { key: 'in-committee',  label: 'Committee',    icon: '👥' },
+                    { key: 'passed-chamber',label: 'Adopted One',  icon: '✓'  },
+                    { key: 'passed',        label: 'Adopted Both', icon: '✓✓' }
+                ];
+                statusOrder = ['introduced', 'in-committee', 'passed-chamber', 'passed'];
+
+            } else if (billType === 'simple-resolution') {
+                titleText  = 'Resolution Progress';
+                subtitle   = 'Does not become law';
+                steps      = [
+                    { key: 'introduced',   label: 'Introduced', icon: '📄' },
+                    { key: 'in-committee', label: 'Committee',  icon: '👥' },
+                    { key: 'passed',       label: 'Adopted',    icon: '✓'  }
+                ];
+                // passed-chamber is procedurally the same as passed for single-chamber resolutions
+                status      = status === 'passed-chamber' ? 'passed' : status;
+                statusOrder = ['introduced', 'in-committee', 'passed'];
+
+            } else {
+                titleText  = 'Bill Progress';
+                subtitle   = null;
+                steps      = [
+                    { key: 'introduced',    label: 'Introduced',  icon: '📄' },
+                    { key: 'in-committee',  label: 'Committee',   icon: '👥' },
+                    { key: 'passed-chamber',label: 'Passed One',  icon: '✓'  },
+                    { key: 'passed',        label: 'Passed Both', icon: '✓✓' },
+                    { key: 'governor',      label: 'Governor',    icon: '🖊️' }
+                ];
+                statusOrder = ['introduced', 'in-committee', 'passed-chamber', 'passed', 'governor'];
+            }
+
             const currentIndex = statusOrder.indexOf(status);
+            const titleHTML = subtitle
+                ? `<div class="progress-title">${titleText} — <span class="progress-subtitle">${subtitle}</span></div>`
+                : `<div class="progress-title">${titleText}</div>`;
 
-            let html = '<div class="progress-container"><div class="progress-title">Bill Progress</div><div class="progress-bar">';
+            let html = `<div class="progress-container">${titleHTML}<div class="progress-bar">`;
 
             steps.forEach((step, index) => {
-                const isActive = index < currentIndex;
+                const isActive  = index < currentIndex;
                 const isCurrent = index === currentIndex;
-                const dotClass = isCurrent ? 'current' : (isActive ? 'active' : '');
-                const labelClass = (isActive || isCurrent) ? 'active' : '';
+                const dotClass       = isCurrent ? 'current' : (isActive ? 'active' : '');
+                const labelClass     = (isActive || isCurrent) ? 'active' : '';
                 const connectorClass = isActive ? 'active' : '';
 
                 html += `
@@ -1384,31 +1459,40 @@
             const isPriority = PRIORITY_BILLS.includes(bill.number);
             const isNew = !isInNewSection && isNewThisWeek(bill);
             const chamberText = bill.chamber === 'house' ? 'House' : 'Senate';
+            const billType = getBillType(bill.number);
             const descId = `desc-${bill.number.replace(/\s+/g, '-')}`;
             const billId = `bill-${bill.number.replace(/\s+/g, '-')}`;
-            
+
+            let typeBadge = '';
+            if (billType === 'joint-resolution') {
+                typeBadge = '<span class="badge badge-ballot">Proposed Ballot Measure</span>';
+            } else if (billType === 'concurrent-resolution' || billType === 'simple-resolution') {
+                typeBadge = '<span class="badge badge-resolution">Resolution</span>';
+            }
+
             // Show toggle if there's any description
             const hasDescription = bill.description && bill.description.trim().length > 0;
-            
+
             return `
-                <div class="bill-item ${isPriority ? 'highlighted' : ''} ${isInNewSection ? 'new-this-week-item' : ''}" id="${billId}">>
+                <div class="bill-item ${isPriority ? 'highlighted' : ''} ${isInNewSection ? 'new-this-week-item' : ''}" id="${billId}">
                     <div class="bill-header">
                         <a href="${bill.url}" target="_blank" class="bill-number">${bill.number}</a>
                         <div class="bill-badges">
                             ${isPriority ? '<span class="badge badge-priority">⭐ PRIORITY</span>' : ''}
                             ${isNew ? '<span class="badge badge-new">🆕 NEW</span>' : ''}
                             <span class="badge badge-chamber">${chamberText}</span>
+                            ${typeBadge}
                         </div>
                     </div>
-                    
+
                     <h3 class="bill-title">${bill.title}</h3>
                     ${hasDescription ? `
                         <button class="description-toggle" onclick="toggleDescription('${descId}', this)">Read more ▼</button>
                         <p class="bill-description collapsed" id="${descId}">${bill.description}</p>
                     ` : ''}
-                    
-                    ${createProgressBar(bill.status)}
-                    
+
+                    ${createProgressBar(bill.status, billType)}
+
                     <div class="bill-meta">
                         <div class="meta-item">
                             <span class="meta-label">Sponsor:</span>

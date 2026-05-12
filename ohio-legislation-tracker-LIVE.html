@@ -783,6 +783,57 @@
             border-left: 4px solid #f00;
             color: #600;
         }
+
+        .header-nav {
+            margin-top: 10px;
+        }
+        .header-nav a {
+            color: var(--signal-yellow);
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            opacity: 0.9;
+        }
+        .header-nav a:hover { opacity: 1; text-decoration: underline; }
+
+        .clear-filters-btn {
+            background: none;
+            border: 2px solid var(--signal-dark);
+            color: var(--signal-dark);
+            padding: 10px 16px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            min-height: 44px;
+            display: none;
+            align-items: center;
+        }
+        .clear-filters-btn.visible { display: inline-flex; }
+        .clear-filters-btn:hover { background: var(--signal-dark); color: white; }
+        @media (max-width: 768px) {
+            .clear-filters-btn { width: 100%; justify-content: center; padding: 12px; font-size: 16px; }
+        }
+
+        .progress-terminal {
+            padding: 12px 16px;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 16px;
+        }
+        .progress-terminal.vetoed {
+            background: #fee2e2;
+            color: #991b1b;
+            border: 1px solid #fca5a5;
+        }
+        .progress-terminal.failed {
+            background: #f3f4f6;
+            color: #6b7280;
+            border: 1px solid #d1d5db;
+        }
     </style>
 </head>
 <body>
@@ -791,6 +842,7 @@
             <h1>Ohio Legislation Tracker</h1>
             <p>136th General Assembly (2025-2026) • Powered by Signal Ohio</p>
             <p class="data-attribution">Data provided by LegiScan</p>
+            <p class="header-nav"><a href="ohio-committee-hearings-LIVE.html">Committee Hearings →</a> &nbsp;·&nbsp; <a href="index.html">← All Tools</a></p>
         </div>
 
         <div class="search-section">
@@ -833,9 +885,20 @@
                     </select>
                 </div>
 
+                <div class="filter-group">
+                    <label for="sortSelect">Sort:</label>
+                    <select id="sortSelect" class="filter-select">
+                        <option value="priority">Priority first</option>
+                        <option value="recent">Most recent activity</option>
+                        <option value="number">Bill number</option>
+                        <option value="status">Status</option>
+                    </select>
+                </div>
+
                 <button class="advanced-toggle" id="advancedToggle">
                     Advanced Filters ▼
                 </button>
+                <button class="clear-filters-btn" id="clearFiltersBtn" onclick="clearAllFilters()">✕ Clear filters</button>
             </div>
 
             <div class="advanced-filters" id="advancedFilters">
@@ -844,12 +907,6 @@
                         <label for="subjectFilter">Subject:</label>
                         <select id="subjectFilter" class="filter-select">
                             <option value="all">All Subjects</option>
-                            <option value="education">Education</option>
-                            <option value="healthcare">Healthcare</option>
-                            <option value="budget">Budget & Taxation</option>
-                            <option value="environment">Environment</option>
-                            <option value="transportation">Transportation</option>
-                            <option value="criminal-justice">Criminal Justice</option>
                         </select>
                     </div>
 
@@ -903,7 +960,8 @@
             status: 'all',
             subject: 'all',
             committee: 'all',
-            sponsor: 'all'
+            sponsor: 'all',
+            sort: 'priority'
         };
 
         // DOM elements
@@ -922,6 +980,8 @@
         const lastUpdate = document.getElementById('lastUpdate');
         const newThisWeekSection = document.getElementById('newThisWeekSection');
         const newThisWeekList = document.getElementById('newThisWeekList');
+        const sortSelect = document.getElementById('sortSelect');
+        const clearFiltersBtn = document.getElementById('clearFiltersBtn');
 
         // Initialize
         function init() {
@@ -947,9 +1007,11 @@
                 allBills = bills;
                 filteredBills = allBills;
                 updateDisplay();
-                updateLastUpdate();
+                const lastModified = response.headers.get('Last-Modified');
+                updateLastUpdate(lastModified ? new Date(lastModified) : null);
                 populateCommitteeFilter();
                 populateSponsorFilter();
+                populateSubjectFilter();
                 displayNewThisWeek();
                 
             } catch (error) {
@@ -978,6 +1040,7 @@
             subjectFilter.addEventListener('change', handleFilterChange);
             committeeFilter.addEventListener('change', handleFilterChange);
             sponsorFilter.addEventListener('change', handleFilterChange);
+            sortSelect.addEventListener('change', (e) => { currentFilters.sort = e.target.value; updateDisplay(); });
             advancedToggle.addEventListener('click', toggleAdvancedFilters);
         }
 
@@ -1001,6 +1064,27 @@
         function handleFilterChange(e) {
             const filterId = e.target.id.replace('Filter', '');
             currentFilters[filterId] = e.target.value;
+            applyFilters();
+        }
+
+        // Clear all active filters
+        function clearAllFilters() {
+            currentFilters.search = '';
+            currentFilters.chamber = 'all';
+            currentFilters.status = 'all';
+            currentFilters.subject = 'all';
+            currentFilters.committee = 'all';
+            currentFilters.sponsor = 'all';
+
+            searchInput.value = '';
+            chamberFilter.value = 'all';
+            statusFilter.value = 'all';
+            subjectFilter.value = 'all';
+            committeeFilter.value = 'all';
+            sponsorFilter.value = 'all';
+
+            searchFeedback.className = 'search-feedback';
+            clearFiltersBtn.classList.remove('visible');
             applyFilters();
         }
 
@@ -1070,6 +1154,15 @@
                 // Hide feedback when search is empty
                 searchFeedback.className = 'search-feedback';
             }
+
+            // Show clear button when any filter is active
+            const hasActiveFilters = currentFilters.search ||
+                currentFilters.chamber !== 'all' ||
+                currentFilters.status !== 'all' ||
+                currentFilters.subject !== 'all' ||
+                currentFilters.committee !== 'all' ||
+                currentFilters.sponsor !== 'all';
+            clearFiltersBtn.classList.toggle('visible', !!hasActiveFilters);
 
             updateDisplay();
         }
@@ -1179,9 +1272,21 @@
             const sortedBills = [...filteredBills].sort((a, b) => {
                 const aIsPriority = PRIORITY_BILLS.includes(a.number);
                 const bIsPriority = PRIORITY_BILLS.includes(b.number);
-                
-                if (aIsPriority && !bIsPriority) return -1;
-                if (!aIsPriority && bIsPriority) return 1;
+
+                if (currentFilters.sort === 'priority') {
+                    if (aIsPriority && !bIsPriority) return -1;
+                    if (!aIsPriority && bIsPriority) return 1;
+                    return 0;
+                } else if (currentFilters.sort === 'recent') {
+                    return (b.last_action_date || '').localeCompare(a.last_action_date || '');
+                } else if (currentFilters.sort === 'number') {
+                    if (a.chamber !== b.chamber) return a.chamber.localeCompare(b.chamber);
+                    const num = s => { const m = s.match(/(\d+)/); return m ? parseInt(m[1]) : 0; };
+                    return num(a.number) - num(b.number);
+                } else if (currentFilters.sort === 'status') {
+                    const order = ['introduced', 'in-committee', 'passed-chamber', 'passed', 'governor', 'vetoed', 'failed'];
+                    return order.indexOf(a.status) - order.indexOf(b.status);
+                }
                 return 0;
             });
 
@@ -1190,6 +1295,15 @@
 
         // Create progress bar HTML
         function createProgressBar(status) {
+            if (status === 'vetoed') {
+                return `<div class="progress-container"><div class="progress-title">Bill Progress</div>
+                    <div class="progress-terminal vetoed">🚫 Vetoed by Governor — Bill did not become law</div></div>`;
+            }
+            if (status === 'failed') {
+                return `<div class="progress-container"><div class="progress-title">Bill Progress</div>
+                    <div class="progress-terminal failed">✗ Did not pass — Bill failed or was withdrawn</div></div>`;
+            }
+
             const steps = [
                 { key: 'introduced', label: 'Introduced', icon: '📄' },
                 { key: 'in-committee', label: 'Committee', icon: '👥' },
@@ -1198,7 +1312,7 @@
                 { key: 'governor', label: 'Governor', icon: '🖊️' }
             ];
 
-            const statusOrder = ['introduced', 'in-committee', 'passed-chamber', 'passed', 'vetoed', 'failed'];
+            const statusOrder = ['introduced', 'in-committee', 'passed-chamber', 'passed', 'governor'];
             const currentIndex = statusOrder.indexOf(status);
 
             let html = '<div class="progress-container"><div class="progress-title">Bill Progress</div><div class="progress-bar">';
@@ -1289,15 +1403,16 @@
             });
         }
 
-        // Update last update timestamp
-        function updateLastUpdate() {
-            const now = new Date();
-            lastUpdate.textContent = now.toLocaleDateString('en-US', { 
-                month: 'short', 
-                day: 'numeric', 
-                year: 'numeric',
-                hour: 'numeric',
-                minute: '2-digit'
+        // Update last update timestamp from data file, not page load time
+        function updateLastUpdate(date) {
+            if (!date) {
+                const dates = allBills.map(b => b.last_action_date).filter(Boolean);
+                date = dates.length ? new Date(Math.max(...dates.map(d => new Date(d)))) : new Date();
+            }
+            lastUpdate.textContent = date.toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric'
             });
         }
 
@@ -1322,6 +1437,18 @@
 
             sponsorFilter.innerHTML = '<option value="all">All Sponsors</option>' +
                 sponsors.map(sponsor => `<option value="${sponsor}">${sponsor}</option>`).join('');
+        }
+
+        // Populate subject filter from actual bill data
+        function populateSubjectFilter() {
+            const subjects = [...new Set(
+                allBills.map(bill => bill.subject).filter(s => s)
+            )].sort();
+
+            if (subjects.length === 0) return;
+
+            subjectFilter.innerHTML = '<option value="all">All Subjects</option>' +
+                subjects.map(s => `<option value="${s}">${s}</option>`).join('');
         }
 
         // Translate legislative jargon to plain language

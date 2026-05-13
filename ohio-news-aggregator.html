@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ohio News Digest — Signal Ohio</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23f4c913'/><text x='16' y='23' font-family='system-ui,sans-serif' font-size='15' font-weight='700' fill='%23404f54' text-anchor='middle'>OH</text></svg>">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #f5f5f5;
+  color: #1a1a1a;
+  min-height: 100vh;
+}
+
+header {
+  background: #404f54;
+  border-bottom: 4px solid #f4c913;
+  padding: 16px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+header h1 {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+#updated {
+  color: rgba(255,255,255,0.6);
+  font-size: 0.75rem;
+  white-space: nowrap;
+}
+
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.8);
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.filter-btn.active {
+  background: #f4c913;
+  border-color: #f4c913;
+  color: #404f54;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 0 40px 0;
+}
+
+.day-section { margin-top: 0; }
+
+.day-header {
+  background: #e8e8e8;
+  padding: 6px 20px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #666;
+  text-transform: uppercase;
+  position: sticky;
+  top: 97px;
+  z-index: 5;
+}
+
+.story-item {
+  background: white;
+  border-bottom: 1px solid #efefef;
+  padding: 14px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.story-item:hover { background: #fafafa; }
+
+.story-main { flex: 1; min-width: 0; }
+
+.story-meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
+}
+
+.source-badge {
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 7px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.story-time {
+  font-size: 0.72rem;
+  color: #999;
+}
+
+.story-title {
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: #1a1a1a;
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+}
+
+.story-title:hover { color: #404f54; text-decoration: underline; }
+
+.flag-btn {
+  background: none;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  padding: 6px 8px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: #bbb;
+  flex-shrink: 0;
+  line-height: 1;
+  transition: all 0.15s;
+  margin-top: 1px;
+}
+
+.flag-btn:hover {
+  background: #fff7e6;
+  border-color: #f4c913;
+  color: #b8860b;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.stats-bar {
+  background: #404f54;
+  color: rgba(255,255,255,0.5);
+  font-size: 0.72rem;
+  padding: 6px 20px;
+  text-align: center;
+}
+
+/* Source badge colors */
+.src-ocj      { background: #dbeafe; color: #1e40af; }
+.src-blade    { background: #f3f4f6; color: #374151; }
+.src-richland { background: #d1fae5; color: #065f46; }
+.src-nbc4i    { background: #fee2e2; color: #991b1b; }
+.src-spectrum { background: #ede9fe; color: #5b21b6; }
+.src-rooster  { background: #ffedd5; color: #9a3412; }
+.src-bf       { background: #ccfbf1; color: #134e4a; }
+.src-wcpo     { background: #fce7f3; color: #9d174d; }
+.src-google   { background: #f3f4f6; color: #6b7280; }
+
+@media (max-width: 480px) {
+  .story-item { padding: 12px 16px; }
+  .day-header { padding: 6px 16px; top: 93px; }
+  header { padding: 14px 16px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-top">
+    <h1>Ohio News Digest</h1>
+    <span id="updated">Loading...</span>
+  </div>
+  <div class="filter-bar">
+    <button class="filter-btn active" onclick="setFilter('all', this)">All</button>
+    <button class="filter-btn" onclick="setFilter('Ohio Capital Journal', this)">OCJ</button>
+    <button class="filter-btn" onclick="setFilter('The Rooster', this)">Rooster</button>
+    <button class="filter-btn" onclick="setFilter('Buckeye Flame', this)">Buckeye Flame</button>
+    <button class="filter-btn" onclick="setFilter('Google News: Ohio Statehouse', this)">Google News</button>
+    <button class="filter-btn" onclick="setFilter('tv', this)">TV</button>
+  </div>
+</header>
+
+<main id="feed">
+  <div class="empty-state">Loading stories...</div>
+</main>
+
+<script>
+const SOURCE_META = {
+  'Ohio Capital Journal':         { short: 'OCJ',       cls: 'src-ocj'      },
+  'Toledo Blade':                 { short: 'Blade',     cls: 'src-blade'    },
+  'Richland Source':              { short: 'Richland',  cls: 'src-richland' },
+  'WCMH / NBC4i':                { short: 'NBC4i',     cls: 'src-nbc4i'    },
+  'Spectrum News 1':              { short: 'Spectrum',  cls: 'src-spectrum' },
+  'The Rooster':                  { short: 'Rooster',   cls: 'src-rooster'  },
+  'Buckeye Flame':               { short: 'BF',        cls: 'src-bf'       },
+  'WCPO':                         { short: 'WCPO',      cls: 'src-wcpo'     },
+  'Google News: Ohio Statehouse': { short: 'via Google','cls': 'src-google' },
+};
+
+const TV_SOURCES = new Set(['WCMH / NBC4i', 'Spectrum News 1', 'WCPO']);
+
+let allItems = [];
+let activeFilter = 'all';
+
+function setFilter(filter, btn) {
+  activeFilter = filter;
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  renderFeed(allItems);
+}
+
+function flagStory(title, link, source) {
+  const subject = encodeURIComponent(`Story idea: ${title}`);
+  const body = encodeURIComponent(`Source: ${source}\n\n${link}`);
+  window.location.href = `mailto:scott@signalohio.org?subject=${subject}&body=${body}`;
+}
+
+function timeAgo(dateStr) {
+  const now = new Date();
+  const then = new Date(dateStr);
+  const diffMs = now - then;
+  const diffMin = Math.floor(diffMs / 60000);
+  const diffHr = Math.floor(diffMin / 60);
+
+  if (diffMin < 60) return diffMin <= 1 ? 'just now' : `${diffMin}m ago`;
+  if (diffHr < 24) return `${diffHr}h ago`;
+
+  return then.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+}
+
+function getDayLabel(dateStr) {
+  const then = new Date(dateStr);
+  const now = new Date();
+  const todayStr = now.toDateString();
+  const thenStr = then.toDateString();
+
+  if (thenStr === todayStr) return 'TODAY';
+
+  const yesterday = new Date(now);
+  yesterday.setDate(now.getDate() - 1);
+  if (thenStr === yesterday.toDateString()) return 'YESTERDAY';
+
+  return then.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+}
+
+function filteredItems(items) {
+  if (activeFilter === 'all') return items;
+  if (activeFilter === 'tv') return items.filter(i => TV_SOURCES.has(i.source));
+  return items.filter(i => i.source === activeFilter);
+}
+
+function renderFeed(items) {
+  const feed = document.getElementById('feed');
+  const visible = filteredItems(items);
+
+  if (!visible.length) {
+    feed.innerHTML = '<div class="empty-state">No stories found.</div>';
+    return;
+  }
+
+  let html = '';
+  let currentDay = null;
+
+  visible.forEach(item => {
+    const day = getDayLabel(item.pub_date);
+    if (day !== currentDay) {
+      if (currentDay !== null) html += '</div>';
+      html += `<div class="day-section"><div class="day-header">${day}</div>`;
+      currentDay = day;
+    }
+
+    const meta = SOURCE_META[item.source] || { short: item.source, cls: 'src-google' };
+    const safeTitle = item.title.replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+    const safeLink  = item.link.replace(/"/g, '&quot;');
+    const safeSrc   = item.source.replace(/"/g, '&quot;');
+
+    html += `
+      <div class="story-item">
+        <div class="story-main">
+          <div class="story-meta">
+            <span class="source-badge ${meta.cls}">${meta.short}</span>
+            <span class="story-time">${timeAgo(item.pub_date)}</span>
+          </div>
+          <a class="story-title" href="${safeLink}" target="_blank" rel="noopener">${item.title}</a>
+        </div>
+        <button class="flag-btn" onclick="flagStory('${safeTitle}','${safeLink}','${safeSrc}')" title="Flag as story idea">📧</button>
+      </div>`;
+  });
+
+  if (currentDay !== null) html += '</div>';
+  feed.innerHTML = html;
+}
+
+async function loadNews() {
+  try {
+    const res = await fetch('ohio_news_data/news.json?t=' + Date.now());
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    const data = await res.json();
+
+    allItems = data.items || [];
+
+    const updated = new Date(data.last_updated);
+    const diffMin = Math.floor((Date.now() - updated) / 60000);
+    const updatedText = diffMin < 60
+      ? `Updated ${diffMin}m ago`
+      : `Updated ${Math.floor(diffMin/60)}h ago`;
+    document.getElementById('updated').textContent =
+      `${data.item_count} stories · ${updatedText}`;
+
+    renderFeed(allItems);
+  } catch (err) {
+    document.getElementById('feed').innerHTML =
+      `<div class="empty-state">Couldn't load news data.<br><small>${err.message}</small></div>`;
+    document.getElementById('updated').textContent = 'Error loading data';
+  }
+}
+
+loadNews();
+</script>
+
+</body>
+</html>

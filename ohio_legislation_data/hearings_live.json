@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-14T14:30:27.607111Z",
+  "fetched_at": "2026-05-14T19:55:33.647126Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -14,6 +14,395 @@
       "url": "calendar/events/cmte_j_orsc_1_2026-05-14-1000_1272",
       "status": "Scheduled",
       "agenda_items": []
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-05-20T11:30:00",
+      "end": "T",
+      "id": null,
+      "title": "House Agriculture Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_agriculture_1_2026-05-20-1130_1306",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb733",
+          "headline": "H. B. No. 733",
+          "title": "Include maple syrup, maple product production to agriculture law",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb664",
+          "headline": "H. B. No. 664",
+          "title": "Regards registered veterinary technician authority",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb163",
+          "headline": "H. B. No. 163",
+          "title": "Enact the Enhanced Cybersecurity for SNAP Act of 2025",
+          "subject": "healthcare",
+          "status": "6th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 2
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-05-20T15:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Financial Institutions Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_financial_institutions_1_2026-05-20-0300_1295",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb612",
+          "headline": "H. B. No. 612",
+          "title": "Regards credit union share guaranty corporations",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "hb648",
+          "headline": "H. B. No. 648",
+          "title": "Regulate digital asset kiosks; register as money transmitters",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-05-19T16:15:00",
+      "end": "T",
+      "id": null,
+      "title": "House General Government Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_gen_govt_1_2026-05-19-0415_1260",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb111",
+          "headline": "S. B. No. 111",
+          "title": "Designate Henrietta Lacks Day",
+          "subject": "healthcare",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "hb710",
+          "headline": "H. B. No. 710",
+          "title": "Prohibit public support, limit construction of, new data centers",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "hb586",
+          "headline": "H. B. No. 586",
+          "title": "Prohibit mailing out unsolicited absentee ballot request forms",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "hb272",
+          "headline": "H. B. No. 272",
+          "title": "Regards food dyes, PFAS, fluoride, and certain substance releases",
+          "subject": "healthcare",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 3
+        },
+        {
+          "id": "hb554",
+          "headline": "H. B. No. 554",
+          "title": "Require government, private sellers to accept cash as payment",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 4
+        },
+        {
+          "id": "hb582",
+          "headline": "H. B. No. 582",
+          "title": "Regards embalmers, funeral directors, and crematories",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 5
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-05-19T09:30:00",
+      "end": "T",
+      "id": null,
+      "title": "House Public Safety Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_pub_safety_1_2026-05-19-0930_1304",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb321",
+          "headline": "Sub. S. B. No. 321",
+          "title": "Regards carrying of firearms by certain special police officers",
+          "subject": "criminal-justice",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "hb846",
+          "headline": "H. B. No. 846",
+          "title": "Create the repeat domestic violence offender registry",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "hb849",
+          "headline": "H. B. No. 849",
+          "title": "Regards electronic smoking, tobacco, nicotine, vapor products",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "hb852",
+          "headline": "H. B. No. 852",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 3
+        },
+        {
+          "id": "hb82",
+          "headline": "H. B. No. 82",
+          "title": "Regards traffic offenses in construction zones",
+          "subject": "criminal-justice",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 4
+        },
+        {
+          "id": "hb417",
+          "headline": "H. B. No. 417",
+          "title": "Regards animal abuse offenses and penalties",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 5
+        },
+        {
+          "id": "hb667",
+          "headline": "H. B. No. 667",
+          "title": "Enact the Reagan Tokes and Patrick Heringer Act",
+          "subject": "criminal-justice",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 6
+        },
+        {
+          "id": "hb630",
+          "headline": "H. B. No. 630",
+          "title": "Regards police escorts for farm equipment, agricultural vehicles",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 7
+        },
+        {
+          "id": "hb654",
+          "headline": "H. B. No. 654",
+          "title": "Enact Amanda Dean's Law",
+          "subject": "criminal-justice",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 8
+        },
+        {
+          "id": "hb677",
+          "headline": "H. B. No. 677",
+          "title": "Regards custody interference, missing children, certain call data",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 9
+        },
+        {
+          "id": "hb689",
+          "headline": "H. B. No. 689",
+          "title": "Align and modernize fingerprinting and disposition reporting",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 10
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-05-19T15:30:00",
+      "end": "T",
+      "id": null,
+      "title": "House Transportation Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_trans_1_2026-05-19-0330_1299",
+      "status": "Scheduled",
+      "agenda_items": []
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-05-19T15:15:00",
+      "end": "T",
+      "id": null,
+      "title": "House Workforce and Higher Education Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_workforce_higher_ed_1_2026-05-19-0315_1294",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb698",
+          "headline": "H. B. No. 698",
+          "title": "Enact the S.B. 1 Compliance Supplemental Appropriation Act",
+          "subject": "education",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb748",
+          "headline": "H. B. No. 748",
+          "title": "Establish the Armed Forces Reserve Component Scholarship Program",
+          "subject": "education",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb793",
+          "headline": "H. B. No. 793",
+          "title": "Regards cost of attendance at institutions of higher education",
+          "subject": "education",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "hb319",
+          "headline": "H. B. No. 319",
+          "title": "Enact the Clinical Teaching Subsidy Reform Act",
+          "subject": "education",
+          "status": "1st Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 3
+        }
+      ]
     }
   ]
 }

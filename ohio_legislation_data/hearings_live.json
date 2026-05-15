@@ -1,17 +1,17 @@
 {
-  "fetched_at": "2026-05-14T19:55:33.647126Z",
+  "fetched_at": "2026-05-15T04:04:04.709087Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
     {
       "allDay": null,
       "backgroundColor": "#476b9c",
-      "start": "2026-05-14T10:00:00",
+      "start": "2026-05-20T11:30:00",
       "end": "T",
       "id": null,
-      "title": "Senate Ohio Retirement Study Council Committee Meeting",
+      "title": "Senate Rules and Reference Committee Meeting",
       "textColor": "#ffffff",
-      "url": "calendar/events/cmte_j_orsc_1_2026-05-14-1000_1272",
+      "url": "calendar/events/cmte_s_rules_ref_1_2026-05-20-1130_1310",
       "status": "Scheduled",
       "agenda_items": []
     },
@@ -192,6 +192,103 @@
       "start": "2026-05-19T09:30:00",
       "end": "T",
       "id": null,
+      "title": "House Insurance Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_insurance_1_2026-05-19-0930_1309",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb593",
+          "headline": "H. B. No. 593",
+          "title": "Regards paid family leave insurance",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb652",
+          "headline": "H. B. No. 652",
+          "title": "Regards time frames for insurance policy nonrenewal notifications",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "sb306",
+          "headline": "Sub. S. B. No. 306",
+          "title": "Regards insurance transactions, plans, and policies",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "hb699",
+          "headline": "H. B. No. 699",
+          "title": "Require prescription drug coverage by health plan issuers",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 3
+        },
+        {
+          "id": "hb792",
+          "headline": "H. B. No. 792",
+          "title": "Regards surplus lines insurers",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 4
+        },
+        {
+          "id": "hb724",
+          "headline": "H. B. No. 724",
+          "title": "Require health benefit plans cover behavioral health well checks",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 5
+        },
+        {
+          "id": "hb757",
+          "headline": "H. B. No. 757",
+          "title": "Enact the Rental Home Marketplace Guarantees Act",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 6
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-05-19T09:30:00",
+      "end": "T",
+      "id": null,
       "title": "House Public Safety Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_h_pub_safety_1_2026-05-19-0930_1304",
@@ -330,6 +427,18 @@
           "index": 10
         }
       ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-05-20T10:30:00",
+      "end": "T",
+      "id": null,
+      "title": "House Rules and Reference Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_rules_ref_1_2026-05-20-0800_1289",
+      "status": "Scheduled",
+      "agenda_items": []
     },
     {
       "allDay": null,

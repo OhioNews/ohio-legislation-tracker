@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-15T19:47:55.830116Z",
+  "fetched_at": "2026-05-16T03:46:44.563208Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -298,6 +298,55 @@
     {
       "allDay": null,
       "backgroundColor": "#476b9c",
+      "start": "2026-05-19T14:00:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Finance Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_finance_1_2026-05-19-0200_1292",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb315",
+          "headline": "S. B. No. 315",
+          "title": "Enact the Enhanced Cybersecurity for SNAP Act",
+          "subject": "healthcare",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "sb120",
+          "headline": "S. B. No. 120",
+          "title": "Establish the Urban Farmer Youth Initiative Pilot Program",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "sb372",
+          "headline": "S. B. No. 372",
+          "title": "Require centralized reporting for certain financial reports",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
       "start": "2026-05-20T14:30:00",
       "end": "T",
       "id": null,
@@ -462,6 +511,212 @@
           "interested_party": false,
           "sponsor": false,
           "index": 7
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-05-20T09:45:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Judiciary Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_judiciary_1_2026-05-20-0945_1317",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb418",
+          "headline": "S. B. No. 418",
+          "title": "Enact the Grow Act",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "sb135",
+          "headline": "S. B. No. 135",
+          "title": "Regards real property foreclosures and estate sales",
+          "subject": "",
+          "status": "6th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "sb157",
+          "headline": "S. B. No. 157",
+          "title": "Reduce statute of limitations for contract actions",
+          "subject": "",
+          "status": "5th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "sb163",
+          "headline": "S. B. No. 163",
+          "title": "Regards AI images, simulated child porn, replica identity fraud",
+          "subject": "",
+          "status": "7th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 3
+        },
+        {
+          "id": "sb225",
+          "headline": "S. B. No. 225",
+          "title": "Expand the Address Confidentiality Program",
+          "subject": "criminal-justice",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 4
+        },
+        {
+          "id": "sb393",
+          "headline": "S. B. No. 393",
+          "title": "Regards sexually oriented offenses involving juveniles, animals",
+          "subject": "criminal-justice",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 5
+        },
+        {
+          "id": "hb86",
+          "headline": "H. B. No. 86",
+          "title": "Enact the Gus Frangos Act",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 6
+        },
+        {
+          "id": "hb105",
+          "headline": "Sub. H. B. No. 105",
+          "title": "Revise non-recourse litigation funding agreement regulations",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 7
+        },
+        {
+          "id": "sb292",
+          "headline": "S. B. No. 292",
+          "title": "Revise caps on noneconomic, punitive, and exemplary damages",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 8
+        },
+        {
+          "id": "sb421",
+          "headline": "S. B. No. 421",
+          "title": "Increase time period to bring civil action for sex offense victim",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 9
+        },
+        {
+          "id": "sb422",
+          "headline": "S. B. No. 422",
+          "title": "Prohibit certain offenders from school or child care premises",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 10
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-05-20T14:30:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Local Government Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_local_govt_1_2026-05-20-0230_1324",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb426",
+          "headline": "S. B. No. 426",
+          "title": "Regards closing a library branch, forfeiture of library funds",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "sb435",
+          "headline": "S. B. No. 435",
+          "title": "Regards abandoned manufactured homes",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "sb366",
+          "headline": "S. B. No. 366",
+          "title": "Require some delinquent property tax payments upon lot transfer",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "hb428",
+          "headline": "Am. H. B. No. 428",
+          "title": "Remove residency requirements for certain city director positions",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 3
         }
       ]
     },

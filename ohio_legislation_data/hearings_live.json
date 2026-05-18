@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-18T15:49:43.119889Z",
+  "fetched_at": "2026-05-18T19:54:37.893079Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -1598,18 +1598,6 @@
       "status": "Scheduled",
       "agenda_items": [
         {
-          "id": "hb593",
-          "headline": "H. B. No. 593",
-          "title": "Regards paid family leave insurance",
-          "subject": "",
-          "status": "4th Hearing",
-          "proponent": false,
-          "opponent": false,
-          "interested_party": false,
-          "sponsor": false,
-          "index": 0
-        },
-        {
           "id": "hb652",
           "headline": "H. B. No. 652",
           "title": "Regards time frames for insurance policy nonrenewal notifications",
@@ -1619,7 +1607,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": false,
-          "index": 1
+          "index": 0
         },
         {
           "id": "sb306",
@@ -1631,7 +1619,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": true,
-          "index": 2
+          "index": 1
         },
         {
           "id": "hb699",
@@ -1643,7 +1631,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": true,
-          "index": 3
+          "index": 2
         },
         {
           "id": "hb792",
@@ -1655,7 +1643,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": true,
-          "index": 4
+          "index": 3
         },
         {
           "id": "hb724",
@@ -1667,7 +1655,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": false,
-          "index": 5
+          "index": 4
         },
         {
           "id": "hb757",
@@ -1679,7 +1667,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": false,
-          "index": 6
+          "index": 5
         }
       ]
     },
@@ -1953,7 +1941,7 @@
           "headline": "H. B. No. 581",
           "title": "Regards specified Medicaid disability, Ohio WorkAbility Programs",
           "subject": "",
-          "status": "1st Hearing",
+          "status": "4th Hearing",
           "proponent": false,
           "opponent": false,
           "interested_party": false,
@@ -1965,7 +1953,7 @@
           "headline": "H. B. No. 508",
           "title": "Enact the Better Access to Health Care Act",
           "subject": "healthcare",
-          "status": "1st Hearing",
+          "status": "5th Hearing",
           "proponent": false,
           "opponent": false,
           "interested_party": false,
@@ -1977,7 +1965,7 @@
           "headline": "H. B. No. 318",
           "title": "Revise the Medicaid Estate Recovery Program Law",
           "subject": "healthcare",
-          "status": "2nd Hearing",
+          "status": "4th Hearing",
           "proponent": false,
           "opponent": false,
           "interested_party": false,

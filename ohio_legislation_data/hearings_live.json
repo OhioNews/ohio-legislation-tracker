@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-18T10:19:16.465659Z",
+  "fetched_at": "2026-05-18T15:49:43.119889Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -760,31 +760,6 @@
     {
       "allDay": null,
       "backgroundColor": "#476b9c",
-      "start": "2026-05-20T15:15:00",
-      "end": "T",
-      "id": null,
-      "title": "Senate Small Business and Economic Opportunity Committee Meeting",
-      "textColor": "#ffffff",
-      "url": "calendar/events/cmte_s_small_business_1_2026-05-20-0315_1308",
-      "status": "Scheduled",
-      "agenda_items": [
-        {
-          "id": "sb348",
-          "headline": "S. B. No. 348",
-          "title": "Require bars, restaurants to have date rape drug testing devices",
-          "subject": "",
-          "status": "2nd Hearing",
-          "proponent": true,
-          "opponent": false,
-          "interested_party": false,
-          "sponsor": false,
-          "index": 0
-        }
-      ]
-    },
-    {
-      "allDay": null,
-      "backgroundColor": "#476b9c",
       "start": "2026-05-19T11:00:00",
       "end": "T",
       "id": null,
@@ -793,6 +768,18 @@
       "url": "calendar/events/cmte_s_workforce_dev_1_2026-05-19-1100_1323",
       "status": "Scheduled",
       "agenda_items": [
+        {
+          "id": "hb292",
+          "headline": "Sub. H. B. No. 292",
+          "title": "Establish the Ohio Defense Commission",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
         {
           "id": "sb331",
           "headline": "S. B. No. 331",
@@ -803,7 +790,7 @@
           "opponent": true,
           "interested_party": true,
           "sponsor": false,
-          "index": 0
+          "index": 1
         },
         {
           "id": "hb268",
@@ -815,7 +802,7 @@
           "opponent": true,
           "interested_party": true,
           "sponsor": false,
-          "index": 1
+          "index": 2
         }
       ]
     },
@@ -941,18 +928,6 @@
           "index": 0
         },
         {
-          "id": "hb707",
-          "headline": "H. B. No. 707",
-          "title": "Enact Kei'Mani's Law",
-          "subject": "",
-          "status": "1st Hearing",
-          "proponent": false,
-          "opponent": false,
-          "interested_party": false,
-          "sponsor": true,
-          "index": 1
-        },
-        {
           "id": "hb865",
           "headline": "H. B. No. 865",
           "title": "",
@@ -962,7 +937,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": true,
-          "index": 2
+          "index": 1
         },
         {
           "id": "hb635",
@@ -974,7 +949,7 @@
           "opponent": true,
           "interested_party": false,
           "sponsor": false,
-          "index": 3
+          "index": 2
         },
         {
           "id": "hb712",
@@ -986,7 +961,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": false,
-          "index": 4
+          "index": 3
         }
       ]
     },
@@ -1380,16 +1355,28 @@
           "index": 2
         },
         {
+          "id": "sb320",
+          "headline": "Am. S. B. No. 320",
+          "title": "Enter into the Athletic Trainer Compact",
+          "subject": "healthcare",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 3
+        },
+        {
           "id": "hb272",
           "headline": "H. B. No. 272",
           "title": "Regards food dyes, PFAS, fluoride, and certain substance releases",
           "subject": "healthcare",
-          "status": "2nd Hearing",
+          "status": "3rd Hearing",
           "proponent": true,
           "opponent": false,
           "interested_party": false,
           "sponsor": false,
-          "index": 3
+          "index": 4
         },
         {
           "id": "hb554",
@@ -1401,7 +1388,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": false,
-          "index": 4
+          "index": 5
         },
         {
           "id": "hb582",
@@ -1413,7 +1400,7 @@
           "opponent": true,
           "interested_party": true,
           "sponsor": false,
-          "index": 5
+          "index": 6
         }
       ]
     },
@@ -1929,6 +1916,79 @@
     {
       "allDay": null,
       "backgroundColor": "#ad3838",
+      "start": "2026-05-19T16:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Medicaid Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_medicaid_1_2026-05-19-0400_1327",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb780",
+          "headline": "H. B. No. 780",
+          "title": "Enact the Medicaid Savings Act",
+          "subject": "healthcare",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "hb795",
+          "headline": "H. B. No. 795",
+          "title": "Enact SHIELD Act",
+          "subject": "healthcare",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "hb581",
+          "headline": "H. B. No. 581",
+          "title": "Regards specified Medicaid disability, Ohio WorkAbility Programs",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "hb508",
+          "headline": "H. B. No. 508",
+          "title": "Enact the Better Access to Health Care Act",
+          "subject": "healthcare",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 3
+        },
+        {
+          "id": "hb318",
+          "headline": "H. B. No. 318",
+          "title": "Revise the Medicaid Estate Recovery Program Law",
+          "subject": "healthcare",
+          "status": "2nd Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 4
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
       "start": "2026-05-20T09:00:00",
       "end": "T",
       "id": null,
@@ -2341,6 +2401,67 @@
     {
       "allDay": null,
       "backgroundColor": "#ad3838",
+      "start": "2026-05-20T10:30:00",
+      "end": "T",
+      "id": null,
+      "title": "House Veterans and Military Development Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_vets_military_dev_1_2026-05-20-1030_1318",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb179",
+          "headline": "S. B. No. 179",
+          "title": "Verify veteran status of imprisoned individuals",
+          "subject": "criminal-justice",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb632",
+          "headline": "H. B. No. 632",
+          "title": "Allow driver's license or ID card to show Gold Star Family status",
+          "subject": "transportation",
+          "status": "2nd Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "hb785",
+          "headline": "H. B. No. 785",
+          "title": "Enact the ASSET Act",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "hb823",
+          "headline": "H. B. No. 823",
+          "title": "Regards deployed elected official's office, meeting attendance",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 3
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
       "start": "2026-05-20T11:30:00",
       "end": "T",
       "id": null,
@@ -2414,7 +2535,7 @@
     {
       "allDay": null,
       "backgroundColor": "#ad3838",
-      "start": "2026-05-19T15:15:00",
+      "start": "2026-05-19T15:00:00",
       "end": "T",
       "id": null,
       "title": "House Workforce and Higher Education Committee Meeting",
@@ -2435,15 +2556,15 @@
           "index": 0
         },
         {
-          "id": "hb748",
-          "headline": "H. B. No. 748",
-          "title": "Establish the Armed Forces Reserve Component Scholarship Program",
+          "id": "hb319",
+          "headline": "H. B. No. 319",
+          "title": "Enact the Clinical Teaching Subsidy Reform Act",
           "subject": "education",
-          "status": "2nd Hearing",
+          "status": "1st Hearing",
           "proponent": true,
-          "opponent": false,
+          "opponent": true,
           "interested_party": true,
-          "sponsor": false,
+          "sponsor": true,
           "index": 1
         },
         {
@@ -2459,13 +2580,13 @@
           "index": 2
         },
         {
-          "id": "hb319",
-          "headline": "H. B. No. 319",
-          "title": "Enact the Clinical Teaching Subsidy Reform Act",
+          "id": "hb748",
+          "headline": "H. B. No. 748",
+          "title": "Establish the Armed Forces Reserve Component Scholarship Program",
           "subject": "education",
-          "status": "1st Hearing",
+          "status": "2nd Hearing",
           "proponent": true,
-          "opponent": true,
+          "opponent": false,
           "interested_party": true,
           "sponsor": false,
           "index": 3

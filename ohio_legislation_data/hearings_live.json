@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-19T09:59:27.533229Z",
+  "fetched_at": "2026-05-19T15:41:07.012495Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -1906,7 +1906,7 @@
           "title": "Regards deed and title fraud prevention",
           "subject": "",
           "status": "2nd Hearing",
-          "proponent": false,
+          "proponent": true,
           "opponent": false,
           "interested_party": false,
           "sponsor": false,

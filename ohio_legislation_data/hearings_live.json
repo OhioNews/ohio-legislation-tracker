@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-18T19:54:37.893079Z",
+  "fetched_at": "2026-05-19T04:12:10.389786Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -402,6 +402,18 @@
           "interested_party": false,
           "sponsor": true,
           "index": 3
+        },
+        {
+          "id": "S. J. R. No. 10",
+          "headline": "S. J. R. No. 10",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 4
         }
       ]
     },
@@ -1401,6 +1413,31 @@
           "interested_party": true,
           "sponsor": false,
           "index": 6
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-05-20T15:30:00",
+      "end": "T",
+      "id": null,
+      "title": "House General Government Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_gen_govt_1_2026-05-20-0330_1328",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "H. J. R. No. XX",
+          "headline": "H. J. R. No. XX",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
         }
       ]
     },

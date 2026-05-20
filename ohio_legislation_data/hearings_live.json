@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-20T15:41:14.947067Z",
+  "fetched_at": "2026-05-20T20:26:42.171590Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -757,11 +757,11 @@
       "status": "Scheduled",
       "agenda_items": [
         {
-          "id": "H. J. R. No. 9",
+          "id": "hjr9",
           "headline": "H. J. R. No. 9",
           "title": "",
           "subject": "",
-          "status": "",
+          "status": "1st Hearing",
           "proponent": false,
           "opponent": false,
           "interested_party": false,

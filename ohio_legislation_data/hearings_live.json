@@ -1,6 +1,68 @@
 {
-  "fetched_at": "2026-05-22T09:40:50.027766Z",
+  "fetched_at": "2026-05-22T14:52:08.913249Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
-  "events": []
+  "events": [
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-05-27T09:30:00",
+      "end": "T",
+      "id": null,
+      "title": "House Health Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_health_1_2026-05-27-0930_1334",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb380",
+          "headline": "H. B. No. 380",
+          "title": "Designate Migraine and Headache Awareness Month",
+          "subject": "healthcare",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "hb739",
+          "headline": "H. B. No. 739",
+          "title": "Require Department of Health to assess its warehousing operations",
+          "subject": "healthcare",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "hb820",
+          "headline": "H. B. No. 820",
+          "title": "Require school radon testing; create home radon tax credits",
+          "subject": "education",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "hb863",
+          "headline": "H. B. No. 863",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 3
+        }
+      ]
+    }
+  ]
 }

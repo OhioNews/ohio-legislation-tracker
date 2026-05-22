@@ -1,8 +1,94 @@
 {
-  "fetched_at": "2026-05-22T14:52:08.913249Z",
+  "fetched_at": "2026-05-22T19:58:10.060712Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-05-27T11:30:00",
+      "end": "T",
+      "id": null,
+      "title": "House Community Revitalization Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_community_revitalization_1_2026-05-27-1130_1338",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb766",
+          "headline": "H. B. No. 766",
+          "title": "Designate Augmentative and Alternative Communication (AAC) Month",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-05-27T10:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Select Committee on Data Centers Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_data_centers_1_2026-05-27-1000_1337",
+      "status": "Scheduled",
+      "agenda_items": []
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-05-27T12:15:00",
+      "end": "T",
+      "id": null,
+      "title": "House Education Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_education_1_2026-05-27-1215_1331",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb934",
+          "headline": "H. B. No. 934",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "sb318",
+          "headline": "S. B. No. 318",
+          "title": "Allow law enforcement to provide certain school resource services",
+          "subject": "education",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb711",
+          "headline": "H. B. No. 711",
+          "title": "Regards the minimum teacher salary schedule",
+          "subject": "education",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 2
+        }
+      ]
+    },
     {
       "allDay": null,
       "backgroundColor": "#ad3838",
@@ -63,6 +149,30 @@
           "index": 3
         }
       ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-05-27T13:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Rules and Reference Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_rules_ref_1_2026-05-27-0800_1333",
+      "status": "Scheduled",
+      "agenda_items": []
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-01T13:30:00",
+      "end": "T",
+      "id": null,
+      "title": "House Joint Committee on Agency Rule Review Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_j_jcarr_1_2026-06-01-0130_1336",
+      "status": "Scheduled",
+      "agenda_items": []
     }
   ]
 }

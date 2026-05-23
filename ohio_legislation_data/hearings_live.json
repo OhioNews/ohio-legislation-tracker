@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-22T19:58:10.060712Z",
+  "fetched_at": "2026-05-23T03:54:41.027887Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -92,6 +92,31 @@
     {
       "allDay": null,
       "backgroundColor": "#ad3838",
+      "start": "2026-05-27T10:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House General Government Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_gen_govt_1_2026-05-27-1000_1335",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hjr9",
+          "headline": "H. J. R. No. 9",
+          "title": "",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
       "start": "2026-05-27T09:30:00",
       "end": "T",
       "id": null,
@@ -147,6 +172,104 @@
           "interested_party": false,
           "sponsor": true,
           "index": 3
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-05-27T09:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Judiciary Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_judiciary_1_2026-05-27-0900_1332",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb314",
+          "headline": "H. B. No. 314",
+          "title": "Limit certain public record requests; allow contractor response",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb556",
+          "headline": "H. B. No. 556",
+          "title": "Revise community control sanctions for felonies and misdemeanors",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "hb501",
+          "headline": "H. B. No. 501",
+          "title": "Modify and rename the wrongful incarceration law",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "hb527",
+          "headline": "H. B. No. 527",
+          "title": "Allow felony defendants to request indictment by open grand jury",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 3
+        },
+        {
+          "id": "hb690",
+          "headline": "H. B. No. 690",
+          "title": "Establish penalties for failing to obey a school crossing guard",
+          "subject": "criminal-justice",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 4
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-05-27T10:30:00",
+      "end": "T",
+      "id": null,
+      "title": "House Medicaid Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_medicaid_1_2026-05-27-1030_1339",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb795",
+          "headline": "H. B. No. 795",
+          "title": "Enact SHIELD Act",
+          "subject": "healthcare",
+          "status": "2nd Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
         }
       ]
     },

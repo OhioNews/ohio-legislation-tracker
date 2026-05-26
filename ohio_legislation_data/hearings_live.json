@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-26T10:10:54.484132Z",
+  "fetched_at": "2026-05-26T15:57:35.064455Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -138,18 +138,6 @@
           "index": 0
         },
         {
-          "id": "hb739",
-          "headline": "H. B. No. 739",
-          "title": "Require Department of Health to assess its warehousing operations",
-          "subject": "healthcare",
-          "status": "1st Hearing",
-          "proponent": false,
-          "opponent": false,
-          "interested_party": false,
-          "sponsor": true,
-          "index": 1
-        },
-        {
           "id": "hb820",
           "headline": "H. B. No. 820",
           "title": "Require school radon testing; create home radon tax credits",
@@ -159,7 +147,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": true,
-          "index": 2
+          "index": 1
         },
         {
           "id": "hb863",
@@ -171,7 +159,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": true,
-          "index": 3
+          "index": 2
         }
       ]
     },

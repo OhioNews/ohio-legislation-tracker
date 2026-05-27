@@ -1,15 +1,147 @@
 {
-  "last_updated": "2026-05-27T15:34:38.990657+00:00",
-  "item_count": 75,
+  "last_updated": "2026-05-27T20:27:15.069160+00:00",
+  "item_count": 81,
   "items": [
     {
-      "title": "Police release 911 calls reporting impaired school bus driver",
+      "title": "DeWine announces pause of Ohio's data center tax exemption",
+      "link": "https://www.wcpo.com/news/state/state-ohio/dewine-announces-pause-of-ohios-data-center-tax-exemption",
+      "pub_date": "2026-05-27T20:22:26+00:00",
+      "source": "WCPO"
+    },
+    {
+      "title": "Democrats raise questions on proposed voter ID amendment",
+      "link": "https://www.toledoblade.com/local/politics/2026/05/27/democrats-raise-questions-on-proposed-voter-id-amendment/stories/20260527088",
+      "pub_date": "2026-05-27T20:12:47+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Kickoff times announced for 2026 Toledo, Bowling Green football games",
+      "link": "https://www.toledoblade.com/sports/college/2026/05/27/kickoff-times-announced-2026-toledo-bowling-green-football-games/stories/20260527104",
+      "pub_date": "2026-05-27T19:59:01+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Judge sentences Mulvey to 11 years for girlfriend’s son’s death",
+      "link": "https://www.toledoblade.com/local/courts/2026/05/27/judge-sentences-mulvey-11-years-girlfriends-sons-death/stories/20260527099",
+      "pub_date": "2026-05-27T19:43:16+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Juvenile arrested in suspected Galion residence arson fire",
+      "link": "https://www.richlandsource.com/2026/05/27/juvenile-arrested-in-suspected-galion-residence-arson-fire/",
+      "pub_date": "2026-05-27T19:30:00+00:00",
+      "source": "Richland Source"
+    },
+    {
+      "title": "Sight, snakes and possible swindles were themes in Dr. Oz’s visit to Ohio - WOUB Public Media -",
+      "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTFBDY2l5YjJRT0xlbkJrMnE4VTNtcHFxRnpIQmlJVXM2azdZT2ttbTcyX0Z1STRaYlhRVDJQNFRxekZ2d1lNWFpMTFdYT3pQMzc1aHlyTEFQY2dJdnF4dWpzUlYzQWp6b0hXbW1sVU93?oc=5",
+      "pub_date": "2026-05-27T19:27:36+00:00",
+      "source": "Google News: Ohio Statehouse"
+    },
+    {
+      "title": "More Ohio State kickoff times announced, including for 2026 season opener",
+      "link": "https://www.nbc4i.com/sports/buckeyes/more-ohio-state-kickoff-times-announced-for-2026-football-season/",
+      "pub_date": "2026-05-27T19:16:32+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "Briggs: Toledo-Bowling Green football game moving to Friday night. Here's why that's a big win",
+      "link": "https://www.toledoblade.com/sports/college/2026/05/27/toledo-bowling-green-football-game-moving-friday-night/stories/20260527098",
+      "pub_date": "2026-05-27T19:11:49+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Early lead holds as Clippers top Mud Hens 6-3",
+      "link": "https://www.toledoblade.com/sports/mud-hens/2026/05/27/early-lead-holds-as-clippers-top-mud-hens-6-3/stories/20260527096",
+      "pub_date": "2026-05-27T18:54:36+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Library to host social night to celebrate Immigrant Heritage Month",
+      "link": "https://www.toledoblade.com/local/community-events/2026/05/27/library-to-host-social-night-to-celebrate-immigrant-heritage-month/stories/20260521098",
+      "pub_date": "2026-05-27T18:51:07+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Tentative trial date set for man accused of mother-in-law’s murder",
+      "link": "https://www.toledoblade.com/local/courts/2026/05/27/tentative-trial-date-set-for-man-accused-of-mother-in-law-s-murder/stories/20260527095",
+      "pub_date": "2026-05-27T18:49:27+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Waterville library to observe 100th anniversary with community party",
+      "link": "https://www.toledoblade.com/local/community-events/2026/05/27/waterville-library-to-observe-100th-anniversary-with-community-party/stories/20260524003",
+      "pub_date": "2026-05-27T18:44:02+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "DeWine pauses data center sales tax break as new committee begins hearings",
+      "link": "https://www.toledoblade.com/local/politics/2026/05/27/ohio-s-data-center-sales-tax-break-needed-for-investment-industry-leader-says/stories/20260527083",
+      "pub_date": "2026-05-27T18:37:06+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Nonprofit Staging the Future sends area kids to Oz",
+      "link": "https://www.toledoblade.com/a-e/music-theater-dance/2026/05/27/nonprofit-staging-the-future-sends-area-kids-to-oz/stories/20260528059",
+      "pub_date": "2026-05-27T18:05:11+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Time is right: Mansfield restaurateur Dan Lew buying Coney Island Diner business on Main Street",
+      "link": "https://www.richlandsource.com/2026/05/27/time-is-right-mansfield-restaurateur-dan-lew-buying-coney-island-diner-business-on-main-street/",
+      "pub_date": "2026-05-27T18:00:00+00:00",
+      "source": "Richland Source"
+    },
+    {
+      "title": "Photo gallery: Eid al-Adha prayer service at Masjid of Al-Islam",
+      "link": "https://www.toledoblade.com/news/religion/2026/05/27/photo-gallery-eid-al-adha-prayer-service-at-masjid-of-al-islam/stories/20260527092",
+      "pub_date": "2026-05-27T17:17:55+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Kyle Baughn",
+      "link": "https://www.richlandsource.com/2026/05/27/kyle-baughn/",
+      "pub_date": "2026-05-27T16:32:18+00:00",
+      "source": "Richland Source"
+    },
+    {
+      "title": "Redevelopment plan for former state library site returns to city review",
+      "link": "https://www.nbc4i.com/news/local-news/columbus/redevelopment-plan-for-former-state-library-site-returns-to-city-review/",
+      "pub_date": "2026-05-27T16:00:00+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "Photo Gallery: Division II baseball district semifinals",
+      "link": "https://www.toledoblade.com/sports/high-school/2026/05/27/photo-gallery-division-ii-baseball-district-semifinals/stories/20260527087",
+      "pub_date": "2026-05-27T15:51:22+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Trump struck a deal for China to buy $17B a year in US ag products. Farmers are skeptical.",
+      "link": "https://ohiocapitaljournal.com/2026/05/27/repub/trump-struck-a-deal-for-china-to-buy-17b-a-year-in-us-ag-products-farmers-are-skeptical/",
+      "pub_date": "2026-05-27T15:42:51+00:00",
+      "source": "Ohio Capital Journal"
+    },
+    {
+      "title": "Democratic state AGs say their staff excluded from Vance anti-fraud meeting",
+      "link": "https://ohiocapitaljournal.com/2026/05/27/repub/democratic-state-ags-say-their-staff-excluded-from-vance-anti-fraud-meeting/",
+      "pub_date": "2026-05-27T15:38:26+00:00",
+      "source": "Ohio Capital Journal"
+    },
+    {
+      "title": "Martha “Marty” Gibbs",
+      "link": "https://www.richlandsource.com/2026/05/27/martha-marty-gibbs/",
+      "pub_date": "2026-05-27T15:37:46+00:00",
+      "source": "Richland Source"
+    },
+    {
+      "title": "Student tells 911: ‘Our bus driver passed out’",
       "link": "https://www.toledoblade.com/local/police-fire/2026/05/27/police-release-911-calls-reporting-impaired-school-bus-driver/stories/20260527086",
       "pub_date": "2026-05-27T15:16:37+00:00",
       "source": "Toledo Blade"
     },
     {
-      "title": "Flash flood warning for several central Ohio counties",
+      "title": "Several central Ohio counties under flood watch",
       "link": "https://www.nbc4i.com/weather/forecast/columbus-weather-flood-watch-rain-few-storms-clearing-thursday/",
       "pub_date": "2026-05-27T15:13:50+00:00",
       "source": "WCMH / NBC4i"
@@ -93,28 +225,10 @@
       "source": "WCMH / NBC4i"
     },
     {
-      "title": "Ferrari's first electric vehicle met with market skepticism",
-      "link": "https://www.toledoblade.com/business/automotive/2026/05/27/ferrari-s-first-electric-vehicle-met-with-market-skepticism/stories/20260527082",
-      "pub_date": "2026-05-27T10:33:06+00:00",
-      "source": "Toledo Blade"
-    },
-    {
       "title": "Ohio Senate passes bill targeting AI child sexual abuse material, deepfakes",
       "link": "https://www.nbc4i.com/news/politics/ohio-senate-passes-bill-targeting-ai-child-sexual-abuse-material-deepfakes/",
       "pub_date": "2026-05-27T10:30:00+00:00",
       "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Real estate transfers: 5/27",
-      "link": "https://www.toledoblade.com/business/real-estate/2026/05/27/real-estate-transfers-5-27-1/stories/20260527002",
-      "pub_date": "2026-05-27T10:25:49+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "Plan It Calendar: 5/28-6/3",
-      "link": "https://www.toledoblade.com/a-e/living/2026/05/27/plan-it-calendar-5-28-6-3-26/stories/20260515093",
-      "pub_date": "2026-05-27T10:00:00+00:00",
-      "source": "Toledo Blade"
     },
     {
       "title": "Historic schools, Downtown tower among most endangered Columbus sites for 2026",
@@ -183,46 +297,10 @@
       "source": "WCMH / NBC4i"
     },
     {
-      "title": "Clay, St. Francis baseball advance to district final matchup",
-      "link": "https://www.toledoblade.com/sports/high-school/2026/05/26/district-semis-baseball-doubleheader/stories/20260526111",
-      "pub_date": "2026-05-27T03:07:46+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "Wood's 15th homer of the season helps Nationals to 6-3 victory over Guardians",
-      "link": "https://www.toledoblade.com/sports/guardians/2026/05/26/wood-s-15th-homer-season-helps-nationals-6-3-victory-over-guardians/stories/20260526114",
-      "pub_date": "2026-05-27T02:58:32+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "Vaughn Grissom's grand slam, 6 RBIs lead Angels over Tigers, 10-6",
-      "link": "https://www.toledoblade.com/sports/tigers/2026/05/26/vaughn-grissoms-grand-slam-6-rbis-lead-angels-over-tigers-10-6/stories/20260526113",
-      "pub_date": "2026-05-27T02:55:09+00:00",
-      "source": "Toledo Blade"
-    },
-    {
       "title": "Mansfield Planning Commission OKs conditional use permit for proposed Buc-ee’s Travel Center",
       "link": "https://www.richlandsource.com/2026/05/26/mansfield-planning-commission-oks-conditional-use-permit-for-proposed-buc-ees-travel-center/",
       "pub_date": "2026-05-27T01:03:18+00:00",
       "source": "Richland Source"
-    },
-    {
-      "title": "Toledo council approves trash contract, rejects outsourcing police tow lot",
-      "link": "https://www.toledoblade.com/local/city/2026/05/26/toledo-city-council-approves-trash-contract-rejects-tow-lot/stories/20260526109",
-      "pub_date": "2026-05-27T00:58:00+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "Memorial Day traffic deaths hit 18-year low in Ohio",
-      "link": "https://www.toledoblade.com/local/police-fire/2026/05/26/memorial-day-traffic-deaths-hit-18-year-low-ohio/stories/20260526107",
-      "pub_date": "2026-05-27T00:10:35+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "Children's vision program to expand in northwest Ohio, DeWine says",
-      "link": "https://www.toledoblade.com/local/education/2026/05/26/childrens-vision-program-expand-northwest-ohio-dewine-says/stories/20260526094",
-      "pub_date": "2026-05-26T23:28:32+00:00",
-      "source": "Toledo Blade"
     },
     {
       "title": "Mansfield Juneteenth Parade & Festival on 06/13/2026",
@@ -237,12 +315,6 @@
       "source": "WCPO"
     },
     {
-      "title": "Bedford student's essay places third in the state contest",
-      "link": "https://www.toledoblade.com/local/education/2026/05/26/bedford-students-essay-places-third-state-contest/stories/20260526093",
-      "pub_date": "2026-05-26T23:09:04+00:00",
-      "source": "Toledo Blade"
-    },
-    {
       "title": "Former Columbus police deputy chief comes forward as Strauss survivor",
       "link": "https://www.nbc4i.com/news/local-news/columbus/former-columbus-police-deputy-chief-comes-forward-as-strauss-survivor/",
       "pub_date": "2026-05-26T23:00:00+00:00",
@@ -253,18 +325,6 @@
       "link": "https://www.nbc4i.com/news/politics/dewine-dr-oz-address-alleged-medicaid-fraud-in-ohio/",
       "pub_date": "2026-05-26T22:30:00+00:00",
       "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "South Carolina Senate rejects Trump’s call to redraw congressional map",
-      "link": "https://www.toledoblade.com/news/nation/2026/05/26/south-carolina-senate-rejects-trumps-call-redraw-congressional-map/stories/20260526103",
-      "pub_date": "2026-05-26T22:03:43+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "Texas Attorney General Ken Paxton wins GOP runoff for U.S. Senate, ousting longtime Sen. John Cornyn",
-      "link": "https://www.toledoblade.com/news/nation/2026/05/26/cornyn-texas-senate-runoff-with-trump-backed-paxton/stories/20260526104",
-      "pub_date": "2026-05-26T22:03:06+00:00",
-      "source": "Toledo Blade"
     },
     {
       "title": "Teen accused of killing father in Columbus appears in court",
@@ -285,12 +345,6 @@
       "source": "Richland Source"
     },
     {
-      "title": "Richard Osborn",
-      "link": "https://www.richlandsource.com/2026/05/26/richard-osborn/",
-      "pub_date": "2026-05-26T20:59:19+00:00",
-      "source": "Richland Source"
-    },
-    {
       "title": "Trump administration seizes on shooting to make case again for White House ballroom",
       "link": "https://ohiocapitaljournal.com/2026/05/26/repub/trump-administration-seizes-on-shooting-to-make-case-again-for-white-house-ballroom/",
       "pub_date": "2026-05-26T20:03:15+00:00",
@@ -301,18 +355,6 @@
       "link": "https://ohiocapitaljournal.com/2026/05/26/repub/congressional-black-caucus-calls-for-corporate-leaders-to-speak-out-for-voting-rights/",
       "pub_date": "2026-05-26T20:00:06+00:00",
       "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "Region celebrates rebirth of Mansfield Speedway",
-      "link": "https://www.richlandsource.com/2026/05/26/region-celebrates-rebirth-of-mansfield-speedway/",
-      "pub_date": "2026-05-26T20:00:00+00:00",
-      "source": "Richland Source"
-    },
-    {
-      "title": "After the storm, 33 Forever’s Birthday Walk a scene of healing",
-      "link": "https://www.richlandsource.com/2026/05/26/after-the-storm-33-forevers-birthday-walk-a-scene-of-healing/",
-      "pub_date": "2026-05-26T19:57:17+00:00",
-      "source": "Richland Source"
     },
     {
       "title": "Crew's Max Arfsten named to U.S. World Cup roster",
@@ -331,12 +373,6 @@
       "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOR3czUXNPeE0wQTRJUl94SkY4YzYydzk3OVJZTHlIU0FYeVhuYUNSa2k2WlRKbHdtU19reHFna2p2RGd3MUVKUmpleWVQTWdreHdzMVg3M1dqb1VENF9kX3RJS3JyWElVZk9HUWJpRmQ0UzFLcmxCaERmeEU1a2U0X2p4SDJ1cmQ1U0pwWUpDQV9Vd2I2ck15VHdvdVRXcjJ5OEE?oc=5",
       "pub_date": "2026-05-26T18:50:12+00:00",
       "source": "Google News: Ohio Statehouse"
-    },
-    {
-      "title": "James P. Cook",
-      "link": "https://www.richlandsource.com/2026/05/26/james-p-cook/",
-      "pub_date": "2026-05-26T18:40:42+00:00",
-      "source": "Richland Source"
     },
     {
       "title": "LGBTQ+ Ohioan sues Bureau of Motor Vehicles again over ‘GAY’ license plate",

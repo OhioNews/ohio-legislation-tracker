@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-28T16:16:17.069852Z",
+  "fetched_at": "2026-05-28T20:32:34.166235Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -63,6 +63,373 @@
           "index": 2
         }
       ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-03T14:30:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Local Government Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_local_govt_1_2026-06-03-0230_1367",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb397",
+          "headline": "Am. H. B. No. 397",
+          "title": "Expand allowable uses of profits from jail commissary funds",
+          "subject": "criminal-justice",
+          "status": "5th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "sb435",
+          "headline": "S. B. No. 435",
+          "title": "Regards abandoned manufactured homes",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "sb366",
+          "headline": "S. B. No. 366",
+          "title": "Require some delinquent property tax payments upon lot transfer",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "hb428",
+          "headline": "Am. H. B. No. 428",
+          "title": "Remove residency requirements for certain city director positions",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 3
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-02T10:00:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Medicaid Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_medicaid_1_2026-06-02-1000_1345",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb387",
+          "headline": "S. B. No. 387",
+          "title": "Regards Medicaid managed care coverage of pharmacogenomic testing",
+          "subject": "healthcare",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-02T11:30:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Rules and Reference Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_rules_ref_1_2026-06-02-1130_1356",
+      "status": "Scheduled",
+      "agenda_items": []
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-03T11:30:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Rules and Reference Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_rules_ref_1_2026-06-03-1130_1357",
+      "status": "Scheduled",
+      "agenda_items": []
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-02T11:00:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Workforce Development Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_workforce_dev_1_2026-06-02-1100_1365",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb292",
+          "headline": "Sub. H. B. No. 292",
+          "title": "Establish the Ohio Defense Commission",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-01T12:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Select Committee on Data Centers Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_data_centers_1_2026-06-01-1200_1349",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "",
+          "headline": "Public Testimony",
+          "title": "",
+          "subject": "",
+          "status": "",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-03T09:45:00",
+      "end": "T",
+      "id": null,
+      "title": "House Development Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_development_1_2026-06-03-0945_1341",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb284",
+          "headline": "H. B. No. 284",
+          "title": "Require US-produced iron, steel be used on state-funded projects",
+          "subject": "",
+          "status": "5th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb291",
+          "headline": "H. B. No. 291",
+          "title": "Create the Ohio International Trade Commission",
+          "subject": "",
+          "status": "6th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb857",
+          "headline": "H. B. No. 857",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "hb910",
+          "headline": "H. B. No. 910",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 3
+        },
+        {
+          "id": "hb765",
+          "headline": "H. B. No. 765",
+          "title": "Modify the affordable single-family home credit",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 4
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-03T15:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Energy Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_energy_1_2026-06-03-0300_1362",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hcr35",
+          "headline": "H. C. R. No. 35",
+          "title": "Urge Congress accelerate deployment of new energy infrastructure",
+          "subject": "environment",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb706",
+          "headline": "H. B. No. 706",
+          "title": "Impose certain minimum requirements on data center customers",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb736",
+          "headline": "H. B. No. 736",
+          "title": "Enact the Ohio Fusion Energy Advancement Act",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-03T10:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Health Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_health_1_2026-06-03-1000_1363",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb692",
+          "headline": "H. B. No. 692",
+          "title": "Revise the household sewage treatment system law",
+          "subject": "environment",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb750",
+          "headline": "H. B. No. 750",
+          "title": "Regards PACE program site expansion",
+          "subject": "healthcare",
+          "status": "2nd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "sb162",
+          "headline": "Sub. S. B. No. 162",
+          "title": "Regards timing of health insurer recoupment from providers",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "hb739",
+          "headline": "H. B. No. 739",
+          "title": "Require Department of Health to assess its warehousing operations",
+          "subject": "healthcare",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 3
+        },
+        {
+          "id": "hb945",
+          "headline": "H. B. No. 945",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 4
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-03T10:30:00",
+      "end": "T",
+      "id": null,
+      "title": "House Rules and Reference Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_rules_ref_1_2026-06-03-1030_1330",
+      "status": "Scheduled",
+      "agenda_items": []
     },
     {
       "allDay": null,

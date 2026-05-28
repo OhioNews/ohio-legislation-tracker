@@ -1,8 +1,69 @@
 {
-  "fetched_at": "2026-05-28T10:16:54.148733Z",
+  "fetched_at": "2026-05-28T16:16:17.069852Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-03T15:30:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Sunset Review Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_j_sunset_1_2026-06-03-0330_1351",
+      "status": "Scheduled",
+      "agenda_items": []
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-02T10:00:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Energy Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_energy_1_2026-06-02-1000_1350",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb231",
+          "headline": "S. B. No. 231",
+          "title": "Establish community energy program and pilot program",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "sb294",
+          "headline": "S. B. No. 294",
+          "title": "Declare the state's energy siting policy",
+          "subject": "",
+          "status": "6th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "scr20",
+          "headline": "S. C. R. No. 20",
+          "title": "Urge Congress accelerate deployment of new energy infrastructure",
+          "subject": "environment",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 2
+        }
+      ]
+    },
     {
       "allDay": null,
       "backgroundColor": "#ad3838",

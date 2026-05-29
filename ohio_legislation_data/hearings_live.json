@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-29T10:06:37.862785Z",
+  "fetched_at": "2026-05-29T15:58:41.183032Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -14,6 +14,79 @@
       "url": "calendar/events/cmte_j_sunset_1_2026-06-03-0330_1351",
       "status": "Scheduled",
       "agenda_items": []
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-03T14:30:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Armed Services, Veterans Affairs and Public Safety Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_armed_services_1_2026-06-03-0230_1340",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb416",
+          "headline": "S. B. No. 416",
+          "title": "Regards board of education members deployed on active duty",
+          "subject": "education",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb464",
+          "headline": "H. B. No. 464",
+          "title": "Exempt military-certified child care providers from licensure",
+          "subject": "healthcare",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb217",
+          "headline": "Sub. H. B. No. 217",
+          "title": "Enact the Finding and Identifying with NamUs Data (FIND) Act",
+          "subject": "criminal-justice",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "hb533",
+          "headline": "H. B. No. 533",
+          "title": "Revise list of vehicles that can commit vehicular homicide",
+          "subject": "criminal-justice",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 3
+        },
+        {
+          "id": "hb251",
+          "headline": "Sub. H. B. No. 251",
+          "title": "Regards drone use by law enforcement; aviation facilities",
+          "subject": "criminal-justice",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 4
+        }
+      ]
     },
     {
       "allDay": null,
@@ -153,6 +226,31 @@
     {
       "allDay": null,
       "backgroundColor": "#476b9c",
+      "start": "2026-06-03T10:00:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Public Utilities Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_pub_utilities_1_2026-06-03-1000_1371",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb173",
+          "headline": "Sub. H. B. No. 173",
+          "title": "Regards entities providing behind-the-meter utility services",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
       "start": "2026-06-02T11:30:00",
       "end": "T",
       "id": null,
@@ -196,6 +294,67 @@
           "interested_party": true,
           "sponsor": false,
           "index": 0
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-02T16:15:00",
+      "end": "T",
+      "id": null,
+      "title": "House Arts, Athletics, and Tourism Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_arts_athletics_tourism_1_2026-06-02-0415_1374",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb687",
+          "headline": "H. B. No. 687",
+          "title": "Regards staffing in athletic facilities with AED, CPR training",
+          "subject": "healthcare",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb138",
+          "headline": "H. B. No. 138",
+          "title": "Authorize the creation of tourism promotion districts",
+          "subject": "",
+          "status": "5th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb255",
+          "headline": "H. B. No. 255",
+          "title": "Create the Ohio Sports Commission",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "hcr37",
+          "headline": "H. C. R. No. 37",
+          "title": "Congratulate USA's Olympic hockey teams on their victories",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 3
         }
       ]
     },
@@ -269,6 +428,67 @@
           "interested_party": false,
           "sponsor": true,
           "index": 4
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-03T11:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Commerce and Labor Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_commerce_labor_1_2026-06-03-1100_1352",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb921",
+          "headline": "H. B. No. 921",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "hb605",
+          "headline": "H. B. No. 605",
+          "title": "Codify the Spearin doctrine in public construction contracts",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb717",
+          "headline": "H. B. No. 717",
+          "title": "Increase number of vehicles a person may sell without a license",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "hb769",
+          "headline": "H. B. No. 769",
+          "title": "Regulate the practices, contract terms of roofing contractors",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 3
         }
       ]
     },
@@ -373,6 +593,91 @@
     {
       "allDay": null,
       "backgroundColor": "#ad3838",
+      "start": "2026-06-02T11:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Education Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_education_1_2026-06-02-0215_1359",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb328",
+          "headline": "Sub. S. B. No. 328",
+          "title": "Regards Education and Workforce Return on Investment Initiative",
+          "subject": "education",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "hb907",
+          "headline": "H. B. No. 907",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 3
+        },
+        {
+          "id": "hb715",
+          "headline": "H. B. No. 715",
+          "title": "Regards chartered nonpublic school EdChoice scholarship reporting",
+          "subject": "education",
+          "status": "1st Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 4
+        },
+        {
+          "id": "sb318",
+          "headline": "S. B. No. 318",
+          "title": "Allow law enforcement to provide certain school resource services",
+          "subject": "education",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 5
+        },
+        {
+          "id": "hb711",
+          "headline": "H. B. No. 711",
+          "title": "Regards the minimum teacher salary schedule",
+          "subject": "education",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 6
+        },
+        {
+          "id": "hb625",
+          "headline": "H. B. No. 625",
+          "title": "Enact the Student Athlete Mobility (SAM) Act",
+          "subject": "education",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 7
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
       "start": "2026-06-03T15:00:00",
       "end": "T",
       "id": null,
@@ -416,6 +721,67 @@
           "interested_party": false,
           "sponsor": true,
           "index": 2
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-02T15:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Finance Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_finance_1_2026-06-02-1000_1348",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "H. B. No. XX",
+          "headline": "H. B. No. XX",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb645",
+          "headline": "H. B. No. 645",
+          "title": "Require the use of zero-based budgeting every ten years",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hcr32",
+          "headline": "H. C. R. No. 32",
+          "title": "Urge Congress to implement a zero-based budgeting process",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "hb163",
+          "headline": "Am. H. B. No. 163",
+          "title": "Enact the Enhanced Cybersecurity for SNAP Act of 2025",
+          "subject": "healthcare",
+          "status": "1st Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": true,
+          "index": 3
         }
       ]
     },
@@ -503,6 +869,176 @@
       "url": "calendar/events/cmte_h_rules_ref_1_2026-06-03-1030_1330",
       "status": "Scheduled",
       "agenda_items": []
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-02T10:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Technology and Innovation Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_tech_innovation_1_2026-06-02-1000_1370",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb185",
+          "headline": "H. B. No. 185",
+          "title": "Regards an individual's persona usage; prohibit certain deepfakes",
+          "subject": "",
+          "status": "5th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb426",
+          "headline": "H. B. No. 426",
+          "title": "Regards safekeeping and management of unclaimed digital assets",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "sb163",
+          "headline": "Sub. S. B. No. 163",
+          "title": "Regards AI images, simulated child porn, replica identity fraud",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-02T11:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Transportation Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_trans_1_2026-06-02-1100_1369",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb364",
+          "headline": "S. B. No. 364",
+          "title": "Designate Cleveland Police Officer Jamieson Ritter Memorial Hwy",
+          "subject": "criminal-justice",
+          "status": "1st Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "sb365",
+          "headline": "S. B. No. 365",
+          "title": "Designate Trooper Nicholas P. Cayton Memorial Highway",
+          "subject": "criminal-justice",
+          "status": "1st Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "sb280",
+          "headline": "Sub. S. B. No. 280",
+          "title": "Allow registration of a humvee as a historical motor vehicle",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "hb526",
+          "headline": "H. B. No. 526",
+          "title": "Require orange International Symbol of Access windshield placards",
+          "subject": "healthcare",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 3
+        },
+        {
+          "id": "hb931",
+          "headline": "H. B. No. 931",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 4
+        },
+        {
+          "id": "hb773",
+          "headline": "H. B. No. 773",
+          "title": "Require E15 fuel at turnpike facilities; biodiesel fuel study",
+          "subject": "transportation",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 5
+        },
+        {
+          "id": "hb672",
+          "headline": "H. B. No. 672",
+          "title": "Exempt a vehicle towing farm machinery from vehicle size limits",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 6
+        },
+        {
+          "id": "hb776",
+          "headline": "H. B. No. 776",
+          "title": "Regards motorcycle lane filtering and lane splitting",
+          "subject": "criminal-justice",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 7
+        },
+        {
+          "id": "hb814",
+          "headline": "H. B. No. 814",
+          "title": "Eliminate E-Check if Ohio meets certain air quality standards",
+          "subject": "environment",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 8
+        }
+      ]
     },
     {
       "allDay": null,

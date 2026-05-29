@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-28T20:32:34.166235Z",
+  "fetched_at": "2026-05-29T04:17:41.098140Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -196,6 +196,79 @@
           "interested_party": true,
           "sponsor": false,
           "index": 0
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-02T10:45:00",
+      "end": "T",
+      "id": null,
+      "title": "House Children and Human Services Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_children_human_services_1_2026-06-02-1045_1366",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb707",
+          "headline": "H. B. No. 707",
+          "title": "Enact Kei'Mani's Law",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "hb797",
+          "headline": "H. B. No. 797",
+          "title": "Enact the Ohio Students and Families Workforce Strengthening Act",
+          "subject": "education",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "hb865",
+          "headline": "H. B. No. 865",
+          "title": "",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "hb496",
+          "headline": "H. B. No. 496",
+          "title": "Designate Fathers Walk Week",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 3
+        },
+        {
+          "id": "hb939",
+          "headline": "H. B. No. 939",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 4
         }
       ]
     },

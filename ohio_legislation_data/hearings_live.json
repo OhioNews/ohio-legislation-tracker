@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-29T15:58:41.183032Z",
+  "fetched_at": "2026-05-29T20:34:47.243552Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -14,6 +14,67 @@
       "url": "calendar/events/cmte_j_sunset_1_2026-06-03-0330_1351",
       "status": "Scheduled",
       "agenda_items": []
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-03T09:30:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Agriculture and Natural Resources Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_ag_nat_res_1_2026-06-03-0930_1377",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb433",
+          "headline": "S. B. No. 433",
+          "title": "Alter the law governing coastal management",
+          "subject": "environment",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "sb398",
+          "headline": "S. B. No. 398",
+          "title": "Create the Adopt a Trail Program",
+          "subject": "environment",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "sb342",
+          "headline": "S. B. No. 342",
+          "title": "Prohibit certain clauses from conservancy district contracts",
+          "subject": "environment",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "scr19",
+          "headline": "S. C. R. No. 19",
+          "title": "Urge Congress to enact the Ohio River Restoration Program Act",
+          "subject": "environment",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 3
+        }
+      ]
     },
     {
       "allDay": null,
@@ -91,6 +152,79 @@
     {
       "allDay": null,
       "backgroundColor": "#476b9c",
+      "start": "2026-06-02T15:00:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Education Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_education_1_2026-06-02-0300_1386",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb442",
+          "headline": "S. B. No. 442",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "sb332",
+          "headline": "S. B. No. 332",
+          "title": "Dissolve academic distress comms; require student support teams",
+          "subject": "criminal-justice",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "hb25",
+          "headline": "Sub. H. B. No. 25",
+          "title": "Establish the Foster-to-College Scholarship Program",
+          "subject": "education",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 3
+        },
+        {
+          "id": "hb125",
+          "headline": "Am. H. B. No. 125",
+          "title": "Regards excused school absences for 4-H and FFA programs",
+          "subject": "education",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 4
+        },
+        {
+          "id": "hb500",
+          "headline": "Am. H. B. No. 500",
+          "title": "Designate a school JROTC program as a career-technical ed program",
+          "subject": "education",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 5
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
       "start": "2026-06-02T10:00:00",
       "end": "T",
       "id": null,
@@ -134,6 +268,517 @@
           "interested_party": false,
           "sponsor": false,
           "index": 2
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-02T16:00:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Financial Institutions, Insurance and Technology Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_financial_institutions_1_2026-06-02-0400_1376",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb347",
+          "headline": "S. B. No. 347",
+          "title": "Regards the BWC drug free workplace program",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "sb389",
+          "headline": "S. B. No. 389",
+          "title": "Regards augmentative, alternative comm. tool insurance coverage",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "sb396",
+          "headline": "S. B. No. 396",
+          "title": "Establish family and medical leave insurance benefits",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "sb431",
+          "headline": "S. B. No. 431",
+          "title": "Enact the Rental Home Marketplace Guarantees Act",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 3
+        },
+        {
+          "id": "sb241",
+          "headline": "S. B. No. 241",
+          "title": "Regards specified workers' compensation employer appeals",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 4
+        },
+        {
+          "id": "sb207",
+          "headline": "S. B. No. 207",
+          "title": "Prohibit certain health insurance cost-sharing practices",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 5
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-01T14:30:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate General Government Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_gen_govt_1_2026-06-01-0230_1378",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb419",
+          "headline": "S. B. No. 419",
+          "title": "Revise temporary instruction permit eligibility, requirements",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "sjr10",
+          "headline": "S. J. R. No. 10",
+          "title": "",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-02T14:00:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate General Government Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_gen_govt_1_2026-06-02-0200_1379",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sjr10",
+          "headline": "S. J. R. No. 10",
+          "title": "",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-03T09:00:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate General Government Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_gen_govt_1_2026-06-03-0900_1380",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sjr10",
+          "headline": "S. J. R. No. 10",
+          "title": "",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-03T10:30:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Health Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_health_1_2026-06-03-1030_1391",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb230",
+          "headline": "S. B. No. 230",
+          "title": "Authorize pharmacists to test, treat certain health conditions",
+          "subject": "healthcare",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "sb274",
+          "headline": "S. B. No. 274",
+          "title": "Prohibit minor mental health services without parental consent",
+          "subject": "healthcare",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "sb384",
+          "headline": "S. B. No. 384",
+          "title": "Regards direct care staffing hour requirements for nursing homes",
+          "subject": "healthcare",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "sb388",
+          "headline": "S. B. No. 388",
+          "title": "Designate Augmentative and Alternative Communication (AAC) Month",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 3
+        },
+        {
+          "id": "sb423",
+          "headline": "S. B. No. 423",
+          "title": "Regards employment status of health care workers for certain laws",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 4
+        },
+        {
+          "id": "hb347",
+          "headline": "H. B. No. 347",
+          "title": "Enact SHE WINS Act",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 5
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-02T15:45:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Housing Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_housing_1_2026-06-02-0345_1384",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "5076",
+          "headline": "Ralph Griffith - Ohio Housing Finance Agency",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "sb250",
+          "headline": "S. B. No. 250",
+          "title": "Enact the Promised Land Act",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "sb428",
+          "headline": "S. B. No. 428",
+          "title": "Enact the Build Smart Act",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 3
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-03T09:45:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Judiciary Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_judiciary_1_2026-06-03-0945_1354",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb252",
+          "headline": "Sub. H. B. No. 252",
+          "title": "Modify offenses of burglary, breaking and entering, and trespass",
+          "subject": "criminal-justice",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "hb372",
+          "headline": "Am. H. B. No. 372",
+          "title": "Enact the Larry Henderson Act",
+          "subject": "criminal-justice",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "hb20",
+          "headline": "Sub. H. B. No. 20",
+          "title": "Prohibit harassing or impeding an emergency service responder",
+          "subject": "criminal-justice",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "hb195",
+          "headline": "H. B. No. 195",
+          "title": "Revise the Ohio Uniform Commercial Code",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 3
+        },
+        {
+          "id": "hb86",
+          "headline": "H. B. No. 86",
+          "title": "Enact the Gus Frangos Act",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 4
+        },
+        {
+          "id": "hb105",
+          "headline": "Sub. H. B. No. 105",
+          "title": "Revise non-recourse litigation funding agreement regulations",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 5
+        },
+        {
+          "id": "sb422",
+          "headline": "S. B. No. 422",
+          "title": "Prohibit certain offenders from school or child care premises",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 6
+        },
+        {
+          "id": "hb210",
+          "headline": "Sub. H. B. No. 210",
+          "title": "Regards the sale of used catalytic converters",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 7
+        },
+        {
+          "id": "hb126",
+          "headline": "Sub. H. B. No. 126",
+          "title": "Prohibit certain public nuisance actions",
+          "subject": "",
+          "status": "5th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 8
+        },
+        {
+          "id": "hb296",
+          "headline": "H. B. No. 296",
+          "title": "Delay offender financial sanctions until 180 days after release",
+          "subject": "criminal-justice",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 9
+        },
+        {
+          "id": "hb519",
+          "headline": "Sub. H. B. No. 519",
+          "title": "Prohibit specified actions with intent to steal a motor vehicle",
+          "subject": "criminal-justice",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 10
+        },
+        {
+          "id": "hb338",
+          "headline": "Sub. H. B. No. 338",
+          "title": "Enact Andy's Law",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 11
+        },
+        {
+          "id": "hb532",
+          "headline": "Sub. H. B. No. 532",
+          "title": "Regards custody of children who cannot be released to a parent",
+          "subject": "criminal-justice",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 12
+        },
+        {
+          "id": "sb178",
+          "headline": "S. B. No. 178",
+          "title": "Form Missing Women-Black, Indigenous, People of Color task force",
+          "subject": "criminal-justice",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 13
+        },
+        {
+          "id": "sb421",
+          "headline": "S. B. No. 421",
+          "title": "Increase time period to bring civil action for sex offense victim",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 14
+        },
+        {
+          "id": "hb492",
+          "headline": "Sub. H. B. No. 492",
+          "title": "Prohibit interfering with motor vehicle-related arrests",
+          "subject": "criminal-justice",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 15
         }
       ]
     },
@@ -275,6 +920,43 @@
     {
       "allDay": null,
       "backgroundColor": "#476b9c",
+      "start": "2026-06-03T15:15:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Small Business and Economic Opportunity Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_small_business_1_2026-06-03-0315_1353",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb348",
+          "headline": "S. B. No. 348",
+          "title": "Require bars, restaurants to have date rape drug testing devices",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "sb23",
+          "headline": "S. B. No. 23",
+          "title": "Revise the Alcohol Franchise Law",
+          "subject": "",
+          "status": "5th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
       "start": "2026-06-02T11:00:00",
       "end": "T",
       "id": null,
@@ -294,6 +976,55 @@
           "interested_party": true,
           "sponsor": false,
           "index": 0
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-03T11:30:00",
+      "end": "T",
+      "id": null,
+      "title": "House Agriculture Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_agriculture_1_2026-06-03-1130_1385",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb911",
+          "headline": "H. B. No. 911",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "hb733",
+          "headline": "H. B. No. 733",
+          "title": "Include maple syrup, maple product production to agriculture law",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb364",
+          "headline": "H. B. No. 364",
+          "title": "Require food service operation note certain allergens on the menu",
+          "subject": "healthcare",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 2
         }
       ]
     },
@@ -485,6 +1216,67 @@
           "subject": "",
           "status": "2nd Hearing",
           "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 3
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-02T15:15:00",
+      "end": "T",
+      "id": null,
+      "title": "House Community Revitalization Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_community_revitalization_1_2026-06-02-0315_1358",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb758",
+          "headline": "H. B. No. 758",
+          "title": "Regards SUDEP, epilepsy license designation, disability database",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb766",
+          "headline": "H. B. No. 766",
+          "title": "Designate Augmentative and Alternative Communication (AAC) Month",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb718",
+          "headline": "H. B. No. 718",
+          "title": "Revise the Chemical Dependency Professionals Board and duties",
+          "subject": "healthcare",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "hb585",
+          "headline": "H. B. No. 585",
+          "title": "Regards DoDD authority re: community capital assistance funds",
+          "subject": "healthcare",
+          "status": "5th Hearing",
+          "proponent": false,
           "opponent": false,
           "interested_party": false,
           "sponsor": false,
@@ -788,6 +1580,103 @@
     {
       "allDay": null,
       "backgroundColor": "#ad3838",
+      "start": "2026-06-02T10:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House General Government Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_gen_govt_1_2026-06-02-1000_1373",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb582",
+          "headline": "H. B. No. 582",
+          "title": "Regards embalmers, funeral directors, and crematories",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb264",
+          "headline": "H. B. No. 264",
+          "title": "Prohibit certain publications during 30 days before an election",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb770",
+          "headline": "H. B. No. 770",
+          "title": "Allow a campaign committee to refund a political contribution",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "hb388",
+          "headline": "H. B. No. 388",
+          "title": "Regards state employee reimbursement for GLP-1 drug costs",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 3
+        },
+        {
+          "id": "hb779",
+          "headline": "H. B. No. 779",
+          "title": "Enact the JobsOhio Transparency Act",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 4
+        },
+        {
+          "id": "hb775",
+          "headline": "H. B. No. 775",
+          "title": "Regards state agencies' authority to adopt administrative rules",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 5
+        },
+        {
+          "id": "hjr9",
+          "headline": "H. J. R. No. 9",
+          "title": "",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 6
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
       "start": "2026-06-03T10:00:00",
       "end": "T",
       "id": null,
@@ -855,6 +1744,602 @@
           "interested_party": false,
           "sponsor": false,
           "index": 4
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-02T09:30:00",
+      "end": "T",
+      "id": null,
+      "title": "House Insurance Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_insurance_1_2026-06-02-0930_1382",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb593",
+          "headline": "H. B. No. 593",
+          "title": "Regards paid family leave insurance",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb453",
+          "headline": "H. B. No. 453",
+          "title": "Regards insurance, Medicaid coverage of certain autism therapy",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb709",
+          "headline": "H. B. No. 709",
+          "title": "Require private insurers cover telehealth mental health services",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "sb306",
+          "headline": "Sub. S. B. No. 306",
+          "title": "Regards insurance transactions, plans, and policies",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 3
+        },
+        {
+          "id": "hb792",
+          "headline": "H. B. No. 792",
+          "title": "Regards surplus lines insurers",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 4
+        },
+        {
+          "id": "hb757",
+          "headline": "H. B. No. 757",
+          "title": "Enact the Rental Home Marketplace Guarantees Act",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 5
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-03T09:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Judiciary Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_judiciary_1_2026-06-03-1100_1360",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb345",
+          "headline": "H. B. No. 345",
+          "title": "Increase the penalties for voyeurism",
+          "subject": "criminal-justice",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb441",
+          "headline": "H. B. No. 441",
+          "title": "Regards the one-year limitations period for libel or slander",
+          "subject": "",
+          "status": "5th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb314",
+          "headline": "H. B. No. 314",
+          "title": "Limit certain public record requests; allow contractor response",
+          "subject": "",
+          "status": "5th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "hb528",
+          "headline": "H. B. No. 528",
+          "title": "Require 7 year mandatory minimum prison term for forcible rape",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 3
+        },
+        {
+          "id": "sb262",
+          "headline": "S. B. No. 262",
+          "title": "Require construction contracts note variation from standard form",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 4
+        },
+        {
+          "id": "sb61",
+          "headline": "Sub. S. B. No. 61",
+          "title": "Regards courts and court procedures",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 5
+        },
+        {
+          "id": "sb278",
+          "headline": "S. B. No. 278",
+          "title": "Permit monetary damages against municipal corps with gun controls",
+          "subject": "criminal-justice",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 6
+        },
+        {
+          "id": "hb295",
+          "headline": "H. B. No. 295",
+          "title": "Expedite unauthorized occupant removal; prohibit fraudulent deeds",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 7
+        },
+        {
+          "id": "hb622",
+          "headline": "H. B. No. 622",
+          "title": "Enact the Mental Health and Community Wellness Act",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 8
+        },
+        {
+          "id": "hb686",
+          "headline": "H. B. No. 686",
+          "title": "Enact the Parker Kahle Act",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 9
+        },
+        {
+          "id": "hb459",
+          "headline": "H. B. No. 459",
+          "title": "Enact Katelyn's Law",
+          "subject": "criminal-justice",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 10
+        },
+        {
+          "id": "sb174",
+          "headline": "Sub. S. B. No. 174",
+          "title": "Regards allocation of parenting responsibilities",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 11
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-03T09:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Local Government Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_local_govt_1_2026-06-03-0900_1389",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb445",
+          "headline": "H. B. No. 445",
+          "title": "Regards regional councils of govt and metropolitan planning orgs",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb695",
+          "headline": "H. B. No. 695",
+          "title": "Prohibit nondisclosure agreements for certain local officials",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb843",
+          "headline": "H. B. No. 843",
+          "title": "Require elector approval for a municipal traffic camera program",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-02T16:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Medicaid Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_medicaid_1_2026-06-02-0400_1387",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb795",
+          "headline": "H. B. No. 795",
+          "title": "Enact SHIELD Act",
+          "subject": "healthcare",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-03T15:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Medicaid Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_medicaid_1_2026-06-03-0300_1390",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb795",
+          "headline": "H. B. No. 795",
+          "title": "Enact SHIELD Act",
+          "subject": "healthcare",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-03T09:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Natural Resources Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_natural_resources_1_2026-06-03-0900_1355",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb181",
+          "headline": "Sub. S. B. No. 181",
+          "title": "Regards limestone, dolomite mining; increase severance taxes",
+          "subject": "environment",
+          "status": "1st Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "sb219",
+          "headline": "Sub. S. B. No. 219",
+          "title": "Revise the law governing oil and gas wells",
+          "subject": "environment",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hcr40",
+          "headline": "H. C. R. No. 40",
+          "title": "",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 2
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-03T10:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Public Insurance and Pensions Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_pub_ins_pensions_1_2026-06-03-1000_1388",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb343",
+          "headline": "Am. S. B. No. 343",
+          "title": "Regards workers' compensation coverage-urban search and rescue",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "hb833",
+          "headline": "H. B. No. 833",
+          "title": "Regards state retirement defined contribution investment options",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "sb263",
+          "headline": "Sub. S. B. No. 263",
+          "title": "Regards professional employer organizations and Unemployment Law",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 2
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-02T15:30:00",
+      "end": "T",
+      "id": null,
+      "title": "House Public Safety Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_pub_safety_1_2026-06-02-0330_1364",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb654",
+          "headline": "H. B. No. 654",
+          "title": "Enact Amanda Dean's Law",
+          "subject": "criminal-justice",
+          "status": "5th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb667",
+          "headline": "H. B. No. 667",
+          "title": "Enact the Reagan Tokes and Patrick Heringer Act",
+          "subject": "criminal-justice",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb677",
+          "headline": "H. B. No. 677",
+          "title": "Regards custody interference, missing children, certain call data",
+          "subject": "",
+          "status": "5th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "sb273",
+          "headline": "Sub. S. B. No. 273",
+          "title": "Enact the Keep Them Safe Act",
+          "subject": "criminal-justice",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 3
+        },
+        {
+          "id": "hb346",
+          "headline": "H. B. No. 346",
+          "title": "Enact V.J.'s Law",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 4
+        },
+        {
+          "id": "hb849",
+          "headline": "H. B. No. 849",
+          "title": "Regards electronic smoking, tobacco, nicotine, vapor products",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 5
+        },
+        {
+          "id": "sb214",
+          "headline": "S. B. No. 214",
+          "title": "Remove firearm mufflers, suppressors as dangerous ordnance",
+          "subject": "criminal-justice",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 6
+        },
+        {
+          "id": "hb830",
+          "headline": "H. B. No. 830",
+          "title": "Establish the violent crime reduction grant program",
+          "subject": "criminal-justice",
+          "status": "1st Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 7
+        },
+        {
+          "id": "sb321",
+          "headline": "Sub. S. B. No. 321",
+          "title": "Regards carrying of firearms by certain special police officers",
+          "subject": "criminal-justice",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 8
+        },
+        {
+          "id": "hb846",
+          "headline": "H. B. No. 846",
+          "title": "Create the repeat domestic violence offender registry",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 9
+        },
+        {
+          "id": "hb852",
+          "headline": "H. B. No. 852",
+          "title": "",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 10
+        },
+        {
+          "id": "hb82",
+          "headline": "H. B. No. 82",
+          "title": "Regards traffic offenses in construction zones",
+          "subject": "criminal-justice",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 11
         }
       ]
     },
@@ -1037,6 +2522,237 @@
           "interested_party": false,
           "sponsor": false,
           "index": 8
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-02T09:15:00",
+      "end": "T",
+      "id": null,
+      "title": "House Veterans and Military Development Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_vets_military_dev_1_2026-06-02-0915_1372",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb452",
+          "headline": "H. B. No. 452",
+          "title": "Designate 761st Tank Battalion Day",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "sb253",
+          "headline": "S. B. No. 253",
+          "title": "Designate Black Ohioan Civil War Medal of Honor Recipient Day",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "hcr42",
+          "headline": "H. C. R. No. 42",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "hb632",
+          "headline": "H. B. No. 632",
+          "title": "Allow driver's license or ID card to show Gold Star Family status",
+          "subject": "transportation",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 3
+        },
+        {
+          "id": "hb785",
+          "headline": "H. B. No. 785",
+          "title": "Enact the ASSET Act",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 4
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-03T11:30:00",
+      "end": "T",
+      "id": null,
+      "title": "House Ways and Means Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_wm_1_2026-06-03-1130_1381",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb504",
+          "headline": "H. B. No. 504",
+          "title": "Enact the Calculated Adjustments for Property Surges (CAPS) Act",
+          "subject": "",
+          "status": "6th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb613",
+          "headline": "H. B. No. 613",
+          "title": "Modify tax enforcement authority",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb778",
+          "headline": "H. B. No. 778",
+          "title": "Exclude certain fire and EMS levies from being reduced",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "hb737",
+          "headline": "H. B. No. 737",
+          "title": "Require cash payments to the government be rounded to a nickel",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 3
+        },
+        {
+          "id": "sb307",
+          "headline": "S. B. No. 307",
+          "title": "Allow tax increment financing for police, firefighting facilities",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 4
+        },
+        {
+          "id": "hb549",
+          "headline": "H. B. No. 549",
+          "title": "Regulate cigar bars; create cigar sales and use tax exemption",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 5
+        },
+        {
+          "id": "hb762",
+          "headline": "H. B. No. 762",
+          "title": "Exempt certain vending machine food purchases from sales, use tax",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 6
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-03T11:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Workforce and Higher Education Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_workforce_higher_ed_1_2026-06-03-1100_1383",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb319",
+          "headline": "H. B. No. 319",
+          "title": "Enact the Clinical Teaching Subsidy Reform Act",
+          "subject": "education",
+          "status": "2nd Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb530",
+          "headline": "H. B. No. 530",
+          "title": "Establish the Long-term Care Workforce Study Commission",
+          "subject": "healthcare",
+          "status": "5th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb848",
+          "headline": "H. B. No. 848",
+          "title": "Designate September as Celebrate HBCU Month",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "hb793",
+          "headline": "H. B. No. 793",
+          "title": "Regards cost of attendance at institutions of higher education",
+          "subject": "education",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 3
         }
       ]
     },

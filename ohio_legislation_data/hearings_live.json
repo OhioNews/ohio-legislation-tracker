@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-05-29T20:34:47.243552Z",
+  "fetched_at": "2026-05-30T04:03:09.531590Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -274,6 +274,93 @@
     {
       "allDay": null,
       "backgroundColor": "#476b9c",
+      "start": "2026-06-02T14:00:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Finance Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_finance_1_2026-06-02-0200_1343",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "S. B. No. XXX",
+          "headline": "S. B. No. XXX",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "H. B. No. 479",
+          "headline": "H. B. No. 479",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-02T11:00:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Finance Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_finance_1_2026-06-02-1000_1342",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "S. B. No. XXX",
+          "headline": "S. B. No. XXX",
+          "title": "",
+          "subject": "",
+          "status": "",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-03T09:00:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Finance Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_finance_1_2026-06-03-0900_1344",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "S. B. No. XXX",
+          "headline": "S. B. No. XXX",
+          "title": "",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
       "start": "2026-06-02T16:00:00",
       "end": "T",
       "id": null,
@@ -508,7 +595,7 @@
           "title": "Regards employment status of health care workers for certain laws",
           "subject": "",
           "status": "3rd Hearing",
-          "proponent": false,
+          "proponent": true,
           "opponent": true,
           "interested_party": true,
           "sponsor": false,
@@ -2082,7 +2169,7 @@
           "status": "4th Hearing",
           "proponent": false,
           "opponent": true,
-          "interested_party": true,
+          "interested_party": false,
           "sponsor": false,
           "index": 0
         }

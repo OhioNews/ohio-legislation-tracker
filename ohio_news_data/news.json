@@ -1,7 +1,55 @@
 {
-  "last_updated": "2026-05-31T13:40:02.022660+00:00",
-  "item_count": 60,
+  "last_updated": "2026-05-31T19:23:22.368890+00:00",
+  "item_count": 50,
   "items": [
+    {
+      "title": "Sunday Briefing: Medicaid abuse; data center tax breaks; more Strauss survivors",
+      "link": "https://www.nbc4i.com/news/sunday-briefing/sunday-briefing-medicaid-abuse-data-center-tax-breaks-more-strauss-survivors/",
+      "pub_date": "2026-05-31T18:51:44+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "A Stroll Through the Garden: Giant hogweed creates toxins & surprises",
+      "link": "https://www.richlandsource.com/2026/05/31/a-stroll-through-the-garden-giant-hogweed-creates-toxins-surprises/",
+      "pub_date": "2026-05-31T18:00:00+00:00",
+      "source": "Richland Source"
+    },
+    {
+      "title": "Toledo-born magician, musician writes raw memoir of growing up in the Glass City",
+      "link": "https://www.toledoblade.com/local/city/2026/05/31/magician-musician-writes-memoir-growing-glass-city/stories/20260522004",
+      "pub_date": "2026-05-31T16:38:10+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "University of Toledo pole vaulter Eva Moran dies in 3-vehicle crash",
+      "link": "https://www.toledoblade.com/sports/ut/2026/05/31/university-pole-vaulter-eva-moran-dies-crash/stories/20260531127",
+      "pub_date": "2026-05-31T16:06:08+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Whitehouse man injured in rollover incident",
+      "link": "https://www.toledoblade.com/local/police-fire/2026/05/31/whitehouse-man-injured-rollover-incident/stories/20260531126",
+      "pub_date": "2026-05-31T14:20:27+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Two Cinderellas? Madison, Louisville will both grab for glass slipper in state softball semifinals",
+      "link": "https://www.richlandsource.com/2026/05/31/two-cinderellas-madison-louisville-will-both-grab-for-glass-slipper-in-state-softball-semifinals/",
+      "pub_date": "2026-05-31T14:00:00+00:00",
+      "source": "Richland Source"
+    },
+    {
+      "title": "St. Francis grad Brendan Furry credits Knights for flourishing pro career",
+      "link": "https://www.toledoblade.com/sports/high-school/2026/05/31/st-francis-grad-brendan-furry-credits-knights-for-flourishing-pro-career/stories/20260530033",
+      "pub_date": "2026-05-31T13:54:25+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "As the Pentagon pushes for battlefield AI, some military leaders urge caution",
+      "link": "https://www.toledoblade.com/news/nation/2026/05/31/pentagon-pushes-battlefield-ai-some-military-leaders-urge-caution/stories/20260531125",
+      "pub_date": "2026-05-31T13:36:58+00:00",
+      "source": "Toledo Blade"
+    },
     {
       "title": "Mama Rose threatens theatergoers with good time in Croswell's 'Gypsy'",
       "link": "https://www.toledoblade.com/a-e/music-theater-dance/2026/05/31/mama-rose-threatens-theatergoers-with-good-time-in-croswell-s-gypsy/stories/20260528013",
@@ -22,7 +70,7 @@
     },
     {
       "title": "Motorcyclist seriously injured in crash near downtown Columbus",
-      "link": "https://www.nbc4i.com/news/local-news/columbus/motorcyclist-seriously-injured-in-crash-near-downtown-columbus/",
+      "link": "https://www.nbc4i.com/news/local-news/motorcyclist-seriously-injured-in-crash-near-downtown-columbus/",
       "pub_date": "2026-05-31T12:00:38+00:00",
       "source": "WCMH / NBC4i"
     },
@@ -141,40 +189,10 @@
       "source": "Toledo Blade"
     },
     {
-      "title": "Wong, Duran propel Red Sox to 9-1 victory over Guardians",
-      "link": "https://www.toledoblade.com/sports/guardians/2026/05/30/wong-duran-propel-red-sox-9-1-victory-over-guardians/stories/20260530103",
-      "pub_date": "2026-05-31T02:49:46+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "Quero, Montgomery and Benintendi hit HRs, White Sox beat Tigers 7-1 without Murakami",
-      "link": "https://www.toledoblade.com/sports/tigers/2026/05/30/quero-montgomery-and-benintendi-hit-hrs-white-sox-beat-tigers-7-1/stories/20260530102",
-      "pub_date": "2026-05-31T02:46:21+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "Editorial Cartoon: Tim Hartman - 5/31",
-      "link": "https://www.toledoblade.com/opinion/editorial-cartoons/2026/05/30/editorial-cartoon-tim-hartman-5-31-26/stories/20260530100",
-      "pub_date": "2026-05-31T02:45:00+00:00",
-      "source": "Toledo Blade"
-    },
-    {
       "title": "Student athlete dead after 3-vehicle crash in Marion County",
       "link": "https://www.nbc4i.com/news/local-news/marion-county/student-athlete-dead-after-3-vehicle-crash-in-marion-county/",
       "pub_date": "2026-05-31T02:08:04+00:00",
       "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Mud Hens drop 4th straight in pitchers’ duel vs. Clippers",
-      "link": "https://www.toledoblade.com/sports/mud-hens/2026/05/30/mud-hens-drop-4th-straight-pitchers-duel-vs-clippers/stories/20260530101",
-      "pub_date": "2026-05-31T02:01:45+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "Photo Gallery: Mud Hens, Walleye take over the Main Library",
-      "link": "https://www.toledoblade.com/local/community-events/2026/05/30/photo-gallery-mud-hens-walleye-take-over-main-library/stories/20260530099",
-      "pub_date": "2026-05-30T23:24:03+00:00",
-      "source": "Toledo Blade"
     },
     {
       "title": "Columbus pools open for first season with $3 admission",
@@ -249,18 +267,6 @@
       "source": "Richland Source"
     },
     {
-      "title": "State-Bound: Madison’s Stancombe, Lex’s Hughes headline list of local qualifiers",
-      "link": "https://www.richlandsource.com/2026/05/30/state-bound-madisons-stancombe-lexs-hughes-headline-list-of-local-qualifiers/",
-      "pub_date": "2026-05-30T04:05:19+00:00",
-      "source": "Richland Source"
-    },
-    {
-      "title": "Madison claims regional championship to earn state softball tournament bid",
-      "link": "https://www.richlandsource.com/2026/05/29/madison-claims-regional-championship-to-earn-state-softball-tournament-bid/",
-      "pub_date": "2026-05-30T03:44:41+00:00",
-      "source": "Richland Source"
-    },
-    {
       "title": "Central Ohio soccer club lends an assist to Ecuador ahead of World Cup",
       "link": "https://www.nbc4i.com/sports/world-cup-2026/central-ohio-soccer-club-lends-an-assist-to-ecuador-ahead-of-world-cup/",
       "pub_date": "2026-05-30T03:16:34+00:00",
@@ -285,12 +291,6 @@
       "source": "WCMH / NBC4i"
     },
     {
-      "title": "Climate activists march from southern Ohio to Columbus - WYSO Public Radio",
-      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxORHlLc3RVWmI5VC1NNlNSbXZpQm1BOXVHbVd5Vl93bEhjODc5cnJtYWxVV0t1MXFHTUdfdDY4UGRPRDNBUENLWWd5cFE2SFpoOXRwNmlBcXI4bmZmS05sNUxZLXFpbENVVXpjblBnR2JYU3hRSUZrdURmRmJsN2xoVmdkLWNFWHJkZWY4U2ZhOA?oc=5",
-      "pub_date": "2026-05-29T21:51:00+00:00",
-      "source": "Google News: Ohio Statehouse"
-    },
-    {
       "title": "Woody Hayes Celebrity Classic reaches major milestone",
       "link": "https://www.nbc4i.com/news/local-news/new-albany/woody-hayes-celebrity-classic-reaches-major-milestone/",
       "pub_date": "2026-05-29T21:00:00+00:00",
@@ -301,66 +301,6 @@
       "link": "https://www.wcpo.com/news/state/state-ohio/republicans-deny-juicing-votes-as-they-attempt-to-put-already-existing-law-on-midterm-ballot",
       "pub_date": "2026-05-29T20:53:44+00:00",
       "source": "WCPO"
-    },
-    {
-      "title": "Small plane crashes in Muskingum County",
-      "link": "https://www.nbc4i.com/news/local-news/central-ohio-news/small-plane-crashes-in-muskingum-county/",
-      "pub_date": "2026-05-29T17:41:49+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Rooster in Review: Say it ain't so, Laura Bischoff!",
-      "link": "https://www.rooster.info/p/laura-bischoff-dispatch-vivek-ramaswamy-cleveland-cavaliers",
-      "pub_date": "2026-05-29T16:59:55+00:00",
-      "source": "The Rooster"
-    },
-    {
-      "title": "Cyclist dead after hit by two vehicles in north Columbus",
-      "link": "https://www.nbc4i.com/news/local-news/columbus/cyclist-dead-after-hit-by-two-vehicles-in-north-columbus/",
-      "pub_date": "2026-05-29T16:35:31+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Columbus man charged in murder of wife, girl was sleeping with knife, police say",
-      "link": "https://www.nbc4i.com/news/local-news/columbus/columbus-man-charged-in-murder-of-wife-girl-was-sleeping-with-knife-police-say/",
-      "pub_date": "2026-05-29T15:23:58+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Cava set to open its latest central Ohio location in Grove City next month",
-      "link": "https://www.nbc4i.com/news/local-news/grove-city/cava-set-to-open-its-latest-central-ohio-location-in-grove-city-next-month/",
-      "pub_date": "2026-05-29T15:00:00+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Trump’s ‘anti-weaponization’ fund blocked for now by federal judge",
-      "link": "https://ohiocapitaljournal.com/2026/05/29/repub/trumps-anti-weaponization-fund-blocked-for-now-by-federal-judge/",
-      "pub_date": "2026-05-29T14:38:49+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "New Cameron Mitchell restaurant planned for Bexley development",
-      "link": "https://www.nbc4i.com/news/local-news/bexley/new-cameron-mitchell-restaurant-planned-for-bexley-development/",
-      "pub_date": "2026-05-29T14:30:00+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "How Trump’s giant ‘slush fund’ sparked lawsuits, roiled Republicans and revived Jan. 6",
-      "link": "https://ohiocapitaljournal.com/2026/05/29/repub/how-trumps-giant-slush-fund-sparked-lawsuits-roiled-republicans-and-revived-jan-6/",
-      "pub_date": "2026-05-29T14:08:07+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "Bipartisan deal floated on college athletes’ name, image and likeness legislation",
-      "link": "https://ohiocapitaljournal.com/2026/05/29/repub/bipartisan-deal-floated-on-college-athletes-name-image-and-likeness-legislation/",
-      "pub_date": "2026-05-29T13:59:35+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "Catching Our Eye News Roundup, May 29, 2026",
-      "link": "https://ohiocapitaljournal.com/briefs/catching-our-eye-news-roundup-may-29-2026/",
-      "pub_date": "2026-05-29T13:53:55+00:00",
-      "source": "Ohio Capital Journal"
     }
   ]
 }

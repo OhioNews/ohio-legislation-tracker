@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-01T11:49:51.439036Z",
+  "fetched_at": "2026-06-01T17:56:10.215962Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -1112,6 +1112,18 @@
           "interested_party": true,
           "sponsor": false,
           "index": 2
+        },
+        {
+          "id": "hb664",
+          "headline": "H. B. No. 664",
+          "title": "Regards registered veterinary technician authority",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 3
         }
       ]
     },
@@ -1380,6 +1392,31 @@
       "title": "House Select Committee on Data Centers Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_h_data_centers_1_2026-06-01-1200_1349",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "",
+          "headline": "Public Testimony",
+          "title": "",
+          "subject": "",
+          "status": "",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-04T10:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Select Committee on Data Centers Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_data_centers_1_2026-06-04-1000_1392",
       "status": "Scheduled",
       "agenda_items": [
         {
@@ -1831,6 +1868,18 @@
           "interested_party": false,
           "sponsor": false,
           "index": 4
+        },
+        {
+          "id": "hb567",
+          "headline": "H. B. No. 567",
+          "title": "Modify laws governing the Board of Nursing, nursing professionals",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 5
         }
       ]
     },
@@ -2088,15 +2137,15 @@
       "status": "Scheduled",
       "agenda_items": [
         {
-          "id": "hb445",
-          "headline": "H. B. No. 445",
-          "title": "Regards regional councils of govt and metropolitan planning orgs",
+          "id": "hb843",
+          "headline": "H. B. No. 843",
+          "title": "Require elector approval for a municipal traffic camera program",
           "subject": "",
-          "status": "3rd Hearing",
-          "proponent": true,
+          "status": "1st Hearing",
+          "proponent": false,
           "opponent": false,
           "interested_party": false,
-          "sponsor": false,
+          "sponsor": true,
           "index": 0
         },
         {
@@ -2112,15 +2161,15 @@
           "index": 1
         },
         {
-          "id": "hb843",
-          "headline": "H. B. No. 843",
-          "title": "Require elector approval for a municipal traffic camera program",
+          "id": "hb445",
+          "headline": "H. B. No. 445",
+          "title": "Regards regional councils of govt and metropolitan planning orgs",
           "subject": "",
-          "status": "1st Hearing",
-          "proponent": false,
+          "status": "3rd Hearing",
+          "proponent": true,
           "opponent": false,
           "interested_party": false,
-          "sponsor": true,
+          "sponsor": false,
           "index": 2
         }
       ]

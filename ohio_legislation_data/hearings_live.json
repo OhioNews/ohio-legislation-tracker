@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-01T17:56:10.215962Z",
+  "fetched_at": "2026-06-01T21:41:47.871516Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -492,6 +492,18 @@
       "status": "Scheduled",
       "agenda_items": [
         {
+          "id": "sb419",
+          "headline": "S. B. No. 419",
+          "title": "Revise temporary instruction permit eligibility, requirements",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
           "id": "sjr10",
           "headline": "S. J. R. No. 10",
           "title": "",
@@ -501,7 +513,7 @@
           "opponent": true,
           "interested_party": true,
           "sponsor": false,
-          "index": 0
+          "index": 1
         }
       ]
     },
@@ -1200,6 +1212,18 @@
       "status": "Scheduled",
       "agenda_items": [
         {
+          "id": "hb647",
+          "headline": "H. B. No. 647",
+          "title": "Regards publicly funded child care, the Child Care Cred Program",
+          "subject": "healthcare",
+          "status": "8th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
           "id": "hb707",
           "headline": "H. B. No. 707",
           "title": "Enact Kei'Mani's Law",
@@ -1209,7 +1233,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": true,
-          "index": 0
+          "index": 1
         },
         {
           "id": "hb797",
@@ -1221,7 +1245,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": true,
-          "index": 1
+          "index": 2
         },
         {
           "id": "hb865",
@@ -1233,7 +1257,7 @@
           "opponent": true,
           "interested_party": true,
           "sponsor": false,
-          "index": 2
+          "index": 3
         },
         {
           "id": "hb496",
@@ -1245,7 +1269,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": false,
-          "index": 3
+          "index": 4
         },
         {
           "id": "hb939",
@@ -1257,7 +1281,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": true,
-          "index": 4
+          "index": 5
         }
       ]
     },

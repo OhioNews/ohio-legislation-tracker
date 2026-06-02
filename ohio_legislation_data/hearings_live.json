@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-02T10:48:39.847201Z",
+  "fetched_at": "2026-06-02T16:47:46.301788Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -283,8 +283,8 @@
       "status": "Scheduled",
       "agenda_items": [
         {
-          "id": "S. B. No. XXX",
-          "headline": "S. B. No. XXX",
+          "id": "sb450",
+          "headline": "S. B. No. 450",
           "title": "",
           "subject": "",
           "status": "1st Hearing",
@@ -295,10 +295,10 @@
           "index": 0
         },
         {
-          "id": "H. B. No. 479",
-          "headline": "H. B. No. 479",
-          "title": "",
-          "subject": "",
+          "id": "hb479",
+          "headline": "Am. Sub. H. B. No. 479",
+          "title": "Regards physician supervision of imaging contrast administration",
+          "subject": "healthcare",
           "status": "1st Hearing",
           "proponent": false,
           "opponent": false,
@@ -320,8 +320,8 @@
       "status": "Scheduled",
       "agenda_items": [
         {
-          "id": "S. B. No. XXX",
-          "headline": "S. B. No. XXX",
+          "id": "S. B. No. 450",
+          "headline": "S. B. No. 450",
           "title": "",
           "subject": "",
           "status": "",
@@ -1614,8 +1614,8 @@
       "status": "Scheduled",
       "agenda_items": [
         {
-          "id": "H. B. No. XX",
-          "headline": "H. B. No. XX",
+          "id": "H. B. No. 959",
+          "headline": "H. B. No. 959",
           "title": "",
           "subject": "",
           "status": "1st Hearing",

@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-02T16:47:46.301788Z",
+  "fetched_at": "2026-06-02T21:18:39.501662Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -345,8 +345,8 @@
       "status": "Scheduled",
       "agenda_items": [
         {
-          "id": "S. B. No. XXX",
-          "headline": "S. B. No. XXX",
+          "id": "sb450",
+          "headline": "S. B. No. 450",
           "title": "",
           "subject": "",
           "status": "2nd Hearing",
@@ -477,31 +477,6 @@
           "interested_party": true,
           "sponsor": false,
           "index": 1
-        }
-      ]
-    },
-    {
-      "allDay": null,
-      "backgroundColor": "#476b9c",
-      "start": "2026-06-03T09:00:00",
-      "end": "T",
-      "id": null,
-      "title": "Senate General Government Committee Meeting",
-      "textColor": "#ffffff",
-      "url": "calendar/events/cmte_s_gen_govt_1_2026-06-03-0900_1380",
-      "status": "Scheduled",
-      "agenda_items": [
-        {
-          "id": "sjr10",
-          "headline": "S. J. R. No. 10",
-          "title": "",
-          "subject": "",
-          "status": "4th Hearing",
-          "proponent": false,
-          "opponent": false,
-          "interested_party": false,
-          "sponsor": false,
-          "index": 0
         }
       ]
     },
@@ -699,16 +674,28 @@
           "index": 3
         },
         {
-          "id": "hb86",
-          "headline": "H. B. No. 86",
+          "id": "sb102",
+          "headline": "S. B. No. 102",
           "title": "Enact the Gus Frangos Act",
           "subject": "",
           "status": "3rd Hearing",
-          "proponent": false,
-          "opponent": false,
-          "interested_party": false,
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
           "sponsor": false,
           "index": 4
+        },
+        {
+          "id": "sb421",
+          "headline": "S. B. No. 421",
+          "title": "Increase time period to bring civil action for sex offense victim",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 5
         },
         {
           "id": "hb105",
@@ -720,7 +707,7 @@
           "opponent": true,
           "interested_party": true,
           "sponsor": false,
-          "index": 5
+          "index": 6
         },
         {
           "id": "sb422",
@@ -732,7 +719,7 @@
           "opponent": true,
           "interested_party": true,
           "sponsor": false,
-          "index": 6
+          "index": 7
         },
         {
           "id": "hb210",
@@ -744,7 +731,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": false,
-          "index": 7
+          "index": 8
         },
         {
           "id": "hb126",
@@ -756,7 +743,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": false,
-          "index": 8
+          "index": 9
         },
         {
           "id": "hb296",
@@ -768,7 +755,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": false,
-          "index": 9
+          "index": 10
         },
         {
           "id": "hb519",
@@ -780,7 +767,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": false,
-          "index": 10
+          "index": 11
         },
         {
           "id": "hb338",
@@ -792,7 +779,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": false,
-          "index": 11
+          "index": 12
         },
         {
           "id": "hb532",
@@ -804,25 +791,13 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": false,
-          "index": 12
+          "index": 13
         },
         {
           "id": "sb178",
           "headline": "S. B. No. 178",
           "title": "Form Missing Women-Black, Indigenous, People of Color task force",
           "subject": "criminal-justice",
-          "status": "3rd Hearing",
-          "proponent": false,
-          "opponent": true,
-          "interested_party": true,
-          "sponsor": false,
-          "index": 13
-        },
-        {
-          "id": "sb421",
-          "headline": "S. B. No. 421",
-          "title": "Increase time period to bring civil action for sex offense victim",
-          "subject": "",
           "status": "3rd Hearing",
           "proponent": false,
           "opponent": true,
@@ -1138,18 +1113,6 @@
           "index": 1
         },
         {
-          "id": "hb255",
-          "headline": "H. B. No. 255",
-          "title": "Create the Ohio Sports Commission",
-          "subject": "",
-          "status": "4th Hearing",
-          "proponent": false,
-          "opponent": false,
-          "interested_party": false,
-          "sponsor": false,
-          "index": 2
-        },
-        {
           "id": "hcr37",
           "headline": "H. C. R. No. 37",
           "title": "Congratulate USA's Olympic hockey teams on their victories",
@@ -1159,7 +1122,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": true,
-          "index": 3
+          "index": 2
         }
       ]
     },
@@ -1828,7 +1791,7 @@
           "proponent": false,
           "opponent": false,
           "interested_party": false,
-          "sponsor": false,
+          "sponsor": true,
           "index": 4
         },
         {
@@ -2026,18 +1989,6 @@
           "index": 6
         },
         {
-          "id": "hb295",
-          "headline": "H. B. No. 295",
-          "title": "Expedite unauthorized occupant removal; prohibit fraudulent deeds",
-          "subject": "",
-          "status": "1st Hearing",
-          "proponent": false,
-          "opponent": false,
-          "interested_party": false,
-          "sponsor": true,
-          "index": 7
-        },
-        {
           "id": "hb622",
           "headline": "H. B. No. 622",
           "title": "Enact the Mental Health and Community Wellness Act",
@@ -2047,7 +1998,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": true,
-          "index": 8
+          "index": 7
         },
         {
           "id": "hb686",
@@ -2059,7 +2010,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": false,
-          "index": 9
+          "index": 8
         },
         {
           "id": "hb459",
@@ -2071,7 +2022,7 @@
           "opponent": true,
           "interested_party": true,
           "sponsor": false,
-          "index": 10
+          "index": 9
         },
         {
           "id": "sb174",
@@ -2083,7 +2034,7 @@
           "opponent": true,
           "interested_party": true,
           "sponsor": false,
-          "index": 11
+          "index": 10
         }
       ]
     },
@@ -2287,7 +2238,7 @@
     {
       "allDay": null,
       "backgroundColor": "#ad3838",
-      "start": "2026-06-02T15:30:00",
+      "start": "2026-06-02T15:45:00",
       "end": "T",
       "id": null,
       "title": "House Public Safety Committee Meeting",

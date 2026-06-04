@@ -1,8 +1,45 @@
 {
-  "fetched_at": "2026-06-04T15:31:28.078105Z",
+  "fetched_at": "2026-06-04T20:13:00.455399Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-09T15:45:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Housing Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_housing_1_2026-06-09-0345_1396",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb250",
+          "headline": "S. B. No. 250",
+          "title": "Enact the Promised Land Act",
+          "subject": "",
+          "status": "5th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "sb428",
+          "headline": "S. B. No. 428",
+          "title": "Enact the Build Smart Act",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        }
+      ]
+    },
     {
       "allDay": null,
       "backgroundColor": "#476b9c",
@@ -37,6 +74,116 @@
           "interested_party": false,
           "sponsor": false,
           "index": 0
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-09T10:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Finance Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_finance_1_2026-06-09-1000_1400",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb315",
+          "headline": "Sub. S. B. No. 315",
+          "title": "Enact the Enhanced Cybersecurity for SNAP Act",
+          "subject": "healthcare",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "S. B. No. 450",
+          "headline": "S. B. No. 450",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "sb273",
+          "headline": "Sub. S. B. No. 273",
+          "title": "Enact the Keep Them Safe Act",
+          "subject": "criminal-justice",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 2
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-09T14:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Rules and Reference Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_rules_ref_1_2026-06-09-0800_1393",
+      "status": "Scheduled",
+      "agenda_items": []
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-10T10:30:00",
+      "end": "T",
+      "id": null,
+      "title": "House Rules and Reference Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_rules_ref_1_2026-06-10-0800_1394",
+      "status": "Scheduled",
+      "agenda_items": []
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-08T17:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Small Business Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_small_business_1_2026-06-08-0500_1401",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb873",
+          "headline": "H. B. No. 873",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "hb615",
+          "headline": "H. B. No. 615",
+          "title": "Enact the Retail Theft Prevention Act",
+          "subject": "criminal-justice",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
         }
       ]
     }

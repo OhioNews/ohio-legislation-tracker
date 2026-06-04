@@ -1,8 +1,20 @@
 {
-  "fetched_at": "2026-06-04T10:06:57.365551Z",
+  "fetched_at": "2026-06-04T15:31:28.078105Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-10T11:30:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Rules and Reference Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_rules_ref_1_2026-06-10-1130_1395",
+      "status": "Scheduled",
+      "agenda_items": []
+    },
     {
       "allDay": null,
       "backgroundColor": "#ad3838",

@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-04T20:13:00.455399Z",
+  "fetched_at": "2026-06-05T04:24:07.001102Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -55,31 +55,6 @@
     {
       "allDay": null,
       "backgroundColor": "#ad3838",
-      "start": "2026-06-04T10:00:00",
-      "end": "T",
-      "id": null,
-      "title": "House Select Committee on Data Centers Committee Meeting",
-      "textColor": "#ffffff",
-      "url": "calendar/events/cmte_h_data_centers_1_2026-06-04-1000_1392",
-      "status": "Scheduled",
-      "agenda_items": [
-        {
-          "id": "",
-          "headline": "Public Testimony",
-          "title": "",
-          "subject": "",
-          "status": "",
-          "proponent": false,
-          "opponent": false,
-          "interested_party": false,
-          "sponsor": false,
-          "index": 0
-        }
-      ]
-    },
-    {
-      "allDay": null,
-      "backgroundColor": "#ad3838",
       "start": "2026-06-09T10:00:00",
       "end": "T",
       "id": null,
@@ -123,6 +98,67 @@
           "interested_party": false,
           "sponsor": false,
           "index": 2
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-08T15:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Insurance Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_insurance_1_2026-06-08-0300_1408",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb405",
+          "headline": "H. B. No. 405",
+          "title": "Regards regulation of consumer goods service contracts",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb757",
+          "headline": "H. B. No. 757",
+          "title": "Enact the Rental Home Marketplace Guarantees Act",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "sb306",
+          "headline": "Sub. S. B. No. 306",
+          "title": "Regards insurance transactions, plans, and policies",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "hb792",
+          "headline": "H. B. No. 792",
+          "title": "Regards surplus lines insurers",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 3
         }
       ]
     },

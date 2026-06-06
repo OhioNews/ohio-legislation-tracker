@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-05T20:06:36.619620Z",
+  "fetched_at": "2026-06-06T04:07:09.761628Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -409,6 +409,453 @@
     {
       "allDay": null,
       "backgroundColor": "#476b9c",
+      "start": "2026-06-09T16:00:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Financial Institutions, Insurance and Technology Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_financial_institutions_1_2026-06-09-0400_1432",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb160",
+          "headline": "S. B. No. 160",
+          "title": "Regards prescription drugs and medication switching",
+          "subject": "",
+          "status": "5th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "sb175",
+          "headline": "S. B. No. 175",
+          "title": "Establish age verification, parental consent for apps, developers",
+          "subject": "",
+          "status": "5th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb220",
+          "headline": "Sub. H. B. No. 220",
+          "title": "Regards health insurance, Medicaid prior authorization",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "sb338",
+          "headline": "S. B. No. 338",
+          "title": "Create the Digital Safety for Children Office",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 3
+        },
+        {
+          "id": "sb336",
+          "headline": "S. B. No. 336",
+          "title": "Require disclosure of mandatory fees in consumer transactions",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 4
+        },
+        {
+          "id": "sb256",
+          "headline": "S. B. No. 256",
+          "title": "Provide for licensure of debt services providers",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 5
+        },
+        {
+          "id": "hb332",
+          "headline": "Am. H. B. No. 332",
+          "title": "Create the small defense business linked deposit program",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 6
+        },
+        {
+          "id": "hb21",
+          "headline": "Am. H. B. No. 21",
+          "title": "Enact the Health Care Sharing Ministries Freedom to Share Act",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 7
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-08T14:30:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate General Government Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_gen_govt_1_2026-06-08-0230_1435",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb472",
+          "headline": "Sub. H. B. No. 472",
+          "title": "Waive ID, birth certificate fees for homeless individuals",
+          "subject": "healthcare",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "sb395",
+          "headline": "S. B. No. 395",
+          "title": "Implement top-three primary, consensus general election system",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-09T14:00:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate General Government Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_gen_govt_1_2026-06-09-0200_1436",
+      "status": "Scheduled",
+      "agenda_items": []
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-10T10:30:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Health Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_health_1_2026-06-10-1030_1405",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb149",
+          "headline": "S. B. No. 149",
+          "title": "Enter into the Respiratory Care Interstate Compact",
+          "subject": "healthcare",
+          "status": "5th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "sb230",
+          "headline": "S. B. No. 230",
+          "title": "Authorize pharmacists to test, treat certain health conditions",
+          "subject": "healthcare",
+          "status": "5th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "sb324",
+          "headline": "S. B. No. 324",
+          "title": "Revise X-ray machine operator and radiation technician law",
+          "subject": "healthcare",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "sb423",
+          "headline": "S. B. No. 423",
+          "title": "Regards employment status of health care workers for certain laws",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 3
+        },
+        {
+          "id": "sb375",
+          "headline": "S. B. No. 375",
+          "title": "Allow physician with revoked license to apply for reinstatement",
+          "subject": "healthcare",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 4
+        },
+        {
+          "id": "hb324",
+          "headline": "Sub. H. B. No. 324",
+          "title": "Enact the Patient Protection Act",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 5
+        },
+        {
+          "id": "sb373",
+          "headline": "S. B. No. 373",
+          "title": "Regards hospital-wide nursing care comm., nursing staffing plans",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 6
+        },
+        {
+          "id": "sb319",
+          "headline": "S. B. No. 319",
+          "title": "Regards adult protective services provided by county JFS",
+          "subject": "healthcare",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 7
+        },
+        {
+          "id": "sb258",
+          "headline": "S. B. No. 258",
+          "title": "Enact the Better Access to Health Care Act",
+          "subject": "healthcare",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 8
+        },
+        {
+          "id": "sb385",
+          "headline": "S. B. No. 385",
+          "title": "License and regulate the practice of naturopathic medicine",
+          "subject": "healthcare",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 9
+        },
+        {
+          "id": "hb347",
+          "headline": "H. B. No. 347",
+          "title": "Enact SHE WINS Act",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 10
+        },
+        {
+          "id": "5055",
+          "headline": "Gina Woods - Board of Nursing",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 11
+        },
+        {
+          "id": "5034",
+          "headline": "Jenny Heiser - Board of Nursing",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 12
+        },
+        {
+          "id": "5038",
+          "headline": "Shawn Livingston - Board of Nursing",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 13
+        },
+        {
+          "id": "5037",
+          "headline": "Tiffany Knepper - Board of Nursing",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 14
+        },
+        {
+          "id": "5049",
+          "headline": "Virinder Sidhu - Board of Nursing",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 15
+        },
+        {
+          "id": "5033",
+          "headline": "Matthew Haumesser - State Chiropractic Board",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 16
+        },
+        {
+          "id": "5083",
+          "headline": "Wayne Kinney - Counselor, Social Worker, and Marriage and Family Therapist Board",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 17
+        },
+        {
+          "id": "5028",
+          "headline": "Alan Demmitt - Counselor, Social Worker, and Marriage and Family Therapist Board",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 18
+        },
+        {
+          "id": "5024",
+          "headline": "Ashley Alexander - Counselor, Social Worker, and Marriage and Family Therapist Board",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 19
+        },
+        {
+          "id": "5051",
+          "headline": "Cheryl Thomas - Counselor, Social Worker, and Marriage and Family Therapist Board",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 20
+        },
+        {
+          "id": "5040",
+          "headline": "Rebecca Miller - Counselor, Social Worker, and Marriage and Family Therapist Board",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 21
+        },
+        {
+          "id": "5039",
+          "headline": "Sarah McCullough - Counselor, Social Worker, and Marriage and Family Therapist Board",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 22
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
       "start": "2026-06-09T15:45:00",
       "end": "T",
       "id": null,
@@ -440,6 +887,175 @@
           "interested_party": false,
           "sponsor": false,
           "index": 1
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-10T09:45:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Judiciary Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_judiciary_1_2026-06-10-0945_1410",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb203",
+          "headline": "Sub. H. B. No. 203",
+          "title": "Enact Aspen Runnels' Law",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "hb446",
+          "headline": "Sub. H. B. No. 446",
+          "title": "Modify trust and probate laws",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 1
+        },
+        {
+          "id": "hb689",
+          "headline": "Sub. H. B. No. 689",
+          "title": "Align and modernize fingerprinting and disposition reporting",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "hb105",
+          "headline": "Sub. H. B. No. 105",
+          "title": "Revise non-recourse litigation funding agreement regulations",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 3
+        },
+        {
+          "id": "hb126",
+          "headline": "Sub. H. B. No. 126",
+          "title": "Prohibit certain public nuisance actions",
+          "subject": "",
+          "status": "6th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 4
+        },
+        {
+          "id": "hb168",
+          "headline": "Am. H. B. No. 168",
+          "title": "Regards motivation or purpose to commit criminal child enticement",
+          "subject": "criminal-justice",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 5
+        },
+        {
+          "id": "hb210",
+          "headline": "Sub. H. B. No. 210",
+          "title": "Regards the sale of used catalytic converters",
+          "subject": "",
+          "status": "5th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 6
+        },
+        {
+          "id": "hb492",
+          "headline": "Sub. H. B. No. 492",
+          "title": "Prohibit interfering with motor vehicle-related arrests",
+          "subject": "criminal-justice",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 7
+        },
+        {
+          "id": "sb178",
+          "headline": "S. B. No. 178",
+          "title": "Form Missing Women-Black, Indigenous, People of Color task force",
+          "subject": "criminal-justice",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 8
+        },
+        {
+          "id": "sb341",
+          "headline": "S. B. No. 341",
+          "title": "Repeal law that authorizes a person who is 17 to marry",
+          "subject": "",
+          "status": "5th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 9
+        },
+        {
+          "id": "sb422",
+          "headline": "S. B. No. 422",
+          "title": "Prohibit certain offenders from school or child care premises",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 10
+        },
+        {
+          "id": "hb372",
+          "headline": "Am. H. B. No. 372",
+          "title": "Enact the Larry Henderson Act",
+          "subject": "criminal-justice",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 11
+        },
+        {
+          "id": "hb338",
+          "headline": "Sub. H. B. No. 338",
+          "title": "Enact Andy's Law",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 12
         }
       ]
     },
@@ -504,6 +1120,43 @@
       "url": "calendar/events/cmte_s_rules_ref_1_2026-06-10-1130_1395",
       "status": "Scheduled",
       "agenda_items": []
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-06-09T18:00:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Small Business and Economic Opportunity Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_small_business_1_2026-06-09-0600_1434",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb348",
+          "headline": "S. B. No. 348",
+          "title": "Require bars, restaurants to have date rape drug testing devices",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "sb23",
+          "headline": "S. B. No. 23",
+          "title": "Revise the Alcohol Franchise Law",
+          "subject": "",
+          "status": "6th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        }
+      ]
     },
     {
       "allDay": null,
@@ -1109,6 +1762,67 @@
     {
       "allDay": null,
       "backgroundColor": "#ad3838",
+      "start": "2026-06-10T08:45:00",
+      "end": "T",
+      "id": null,
+      "title": "House Judiciary Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_judiciary_1_2026-06-10-0845_1433",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb491",
+          "headline": "H. B. No. 491",
+          "title": "Make changes to Guardianship Law",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        },
+        {
+          "id": "hb459",
+          "headline": "H. B. No. 459",
+          "title": "Enact Katelyn's Law",
+          "subject": "criminal-justice",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "hb952",
+          "headline": "H. B. No. 952",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 2
+        },
+        {
+          "id": "hb686",
+          "headline": "H. B. No. 686",
+          "title": "Enact the Parker Kahle Act",
+          "subject": "",
+          "status": "3rd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 3
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
       "start": "2026-06-08T15:30:00",
       "end": "T",
       "id": null,
@@ -1175,6 +1889,31 @@
           "proponent": true,
           "opponent": true,
           "interested_party": true,
+          "sponsor": false,
+          "index": 0
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-09T09:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Medicaid Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_medicaid_1_2026-06-09-0900_1430",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb795",
+          "headline": "H. B. No. 795",
+          "title": "Enact SHIELD Act",
+          "subject": "healthcare",
+          "status": "6th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
           "sponsor": false,
           "index": 0
         }
@@ -1325,18 +2064,6 @@
           "index": 6
         },
         {
-          "id": "hb714",
-          "headline": "H. B. No. 714",
-          "title": "Alter law governing vehicular assault, yielding to pedestrians",
-          "subject": "criminal-justice",
-          "status": "2nd Hearing",
-          "proponent": true,
-          "opponent": false,
-          "interested_party": false,
-          "sponsor": false,
-          "index": 7
-        },
-        {
           "id": "hb846",
           "headline": "H. B. No. 846",
           "title": "Create the repeat domestic violence offender registry",
@@ -1346,7 +2073,7 @@
           "opponent": true,
           "interested_party": true,
           "sponsor": false,
-          "index": 8
+          "index": 7
         },
         {
           "id": "sb214",
@@ -1358,7 +2085,7 @@
           "opponent": false,
           "interested_party": false,
           "sponsor": false,
-          "index": 9
+          "index": 8
         },
         {
           "id": "hb830",
@@ -1370,7 +2097,7 @@
           "opponent": true,
           "interested_party": false,
           "sponsor": false,
-          "index": 10
+          "index": 9
         }
       ]
     },

@@ -1,54 +1,198 @@
 {
-  "last_updated": "2026-06-06T19:38:23.032300+00:00",
-  "item_count": 86,
+  "last_updated": "2026-06-07T13:47:05.263969+00:00",
+  "item_count": 64,
   "items": [
     {
-      "title": "OHSAA Division I state track: Perrysburg girls strong 5th in 3,200 relay",
-      "link": "https://www.toledoblade.com/sports/high-school/2026/06/06/ohsaa-division-i-state-track-perrysburg-girls-strong-5th-3-200-relay/stories/20260606097",
-      "pub_date": "2026-06-06T19:10:15+00:00",
+      "title": "Mansfield Senior graduate Zetta Anderson selected as mayor’s summer intern",
+      "link": "https://www.richlandsource.com/2026/06/07/mansfield-senior-graduate-zetta-anderson-selected-as-mayors-summer-intern/",
+      "pub_date": "2026-06-07T13:41:52+00:00",
+      "source": "Richland Source"
+    },
+    {
+      "title": "Outdoors: Don't be blue under full moon while fishing",
+      "link": "https://www.toledoblade.com/sports/outdoors/2026/06/07/outdoors-don-t-be-blue-under-full-moon-while-fishing/stories/20260607035",
+      "pub_date": "2026-06-07T13:30:00+00:00",
       "source": "Toledo Blade"
     },
     {
-      "title": "Hundreds show up for Old West End Festival parade",
-      "link": "https://www.toledoblade.com/local/community-events/2026/06/06/hundreds-old-west-end-festival-parade/stories/20260606089",
-      "pub_date": "2026-06-06T18:39:30+00:00",
+      "title": "2021 homicide of woman shot on north Columbus doorstep remains unsolved",
+      "link": "https://www.nbc4i.com/news/local-news/columbus/2021-homicide-of-woman-shot-on-north-columbus-doorstep-remains-unsolved/",
+      "pub_date": "2026-06-07T13:00:00+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "Apartment complex with more than 350 units opens near Hilliard, Dublin",
+      "link": "https://www.nbc4i.com/news/local-news/columbus/apartment-complex-with-more-than-350-units-opens-near-hilliard-dublin/",
+      "pub_date": "2026-06-07T12:00:00+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "Cognac in a slump; Hennessy thinks it has a fix",
+      "link": "https://www.toledoblade.com/business/retail/2026/06/07/cognac-is-in-a-slump-hennessy-thinks-it-has-a-fix/stories/20260607025",
+      "pub_date": "2026-06-07T11:45:00+00:00",
       "source": "Toledo Blade"
     },
     {
-      "title": "Photo gallery: Library anniversary",
-      "link": "https://www.toledoblade.com/local/community-events/2026/06/06/photo-gallery-library-anniversary/stories/20260606096",
-      "pub_date": "2026-06-06T18:30:20+00:00",
+      "title": "2 downtown Sylvania businesses to close amid ongoing construction",
+      "link": "https://www.toledoblade.com/business/development/2026/06/07/2-downtown-sylvania-businesse-close-amid-ongoing-construction/stories/20260603050",
+      "pub_date": "2026-06-07T11:30:00+00:00",
       "source": "Toledo Blade"
     },
     {
-      "title": "World Cup fans may need more than an hour to go through security at Boston Stadium",
-      "link": "https://www.toledoblade.com/news/nation/2026/06/06/world-cup-fans-hour-security-boston-stadium/stories/20260606095",
-      "pub_date": "2026-06-06T18:25:16+00:00",
+      "title": "America’s job market looks strong, so why is it so difficult to find work?",
+      "link": "https://www.toledoblade.com/business/labor/2026/06/07/america-s-job-market-looks-strong-so-why-is-it-so-difficult-to-find-work/stories/20260608004",
+      "pub_date": "2026-06-07T11:00:00+00:00",
       "source": "Toledo Blade"
     },
     {
-      "title": "Photo gallery: Fishing derby held in Perrysburg",
-      "link": "https://www.toledoblade.com/local/community-events/2026/06/06/photo-gallery-fishing-derby-held-perrysburg/stories/20260606094",
-      "pub_date": "2026-06-06T18:14:59+00:00",
+      "title": "Live updates: Final day of the Memorial underway as third round concludes",
+      "link": "https://www.nbc4i.com/sports/pga/the-memorial/live-updates-final-day-of-the-memorial-underway-as-third-round-concludes/",
+      "pub_date": "2026-06-07T11:00:00+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "Electronics shop uses tech skills to serve customers, community",
+      "link": "https://www.toledoblade.com/business/technology/2026/06/07/electronics-shop-tech-skills-customers/stories/20260603084",
+      "pub_date": "2026-06-07T10:57:37+00:00",
       "source": "Toledo Blade"
+    },
+    {
+      "title": "AI ‘voice cloning’ scams on the rise",
+      "link": "https://www.toledoblade.com/business/technology/2026/06/07/ai-voice-cloning-scams-are-on-the-rise-here-s-how-to-protect-yourself/stories/20260606002",
+      "pub_date": "2026-06-07T10:45:00+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "One critically injured in South Linden shooting",
+      "link": "https://www.nbc4i.com/news/local-news/columbus/one-critically-injured-in-south-linden-shooting/",
+      "pub_date": "2026-06-07T10:42:20+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "Man, 65, killed in Columbus motorcycle crash",
+      "link": "https://www.nbc4i.com/news/local-news/columbus/man-65-killed-in-columbus-motorcycle-crash/",
+      "pub_date": "2026-06-07T10:32:44+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "Hendel: Boats blessed as nautical season kicks off",
+      "link": "https://www.toledoblade.com/a-e/culture/2026/06/07/hendel-boats-blessed-as-nautical-season-kicks-off/stories/20260606003",
+      "pub_date": "2026-06-07T10:30:00+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Ohio program helps preserve farmland for future generations",
+      "link": "https://www.nbc4i.com/news/local-news/central-ohio-news/ohio-farmland-preservation-program/",
+      "pub_date": "2026-06-07T10:30:00+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "Powell: From department-store devotee to Amazon convert",
+      "link": "https://www.toledoblade.com/a-e/living/2026/06/07/powell-from-department-store-devotee-to-amazon-convert/stories/20260601063",
+      "pub_date": "2026-06-07T10:00:00+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Nelly Korda seizes share of 3rd-round lead at US Women's Open with late birdie spree",
+      "link": "https://www.toledoblade.com/sports/golf/2026/06/06/nelly-korda-seizes-share-of-3rd-round-lead-at-us-women-s-open-with-late-birdie-spree/stories/20260606111",
+      "pub_date": "2026-06-07T04:01:36+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Aaron Grizaniuk, 1978 -2026: Brewer described as kind, loyal",
+      "link": "https://www.toledoblade.com/news/deaths/2026/06/07/aaron-grizaniuk-obituary/stories/20260607038",
+      "pub_date": "2026-06-07T04:00:00+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Ohio foundation works to decrease childhood asthma, raise awareness",
+      "link": "https://www.toledoblade.com/news/health-and-well-being/2026/06/07/ohio-foundation-works-to-decrease-childhood-asthma-raise-awareness/stories/20260503139",
+      "pub_date": "2026-06-07T04:00:00+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Ohio lawmakers' votes: 6/1-6/5",
+      "link": "https://www.toledoblade.com/local/politics/2026/06/07/ohio-lawmakers-votes-6-1-6-5/stories/20260605093",
+      "pub_date": "2026-06-07T04:00:00+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Sunscreen dilemma: Experts weight in on choice, standards",
+      "link": "https://www.toledoblade.com/news/health-and-well-being/2026/06/07/ewg-sunscreen-report-finds-both-safety-improvements/stories/20260526101",
+      "pub_date": "2026-06-07T04:00:00+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Tanner Bibee gets first win of season in 14th start, Guardians beat Rangers 6-0",
+      "link": "https://www.toledoblade.com/sports/guardians/2026/06/06/tanner-bibee-gets-first-win-season-14th-start-guardians-beat-rangers-6-0/stories/20260606110",
+      "pub_date": "2026-06-07T03:48:40+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Postal workers' union raises concerns over suspected mold at Hilliard office",
+      "link": "https://www.nbc4i.com/news/local-news/columbus/postal-workers-union-raises-concerns-over-suspected-mold-at-hilliard-office/",
+      "pub_date": "2026-06-07T03:20:00+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "Mud Hens earn series win by splitting doubleheader vs. Iowa",
+      "link": "https://www.toledoblade.com/sports/mud-hens/2026/06/06/mud-hens-earn-series-win-splitting-doubleheader-vs-iowa/stories/20260606109",
+      "pub_date": "2026-06-07T03:01:50+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Clear Fork’s Hoeflich reaches state podium in high jump",
+      "link": "https://www.richlandsource.com/2026/06/06/clear-forks-hoeflich-reaches-state-podium-in-high-jump/",
+      "pub_date": "2026-06-07T02:37:05+00:00",
+      "source": "Richland Source"
+    },
+    {
+      "title": "OHSAA Division II state track: Fremont Ross' Parker is runner-up in shot put",
+      "link": "https://www.toledoblade.com/sports/high-school/2026/06/06/ohsaa-division-ii-state-track-fremont-ross-parker-runner-up-shot-put/stories/20260606107",
+      "pub_date": "2026-06-07T02:23:45+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Storms wreak havoc across central Ohio",
+      "link": "https://www.nbc4i.com/weather/storms-wreak-havoc-across-central-ohio/",
+      "pub_date": "2026-06-07T00:26:44+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "Bryce Miller and Dominic Canzone lead the Mariners to a 4-0 win over the Tigers",
+      "link": "https://www.toledoblade.com/sports/tigers/2026/06/06/bryce-miller-dominic-canzone-lead-mariners-4-0-win-over-tigers/stories/20260606104",
+      "pub_date": "2026-06-07T00:21:36+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Hughes’ blistering anchor leg powers Lexington to defend state title in 4×800 relay",
+      "link": "https://www.richlandsource.com/2026/06/06/lexington-boys-defend-state-title-in-4x800-relay/",
+      "pub_date": "2026-06-06T22:52:59+00:00",
+      "source": "Richland Source"
+    },
+    {
+      "title": "Old West End Festival canceled for Sunday after 12 shot; police seek 2 shooters",
+      "link": "https://www.toledoblade.com/local/police-fire/2026/06/06/multiple-people-injured-old-west-end-festival-shooting/stories/20260606103",
+      "pub_date": "2026-06-06T22:45:12+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Roundabout construction to close Lex-Springmill/Home roads June 15 for 120 days",
+      "link": "https://www.richlandsource.com/2026/06/06/roundabout-to-close-section-of-lex-springmill-road-for-120-days-starting-on-june-15/",
+      "pub_date": "2026-06-06T21:00:00+00:00",
+      "source": "Richland Source"
+    },
+    {
+      "title": "Police investigate shooting north of Hebron",
+      "link": "https://www.nbc4i.com/news/local-news/central-ohio-news/police-searching-for-two-suspects-in-shooting-north-of-hebron/",
+      "pub_date": "2026-06-06T20:08:39+00:00",
+      "source": "WCMH / NBC4i"
     },
     {
       "title": "Shelby’s Henkel shatters state record to repeat as long jump champion",
       "link": "https://www.richlandsource.com/2026/06/06/shelbys-henkel-shatters-state-record-to-repeat-as-long-jump-champion/",
       "pub_date": "2026-06-06T17:52:16+00:00",
       "source": "Richland Source"
-    },
-    {
-      "title": "OHSAA Division III state track: Lake throwers place in shot put",
-      "link": "https://www.toledoblade.com/sports/high-school/2026/06/06/ohsaa-division-iii-state-track-lake-throwers-place-shot-put/stories/20260606091",
-      "pub_date": "2026-06-06T17:38:34+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "Gentry's move to Mud Hens leading to bounce back year",
-      "link": "https://www.toledoblade.com/sports/mud-hens/2026/06/06/gentry-mud-hens/stories/20260606079",
-      "pub_date": "2026-06-06T16:31:58+00:00",
-      "source": "Toledo Blade"
     },
     {
       "title": "Juvenile shot near Walden Park Saturday",
@@ -63,40 +207,16 @@
       "source": "Richland Source"
     },
     {
-      "title": "Briggs: Remembering Toledo pole vaulter Eva Moran, the Rockets' 'brightest' and 'kindest' light",
-      "link": "https://www.toledoblade.com/sports/ut/2026/06/06/briggs-remembering-toledo-pole-vaulter-eva-moran/stories/20260605101",
-      "pub_date": "2026-06-06T15:00:00+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "World Cup poses unprecedented security challenge to U.S.",
-      "link": "https://www.toledoblade.com/news/nation/2026/06/06/world-cup-poses-unprecedented-security-challenge/stories/20260606090",
-      "pub_date": "2026-06-06T14:55:49+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "A tail-wagging weekend offers plenty of bark",
-      "link": "https://www.toledoblade.com/a-e/toledo-magazine/2026/06/06/a-tail-wagging-weekend/stories/20260601064",
-      "pub_date": "2026-06-06T14:00:00+00:00",
-      "source": "Toledo Blade"
+      "title": "Ohio’s nuclear energy industry launches a trade association - The Statehouse News Bureau",
+      "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNdnN1TUMxS1ZXdzljaURxQTNTS1BTd2h6cWFsTGNQWU1Wd245V3NTcVc0MWhQUmRKUzBvNWZVVHhGUEZoZU5kc3B0N3lrVmZnMEhHOEJ2UlNycVNvRmZGU3FqejhZT1pNMzF5cVNrOGxmbnZ4emx6R2xtdHRzb1hKODRDZGNFSGxJREd6NW11bWFUMTM2TzlnQUQteXFRS0wxWFFoQVNMVDhzUjFoN09sX0R0Rjdxdw?oc=5",
+      "pub_date": "2026-06-06T14:26:00+00:00",
+      "source": "Google News: Ohio Statehouse"
     },
     {
       "title": "Numbers decrease for Richland County hunters amid muddy spring turkey season",
       "link": "https://www.richlandsource.com/2026/06/06/numbers-down-for-2026-richland-county-turkey-season/",
       "pub_date": "2026-06-06T14:00:00+00:00",
       "source": "Richland Source"
-    },
-    {
-      "title": "Semi hits pedestrian running in middle of Airport Highway",
-      "link": "https://www.toledoblade.com/local/police-fire/2026/06/06/pedestrian/stories/20260606088",
-      "pub_date": "2026-06-06T13:54:03+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "Fox News contributor headlines local GOP fund-raiser",
-      "link": "https://www.toledoblade.com/local/politics/2026/06/06/fox-news-contributor-headlines-local-gop-fund-raiser/stories/20260605120",
-      "pub_date": "2026-06-06T13:49:28+00:00",
-      "source": "Toledo Blade"
     },
     {
       "title": "Behind the scenes of Cameron Mitchell's massive Memorial Tournament catering",
@@ -117,39 +237,9 @@
       "source": "WCMH / NBC4i"
     },
     {
-      "title": "Live updates: Play halted at the Memorial as J.T. Poston looks to build on one shot lead",
-      "link": "https://www.nbc4i.com/sports/pga/the-memorial/live-updates-moving-day-at-the-memorial-as-j-t-poston-looks-to-build-on-one-shot-lead/",
-      "pub_date": "2026-06-06T12:30:00+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Faith groups to host gun buyback event",
-      "link": "https://www.toledoblade.com/local/community-events/2026/06/06/faith-groups-host-gun-buyback-event/stories/20260605002",
-      "pub_date": "2026-06-06T12:00:00+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "The world’s biggest tech companies are betting big on computers that control themselves",
-      "link": "https://www.toledoblade.com/business/technology/2026/06/06/world-s-biggest-tech-companies-computers-control-themselves/stories/20260606011",
-      "pub_date": "2026-06-06T11:29:30+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "Behind the Wheel: Electric SUV showdown – revamped Toyota bZ vs. Tesla Model Y",
-      "link": "https://www.toledoblade.com/business/automotive/2026/06/06/behind-the-wheel-electric-suv-showdown-revamped-toyota-bz-vs-tesla-model-y/stories/20260606010",
-      "pub_date": "2026-06-06T11:28:42+00:00",
-      "source": "Toledo Blade"
-    },
-    {
       "title": "A robot is helping an ailing couple stay in their home. Are more to come for an aging population?",
       "link": "https://www.toledoblade.com/business/2026/06/06/robot-helps-ailing-couple-home-aging-population/stories/20260606004",
       "pub_date": "2026-06-06T11:28:20+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "Art fairs spring into action as major force in Toledo's creative economy",
-      "link": "https://www.toledoblade.com/a-e/art/2026/06/06/art-fairs-spring-major-force/stories/20260607027",
-      "pub_date": "2026-06-06T11:19:29+00:00",
       "source": "Toledo Blade"
     },
     {
@@ -163,18 +253,6 @@
       "link": "https://www.nbc4i.com/sports/heres-how-you-can-help-name-columbus-new-womens-soccer-team/",
       "pub_date": "2026-06-06T10:30:00+00:00",
       "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Corey Seager homers in his return and Higashioka also goes deep as Rangers win 3-2 over Guardians",
-      "link": "https://www.toledoblade.com/sports/guardians/2026/06/05/corey-seager-homers-return-guardians-rangers/stories/20260605126",
-      "pub_date": "2026-06-06T03:40:21+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "Alison Lee, Ruoning Yin surge atop Riviera leaderboard after 2 rounds at U.S. Women's Open",
-      "link": "https://www.toledoblade.com/sports/golf/2026/06/05/alison-lee-ruoning-yin-surge-atop-riviera-leaderboard-lpga/stories/20260605128",
-      "pub_date": "2026-06-06T03:39:01+00:00",
-      "source": "Toledo Blade"
     },
     {
       "title": "Central Ohio Bhutanese community addresses Medicaid fraud allegations",
@@ -243,12 +321,6 @@
       "source": "WCMH / NBC4i"
     },
     {
-      "title": "Madison’s historic postseason run ends in 10-inning state semifinal thriller",
-      "link": "https://www.richlandsource.com/2026/06/05/madisons-historic-postseason-run-ends-in-10-inning-state-semifinal-thriller/",
-      "pub_date": "2026-06-05T20:13:07+00:00",
-      "source": "Richland Source"
-    },
-    {
       "title": "US Senate blocks Trump’s SAVE America Act, thwarting restrictions on voting",
       "link": "https://ohiocapitaljournal.com/2026/06/05/repub/us-senate-blocks-trumps-save-america-act-thwarting-restrictions-on-voting/",
       "pub_date": "2026-06-05T20:09:38+00:00",
@@ -267,40 +339,10 @@
       "source": "WCMH / NBC4i"
     },
     {
-      "title": "Mansfield distributes electric aggregate enrollment, opt-out letters",
-      "link": "https://www.richlandsource.com/2026/06/05/mansfield-distributes-electric-aggregate-enrollment-letters/",
-      "pub_date": "2026-06-05T18:37:02+00:00",
-      "source": "Richland Source"
-    },
-    {
-      "title": "Renaissance Youth Opera Theatre to present H.M.S. Pinafore on June 27 & 28",
-      "link": "https://www.richlandsource.com/2026/06/05/renaissance-youth-opera-theatre-to-present-h-m-s-pinafore-on-june-27-28/",
-      "pub_date": "2026-06-05T18:24:42+00:00",
-      "source": "Richland Source"
-    },
-    {
       "title": "Former Ohio State football player arrested on domestic violence charges in Denver",
       "link": "https://www.nbc4i.com/sports/nfl/former-ohio-state-football-player-arrested-on-domestic-violence-charges-in-denver/",
       "pub_date": "2026-06-05T18:14:13+00:00",
       "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Lexington, Ontario, Clear Fork runners reach podium at state track meet",
-      "link": "https://www.richlandsource.com/2026/06/05/lexington-ontario-clear-fork-runners-reach-podium-at-state-track-meet/",
-      "pub_date": "2026-06-05T18:12:21+00:00",
-      "source": "Richland Source"
-    },
-    {
-      "title": "Bill would extend warrant requirement to all email access - Dayton Daily News",
-      "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPMktuME1NczhNSmQzUW1vU2wtU3B6Wjdock1SeTR2ZU1NbUc3YTF2VnhTYlE0dTNpMXFaN1IyT09VR2hhZHhvaGs0Mjh2bzBwOUxsS1dRbVNvbFhzYjhQQVNBZ2hFSUJ1V01tR3FoRW1hR25GZmktRG9BTnA0bXlJa1R5RWIyZzVZRzZYeXpmREJGUWhwVXN6dlhueGhqUm81dnEzV0N3ZGI2Wi1xVldLSDI0YTY4Nl82cVRCb3hlX2trMENiYmI3eUJSb2MzOFdMREpPVUc2dno0Y25wRE5J?oc=5",
-      "pub_date": "2026-06-05T17:44:46+00:00",
-      "source": "Google News: Ohio Statehouse"
-    },
-    {
-      "title": "Reps. Brent, Carruthers Urge Passage of Aisha's Law - Ohio House of Representatives (.gov)",
-      "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPSHJ0U1BPV2ZqeEFOMDA3SjZDc05CUDJGTHExbUl6bHBFUWhKeW5kai04dGJuekRqQTBtcTNEalBOOW1hNmxnLXR5THJ4eF9JdV9oOGRsT3FpVWdlM3R1Rms2SGNTbl96UDlzMFlWMFVxR1RIR016UXFyWkR3S1dYRXVzdGMyMm56U1lDc093Y2pJQWhmRTRxMjBUbXJsaVBjVlh2SkdLMA?oc=5",
-      "pub_date": "2026-06-05T17:25:10+00:00",
-      "source": "Google News: Ohio Statehouse"
     },
     {
       "title": "Utility executives reindicted on state bribery charges",
@@ -343,180 +385,6 @@
       "link": "https://ohiocapitaljournal.com/briefs/catching-our-eye-news-roundup-june-5-2026/",
       "pub_date": "2026-06-05T13:56:17+00:00",
       "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "Republicans push $70B for immigration enforcement through US Senate, with no limits on ICE",
-      "link": "https://ohiocapitaljournal.com/2026/06/05/repub/republicans-push-70b-for-immigration-enforcement-through-us-senate-with-no-limits-on-ice/",
-      "pub_date": "2026-06-05T13:19:30+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "Pedestrian struck in east Columbus had legs run over by second vehicle in hit-skip",
-      "link": "https://www.nbc4i.com/news/local-news/columbus/pedestrian-struck-in-east-columbus-had-legs-run-over-by-second-vehicle-in-hit-skip/",
-      "pub_date": "2026-06-05T13:13:08+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Ohio Senate passes motion to enshrine photo ID voting law in state constitution",
-      "link": "https://www.nbc4i.com/news/your-local-election-hq/ohio-senate-passes-motion-to-enshrine-photo-id-voting-law-in-state-constitution/",
-      "pub_date": "2026-06-05T10:30:00+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Man who planned Ohio State shooting moves near campus; court challenge filed",
-      "link": "https://www.nbc4i.com/news/local-news/ohio-state-university/man-who-planned-ohio-state-shooting-moves-near-campus-court-challenge-filed/",
-      "pub_date": "2026-06-05T09:30:00+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "The junta will already have their seat at the table",
-      "link": "https://www.rooster.info/p/dr-amy-acton-republican-cabinet",
-      "pub_date": "2026-06-05T08:33:49+00:00",
-      "source": "The Rooster"
-    },
-    {
-      "title": "Bipartisan JobsOhio oversight bill gets first hearing",
-      "link": "https://ohiocapitaljournal.com/2026/06/05/bipartisan-jobsohio-oversight-bill-gets-first-hearing/",
-      "pub_date": "2026-06-05T08:00:23+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "Economists say a gas tax suspension wouldn’t give Ohioans meaningful relief",
-      "link": "https://ohiocapitaljournal.com/2026/06/05/economists-say-a-gas-tax-suspension-wouldnt-give-ohioans-meaningful-relief/",
-      "pub_date": "2026-06-05T07:55:05+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "Ohio Republican leaders differ on whether child marriage should be a ‘debate’ - Ohio Capital Journal",
-      "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOZzhkMTh1Nkx0dkg0Z0V3dDFEaWI5M3RrOWxWaGtPbS1aYU9FRzBmOWJ5YlpqY1BxblF0R0RjZC14NVdvcVVveFZyMnBxcklTNmxEaGZsZlZ1eGpUWHl1ZWZla25raTlUUWZJYzFpSlZkay1rSzZKRUFVdDBTVGN4NXMwb3dSLTU1VE11TjFfVUhaNzdRTHdZN1h5dlRkM1dVSHh1c25ka0Roa3Axd1pRM0lfLWEwdm55VEE?oc=5",
-      "pub_date": "2026-06-05T07:53:27+00:00",
-      "source": "Google News: Ohio Statehouse"
-    },
-    {
-      "title": "Ohio Republican leaders differ on whether child marriage should be a ‘debate’",
-      "link": "https://ohiocapitaljournal.com/2026/06/05/ohio-republican-leaders-differ-on-whether-child-marriage-should-be-a-debate/",
-      "pub_date": "2026-06-05T07:50:54+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "Ohio officials ignore scientific facts to allow our public air, land, and water to be abused",
-      "link": "https://ohiocapitaljournal.com/2026/06/05/ohio-officials-ignore-scientific-fact-to-allow-our-public-air-land-and-water-to-be-abused/",
-      "pub_date": "2026-06-05T07:30:36+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "First-time homebuyers face hurdles despite gradual improvement",
-      "link": "https://ohiocapitaljournal.com/2026/06/05/repub/first-time-homebuyers-face-hurdles-despite-gradual-improvement/",
-      "pub_date": "2026-06-05T07:05:46+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "Supreme Court allows Alabama to use 2023 congressional map in August special primary",
-      "link": "https://ohiocapitaljournal.com/briefs/supreme-court-allows-alabama-to-use-2023-congressional-map-in-august-special-primary/",
-      "pub_date": "2026-06-05T07:00:44+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "Family, community honor woman, daughter killed in east Columbus",
-      "link": "https://www.nbc4i.com/news/local-news/columbus/family-community-honor-woman-daughter-killed-in-east-columbus/",
-      "pub_date": "2026-06-05T03:08:05+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Ohio, feds announce indictments in Medicaid fraud",
-      "link": "https://www.wcpo.com/news/state/state-ohio/ohio-feds-announce-indictments-in-medicaid-fraud",
-      "pub_date": "2026-06-05T01:26:05+00:00",
-      "source": "WCPO"
-    },
-    {
-      "title": "Tech giant reps testify before Ohio data center committee",
-      "link": "https://www.nbc4i.com/news/politics/tech-giant-reps-testify-before-ohio-data-center-committee/",
-      "pub_date": "2026-06-04T23:00:00+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Trump picks acting AG Blanche to stay on full time",
-      "link": "https://ohiocapitaljournal.com/2026/06/04/repub/trump-picks-acting-ag-blanche-to-stay-on-full-time/",
-      "pub_date": "2026-06-04T22:50:14+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "US Senate launches marathon session to pass nearly $70B for ICE, Border Patrol",
-      "link": "https://ohiocapitaljournal.com/2026/06/04/repub/us-senate-launches-marathon-session-to-pass-nearly-70b-for-ice-border-patrol/",
-      "pub_date": "2026-06-04T22:47:50+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "Fans hyped for Ecuador-Guatemala pre-World Cup exhibition in Columbus",
-      "link": "https://www.nbc4i.com/sports/world-cup-2026/fans-hyped-for-ecuador-guatemala-pre-world-cup-match-in-columbus/",
-      "pub_date": "2026-06-04T22:38:44+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "National Donut Day 2026 deals and free doughnuts in Columbus",
-      "link": "https://www.nbc4i.com/news/local-news/central-ohio-news/free-doughnuts-june-5/",
-      "pub_date": "2026-06-04T22:10:04+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Dublin police work to keep Memorial attendees safe",
-      "link": "https://www.nbc4i.com/news/local-news/dublin/dublin-police-work-to-keep-memorial-attendees-safe/",
-      "pub_date": "2026-06-04T22:00:00+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Complaint from Ohio state Sen. Jerry Cirino leads to political blogger’s arrest, report says - Cleveland.com",
-      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQV1pHUlVydERsZnU2c0I2aXJ1amxfd3FKaEVVOUZKcTNVWHhodl9DbG1qWEJ6REE5RkZ1dFZQS20yZm94WUlVczRjX3I2YXc1dnpodDhpVkFXYlhmM1BwNXlKTDhVZllodnNnSEJlUlpuUUxUTUU0RzNvc215LTdXZldiV09kbDFLNEptNnZuVzVVVjNnSE8yS0dmZGl1ZDV4MS1nNUVkOWRJSGRoOXQtQ2NvdU91UXk1VVR1ZGl5b2lrRE0zNEpEVDRYNS1GUQ?oc=5",
-      "pub_date": "2026-06-04T22:00:00+00:00",
-      "source": "Google News: Ohio Statehouse"
-    },
-    {
-      "title": "'I'm innocent.' Blogger speaks out after arrest at Ohio Statehouse - AOL.com",
-      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOYXp1czdmR29TbEpLcXVVckdKM2FlUjRROXlkWElhODhaeVF6ZnFEYkNlY2dtZ3A2WVBOV2I5S3gxdnFjNlgycFhpd0l2OTBHS2VJcDV5bUJJNUJ6a2pNUjUwdW8ycEk1dFF0Y25HakJXZmxzeV95aUx6dnVsdTc0ZlNtZUJyVUNn?oc=5",
-      "pub_date": "2026-06-04T21:57:16+00:00",
-      "source": "Google News: Ohio Statehouse"
-    },
-    {
-      "title": "'We're on a mission' | Local advocate trying to get data center regulations on Ohio ballot this November",
-      "link": "https://www.wcpo.com/news/state/state-ohio/were-on-a-mission-local-advocate-trying-to-get-data-center-regulations-on-ohio-ballot-this-november",
-      "pub_date": "2026-06-04T21:55:48+00:00",
-      "source": "WCPO"
-    },
-    {
-      "title": "Major tech companies testify at Ohio Statehouse as farmers push back on data center boom - 10TV",
-      "link": "https://news.google.com/rss/articles/CBMihAJBVV95cUxQMG55UEZ3S1FiSzZKcWZ4RFBrTTVGVDhYOWFCY0VoSklSSnVZTXIzdFN5ZVQ1VmRjQnluMHlpQ0VTd2pBc3BZaUZXMnlSV3c3Wk52QmtMcDYyYzBlRUx6cVZpWXZQYVJndk42eUVXUngtVFNHY2haQkJVYzZmZ0N4a0ZNM0x6QnB0UExibmEwZVpYekJNN0taT2dUd2xjMS1sOFFpS1VzQmtEbmNyTHpsOUdtVVZwTmJoUTdfcHBoRTBIQ2JZU1lKZTVNV01qRjZZdzg4N3lFZ3BaUXpqeGdGR1JQNG9jNVpjLVY5VHlaSU9MazAxelR3enFvR0JtZXFZTjRMbQ?oc=5",
-      "pub_date": "2026-06-04T21:32:00+00:00",
-      "source": "Google News: Ohio Statehouse"
-    },
-    {
-      "title": "PGA Tour's Smalley meets NBC4's Smalley at Memorial",
-      "link": "https://www.nbc4i.com/sports/pga/the-memorial/pga-tours-smalley-meets-nbc4s-smalley-at-memorial/",
-      "pub_date": "2026-06-04T21:30:00+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "State suspends dozens of central Ohio Medicaid providers after fraud event",
-      "link": "https://www.nbc4i.com/news/local-news/columbus/state-suspends-dozens-of-central-ohio-medicaid-providers-after-fraud-event/",
-      "pub_date": "2026-06-04T20:46:21+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Former FirstEnergy execs reindicted in House Bill 6 scandal",
-      "link": "https://www.nbc4i.com/news/local-news/central-ohio-news/former-firstenergy-execs-reindicted-in-house-bill-6-scandal/",
-      "pub_date": "2026-06-04T20:36:52+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Microsoft rejects NDAs, tax abatements in Ohio data center expansion - The Columbus Dispatch",
-      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxObWU1SjhZRE5CSlljQ1RPMjdUUlhQNVhaN0MxdjFpV2JvckM1ZkJYdE13dFlyUWtzZDg2UmNUaHh4aEQ5QTRrQjBMNGNFREVIWVFxTXkyLWVXc05YN0lWVE5KVkRySExjS2pDZEdOOUpmbFpQY000YVU3REYzRUtyUkZPM2dQbHFWUGFuQ1BFeXBpM2FLY2dsVG4wODVNM1VBSmhRcUFFRkl1SDdBUlhzZFNBQ0R2NFA2MkJObTg5Q2xNZw?oc=5",
-      "pub_date": "2026-06-04T20:03:00+00:00",
-      "source": "Google News: Ohio Statehouse"
-    },
-    {
-      "title": "Columbus man indicted in death of wife, girl on east side",
-      "link": "https://www.nbc4i.com/news/local-news/columbus/columbus-man-indicted-in-death-of-wife-girl-on-east-side/",
-      "pub_date": "2026-06-04T19:45:11+00:00",
-      "source": "WCMH / NBC4i"
     }
   ]
 }

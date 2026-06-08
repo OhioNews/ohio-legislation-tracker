@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-08T16:08:39.735735Z",
+  "fetched_at": "2026-06-08T20:27:47.903918Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -634,7 +634,68 @@
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_s_gen_govt_1_2026-06-09-0200_1436",
       "status": "Scheduled",
-      "agenda_items": []
+      "agenda_items": [
+        {
+          "id": "hb176",
+          "headline": "Sub. H. B. No. 176",
+          "title": "Establish a universal regulatory sandbox program",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "index": 0
+        },
+        {
+          "id": "sb301",
+          "headline": "S. B. No. 301",
+          "title": "Regards noncompete clauses in health care employment contracts",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 1
+        },
+        {
+          "id": "sb419",
+          "headline": "S. B. No. 419",
+          "title": "Revise temporary instruction permit eligibility, requirements",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 2
+        },
+        {
+          "id": "hb472",
+          "headline": "Sub. H. B. No. 472",
+          "title": "Waive ID, birth certificate fees for homeless individuals",
+          "subject": "healthcare",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "index": 3
+        },
+        {
+          "id": "sb379",
+          "headline": "S. B. No. 379",
+          "title": "Enact Hailey's Law",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 4
+        }
+      ]
     },
     {
       "allDay": null,

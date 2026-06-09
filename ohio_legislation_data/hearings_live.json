@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-09T15:20:01.426561Z",
+  "fetched_at": "2026-06-09T20:15:30.205313Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -244,7 +244,20 @@
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_s_education_1_2026-06-10-1115_1439",
       "status": "Scheduled",
-      "agenda_items": []
+      "agenda_items": [
+        {
+          "id": "sb311",
+          "headline": "S. B. No. 311",
+          "title": "Regards the operation of public and chartered nonpublic schools",
+          "subject": "education",
+          "status": "6th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 0
+        }
+      ]
     },
     {
       "allDay": null,

@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-06-09T09:57:25.432367Z",
+  "fetched_at": "2026-06-09T15:20:01.426561Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -1337,6 +1337,31 @@
           "interested_party": true,
           "sponsor": false,
           "index": 0
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-06-11T10:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Select Committee on Data Centers Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_data_centers_1_2026-06-11-1000_1440",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "",
+          "headline": "Public Testimony",
+          "title": "",
+          "subject": "",
+          "status": "",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "index": 1
         }
       ]
     },

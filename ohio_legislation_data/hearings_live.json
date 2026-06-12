@@ -1,44 +1,6 @@
 {
-  "fetched_at": "2026-06-11T20:29:17.579631Z",
+  "fetched_at": "2026-06-12T04:46:05.025178Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
-  "events": [
-    {
-      "allDay": null,
-      "backgroundColor": "#476b9c",
-      "start": "2026-06-11T09:30:00",
-      "end": "T",
-      "id": null,
-      "title": "Senate Ohio Retirement Study Council Committee Meeting",
-      "textColor": "#ffffff",
-      "url": "calendar/events/cmte_j_orsc_1_2026-06-11-0930_1438",
-      "status": "Scheduled",
-      "agenda_items": []
-    },
-    {
-      "allDay": null,
-      "backgroundColor": "#ad3838",
-      "start": "2026-06-11T10:00:00",
-      "end": "T",
-      "id": null,
-      "title": "House Select Committee on Data Centers Committee Meeting",
-      "textColor": "#ffffff",
-      "url": "calendar/events/cmte_h_data_centers_1_2026-06-11-1000_1440",
-      "status": "Scheduled",
-      "agenda_items": [
-        {
-          "id": "",
-          "headline": "Public Testimony",
-          "title": "",
-          "subject": "",
-          "status": "",
-          "proponent": false,
-          "opponent": false,
-          "interested_party": false,
-          "sponsor": false,
-          "index": 1
-        }
-      ]
-    }
-  ]
+  "events": []
 }

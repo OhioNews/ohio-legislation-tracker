@@ -1,7 +1,79 @@
 {
-  "last_updated": "2026-06-15T17:11:16.595485+00:00",
-  "item_count": 72,
+  "last_updated": "2026-06-15T21:09:05.822123+00:00",
+  "item_count": 75,
   "items": [
+    {
+      "title": "New connectivity project begins in Grove City",
+      "link": "https://www.nbc4i.com/news/local-news/grove-city/new-connectivity-project-begins-in-grove-city/",
+      "pub_date": "2026-06-15T21:00:00+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "Ex-Ohio State running back arrested in South Carolina",
+      "link": "https://www.nbc4i.com/sports/buckeyes/ex-ohio-state-running-back-arrested-in-south-carolina/",
+      "pub_date": "2026-06-15T20:51:12+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "Stocks leap worldwide, and oil prices drop after the U.S.and Iran reach a tentative deal on their war",
+      "link": "https://www.toledoblade.com/business/stock-market/2026/06/15/stocks-leap-worldwide-oil-prices-drop-after-us-iran-reach-deal/stories/20260615079",
+      "pub_date": "2026-06-15T20:43:04+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Big fish, big comeback: Lake sturgeon reintegration study shows signs of success",
+      "link": "https://www.toledoblade.com/local/environment/2026/06/15/big-fish-big-comeback-lake-sturgeon-reintegration-study-shows-signs-success/stories/20260615065",
+      "pub_date": "2026-06-15T20:20:14+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Toledo fire captain to host summer safety fair",
+      "link": "https://www.toledoblade.com/local/community-events/2026/06/15/toledo-fire-captain-host-summer-safety-fair/stories/20260615072",
+      "pub_date": "2026-06-15T20:05:03+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "5 trespassed from Zoombezi Bay after disturbance at lazy river",
+      "link": "https://www.nbc4i.com/news/local-news/powell/5-trespassed-from-zoombezi-bay-after-disturbance-at-lazy-river/",
+      "pub_date": "2026-06-15T19:53:23+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "Library seeking design considerations for new South Toledo branch",
+      "link": "https://www.toledoblade.com/local/city/2026/06/15/library-seeking-design-considerations-new-south-toledo-branch/stories/20260615068",
+      "pub_date": "2026-06-15T19:43:20+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Federal judge in Toledo blocks enforcement of Ohio hemp law",
+      "link": "https://www.toledoblade.com/local/courts/2026/06/15/federal-judge-toledo-blocks-enforcement-hemp-law-3/stories/20260615069",
+      "pub_date": "2026-06-15T19:38:26+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Champion's return, charities highlight upcoming Greater Toledo Classic",
+      "link": "https://www.toledoblade.com/sports/golf/2026/06/15/champions-return-charities-highlight-upcoming-greater-toledo-classic/stories/20260615074",
+      "pub_date": "2026-06-15T19:27:58+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Port authority engages consultant for new seaport master plan",
+      "link": "https://www.toledoblade.com/local/transportation/2026/06/15/port-authority-engages-consultant-for-new-seaport-master-plan/stories/20260610085",
+      "pub_date": "2026-06-15T18:41:20+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Mansfield City Council to vote on $424K purchase of five new Dodge Durango police vehicles",
+      "link": "https://www.richlandsource.com/2026/06/15/mansfield-city-council-to-vote-on-424k-purchase-of-five-new-dodge-durango-police-vehicles/",
+      "pub_date": "2026-06-15T18:00:00+00:00",
+      "source": "Richland Source"
+    },
+    {
+      "title": "Bloody UFC cage match on White House lawn marks Trump’s 80th birthday",
+      "link": "https://ohiocapitaljournal.com/2026/06/15/repub/bloody-ufc-cage-match-on-white-house-lawn-marks-trumps-80th-birthday/",
+      "pub_date": "2026-06-15T17:47:49+00:00",
+      "source": "Ohio Capital Journal"
+    },
     {
       "title": "Ohio Capital Journal wins eight Society of Professional Journalists awards, including Best News Site",
       "link": "https://ohiocapitaljournal.com/2026/06/15/ohio-capital-journal-wins-eight-society-of-professional-journalists-awards-including-best-news-site/",
@@ -51,7 +123,7 @@
       "source": "WCMH / NBC4i"
     },
     {
-      "title": "With Iran peace agreement to be signed Friday, Trump says ships moving in Strait of Hormuz",
+      "title": "Ceasefire reached with Iran, ending hostilities and opening Strait of Hormuz",
       "link": "https://ohiocapitaljournal.com/2026/06/15/repub/with-iran-peace-agreement-to-be-signed-friday-trump-says-ships-moving-in-strait-of-hormuz/",
       "pub_date": "2026-06-15T14:58:39+00:00",
       "source": "Ohio Capital Journal"
@@ -61,6 +133,12 @@
       "link": "https://www.richlandsource.com/2026/06/15/u-s-30-reduced-to-one-lane-of-traffic-in-crawford-county/",
       "pub_date": "2026-06-15T14:53:05+00:00",
       "source": "Richland Source"
+    },
+    {
+      "title": "Behind the push for new firearms bill in Ohio - Spectrum News",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPMFRnQzl6THVuamFEVHlwNU1nZ2Q2MWxNMEFIZVdrNVNhODVwQ29nZngtSFpOVG80a0U1ZkdlVE9MMFQ4aW9rY1NXMTBSdEhZdUs5ZXk1d3dnYjRteTBxeDJEa1ZfUVo2RkNGczJ6dGFsMVA2YURrTU5lblZMMUU5Q29qWEpCT3FHSjNkSUpwWWNqbkp0QzNFNjZYMmlfSTNs?oc=5",
+      "pub_date": "2026-06-15T14:53:00+00:00",
+      "source": "Google News: Ohio Statehouse"
     },
     {
       "title": "List: 2026 Juneteenth events in Columbus and central Ohio",
@@ -83,7 +161,7 @@
     {
       "title": "A debate on tax breaks stalls new data center laws in Ohio. What now? - WOUB Public Media -",
       "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPS3J1S3RMeHZHNk1ETXpWMlVMVXd3TlJqUVFTMUstTVFlZ3FvSGpvQmU5QUZfUGtMR2pmN3VnNjVmLU5FbkhmQnJxdWxoXzFvRmtibFQ5OEdRYktVZ3hKUW85dXBIdXdETnFDOXNOOTR1a1h5bTdleUJrbmtRTTFwNTN0SFp5dw?oc=5",
-      "pub_date": "2026-06-15T13:54:19+00:00",
+      "pub_date": "2026-06-15T13:54:52+00:00",
       "source": "Google News: Ohio Statehouse"
     },
     {
@@ -207,7 +285,7 @@
       "source": "WCMH / NBC4i"
     },
     {
-      "title": "Civil War Living History: Mansfield’s South Park offers third annual event, including cannon fire",
+      "title": "Civil War Living History: Mansfield’s South Park offers 3rd annual event, including cannon fire",
       "link": "https://www.richlandsource.com/2026/06/15/civil-war-living-history-mansfields-south-park-offers-third-annual-event-including-cannon-fire/",
       "pub_date": "2026-06-15T09:00:00+00:00",
       "source": "Richland Source"
@@ -291,46 +369,10 @@
       "source": "Toledo Blade"
     },
     {
-      "title": "Bud Cauley wins the Canadian Open to cap long comeback from 2018 car accident",
-      "link": "https://www.toledoblade.com/sports/golf/2026/06/14/bud-cauley-wins-canadian-open-cap-long-comeback-2018-car-accident/stories/20260614125",
-      "pub_date": "2026-06-15T02:46:45+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "Mud Hens' 9th-inning rally falls short in 5th consecutive loss to St. Paul",
-      "link": "https://www.toledoblade.com/sports/mud-hens/2026/06/14/toledo-mud-hens-9th-inning-rally-falls-short-5th-consecutive-loss-st-paul/stories/20260614119",
-      "pub_date": "2026-06-15T02:14:06+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "Denny Hamlin wins the NASCAR Cup race at Pocono for his third straight victory",
-      "link": "https://www.toledoblade.com/sports/pro/2026/06/14/denny-hamlin-wins-nascar-cup-race-pocono-his-third-straight-victory/stories/20260614124",
-      "pub_date": "2026-06-15T02:03:09+00:00",
-      "source": "Toledo Blade"
-    },
-    {
       "title": "Ecuadorian-owned downtown bar hosts World Cup watch party",
       "link": "https://www.nbc4i.com/news/local-news/columbus/ecuadorian-owned-downtown-bar-hosts-world-cup-watch-party/",
       "pub_date": "2026-06-15T01:23:53+00:00",
       "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Gabriel Moreno's homer in 8th sends Diamondbacks past Reds 5-3 for Lovullo's 700th win",
-      "link": "https://www.toledoblade.com/sports/pro/2026/06/14/gabriel-morenos-homer-8th-sends-diamondbacks-past-reds-5-3/stories/20260614123",
-      "pub_date": "2026-06-14T23:20:50+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "Rain holds off during annual Miss Ohio Scholarship Program Parade in Mansfield",
-      "link": "https://www.richlandsource.com/2026/06/14/rain-holds-off-during-annual-miss-ohio-scholarship-program-parade-in-mansfield/",
-      "pub_date": "2026-06-14T22:35:00+00:00",
-      "source": "Richland Source"
-    },
-    {
-      "title": "Secrets of 'Antiques Roadshow' told at Toledo Museum of Art",
-      "link": "https://www.toledoblade.com/local/community-events/2026/06/14/secrets-antique-roadshow-told-toledo-museum-art/stories/20260614121",
-      "pub_date": "2026-06-14T22:29:46+00:00",
-      "source": "Toledo Blade"
     },
     {
       "title": "Deal is reached to end Iran war and Trump orders stop to U.S. naval blockade",
@@ -349,18 +391,6 @@
       "link": "https://www.nbc4i.com/news/licking-county-man-facing-rape-charge-after-child-abuse-accusation/",
       "pub_date": "2026-06-14T20:46:16+00:00",
       "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "12 dead in crash of plane on skydiving outing in Missouri, authorities say",
-      "link": "https://www.toledoblade.com/news/nation/2026/06/14/12-dead-crash-plane-skydiving-outing-missouri/stories/20260614120",
-      "pub_date": "2026-06-14T20:13:43+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "Library, Harbor partner for Big Feelings, Bright Futures family program",
-      "link": "https://www.toledoblade.com/local/community-events/2026/06/14/library-harbor-partner-big-feelings-bright-futures-family-program/stories/20260614118",
-      "pub_date": "2026-06-14T20:05:24+00:00",
-      "source": "Toledo Blade"
     },
     {
       "title": "Sunday Briefing: Marathon lawmaker session; GOP COVID attack on Acton; Ohio Senator says good-bye",
@@ -420,18 +450,6 @@
       "title": "Columbus Arts Festival returns for 64th year",
       "link": "https://www.nbc4i.com/news/local-news/columbus/columbus-arts-festival-returns-for-64th-year/",
       "pub_date": "2026-06-13T22:12:12+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Thousands gather for Stark County Pride in Canton, Ohio",
-      "link": "https://thebuckeyeflame.com/2026/06/13/thousands-gather-for-stark-county-pride-in-canton-ohio/",
-      "pub_date": "2026-06-13T20:48:54+00:00",
-      "source": "Buckeye Flame"
-    },
-    {
-      "title": "Cheryl Krueger, founder of Cheryl's Cookies, dies after battle with Parkinson's",
-      "link": "https://www.nbc4i.com/news/local-news/columbus/cheryl-krueger-founder-of-cheryls-cookies-dies-after-battle-with-parkinsons/",
-      "pub_date": "2026-06-13T17:17:15+00:00",
       "source": "WCMH / NBC4i"
     }
   ]

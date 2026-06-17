@@ -1,7 +1,355 @@
 {
-  "last_updated": "2026-06-16T20:57:11.574662+00:00",
-  "item_count": 104,
+  "last_updated": "2026-06-17T15:20:14.099665+00:00",
+  "item_count": 110,
   "items": [
+    {
+      "title": "Second Old West End Festival shooter arrested in Columbus",
+      "link": "https://www.toledoblade.com/local/police-fire/2026/06/17/second-old-west-end-fest-shooter-arrested-in-columbus/stories/20260617103",
+      "pub_date": "2026-06-17T15:04:37+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Ohio AG counters DeWine’s call to end capital punishment in the state",
+      "link": "https://www.richlandsource.com/2026/06/17/ohio-ag-counters-dewines-call-to-end-capital-punishment-in-the-state/",
+      "pub_date": "2026-06-17T15:00:15+00:00",
+      "source": "Richland Source"
+    },
+    {
+      "title": "Apartment complex with 235 units opens in Columbus' Franklinton neighborhood",
+      "link": "https://www.nbc4i.com/news/local-news/columbus/apartment-complex-with-235-units-opens-in-columbus-franklinton-neighborhood/",
+      "pub_date": "2026-06-17T15:00:00+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "A new report argues ‘uneconomic coal operations’ affect Ohio - WOUB Public Media -",
+      "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQR1ZrcXpBSXFtLUxybGs3cjBfdXBPWE5LakNkX0h5bjRSMmdZZWxLQ1piZXhGeWtRN0l3NEZ5N2MtU05JV1RBZnVYbkR5TEZVNXdDNTZsUko1UEI0eWpONVQ3YV9TOWlHb2wzZmRMbkR4Y2Y2bzBwVGg0bURLQkVRQVJvYmRlbS1FUTlPdF9B?oc=5",
+      "pub_date": "2026-06-17T14:57:20+00:00",
+      "source": "Google News: Ohio Statehouse"
+    },
+    {
+      "title": "Toledo YouTube woodworker steps into his first art show",
+      "link": "https://www.toledoblade.com/a-e/art/2026/06/17/toledo-youtube-woodworker-steps-into-his-first-art-show/stories/20260610003",
+      "pub_date": "2026-06-17T14:34:17+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "New poll shows Democratic candidates ahead in Ohio",
+      "link": "https://www.nbc4i.com/news/your-local-election-hq/new-poll-shows-democratic-candidates-ahead-in-ohio/",
+      "pub_date": "2026-06-17T14:30:00+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "Photo gallery: Wood County's America 250 block party",
+      "link": "https://www.toledoblade.com/local/community-events/2026/06/17/photo-gallery-wood-county-s-america-250-block-party/stories/20260617088",
+      "pub_date": "2026-06-17T14:25:43+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Attorney General announces settlement in OhioHealth antitrust case",
+      "link": "https://www.richlandsource.com/2026/06/17/attorney-general-announces-settlement-in-ohiohealth-antitrust-case/",
+      "pub_date": "2026-06-17T14:22:30+00:00",
+      "source": "Richland Source"
+    },
+    {
+      "title": "Fraud at financial institutions on the rise, police and FBI say",
+      "link": "https://www.toledoblade.com/local/police-fire/2026/06/17/fraud-financial-institutions-on-rise-police-fbi-say/stories/20260616118",
+      "pub_date": "2026-06-17T14:00:00+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Scam cost Mansfield City Schools $54K in 2024",
+      "link": "https://www.richlandsource.com/2026/06/17/scam-cost-mansfield-city-schools-54k-in-2024/",
+      "pub_date": "2026-06-17T14:00:00+00:00",
+      "source": "Richland Source"
+    },
+    {
+      "title": "Hussain: America for sale just in time for its 250th birthday",
+      "link": "https://www.toledoblade.com/opinion/columnists/2026/06/17/hussian-america-for-sale-just-in-time-for-its-250th-birthday/stories/20260617004",
+      "pub_date": "2026-06-17T13:59:26+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Special ed, civil rights to be shifted out of Trump’s shrinking Department of Education",
+      "link": "https://ohiocapitaljournal.com/2026/06/17/repub/special-ed-civil-rights-to-be-shifted-out-of-trumps-shrinking-department-of-education/",
+      "pub_date": "2026-06-17T13:20:50+00:00",
+      "source": "Ohio Capital Journal"
+    },
+    {
+      "title": "Republicans in US Senate left in dark by Trump on Iran deal, but want details and a vote",
+      "link": "https://ohiocapitaljournal.com/2026/06/17/repub/republicans-in-us-senate-left-in-dark-by-trump-on-iran-deal-but-want-details-and-a-vote/",
+      "pub_date": "2026-06-17T13:18:44+00:00",
+      "source": "Ohio Capital Journal"
+    },
+    {
+      "title": "Calmer hurricane season expected in Atlantic as worries over federal response persist",
+      "link": "https://ohiocapitaljournal.com/2026/06/17/repub/calmer-hurricane-season-expected-in-atlantic-as-worries-over-federal-response-persist/",
+      "pub_date": "2026-06-17T13:17:04+00:00",
+      "source": "Ohio Capital Journal"
+    },
+    {
+      "title": "Man charged in killing of West Virginia guard member pleads not guilty to new charges",
+      "link": "https://ohiocapitaljournal.com/2026/06/17/repub/man-charged-in-killing-of-west-virginia-guard-member-pleads-not-guilty-to-new-charges/",
+      "pub_date": "2026-06-17T13:15:15+00:00",
+      "source": "Ohio Capital Journal"
+    },
+    {
+      "title": "Stonewall Columbus Pride guide: What to know for this weekend’s celebration",
+      "link": "https://www.nbc4i.com/news/local-news/central-ohio-news/stonewall-columbus-pride-celebration/",
+      "pub_date": "2026-06-17T13:00:00+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "Music Academy of Karate & Empowerment celebrates student promotions, growth",
+      "link": "https://www.richlandsource.com/2026/06/17/music-academy-of-karate-empowerment-celebrates-student-promotions-growth/",
+      "pub_date": "2026-06-17T12:37:27+00:00",
+      "source": "Richland Source"
+    },
+    {
+      "title": "Catching Our Eye News Roundup, June 17, 2026",
+      "link": "https://ohiocapitaljournal.com/briefs/catching-our-eye-news-roundup-june-17-2026/",
+      "pub_date": "2026-06-17T12:33:20+00:00",
+      "source": "Ohio Capital Journal"
+    },
+    {
+      "title": "To be or not to be: Mansfield Shakespeare Co. offers ‘Hamlet’ at South Park this weekend",
+      "link": "https://www.richlandsource.com/2026/06/17/to-be-or-not-to-be-mansfield-shakespeare-co-offers-hamlet-at-south-park-this-weekend/",
+      "pub_date": "2026-06-17T12:00:00+00:00",
+      "source": "Richland Source"
+    },
+    {
+      "title": "After initial concern, Ohio State area Waffle House to remain open",
+      "link": "https://www.nbc4i.com/news/local-news/columbus/after-initial-concern-ohio-state-area-waffle-house-to-remain-open/",
+      "pub_date": "2026-06-17T12:00:00+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "One dead, three injured in Delaware County crash",
+      "link": "https://www.nbc4i.com/news/local-news/delaware-county/one-dead-three-injured-in-delaware-county-crash/",
+      "pub_date": "2026-06-17T11:07:51+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "Dublin ends its 'robo cop' pilot program",
+      "link": "https://www.nbc4i.com/news/local-news/dublin/dublin-ends-its-robo-cop-pilot-program/",
+      "pub_date": "2026-06-17T11:00:00+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "Organizers postpone Ohio equal rights ballot initiatives to 2027 ballot; signature collection to continue",
+      "link": "https://thebuckeyeflame.com/2026/06/17/organizers-postpone-ohio-equal-rights-ballot-initiatives-to-2027/",
+      "pub_date": "2026-06-17T11:00:00+00:00",
+      "source": "Buckeye Flame"
+    },
+    {
+      "title": "Real estate transfers: 6/17",
+      "link": "https://www.toledoblade.com/business/real-estate/2026/06/17/real-estate-transfers-6-17-1-1/stories/20260617001",
+      "pub_date": "2026-06-17T10:43:21+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Plan It Calendar: 6/18-6/24",
+      "link": "https://www.toledoblade.com/a-e/living/2026/06/17/plan-it-calendar-6-18-6-24/stories/20260604121",
+      "pub_date": "2026-06-17T10:42:22+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Pizza Hut, overtaken by the arrival of delivery culture, will be sold for $2.7 billion",
+      "link": "https://www.toledoblade.com/business/retail/2026/06/17/pizza-hut-overtaken-by-the-arrival-of-delivery-culture-will-be-sold-for-2-7-billion/stories/20260617084",
+      "pub_date": "2026-06-17T10:38:27+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Warsh to face spotlight as Federal Reserve likely to leave interest rates unchanged",
+      "link": "https://www.toledoblade.com/business/personal-finance/2026/06/17/warsh-to-face-spotlight-as-federal-reserve-likely-to-leave-interest-rates-unchanged/stories/20260617083",
+      "pub_date": "2026-06-17T10:35:33+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Petition with more than 1,800 signatures hoping to stop Mansfield Buc-ee's",
+      "link": "https://www.nbc4i.com/news/local-news/richland-county/petition-with-more-than-1800-signatures-hoping-to-stop-mansfield-buc-ees/",
+      "pub_date": "2026-06-17T10:30:00+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "Who is Tycen Proper, the Ohio man accused of plotting an attack at the White House?",
+      "link": "https://www.nbc4i.com/news/local-news/columbus/who-is-tycen-proper-the-ohio-man-accused-of-plotting-an-attack-at-the-white-house/",
+      "pub_date": "2026-06-17T09:30:00+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "Speed bumps return on weekend nights at ‘Miracle Mile’ section of Park Avenue West",
+      "link": "https://www.richlandsource.com/2026/06/17/speed-bumps-returning-on-weekend-nights-on-the-miracle-mile-section-of-park-avenue-west/",
+      "pub_date": "2026-06-17T09:00:00+00:00",
+      "source": "Richland Source"
+    },
+    {
+      "title": "Double Dippin’: Inside the unaccountable money machine of Mike Dittoe",
+      "link": "https://www.rooster.info/p/mike-dittoe-money-machine",
+      "pub_date": "2026-06-17T08:33:53+00:00",
+      "source": "The Rooster"
+    },
+    {
+      "title": "Ohio Gov. Mike DeWine calls on lawmakers to get rid of the state’s death penalty",
+      "link": "https://ohiocapitaljournal.com/2026/06/17/ohio-gov-mike-dewine-calls-on-lawmakers-to-rid-of-the-states-death-penalty/",
+      "pub_date": "2026-06-17T08:00:32+00:00",
+      "source": "Ohio Capital Journal"
+    },
+    {
+      "title": "Republicans, Democrats and independents agree: Corruption is a huge problem",
+      "link": "https://ohiocapitaljournal.com/2026/06/17/republicans-democrats-and-independents-agree-corruption-is-a-huge-problem/",
+      "pub_date": "2026-06-17T07:55:41+00:00",
+      "source": "Ohio Capital Journal"
+    },
+    {
+      "title": "As men fought in cages at the White House, women urged Americans to take a ‘deep breath’",
+      "link": "https://ohiocapitaljournal.com/2026/06/17/as-men-fought-in-cages-at-the-white-house-women-urged-americans-to-take-a-deep-breath/",
+      "pub_date": "2026-06-17T07:50:17+00:00",
+      "source": "Ohio Capital Journal"
+    },
+    {
+      "title": "This News is So Gay (6/17/26): Unpacking LGBTQ+ Youth Challenges and Threats to Queer Media Representation",
+      "link": "https://thebuckeyeflame.com/2026/06/17/this-news-is-so-gay-unpacking-lgbtq-youth-challenges/",
+      "pub_date": "2026-06-17T07:31:00+00:00",
+      "source": "Buckeye Flame"
+    },
+    {
+      "title": "Facing historic unpopularity, weaponization of government for election chaos has started in Ohio",
+      "link": "https://ohiocapitaljournal.com/2026/06/17/facing-historic-unpopularity-weaponized-government-election-chaos-has-been-started-in-ohio/",
+      "pub_date": "2026-06-17T07:30:20+00:00",
+      "source": "Ohio Capital Journal"
+    },
+    {
+      "title": "Surging stock market, Trump policies boost wealth for top 1%",
+      "link": "https://ohiocapitaljournal.com/2026/06/17/repub/surging-stock-market-trump-policies-boost-wealth-for-top-1/",
+      "pub_date": "2026-06-17T07:15:29+00:00",
+      "source": "Ohio Capital Journal"
+    },
+    {
+      "title": "Supreme Court agrees to weigh in on case over rights of some in ‘prolonged’ ICE detention",
+      "link": "https://ohiocapitaljournal.com/2026/06/17/repub/supreme-court-agrees-to-weigh-in-on-case-over-rights-of-some-in-prolonged-ice-detention/",
+      "pub_date": "2026-06-17T07:10:59+00:00",
+      "source": "Ohio Capital Journal"
+    },
+    {
+      "title": "Most mass shooters show warning signs before attacks, study finds",
+      "link": "https://ohiocapitaljournal.com/2026/06/17/repub/most-mass-shooters-show-warning-signs-before-attacks-study-finds/",
+      "pub_date": "2026-06-17T07:05:11+00:00",
+      "source": "Ohio Capital Journal"
+    },
+    {
+      "title": "‘Prepared for the worst’: Black lawmakers brace for losses as Georgia GOP eyes new political maps",
+      "link": "https://ohiocapitaljournal.com/briefs/prepared-for-the-worst-black-lawmakers-brace-for-losses-as-georgia-gop-eyes-new-political-maps/",
+      "pub_date": "2026-06-17T07:00:49+00:00",
+      "source": "Ohio Capital Journal"
+    },
+    {
+      "title": "Local election officials go with Missouri’s gerrymandered congressional map despite uncertainty",
+      "link": "https://ohiocapitaljournal.com/briefs/local-election-officials-go-with-missouris-gerrymandered-congressional-map-despite-uncertainty/",
+      "pub_date": "2026-06-17T06:55:35+00:00",
+      "source": "Ohio Capital Journal"
+    },
+    {
+      "title": "DeWine drops no hints about vetoes of some controversial bills - WVXU",
+      "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxPTEpBMTN1RGlCX2Z6V3JDcnVRdDRKS3U4LVZnU05BbDdxNXpHOGtIZEVoNGZVeXN5RGc5c0J4UGtCNTl6MXVZcVdHTDhGVUg4aENzd2RHaVFkZGdLSy1DTjZsR2ZHOENlazNHSi1vYWlUWXRBU2tOY2ZSRElQVmN6ZzN3Vm0xZTRqNGlJeWdYTUwzS245SjVWc1lB?oc=5",
+      "pub_date": "2026-06-17T03:34:00+00:00",
+      "source": "Google News: Ohio Statehouse"
+    },
+    {
+      "title": "Final council meeting before Whitehall recall election day",
+      "link": "https://www.nbc4i.com/news/local-news/whitehall/final-council-meeting-before-whitehall-recall-election-day/",
+      "pub_date": "2026-06-17T03:14:21+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "Mud Hens snap skid with series-opening win against Red Wings",
+      "link": "https://www.toledoblade.com/sports/mud-hens/2026/06/16/mud-hens-snap-skid-with-series-opening-win-against-red-wings/stories/20260616123",
+      "pub_date": "2026-06-17T02:56:55+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Police: Robbery gone bad leaves one dead near north Columbus market",
+      "link": "https://www.nbc4i.com/news/local-news/columbus/one-dead-after-shooting-near-north-columbus-market/",
+      "pub_date": "2026-06-17T02:21:57+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "Residents give feedback for McCoy Park replacement, but stay skeptical",
+      "link": "https://www.nbc4i.com/news/local-news/columbus/residents-give-feedback-for-mccoy-park-replacement-but-stay-skeptical/",
+      "pub_date": "2026-06-17T02:10:12+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "OhioHealth reaches agreement with DOJ and Ohio AG",
+      "link": "https://www.richlandsource.com/2026/06/16/ohiohealth-reaches-agreement-with-doj-and-ohio-ag/",
+      "pub_date": "2026-06-17T01:46:01+00:00",
+      "source": "Richland Source"
+    },
+    {
+      "title": "CBC to end 'Hockey Night in Canada' NHL broadcasts",
+      "link": "https://www.toledoblade.com/sports/pro/2026/06/16/cbc-end-hockey-night-canada-nhl-broadcasts/stories/20260617065",
+      "pub_date": "2026-06-17T00:38:59+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Photo gallery: Father's Day barbecue at Laurie's Place",
+      "link": "https://www.toledoblade.com/local/community-events/2026/06/16/photo-gallery-fathers-day-barbecue-lauries-place/stories/20260616121",
+      "pub_date": "2026-06-16T23:35:51+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Walleye see familiar foe Everblades win Kelly Cup title",
+      "link": "https://www.toledoblade.com/sports/walleye/2026/06/16/walleye-familiar-foe-everblades-win-kelly-cup-title/stories/20260616106",
+      "pub_date": "2026-06-16T23:34:35+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Detective details Lear brothers’ alleged gang affiliation at murder trial",
+      "link": "https://www.toledoblade.com/local/courts/2026/06/16/detective-details-lear-brothers-alleged-gang-affiliation-murder-trial/stories/20260616119",
+      "pub_date": "2026-06-16T23:27:36+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Beatty touts victory in Kennedy Center name case",
+      "link": "https://www.nbc4i.com/news/politics/beatty-touts-victory-in-kennedy-center-name-case/",
+      "pub_date": "2026-06-16T23:00:00+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "Council considers safety zones for special events after Old West End Festival shootings",
+      "link": "https://www.toledoblade.com/local/city/2026/06/16/council-considers-safety-zones-special-events-after-old-west-end-festival-shoot/stories/20260616099",
+      "pub_date": "2026-06-16T22:49:17+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Former Toledo Mayor Donna Owens says she’s alive and well despite reports of her death",
+      "link": "https://www.toledoblade.com/local/politics/2026/06/16/former-toledo-mayor-donna-owens-says-alive-well-despite-death-reports/stories/20260616120",
+      "pub_date": "2026-06-16T22:39:26+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Central Ohio orchard reopens after devastating fire",
+      "link": "https://www.nbc4i.com/news/local-news/licking-county/central-ohio-orchard-reopens-after-devastating-fire/",
+      "pub_date": "2026-06-16T22:30:00+00:00",
+      "source": "WCMH / NBC4i"
+    },
+    {
+      "title": "County officials clash over plan to study broader jail renovations",
+      "link": "https://www.toledoblade.com/local/community-events/2026/06/16/county-officials-clash-over-plan-study-broader-jail-renovations/stories/20260616109",
+      "pub_date": "2026-06-16T22:00:49+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Listening sessions to get feedback on new library branch in South Toledo",
+      "link": "https://www.toledoblade.com/local/community-events/2026/06/16/listening-sessions-get-feedback-new-library-branch-south-toledo/stories/20260616117",
+      "pub_date": "2026-06-16T21:32:32+00:00",
+      "source": "Toledo Blade"
+    },
+    {
+      "title": "Bowling Green residents can paint tiles for America 250 mosaic",
+      "link": "https://www.toledoblade.com/local/community-events/2026/06/16/bowling-green-residents-can-paint-tiles-america-250-mosaic/stories/20260615088",
+      "pub_date": "2026-06-16T21:28:04+00:00",
+      "source": "Toledo Blade"
+    },
     {
       "title": "Delaware County judge accused of sexual assault retires",
       "link": "https://www.nbc4i.com/news/local-news/central-ohio-news/delaware-county-judge-accused-of-sexual-assault-retires/",
@@ -15,34 +363,10 @@
       "source": "Toledo Blade"
     },
     {
-      "title": "Mosquito bucket challenge, science workshop set for Maumee library",
-      "link": "https://www.toledoblade.com/local/community-events/2026/06/16/mosquito-bucket-challeng-science-workshop/stories/20260616105",
-      "pub_date": "2026-06-16T20:03:39+00:00",
-      "source": "Toledo Blade"
-    },
-    {
       "title": "Stir-fry chain closes Dublin location permanently",
       "link": "https://www.nbc4i.com/news/local-news/columbus/bds-dublin-restaurant-permanently-closed/",
       "pub_date": "2026-06-16T20:00:00+00:00",
       "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Coffee shop to offer indigenous history lesson as part of speaker series",
-      "link": "https://www.toledoblade.com/local/community-events/2026/06/16/coffee-shop-to-offer-indigenous-history-lesson-as-part-of-speaker-series/stories/20260616097",
-      "pub_date": "2026-06-16T19:29:05+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "FBI disrupts a planned attack on the White House UFC cage-fighting show, court papers say",
-      "link": "https://www.toledoblade.com/news/nation/2026/06/16/fbi-disrupts-planned-attack-white-house-ufc-cage-fighting-show/stories/20260616107",
-      "pub_date": "2026-06-16T19:03:42+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "Briggs: Confidence pool — ranking every Toledo and BG 2026 football game from easiest to hardest",
-      "link": "https://www.toledoblade.com/sports/college/2026/06/16/briggs-confidence-pool-ranking-every-toledo-and-bg-2026-football-game/stories/20260616104",
-      "pub_date": "2026-06-16T19:00:17+00:00",
-      "source": "Toledo Blade"
     },
     {
       "title": "Arrest of 19-year-old Danville man may have helped foil planned attack on UFC Freedom 250",
@@ -57,16 +381,22 @@
       "source": "Richland Source"
     },
     {
+      "title": "Trump DOJ bid to defend Ohio’s anti-voting law is useless and untimely, court rules - Democracy Docket",
+      "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQY3pHc1NEUmxxYVBKS0hOclY0MHlaSFdnNTFabjFpRTNSZnNJREcyYnh1VkVmSkVmVFNnMjVMWWRoLTRIRnpybXdDWHNsdUxvenNTdWNLaV9qVHRtbGczTTBETi1nRjBpQTRmZzUwNmJyTnBHdE9rckVpM3FRVUJaaTBuUEFjUlhFTGZfb09jRVRpZUtWTmlqbEVqVDViOUNFcF9CRW41U0FZcURDSS1tOUV1T1c0ZzB1ZVFKQlQtZFhvZXlV?oc=5",
+      "pub_date": "2026-06-16T18:08:23+00:00",
+      "source": "Google News: Ohio Statehouse"
+    },
+    {
+      "title": "High schools: Ohio House bill aiming to prohibit NIL in OHSAA sports to be reintroduced in January - Springfield News-Sun",
+      "link": "https://news.google.com/rss/articles/CBMiigJBVV95cUxOTmMwUlptZFJVcFZwVnNQX3dQWDZFQ0Z2RWtEcTgzYmxBV2dtUS1KaXFGM0N4UVJDYTJnRmtnNTMzUlNrdnhkeloxODZzLTJiOWdUQldaWGpMTGJ2dldFOE5lTk1NUEpVNnh2ZlVqVjZkdHdNLWN0cHllQmdRRmV3NXlKN1ZVTDFnRVlscDJKOGVMcUd4QW9EbGpOZS1nNjNzVXhsNWFOU0puaEZGbGl4YjVxVzBfNlRVamszU0d5dXBNTmg2aHJMYlhZbjBRbXNPY1dHSV9kQWlXdmdxeDhPZU5rNlRvOWg5YURvdUxtRzQ5d2x1cUZLdnNEdXN1R1ZJZnBINFlvRlNsUQ?oc=5",
+      "pub_date": "2026-06-16T17:32:14+00:00",
+      "source": "Google News: Ohio Statehouse"
+    },
+    {
       "title": "Ohio House bill aiming to prohibit NIL in OHSAA sports to be reintroduced in January",
       "link": "https://www.wcpo.com/sports/high-school-sports/ohio-house-bill-aiming-to-prohibit-nil-in-ohsaa-sports-to-be-reintroduced-in-january",
       "pub_date": "2026-06-16T16:51:20+00:00",
       "source": "WCPO"
-    },
-    {
-      "title": "PWHL draft in Detroit will double as Team USA gold medal reunion",
-      "link": "https://www.toledoblade.com/sports/pro/2026/06/16/pwhl-draft-in-detroit-will-double-as-team-usa-gold-medal-reunion/stories/20260616102",
-      "pub_date": "2026-06-16T16:32:31+00:00",
-      "source": "Toledo Blade"
     },
     {
       "title": "Flaggots Ohio twirl into their 25th year with new leadership and expanded outreach",
@@ -85,12 +415,6 @@
       "link": "https://www.nbc4i.com/news/local-news/video-evidence-helped-identify-suspect-in-south-linden-shooting-near-daycare-center/",
       "pub_date": "2026-06-16T16:30:00+00:00",
       "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Batten down the hatches, high wind & wet weather could be headed our way",
-      "link": "https://www.richlandsource.com/2026/06/16/batten-down-the-hatches-high-wind-wet-weather-could-be-headed-our-way/",
-      "pub_date": "2026-06-16T16:25:02+00:00",
-      "source": "Richland Source"
     },
     {
       "title": "Judge allows 10 companies to temporarily sell intoxicating hemp in Ohio",
@@ -117,12 +441,6 @@
       "source": "WCMH / NBC4i"
     },
     {
-      "title": "Immersive Juneteenth event to portray the Black experience",
-      "link": "https://www.toledoblade.com/local/community-events/2026/06/16/immersive-juneteenth-event-to-portray-the-black-experience/stories/20260611073",
-      "pub_date": "2026-06-16T15:23:38+00:00",
-      "source": "Toledo Blade"
-    },
-    {
       "title": "Ohio man allegedly part of plot to detonate explosives at White House UFC event",
       "link": "https://www.nbc4i.com/news/local-news/central-ohio-news/ohio-man-allegedly-part-of-plot-to-detonate-explosives-at-white-house-ufc-event/",
       "pub_date": "2026-06-16T15:11:51+00:00",
@@ -147,34 +465,10 @@
       "source": "Buckeye Flame"
     },
     {
-      "title": "Madison Local School District announces policy for free and reduced meals",
-      "link": "https://www.richlandsource.com/2026/06/16/madison-local-school-district-announces-policy-for-free-and-reduced-meals/",
-      "pub_date": "2026-06-16T14:50:45+00:00",
-      "source": "Richland Source"
-    },
-    {
       "title": "Presentation canceled in Whitehall after concerns from state auditor",
       "link": "https://www.nbc4i.com/news/local-news/whitehall/whitehall-recall-effort-takes-center-stage-at-city-council-meeting-sparking-legal-questions/",
       "pub_date": "2026-06-16T14:30:00+00:00",
       "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Governor DeWine says Ohio should abolish death penalty",
-      "link": "https://www.toledoblade.com/local/politics/2026/06/16/death-penalty-not-a-deterrent/stories/20260616096",
-      "pub_date": "2026-06-16T14:17:57+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "Shelby honors student-athletes, life-saving teachers with mayoral proclamations",
-      "link": "https://www.richlandsource.com/2026/06/16/shelby-honors-student-athletes-life-saving-teachers-with-mayoral-proclamations/",
-      "pub_date": "2026-06-16T14:00:00+00:00",
-      "source": "Richland Source"
-    },
-    {
-      "title": "Juvenile treated for gunshot wound to arm after incident at North Lake Park on Monday night",
-      "link": "https://www.richlandsource.com/2026/06/16/juvenile-treated-for-gunshot-wound-to-arm-after-incident-at-north-lake-park-on-monday-night/",
-      "pub_date": "2026-06-16T13:23:31+00:00",
-      "source": "Richland Source"
     },
     {
       "title": "Local election officials reel over ‘logistical nightmare’ of Trump’s vote-by-mail order",
@@ -219,34 +513,10 @@
       "source": "WCMH / NBC4i"
     },
     {
-      "title": "Trump signals swift return of sanctions on Russian oil as G7 refocuses on Ukraine",
-      "link": "https://www.toledoblade.com/news/World/2026/06/16/g7-allies-scramble-to-put-ukraine-back-atop-trump-s-agenda-as-war-drags-on/stories/20260616094",
-      "pub_date": "2026-06-16T11:03:42+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "Iran says the deal to end the war with the U.S. requires Israel to withdraw from Lebanon",
-      "link": "https://www.toledoblade.com/news/World/2026/06/16/iran-says-the-deal-to-end-the-war-with-the-us-requires-israel-to-withdraw-from-lebanon/stories/20260616095",
-      "pub_date": "2026-06-16T11:01:27+00:00",
-      "source": "Toledo Blade"
-    },
-    {
       "title": "McDonald's to demolish classic Gahanna location and rebuild it with modern look",
       "link": "https://www.nbc4i.com/news/local-news/gahanna/mcdonalds-to-demolish-classic-gahanna-location-and-rebuild-it-with-modern-look/",
       "pub_date": "2026-06-16T11:00:00+00:00",
       "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Steven Spielberg's 'Disclosure Day' opens No. 1, while 'Obsession' sensation continues",
-      "link": "https://www.toledoblade.com/a-e/movies/2026/06/16/steven-spielberg-s-disclosure-day-opens-no-1-while-obsession-sensation-continues/stories/20260616015",
-      "pub_date": "2026-06-16T10:57:27+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "All eyes turn to Fed chair Kevin Warsh and his first moves on interest rates",
-      "link": "https://www.toledoblade.com/business/personal-finance/2026/06/16/all-eyes-turn-to-fed-chair-kevin-warsh-and-his-first-moves-on-interest-rates/stories/20260616093",
-      "pub_date": "2026-06-16T10:38:43+00:00",
-      "source": "Toledo Blade"
     },
     {
       "title": "Ohio unveils limited edition 'I Voted' sticker for America 250",
@@ -255,22 +525,10 @@
       "source": "WCMH / NBC4i"
     },
     {
-      "title": "Toledo bikers reckon with tragic death of fellow cyclist 1 year later",
-      "link": "https://www.toledoblade.com/local/community-events/2026/06/16/after-one-year-toledo-bikers-reckon-with-tragic-death-fellow-cyclist/stories/20260615073",
-      "pub_date": "2026-06-16T10:20:42+00:00",
-      "source": "Toledo Blade"
-    },
-    {
       "title": "Ohio bill would ban use of politicians' names, images on publicly funded signage",
       "link": "https://www.nbc4i.com/news/politics/ohio-bill-would-ban-use-of-politicians-names-images-on-publicly-funded-signage/",
       "pub_date": "2026-06-16T09:30:00+00:00",
       "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "News Man Weekly: Westinghouse, Miss Ohio Parade and the Ashland BalloonFest",
-      "link": "https://www.richlandsource.com/2026/06/16/news-man-weekly-a-packed-mansfield-weekend-and-the-ashland-balloonfest/",
-      "pub_date": "2026-06-16T09:25:00+00:00",
-      "source": "Richland Source"
     },
     {
       "title": "If Social Security isn’t fixed, average Ohioan will lose $487 a month, report estimates",
@@ -315,40 +573,10 @@
       "source": "Ohio Capital Journal"
     },
     {
-      "title": "Colt Keith has 3 home runs and 6 RBIs as Tigers blow past Astros 9-3",
-      "link": "https://www.toledoblade.com/sports/tigers/2026/06/15/colt-keith-has-3-home-runs-and-6-rbis-as-tigers-blow-past-astros-9-3/stories/20260616090",
-      "pub_date": "2026-06-16T03:41:16+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "Su&#225;rez homers twice and drives in 6 to back Burns as Reds rout Mets 12-0",
-      "link": "https://www.toledoblade.com/sports/pro/2026/06/15/suarez-homers-twice-drives-6-back-burns-reds-rout-mets-12-0/stories/20260615089",
-      "pub_date": "2026-06-16T03:19:09+00:00",
-      "source": "Toledo Blade"
-    },
-    {
       "title": "550-home Licking County development put on hold",
       "link": "https://www.nbc4i.com/news/local-news/licking-county/550-home-licking-county-development-put-on-hold/",
       "pub_date": "2026-06-16T03:09:16+00:00",
       "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Maumee establishes grounds for appealing sewer remediation reimbursements",
-      "link": "https://www.toledoblade.com/local/suburbs/2026/06/15/maumee-establishes-grounds-for-appealing-sewer-remediation-reimbursements/stories/20260615087",
-      "pub_date": "2026-06-16T02:22:37+00:00",
-      "source": "Toledo Blade"
-    },
-    {
-      "title": "New report argues ‘uneconomic coal operations’ affect Ohio - The Statehouse News Bureau",
-      "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQVXBudC01bGFuTXI0UXJFUFRoX0NQcnFXeVlHQ1pZR2VfR085M2x0ZXRWd2xFdERSWWQwUEs4VnkxLWdvUDd6aXE1aXl6bFh3M1ZTd1F2R1FTak91LUFGNEtOYm5EQ1Y4YWJEakVZa2dxRUt2NDhDWWRudXJuekFEaEstcVZ5Zkg4QVg4djgwRTFTQjVhWF9rYTVtYnJIZUkwaWpDM0JQcUpqbWtUVW8yd2JaQQ?oc=5",
-      "pub_date": "2026-06-16T01:14:00+00:00",
-      "source": "Google News: Ohio Statehouse"
-    },
-    {
-      "title": "8 people presumed dead after B-52 bomber crashes at U.S. Air Force base in Southern California",
-      "link": "https://www.toledoblade.com/news/nation/2026/06/15/8-people-presumed-dead-b-52-bomber-crashes-us-air-force-base-california/stories/20260615086",
-      "pub_date": "2026-06-16T00:32:22+00:00",
-      "source": "Toledo Blade"
     },
     {
       "title": "Three, including two children, killed in Pike County crash",
@@ -369,12 +597,6 @@
       "source": "WCMH / NBC4i"
     },
     {
-      "title": "Doorbell cams' value to police limited by motion-sensor activiation, detective says at trial",
-      "link": "https://www.toledoblade.com/local/courts/2026/06/15/doorbell-cams-value-police-limited-motion-sensor-activiation-detective-says/stories/20260615085",
-      "pub_date": "2026-06-15T23:08:21+00:00",
-      "source": "Toledo Blade"
-    },
-    {
       "title": "How crews prepare schools during the summer",
       "link": "https://www.nbc4i.com/news/local-news/lewis-center/how-crews-prepare-schools-during-the-summer/",
       "pub_date": "2026-06-15T23:00:00+00:00",
@@ -387,34 +609,16 @@
       "source": "WCMH / NBC4i"
     },
     {
-      "title": "New Perrysburg girls soccer coach Kaighin brings experience, high expectations",
-      "link": "https://www.toledoblade.com/sports/high-school/2026/06/15/new-perrysburg-girls-soccer-coach-kaighin-brings-experience-high-expectations/stories/20260615071",
-      "pub_date": "2026-06-15T22:08:41+00:00",
-      "source": "Toledo Blade"
-    },
-    {
       "title": "Fan loses out with Bruno Mars hotel reservation",
       "link": "https://www.nbc4i.com/news/investigates/better-call-4/fan-loses-out-with-bruno-mars-hotel-reservation/",
       "pub_date": "2026-06-15T22:00:00+00:00",
       "source": "WCMH / NBC4i"
     },
     {
-      "title": "Trump arrives at G7 summit looking for momentum after announcing a deal to end the Iran war",
-      "link": "https://www.toledoblade.com/news/World/2026/06/15/trump-g7-summit-looking-deal-iran-war/stories/20260615082",
-      "pub_date": "2026-06-15T21:33:17+00:00",
-      "source": "Toledo Blade"
-    },
-    {
       "title": "How Ohio's social media stars build their brand",
       "link": "https://www.nbc4i.com/news/local-news/central-ohio-news/how-ohios-social-media-stars-build-their-brand/",
       "pub_date": "2026-06-15T21:30:00+00:00",
       "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Facelift: Mansfield Speedway racing surface reworked ahead of June 26-27 Sprint Car show",
-      "link": "https://www.richlandsource.com/2026/06/15/facelift-mansfield-speedway-racing-surface-reworked-ahead-of-upcoming-sprint-car-show/",
-      "pub_date": "2026-06-15T21:00:00+00:00",
-      "source": "Richland Source"
     },
     {
       "title": "New connectivity project begins in Grove City",
@@ -429,10 +633,10 @@
       "source": "WCMH / NBC4i"
     },
     {
-      "title": "Clinton J. Brown",
-      "link": "https://www.richlandsource.com/2026/06/15/clinton-j-brown/",
-      "pub_date": "2026-06-15T20:44:40+00:00",
-      "source": "Richland Source"
+      "title": "We The People: How Things Really Get Done at the Ohio Statehouse - The Buckeye Institute",
+      "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNdkR5clVxczlSTy1vQUFkQkgxSVNQb0NKM2Z6LTNWNzNyMHJWSEpXXzdpRXFPeWt0Q3dURDRPbU4wekEzZC00OE9UMlBwQWs3WFgwaDQzT3NMVDV6eWNreFdfYnNENngwTi04UUNwMU54dTRtRW5pdXpBZERvUDdwbDVDTUQ4S1gxMjJiQURyOC1ab2hMLXE5THgxUmVWRXhXY0FkVVZ2Wjh2YWt3emlZ?oc=5",
+      "pub_date": "2026-06-15T20:44:46+00:00",
+      "source": "Google News: Ohio Statehouse"
     },
     {
       "title": "5 trespassed from Zoombezi Bay after disturbance at lazy river",
@@ -456,174 +660,6 @@
       "title": "Central Ohio woman helping to raise awareness about Crohn's disease and ulcerative colitis",
       "link": "https://www.nbc4i.com/news/local-news/dublin/central-ohio-woman-helping-to-raise-awareness-about-crohns-disease-and-ulcerative-colitis/",
       "pub_date": "2026-06-15T16:00:00+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Where Cava is planning its latest central Ohio location",
-      "link": "https://www.nbc4i.com/news/local-news/central-ohio-news/where-cava-is-planning-its-latest-central-ohio-location/",
-      "pub_date": "2026-06-15T15:00:00+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Ceasefire reached with Iran, ending hostilities and opening Strait of Hormuz",
-      "link": "https://ohiocapitaljournal.com/2026/06/15/repub/with-iran-peace-agreement-to-be-signed-friday-trump-says-ships-moving-in-strait-of-hormuz/",
-      "pub_date": "2026-06-15T14:58:39+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "Behind the push for new firearms bill in Ohio - NY State of Politics",
-      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxPMFRnQzl6THVuamFEVHlwNU1nZ2Q2MWxNMEFIZVdrNVNhODVwQ29nZngtSFpOVG80a0U1ZkdlVE9MMFQ4aW9rY1NXMTBSdEhZdUs5ZXk1d3dnYjRteTBxeDJEa1ZfUVo2RkNGczJ6dGFsMVA2YURrTU5lblZMMUU5Q29qWEpCT3FHSjNkSUpwWWNqbkp0QzNFNjZYMmlfSTNs?oc=5",
-      "pub_date": "2026-06-15T14:53:00+00:00",
-      "source": "Google News: Ohio Statehouse"
-    },
-    {
-      "title": "List: 2026 Juneteenth events in Columbus and central Ohio",
-      "link": "https://www.nbc4i.com/news/local-news/central-ohio-news/columbus-juneteenth-celebrations-events/",
-      "pub_date": "2026-06-15T14:30:00+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "A debate on tax breaks stalls new data center laws in Ohio. What now? - WOUB Public Media -",
-      "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxPS3J1S3RMeHZHNk1ETXpWMlVMVXd3TlJqUVFTMUstTVFlZ3FvSGpvQmU5QUZfUGtMR2pmN3VnNjVmLU5FbkhmQnJxdWxoXzFvRmtibFQ5OEdRYktVZ3hKUW85dXBIdXdETnFDOXNOOTR1a1h5bTdleUJrbmtRTTFwNTN0SFp5dw?oc=5",
-      "pub_date": "2026-06-15T13:54:52+00:00",
-      "source": "Google News: Ohio Statehouse"
-    },
-    {
-      "title": "Catching Our Eye News Roundup, June 15, 2026",
-      "link": "https://ohiocapitaljournal.com/briefs/catching-our-eye-news-roundup-june-15-2026/",
-      "pub_date": "2026-06-15T12:50:07+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "After local missing teen case, Indiana congressman aims to expand Amber Alert guidelines",
-      "link": "https://ohiocapitaljournal.com/2026/06/15/repub/after-local-missing-teen-case-indiana-congressman-aims-to-expand-amber-alert-guidelines/",
-      "pub_date": "2026-06-15T12:47:29+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "A US spying law expires amid distrust of Trump moves on national security",
-      "link": "https://ohiocapitaljournal.com/2026/06/15/repub/a-us-spying-law-expires-amid-distrust-of-trump-moves-on-national-security/",
-      "pub_date": "2026-06-15T12:43:30+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "Report: Over one-third of Ohioans do not make enough to afford basic expenses",
-      "link": "https://www.nbc4i.com/news/local-news/columbus/report-over-one-third-of-ohioans-do-not-make-enough-to-afford-basic-expenses/",
-      "pub_date": "2026-06-15T12:00:00+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Pedestrian in east Columbus fatal hit-skip struck by multiple vehicles",
-      "link": "https://www.nbc4i.com/news/local-news/columbus/pedestrian-in-east-columbus-fatal-hit-skip-struck-by-multiple-vehicles/",
-      "pub_date": "2026-06-15T11:30:00+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Ohio LGBTQ+ advocacy organizations denounce Cleveland Clinic’s DOJ settlement",
-      "link": "https://thebuckeyeflame.com/2026/06/15/lgbtq-orgs-denounce-cleveland-clinics-doj-settlement/",
-      "pub_date": "2026-06-15T11:27:25+00:00",
-      "source": "Buckeye Flame"
-    },
-    {
-      "title": "At-large suspect arrested in connection with homicide near South Linden daycare",
-      "link": "https://www.nbc4i.com/news/local-news/columbus/at-large-suspect-arrested-in-homicide-near-south-linden-daycare/",
-      "pub_date": "2026-06-15T11:05:00+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Columbus Zoo fans to choose name for new Masai giraffe calf",
-      "link": "https://www.nbc4i.com/news/local-news/columbus-zoo/columbus-zoo-masai-giraffe-calf/",
-      "pub_date": "2026-06-15T11:00:00+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Ohio State extends lease of local apartments to serve as dorms",
-      "link": "https://www.nbc4i.com/news/local-news/ohio-state-university/ohio-state-extends-lease-of-local-apartments-to-serve-as-dorms/",
-      "pub_date": "2026-06-15T10:30:00+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Price-cycling in Ohio ruins nationwide trend of lower gas prices after U.S.-Iran announcement",
-      "link": "https://www.nbc4i.com/news/local-news/central-ohio-news/price-cycling-in-ohio-ruins-nationwide-trend-of-lower-gas-prices-after-u-s-iran-announcement/",
-      "pub_date": "2026-06-15T09:58:38+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "Nonprofits raise concerns about Ohio bill to create domestic violence offender registry",
-      "link": "https://www.nbc4i.com/news/politics/nonprofits-raise-concerns-about-ohio-bill-to-create-domestic-violence-offender-registry/",
-      "pub_date": "2026-06-15T09:30:00+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "The gremlins they keep",
-      "link": "https://www.rooster.info/p/vivek-ramaswamy-jai-chabria-john-kasich-data-centers-tony-george-matt-huffman-marilyn-john-tip-top",
-      "pub_date": "2026-06-15T08:33:59+00:00",
-      "source": "The Rooster"
-    },
-    {
-      "title": "A bill banning child marriage passed out of committee, but the Ohio Senate did not vote on it",
-      "link": "https://ohiocapitaljournal.com/2026/06/15/a-bill-banning-child-marriage-passed-out-of-committee-but-the-ohio-senate-did-not-vote-on-it/",
-      "pub_date": "2026-06-15T07:55:54+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "Ohio lawmakers pass bill that would increase penalties for passing a stopped school bus, add cameras",
-      "link": "https://ohiocapitaljournal.com/2026/06/15/ohio-lawmakers-pass-bill-that-would-increase-penalties-for-passing-a-stopped-school-bus-add-cameras/",
-      "pub_date": "2026-06-15T07:50:40+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "Here’s what passed before Ohio lawmakers went on summer recess",
-      "link": "https://ohiocapitaljournal.com/2026/06/15/heres-what-passed-before-ohio-lawmakers-went-on-summer-recess/",
-      "pub_date": "2026-06-15T07:45:46+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "Strong candidates in Alaska, Ohio seen as moving US Senate races toward Dems",
-      "link": "https://ohiocapitaljournal.com/2026/06/15/repub/strong-candidates-in-alaska-ohio-seen-as-moving-us-senate-races-toward-dems/",
-      "pub_date": "2026-06-15T07:40:53+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "Nearly half of adults struggled to afford healthcare last year, survey finds",
-      "link": "https://ohiocapitaljournal.com/2026/06/15/repub/nearly-half-of-adults-struggled-to-afford-healthcare-last-year-survey-finds/",
-      "pub_date": "2026-06-15T07:20:08+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "Firearms drive majority of veteran suicides, federal data shows",
-      "link": "https://ohiocapitaljournal.com/2026/06/15/repub/firearms-drive-majority-of-veteran-suicides-federal-data-shows/",
-      "pub_date": "2026-06-15T07:15:03+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "What you need to know about the flesh-eating New World screwworm",
-      "link": "https://ohiocapitaljournal.com/2026/06/15/repub/what-you-need-to-know-about-the-flesh-eating-new-world-screwworm/",
-      "pub_date": "2026-06-15T07:10:47+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "In prisons and jails, a lack of sleep may harm health and safety",
-      "link": "https://ohiocapitaljournal.com/2026/06/15/repub/in-prisons-and-jails-a-lack-of-sleep-may-harm-health-and-safety/",
-      "pub_date": "2026-06-15T07:05:47+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "US Supreme Court leaves stay against Alabama’s nitrogen gas executions in place",
-      "link": "https://ohiocapitaljournal.com/briefs/us-supreme-court-leaves-stay-against-alabamas-nitrogen-gas-executions-in-place/",
-      "pub_date": "2026-06-15T07:00:09+00:00",
-      "source": "Ohio Capital Journal"
-    },
-    {
-      "title": "Ecuadorian-owned downtown bar hosts World Cup watch party",
-      "link": "https://www.nbc4i.com/news/local-news/columbus/ecuadorian-owned-downtown-bar-hosts-world-cup-watch-party/",
-      "pub_date": "2026-06-15T01:23:53+00:00",
-      "source": "WCMH / NBC4i"
-    },
-    {
-      "title": "One injured after shooting near east Columbus fire station",
-      "link": "https://www.nbc4i.com/news/local-news/columbus/one-injured-after-shooting-in-front-of-fire-station/",
-      "pub_date": "2026-06-14T21:28:30+00:00",
       "source": "WCMH / NBC4i"
     }
   ]

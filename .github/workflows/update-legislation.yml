@@ -15,7 +15,9 @@ on:
 jobs:
   update-data:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    # 45 covers a full refetch of all ~2,400 bills on a slow API day;
+    # normal incremental runs finish in a couple of minutes
+    timeout-minutes: 45
     
     steps:
     - name: Checkout repository

@@ -249,6 +249,38 @@ class TestChangesFeed(TempDataDirTestCase):
         changes = self.read_changes()
         self.assertEqual(changes, [])
 
+    def test_mapping_only_status_change_is_noise(self):
+        # Derived status changed (migration remap: passed -> became-law)
+        # but the bill took no new action -> keep it out of the feed
+        self.write_bills([self.existing_hb1(status='passed',
+                                            action='Effective', date='2026-03-01')])
+        updated = minimal_bill(1, 'HB1')
+        updated['status'] = 4  # now maps to became-law
+        updated['status_date'] = '2026-03-01'
+        updated['history'] = [{'action': 'Effective', 'date': '2026-03-01'}]
+        self.run_main_with(
+            {'0': {'bill_id': 1, 'change_hash': 'new'}},
+            {'1': updated},
+            stored={'1': 'old'},
+        )
+        self.assertEqual(self.read_changes(), [])
+
+    def test_real_enactment_with_new_action_is_recorded(self):
+        self.write_bills([self.existing_hb1(status='passed',
+                                            action='Sent to Governor', date='2026-06-20')])
+        updated = minimal_bill(1, 'HB1')
+        updated['status'] = 4
+        updated['history'] = [{'action': 'Signed by Governor', 'date': '2026-07-05'}]
+        self.run_main_with(
+            {'0': {'bill_id': 1, 'change_hash': 'new'}},
+            {'1': updated},
+            stored={'1': 'old'},
+        )
+        changes = self.read_changes()
+        self.assertEqual(len(changes), 1)
+        self.assertEqual(changes[0]['status'], 'became-law')
+        self.assertEqual(changes[0]['prev_status'], 'passed')
+
     def test_entries_older_than_14_days_are_pruned(self):
         self.write_bills([self.existing_hb1()])
         self.write_changes([

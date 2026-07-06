@@ -124,15 +124,17 @@ def build_change_entries(existing_bills, new_bills, run_date):
     Diffs freshly fetched bills against their previous records to produce
     'what moved' entries for the daily monitoring feed.
 
-    A bill whose hash changed but whose status and last action are
-    identical (e.g. a new text version was uploaded) is treated as noise
-    and skipped.
+    A bill whose hash changed but whose last action is identical (e.g. a
+    new text version was uploaded, or only our status mapping changed) is
+    treated as noise and skipped.
     """
     entries = []
     for b in new_bills:
         old = existing_bills.get(b['bill_id'])
+        # A refetch that brought no new action is noise — even if the
+        # derived status string changed (that only happens when our own
+        # mapping changed; real status changes always add a history action)
         if old and \
-           old.get('status') == b.get('status') and \
            old.get('last_action') == b.get('last_action') and \
            old.get('last_action_date') == b.get('last_action_date'):
             continue

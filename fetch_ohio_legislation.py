@@ -11,6 +11,7 @@ IMPORTANT: Set the LEGISCAN_API_KEY GitHub Actions secret before running!
 
 import requests
 import json
+import re
 import os
 import sys
 from datetime import datetime, timedelta, timezone
@@ -324,6 +325,21 @@ def extract_hearing_info(bill):
     return hearings
 
 
+def get_bill_type(number):
+    """
+    Classifies a bill number by its letter prefix, mirroring the widget's
+    getBillType(): HJR/SJR go to Ohio voters, HCR/SCR/HR/SR never reach
+    the governor, everything else (HB/SB) is a bill.
+    """
+    match = re.match(r'^([A-Za-z]+)', number or '')
+    prefix = match.group(1).upper() if match else ''
+    if prefix in ('HJR', 'SJR'):
+        return 'joint-resolution'
+    if prefix in ('HCR', 'SCR', 'HR', 'SR'):
+        return 'resolution'
+    return 'bill'
+
+
 def format_bill_for_widget(bill):
     """
     Formats a bill into the structure the widget expects
@@ -376,7 +392,10 @@ def format_bill_for_widget(bill):
     
     # Determine status using LegiScan's actual status codes:
     # 1=Introduced, 2=Engrossed (passed 1st chamber), 3=Enrolled (passed both),
-    # 4=Passed/Signed, 5=Vetoed, 6=Failed/Dead
+    # 4=Passed (became law for bills; adopted for resolutions; filed with the
+    # Secretary of State for joint resolutions), 5=Vetoed, 6=Failed/Dead
+    status_code = bill.get('status')
+    bill_type = get_bill_type(bill['bill_number'])
     status_map = {
         1: 'introduced',
         2: 'passed-chamber',  # Engrossed = passed first chamber
@@ -385,7 +404,13 @@ def format_bill_for_widget(bill):
         5: 'vetoed',
         6: 'failed'
     }
-    status = status_map.get(bill.get('status'), 'introduced')
+    if bill_type == 'bill':
+        # "Became law" not "signed": covers signature, the 10-day
+        # no-signature rule and veto overrides
+        status_map[4] = 'became-law'
+    elif bill_type == 'joint-resolution':
+        status_map[4] = 'on-ballot'
+    status = status_map.get(status_code, 'introduced')
     # Infer in-committee: introduced bills with a committee assignment are in committee
     if status == 'introduced' and committee:
         status = 'in-committee'
@@ -406,6 +431,7 @@ def format_bill_for_widget(bill):
         'title': bill.get('title', ''),
         'description': bill.get('description', ''),
         'status': status,
+        'status_code': status_code,
         'status_date': bill.get('status_date', ''),
         'last_action': last_action,
         'last_action_date': last_action_date,

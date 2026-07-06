@@ -270,6 +270,39 @@ class TestChangesFeed(TempDataDirTestCase):
         self.assertIn('HB1', numbers, 'new entries must be added')
 
 
+class TestStatusMapping(unittest.TestCase):
+    """Type-aware derivation of widget status from LegiScan status codes."""
+
+    def formatted(self, number, status):
+        b = minimal_bill(1, number)
+        b['status'] = status
+        return fetcher.format_bill_for_widget(b)
+
+    def test_enrolled_bill_stays_passed_awaiting_governor(self):
+        self.assertEqual(self.formatted('HB1', 3)['status'], 'passed')
+
+    def test_status4_house_bill_became_law(self):
+        self.assertEqual(self.formatted('HB1', 4)['status'], 'became-law')
+
+    def test_status4_senate_bill_became_law(self):
+        self.assertEqual(self.formatted('SB1', 4)['status'], 'became-law')
+
+    def test_status4_joint_resolution_is_on_ballot(self):
+        self.assertEqual(self.formatted('HJR2', 4)['status'], 'on-ballot')
+
+    def test_status4_concurrent_resolution_stays_passed(self):
+        self.assertEqual(self.formatted('SCR3', 4)['status'], 'passed')
+
+    def test_status4_simple_resolution_stays_passed(self):
+        self.assertEqual(self.formatted('HR4', 4)['status'], 'passed')
+
+    def test_vetoed_unchanged(self):
+        self.assertEqual(self.formatted('HB1', 5)['status'], 'vetoed')
+
+    def test_raw_status_code_is_preserved(self):
+        self.assertEqual(self.formatted('HB1', 4)['status_code'], 4)
+
+
 class TestApiCallTimeout(unittest.TestCase):
 
     def test_api_calls_use_a_timeout(self):

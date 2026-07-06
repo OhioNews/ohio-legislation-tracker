@@ -522,6 +522,24 @@
             flex-wrap: wrap;
         }
 
+        .copy-link-btn {
+            padding: 6px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 600;
+            white-space: nowrap;
+            background: none;
+            border: 1px solid var(--border-color);
+            color: var(--text-light);
+            cursor: pointer;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .copy-link-btn:hover {
+            border-color: var(--signal-dark);
+            color: var(--signal-dark);
+        }
+
         .badge {
             padding: 6px 12px;
             border-radius: 12px;
@@ -1007,6 +1025,7 @@
         const PRIORITY_BILLS = ['HB 1', 'SB 5'];
         const DATA_FILE_PATH = 'ohio_legislation_data/bills.json';
         const CHANGES_FILE_PATH = 'ohio_legislation_data/changes.json';
+        const CURRENT_GA = 136; // General Assembly number stamped into shared links
         const DAYS_FOR_NEW = 7; // Show as "new" if activity within this many days
 
         // LegiScan numbers have no space ("HB1") but people write "HB 1" —
@@ -1671,6 +1690,7 @@
                             ${isNew ? '<span class="badge badge-new">🆕 NEW</span>' : ''}
                             <span class="badge badge-chamber">${chamberText}</span>
                             ${typeBadge}
+                            <button class="copy-link-btn" onclick="copyBillLink('${bill.number}', this)" aria-label="Copy link to ${bill.number}">🔗 Copy link</button>
                         </div>
                     </div>
 
@@ -1904,6 +1924,29 @@
                 description.classList.add('collapsed');
                 button.textContent = 'Read more ▼';
             }
+        }
+
+        // Copy a shareable deep link for a bill to the clipboard
+        function copyBillLink(billNumber, button) {
+            const compact = billNumber.replace(/\s+/g, '');
+            const url = `${location.origin}${location.pathname}?bill=${compact}&ga=${CURRENT_GA}`;
+            navigator.clipboard.writeText(url).then(() => {
+                showCopyFeedback(button, '✓ Copied');
+            }).catch((err) => {
+                console.error('Copy failed:', err);
+                showCopyFeedback(button, 'Copy failed');
+            });
+        }
+
+        // Swap button text for 1.5s (mirrors flash-highlight timing), then restore
+        function showCopyFeedback(button, message) {
+            const original = button.textContent;
+            button.textContent = message;
+            button.disabled = true;
+            setTimeout(() => {
+                button.textContent = original;
+                button.disabled = false;
+            }, 1500);
         }
 
         // Start the app

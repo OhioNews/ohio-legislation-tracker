@@ -1,8 +1,27 @@
 # Deep Links — Design
 
 **Date:** July 6, 2026
-**Status:** Approved pending Scott's spec review
+**Status:** Shipped July 6; amended same day (see Amendment below)
 **Scope:** `ohio-legislation-tracker-LIVE.html` only. Frontend-only; no fetcher, data-file or Actions changes.
+
+## Amendment (July 6, evening)
+
+Two changes after Scott's first real-world use, replacing the original
+"land in full list + auto-expand" behavior:
+
+1. **Search-box landing.** The original design had `jumpToBill()` extend
+   pagination to reach the target — for a deep bill like HB96 that rendered
+   1,050 cards (~400k px tall), and long scrolls through that page stalled
+   Chrome's compositor for 15–30 s with system-wide jank (diagnosed via
+   longtask/frame-gap instrumentation; the "Show more" click Scott blamed
+   was coincidental — clicks landing during the freeze were swallowed).
+   Deep links now land via the search path: the bill number goes into the
+   search box, a handful of cards render, and clearing the box restores the
+   full list. The type filter is widened by hand for HR/SR/HCR/SCR because
+   `clearAllFilters` (jumpToBill's fallback) would wipe the search box.
+2. **No auto-expand.** The linked bill lands collapsed with the flash
+   highlight only. Budget bills made the expanded description a 19,000-
+   character wall of section numbers — clutter, and extra layout weight.
 
 ## Purpose
 

@@ -1492,10 +1492,10 @@
             }
         }
 
-        // Deep link: ?bill=HB96&ga=136 jumps to a bill on load and expands
-        // its description. Quiet failure — unknown bills log and fall through
-        // to a normal page load. ga mismatch handling is deferred to the
-        // session-rollover work; until then it only warns.
+        // Deep link: ?bill=HB96&ga=136 lands on a bill on load. Quiet
+        // failure — unknown bills log and fall through to a normal page
+        // load. ga mismatch handling is deferred to the session-rollover
+        // work; until then it only warns.
         function handleDeepLink() {
             const params = new URLSearchParams(location.search);
             const rawBill = params.get('bill');
@@ -1513,16 +1513,22 @@
                 console.warn(`Deep link: minted for GA ${ga}, current is GA ${CURRENT_GA}`);
             }
 
-            jumpToBill(bill.number);
-
-            // Auto-expand the description, if the bill has one (~730 don't)
-            const idSuffix = bill.number.replace(/\s+/g, '-');
-            const card = document.getElementById(`bill-${idSuffix}`);
-            const desc = document.getElementById(`desc-${idSuffix}`);
-            if (card && desc && desc.classList.contains('collapsed')) {
-                const toggleBtn = card.querySelector('.description-toggle');
-                if (toggleBtn) toggleDescription(`desc-${idSuffix}`, toggleBtn);
+            // Land via the search path, not pagination extension: rendering
+            // every card above a deep bill builds a ~400k-px page that stalls
+            // the compositor for many seconds (system-wide jank). Searching
+            // the bill number renders a handful of cards, and clearing the
+            // box restores the full list. Type filter is widened by hand
+            // because jumpToBill's fallback (clearAllFilters) would wipe the
+            // search box.
+            const billType = getBillType(bill.number);
+            if (billType === 'simple-resolution' || billType === 'concurrent-resolution') {
+                currentFilters.type = 'all';
+                typeFilter.value = 'all';
             }
+            currentFilters.search = bill.number.toLowerCase();
+            searchInput.value = bill.number;
+            applyFilters();
+            jumpToBill(bill.number);
         }
 
         // Update display

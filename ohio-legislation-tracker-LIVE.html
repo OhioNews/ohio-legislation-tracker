@@ -919,6 +919,8 @@
                         <option value="in-committee">In Committee</option>
                         <option value="passed-chamber">Passed Chamber</option>
                         <option value="passed">Passed Both</option>
+                        <option value="on-ballot">On Ballot</option>
+                        <option value="became-law">Became Law</option>
                         <option value="vetoed">Vetoed</option>
                         <option value="failed">Failed</option>
                     </select>
@@ -1160,6 +1162,8 @@
             const relabels = {
                 'passed-chamber': isResolutions ? 'Adopted (One Chamber)' : isBallot ? 'Adopted One Chamber' : 'Passed Chamber',
                 'passed':         isResolutions ? 'Adopted'               : isBallot ? 'Adopted Both'        : 'Passed Both',
+                'on-ballot':      isBallot ? 'On Ballot' : 'On Ballot (ballot measures)',
+                'became-law':     (isResolutions || isBallot) ? 'Became Law (bills only)' : 'Became Law',
                 'vetoed':         (isResolutions || isBallot) ? 'Vetoed (bills only)' : 'Vetoed'
             };
 

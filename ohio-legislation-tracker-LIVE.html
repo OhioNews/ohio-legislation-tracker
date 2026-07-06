@@ -1083,8 +1083,21 @@
                 filteredBills = allBills;
                 syncStatusLabels();
                 applyFilters();
-                const lastModified = response.headers.get('Last-Modified');
-                updateLastUpdate(lastModified ? new Date(lastModified) : null);
+                // Prefer the fetcher's freshness stamp — the Last-Modified header
+                // reflects the last site deploy, not the last data update
+                let dataTimestamp = null;
+                try {
+                    const metaResponse = await fetch('ohio_legislation_data/meta.json');
+                    if (metaResponse.ok) {
+                        const meta = await metaResponse.json();
+                        if (meta.last_updated) dataTimestamp = new Date(meta.last_updated);
+                    }
+                } catch (e) { /* fall through to header */ }
+                if (!dataTimestamp) {
+                    const lastModified = response.headers.get('Last-Modified');
+                    dataTimestamp = lastModified ? new Date(lastModified) : null;
+                }
+                updateLastUpdate(dataTimestamp);
                 populateCommitteeFilter();
                 populateSponsorFilter();
                 populateSubjectFilter();

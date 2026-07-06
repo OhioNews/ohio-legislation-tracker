@@ -12,7 +12,8 @@ IMPORTANT: Set the LEGISCAN_API_KEY GitHub Actions secret before running!
 import requests
 import json
 import os
-from datetime import datetime, timedelta
+import sys
+from datetime import datetime, timedelta, timezone
 
 # ============================================================================
 # CONFIGURATION - EDIT THIS SECTION
@@ -27,6 +28,11 @@ OUTPUT_DIR = "ohio_legislation_data"
 BILLS_OUTPUT = os.path.join(OUTPUT_DIR, "bills.json")
 HEARINGS_OUTPUT = os.path.join(OUTPUT_DIR, "hearings.json")
 HASH_STORAGE = os.path.join(OUTPUT_DIR, "bill_hashes.json")
+META_OUTPUT = os.path.join(OUTPUT_DIR, "meta.json")
+
+# Seconds before an API call is abandoned (a hung call would otherwise
+# hang the GitHub Actions job until its own timeout)
+REQUEST_TIMEOUT = 30
 
 # How many days ahead to show committee hearings (14 = 2 weeks)
 HEARING_DAYS_AHEAD = 14
@@ -60,7 +66,7 @@ def call_legiscan_api(operation, params=None):
     
     try:
         print(f"  \u2192 Calling LegiScan API: {operation}")
-        response = requests.get(base_url, params=request_params)
+        response = requests.get(base_url, params=request_params, timeout=REQUEST_TIMEOUT)
         response.raise_for_status()  # Raise error for bad status codes
         
         data = response.json()
@@ -91,6 +97,32 @@ def load_stored_hashes():
         with open(HASH_STORAGE, 'r') as f:
             return json.load(f)
     return {}
+
+
+def write_meta(bill_count, updated_count):
+    """
+    Writes a freshness stamp so the widget (and a human checking the repo)
+    can tell when the pipeline last ran successfully — even on days when
+    no bills changed.
+    """
+    meta = {
+        'last_updated': datetime.now(timezone.utc).isoformat(),
+        'bill_count': bill_count,
+        'updated_last_run': updated_count
+    }
+    with open(META_OUTPUT, 'w') as f:
+        json.dump(meta, f, indent=2)
+
+
+def count_existing_bills():
+    """Returns the number of bills currently in the output file."""
+    if os.path.exists(BILLS_OUTPUT):
+        try:
+            with open(BILLS_OUTPUT) as f:
+                return len(json.load(f))
+        except json.JSONDecodeError:
+            pass
+    return 0
 
 
 def save_hashes(hashes):
@@ -366,10 +398,12 @@ def main():
     print("=" * 70)
     
     # Check if API key is set
+    # Fatal errors exit nonzero so GitHub Actions fails the run and
+    # notifies \u2014 a broken pipeline must never look like a green checkmark.
     if not LEGISCAN_API_KEY:
         print("\n\u2717 ERROR: LEGISCAN_API_KEY environment variable is not set!")
         print("  Add it as a GitHub Actions secret named LEGISCAN_API_KEY.")
-        return
+        sys.exit(1)
     
     # Create output directory if it doesn't exist
     if not os.path.exists(OUTPUT_DIR):
@@ -380,13 +414,13 @@ def main():
     session_id = get_ohio_session_id()
     if not session_id:
         print("\n\u2717 Failed to get session ID. Exiting.")
-        return
+        sys.exit(1)
     
     # Get master list of bills
     master_list = get_master_list(session_id)
     if not master_list:
         print("\n\u2717 Failed to get master list. Exiting.")
-        return
+        sys.exit(1)
     
     # Load stored hashes
     stored_hashes = load_stored_hashes()
@@ -414,7 +448,8 @@ def main():
     
     if len(bills_to_fetch) == 0:
         print("\n\u2713 No bills have changed since last fetch. Data is up to date!")
-        print("\nDone! No updates needed.")
+        write_meta(count_existing_bills(), 0)
+        print("\nDone! No updates needed. Freshness stamp written.")
         return
     
     # Fetch detailed bill information
@@ -423,24 +458,39 @@ def main():
     
     bills_for_widget = []
     all_hearings = []
-    
+    failed_count = 0
+
     for i, bill_id in enumerate(bills_to_fetch, 1):
         print(f"   [{i}/{len(bills_to_fetch)}] Fetching bill {bill_id}...", end='')
-        
+
         bill = get_bill_details(bill_id)
-        
+
         if bill:
             # Format for bill tracker widget
             formatted_bill = format_bill_for_widget(bill)
             bills_for_widget.append(formatted_bill)
-            
+
             # Extract hearing information
             hearings = extract_hearing_info(bill)
             all_hearings.extend(hearings)
-            
+
             print(" \u2713")
         else:
-            print(" \u2717")
+            # Roll the hash back to its previous value so this bill still
+            # counts as changed and gets retried on the next run
+            failed_count += 1
+            if bill_id in stored_hashes:
+                new_hashes[bill_id] = stored_hashes[bill_id]
+            else:
+                new_hashes.pop(bill_id, None)
+            print(" \u2717 (will retry next run)")
+
+    if failed_count == len(bills_to_fetch):
+        print(f"\n\u2717 All {failed_count} bill fetches failed \u2014 API is likely down or key is invalid.")
+        sys.exit(1)
+
+    if failed_count:
+        print(f"\n\u26a0 {failed_count} of {len(bills_to_fetch)} bill fetches failed; they will retry next run.")
     
     # Merge duplicate hearings
     merged_hearings = merge_hearings(all_hearings)
@@ -477,6 +527,10 @@ def main():
     # Save updated hashes
     save_hashes(new_hashes)
     print(f"   \u2713 Saved {len(new_hashes)} bill hashes to {HASH_STORAGE}")
+
+    # Save freshness stamp
+    write_meta(len(all_bills), len(bills_for_widget))
+    print(f"   \u2713 Saved freshness stamp to {META_OUTPUT}")
     
     print("\n" + "=" * 70)
     print("SUCCESS! Data fetch complete.")

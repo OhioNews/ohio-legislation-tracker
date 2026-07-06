@@ -1140,7 +1140,8 @@
                     }
                 } catch (e) { /* no feed yet; fallback below */ }
                 displayNewThisWeek();
-                
+                handleDeepLink();
+
             } catch (error) {
                 console.error('Error loading bills:', error);
                 billsList.innerHTML = `
@@ -1488,6 +1489,39 @@
                 setTimeout(() => {
                     billElement.classList.remove('flash-highlight');
                 }, 1500);
+            }
+        }
+
+        // Deep link: ?bill=HB96&ga=136 jumps to a bill on load and expands
+        // its description. Quiet failure — unknown bills log and fall through
+        // to a normal page load. ga mismatch handling is deferred to the
+        // session-rollover work; until then it only warns.
+        function handleDeepLink() {
+            const params = new URLSearchParams(location.search);
+            const rawBill = params.get('bill');
+            if (!rawBill) return;
+
+            const target = rawBill.replace(/\s+/g, '').toUpperCase();
+            const bill = allBills.find(b => b.number.replace(/\s+/g, '').toUpperCase() === target);
+            if (!bill) {
+                console.warn(`Deep link: bill "${rawBill}" not found in current data`);
+                return;
+            }
+
+            const ga = params.get('ga');
+            if (ga && parseInt(ga, 10) !== CURRENT_GA) {
+                console.warn(`Deep link: minted for GA ${ga}, current is GA ${CURRENT_GA}`);
+            }
+
+            jumpToBill(bill.number);
+
+            // Auto-expand the description, if the bill has one (~730 don't)
+            const idSuffix = bill.number.replace(/\s+/g, '-');
+            const card = document.getElementById(`bill-${idSuffix}`);
+            const desc = document.getElementById(`desc-${idSuffix}`);
+            if (card && desc && desc.classList.contains('collapsed')) {
+                const toggleBtn = card.querySelector('.description-toggle');
+                if (toggleBtn) toggleDescription(`desc-${idSuffix}`, toggleBtn);
             }
         }
 

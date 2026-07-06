@@ -29,6 +29,10 @@ BILLS_OUTPUT = os.path.join(OUTPUT_DIR, "bills.json")
 HEARINGS_OUTPUT = os.path.join(OUTPUT_DIR, "hearings.json")
 HASH_STORAGE = os.path.join(OUTPUT_DIR, "bill_hashes.json")
 META_OUTPUT = os.path.join(OUTPUT_DIR, "meta.json")
+CHANGES_OUTPUT = os.path.join(OUTPUT_DIR, "changes.json")
+
+# How many days of change history to keep in changes.json
+CHANGES_KEEP_DAYS = 14
 
 # Seconds before an API call is abandoned (a hung call would otherwise
 # hang the GitHub Actions job until its own timeout)
@@ -112,6 +116,59 @@ def write_meta(bill_count, updated_count):
     }
     with open(META_OUTPUT, 'w') as f:
         json.dump(meta, f, indent=2)
+
+
+def build_change_entries(existing_bills, new_bills, run_date):
+    """
+    Diffs freshly fetched bills against their previous records to produce
+    'what moved' entries for the daily monitoring feed.
+
+    A bill whose hash changed but whose status and last action are
+    identical (e.g. a new text version was uploaded) is treated as noise
+    and skipped.
+    """
+    entries = []
+    for b in new_bills:
+        old = existing_bills.get(b['bill_id'])
+        if old and \
+           old.get('status') == b.get('status') and \
+           old.get('last_action') == b.get('last_action') and \
+           old.get('last_action_date') == b.get('last_action_date'):
+            continue
+        entries.append({
+            'run_date': run_date,
+            'number': b['number'],
+            'title': b.get('title', ''),
+            'status': b.get('status'),
+            'prev_status': old.get('status') if old else None,
+            'is_new': old is None,
+            'last_action': b.get('last_action', ''),
+            'last_action_date': b.get('last_action_date', ''),
+            'url': b.get('url', '')
+        })
+    return entries
+
+
+def update_changes_feed(new_entries):
+    """
+    Prepends new change entries to changes.json and prunes anything older
+    than CHANGES_KEEP_DAYS.
+    """
+    old_entries = []
+    if os.path.exists(CHANGES_OUTPUT):
+        try:
+            with open(CHANGES_OUTPUT) as f:
+                old_entries = json.load(f)
+        except json.JSONDecodeError:
+            old_entries = []
+
+    cutoff = (datetime.now() - timedelta(days=CHANGES_KEEP_DAYS)).strftime('%Y-%m-%d')
+    kept = [e for e in old_entries if e.get('run_date', '') >= cutoff]
+
+    merged = new_entries + kept
+    with open(CHANGES_OUTPUT, 'w') as f:
+        json.dump(merged, f, indent=2)
+    return merged
 
 
 def count_existing_bills():
@@ -508,6 +565,11 @@ def main():
         except (json.JSONDecodeError, KeyError):
             pass  # Start fresh if file is corrupt
 
+    # Diff against previous records for the daily changes feed
+    # (must happen before the overwrite below)
+    run_date = datetime.now().strftime('%Y-%m-%d')
+    change_entries = build_change_entries(existing_bills, bills_for_widget, run_date)
+
     # Overwrite changed/new bills; preserve everything else
     for b in bills_for_widget:
         existing_bills[b['bill_id']] = b
@@ -531,6 +593,10 @@ def main():
     # Save freshness stamp
     write_meta(len(all_bills), len(bills_for_widget))
     print(f"   \u2713 Saved freshness stamp to {META_OUTPUT}")
+
+    # Save the daily changes feed
+    all_changes = update_changes_feed(change_entries)
+    print(f"   \u2713 Saved changes feed to {CHANGES_OUTPUT} ({len(change_entries)} new, {len(all_changes)} total)")
     
     print("\n" + "=" * 70)
     print("SUCCESS! Data fetch complete.")

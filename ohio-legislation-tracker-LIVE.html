@@ -895,8 +895,8 @@
         </div>
 
         <div class="new-this-week" id="newThisWeekSection" style="display: none;">
-            <h2>📰 New & Active This Week</h2>
-            <p>Recent activity in the past 7 days — Click to jump to full details</p>
+            <h2>📰 What Moved</h2>
+            <p id="newThisWeekSubtitle">Recent legislative action — Click to jump to full details</p>
             <div id="newThisWeekList"></div>
         </div>
 
@@ -927,8 +927,8 @@
                 <div class="filter-group">
                     <label for="sortSelect">Sort:</label>
                     <select id="sortSelect" class="filter-select">
-                        <option value="priority">Priority first</option>
                         <option value="recent">Most recent activity</option>
+                        <option value="priority">Priority first</option>
                         <option value="number">Bill number</option>
                         <option value="status">Status</option>
                     </select>
@@ -1004,7 +1004,15 @@
         // Configuration
         const PRIORITY_BILLS = ['HB 1', 'SB 5'];
         const DATA_FILE_PATH = 'ohio_legislation_data/bills.json';
+        const CHANGES_FILE_PATH = 'ohio_legislation_data/changes.json';
         const DAYS_FOR_NEW = 7; // Show as "new" if activity within this many days
+
+        // LegiScan numbers have no space ("HB1") but people write "HB 1" —
+        // compare with spaces stripped so both forms work
+        function isPriorityBill(number) {
+            const compact = (number || '').replace(/\s+/g, '').toUpperCase();
+            return PRIORITY_BILLS.some(p => p.replace(/\s+/g, '').toUpperCase() === compact);
+        }
 
         // Detect legislation type from bill number prefix (handles both "HR4" and "HB 5" formats)
         function getBillType(number) {
@@ -1023,6 +1031,7 @@
         // State management
         let allBills = [];
         let filteredBills = [];
+        let changesFeed = []; // Daily "what moved" diff from the fetcher
         let searchDebounceTimer = null; // For debouncing search input
         let currentFilters = {
             search: '',
@@ -1031,7 +1040,7 @@
             subject: 'all',
             committee: 'all',
             sponsor: 'all',
-            sort: 'priority',
+            sort: 'recent',
             type: 'bills-and-ballot'
         };
 
@@ -1101,6 +1110,14 @@
                 populateCommitteeFilter();
                 populateSponsorFilter();
                 populateSubjectFilter();
+                // Changes feed is optional — fall back to date-based detection
+                try {
+                    const changesResponse = await fetch(CHANGES_FILE_PATH);
+                    if (changesResponse.ok) {
+                        const feed = await changesResponse.json();
+                        if (Array.isArray(feed)) changesFeed = feed;
+                    }
+                } catch (e) { /* no feed yet; fallback below */ }
                 displayNewThisWeek();
                 
             } catch (error) {
@@ -1227,8 +1244,13 @@
                         bill.description,
                         bill.sponsor
                     ].join(' ').toLowerCase();
-                    
-                    if (!searchableText.includes(searchTerm)) {
+
+                    // "HB 33" should find "HB33" — retry the number with spaces stripped
+                    const compactTerm = searchTerm.replace(/\s+/g, '');
+                    const numberMatch = compactTerm &&
+                        bill.number.toLowerCase().includes(compactTerm);
+
+                    if (!searchableText.includes(searchTerm) && !numberMatch) {
                         return false;
                     }
                 }
@@ -1307,27 +1329,60 @@
             return daysAgo <= DAYS_FOR_NEW;
         }
 
-        // Display new this week section
+        // Display the "What Moved" section.
+        // Prefers the fetcher's changes feed (real diffs with plain-language
+        // actions); falls back to date-based detection if the feed is absent.
         function displayNewThisWeek() {
-            const newBills = allBills.filter(isNewThisWeek).slice(0, 8);
-            
-            if (newBills.length === 0) {
+            let movers;
+
+            if (changesFeed.length > 0) {
+                // Newest entries are prepended by the fetcher — dedupe to each
+                // bill's latest movement, then order by action date
+                const seen = new Set();
+                movers = changesFeed
+                    .filter(c => {
+                        if (seen.has(c.number)) return false;
+                        seen.add(c.number);
+                        return true;
+                    })
+                    .sort((a, b) => (b.last_action_date || '').localeCompare(a.last_action_date || ''))
+                    .slice(0, 8)
+                    .map(c => ({
+                        number: c.number,
+                        title: c.title,
+                        detail: `${c.is_new ? '🆕 ' : ''}${translateAction(c.last_action)} — ${formatDate(c.last_action_date)}`
+                    }));
+            } else {
+                movers = allBills.filter(isNewThisWeek)
+                    .sort((a, b) => (b.last_action_date || '').localeCompare(a.last_action_date || ''))
+                    .slice(0, 8)
+                    .map(b => ({
+                        number: b.number,
+                        title: b.title,
+                        detail: `${translateAction(b.last_action)} — ${formatDate(b.last_action_date)}`
+                    }));
+            }
+
+            if (movers.length === 0) {
                 newThisWeekSection.style.display = 'none';
                 return;
             }
-            
+
             newThisWeekSection.style.display = 'block';
-            
+            document.getElementById('newThisWeekSubtitle').textContent = changesFeed.length > 0
+                ? 'Legislative action in the past 14 days — Click to jump to full details'
+                : 'Recent activity in the past 7 days — Click to jump to full details';
+
             // Show only first 4 initially
-            const initialBills = newBills.slice(0, 4);
-            const remainingBills = newBills.slice(4);
-            
-            const createChip = (bill) => {
-                const billId = `bill-${bill.number.replace(/\s+/g, '-')}`;
+            const initialBills = movers.slice(0, 4);
+            const remainingBills = movers.slice(4);
+
+            const createChip = (mover) => {
                 return `
-                    <div class="new-bill-chip" onclick="jumpToBill('${billId}')">
-                        <span class="new-bill-number">${bill.number}</span>
-                        <span class="new-bill-title">${bill.title}</span>
+                    <div class="new-bill-chip" onclick="jumpToBill('${mover.number}')">
+                        <span class="new-bill-number">${mover.number}</span>
+                        <span class="new-bill-title">${mover.title}<br>
+                            <span style="font-size:12px; color:var(--text-light);">${mover.detail}</span></span>
                         <span class="new-bill-arrow">→</span>
                     </div>
                 `;
@@ -1369,13 +1424,42 @@
             }
         }
 
-        // Jump to a bill in the main list
-        function jumpToBill(billId) {
-            const billElement = document.getElementById(billId);
+        // Jump to a bill in the main list. The target may not be rendered
+        // (beyond the current page, or excluded by filters) — widen filters
+        // and extend pagination until it is.
+        function jumpToBill(billNumber) {
+            const bill = allBills.find(b => b.number === billNumber);
+            if (!bill) return;
+
+            const targetId = `bill-${billNumber.replace(/\s+/g, '-')}`;
+            let billElement = document.getElementById(targetId);
+            let hadToRerender = false;
+
+            if (!billElement) {
+                hadToRerender = true;
+                if (!filteredBills.includes(bill)) {
+                    clearAllFilters();
+                }
+                if (!filteredBills.includes(bill)) {
+                    // Still hidden: it's a resolution outside the default view
+                    currentFilters.type = 'all';
+                    typeFilter.value = 'all';
+                    applyFilters();
+                }
+                // Extend pagination to the bill's position in one render
+                const index = sortBills(filteredBills).findIndex(b => b.number === billNumber);
+                if (index >= visibleCount) {
+                    visibleCount = Math.ceil((index + 1) / PAGE_SIZE) * PAGE_SIZE;
+                    updateDisplay();
+                }
+                billElement = document.getElementById(targetId);
+            }
+
             if (billElement) {
-                // Smooth scroll to the bill
-                billElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                
+                // Smooth scroll for short hops; instant when the list was
+                // just re-rendered (animating across thousands of rows lags)
+                billElement.scrollIntoView({ behavior: hadToRerender ? 'auto' : 'smooth', block: 'center' });
+
                 // Add flash animation
                 billElement.classList.add('flash-highlight');
                 setTimeout(() => {
@@ -1419,14 +1503,31 @@
                 return;
             }
 
-            const sortedBills = [...filteredBills].sort((a, b) => {
-                const aIsPriority = PRIORITY_BILLS.includes(a.number);
-                const bIsPriority = PRIORITY_BILLS.includes(b.number);
+            const sortedBills = sortBills(filteredBills);
+            const page = sortedBills.slice(0, visibleCount);
+            const remaining = sortedBills.length - visibleCount;
+
+            const loadMoreHTML = remaining > 0 ? `
+                <div class="load-more-bar">
+                    <button class="load-more-btn" onclick="loadMoreBills()">Load ${Math.min(remaining, PAGE_SIZE)} more bills</button>
+                    <div class="load-more-count">Showing ${page.length} of ${sortedBills.length} bills</div>
+                </div>
+            ` : '';
+
+            billsList.innerHTML = page.map(bill => createBillHTML(bill)).join('') + loadMoreHTML;
+        }
+
+        // Sort a bill list by the current sort setting
+        function sortBills(bills) {
+            return [...bills].sort((a, b) => {
+                const aIsPriority = isPriorityBill(a.number);
+                const bIsPriority = isPriorityBill(b.number);
 
                 if (currentFilters.sort === 'priority') {
                     if (aIsPriority && !bIsPriority) return -1;
                     if (!aIsPriority && bIsPriority) return 1;
-                    return 0;
+                    // Within the same tier, most recent activity first
+                    return (b.last_action_date || '').localeCompare(a.last_action_date || '');
                 } else if (currentFilters.sort === 'recent') {
                     return (b.last_action_date || '').localeCompare(a.last_action_date || '');
                 } else if (currentFilters.sort === 'number') {
@@ -1439,18 +1540,6 @@
                 }
                 return 0;
             });
-
-            const page = sortedBills.slice(0, visibleCount);
-            const remaining = sortedBills.length - visibleCount;
-
-            const loadMoreHTML = remaining > 0 ? `
-                <div class="load-more-bar">
-                    <button class="load-more-btn" onclick="loadMoreBills()">Load ${Math.min(remaining, PAGE_SIZE)} more bills</button>
-                    <div class="load-more-count">Showing ${page.length} of ${sortedBills.length} bills</div>
-                </div>
-            ` : '';
-
-            billsList.innerHTML = page.map(bill => createBillHTML(bill)).join('') + loadMoreHTML;
         }
 
         function loadMoreBills() {
@@ -1552,7 +1641,7 @@
 
         // Create HTML for a single bill
         function createBillHTML(bill, isInNewSection = false) {
-            const isPriority = PRIORITY_BILLS.includes(bill.number);
+            const isPriority = isPriorityBill(bill.number);
             const isNew = !isInNewSection && isNewThisWeek(bill);
             const chamberText = bill.chamber === 'house' ? 'House' : 'Senate';
             const billType = getBillType(bill.number);
@@ -1617,11 +1706,14 @@
         // Format date
         function formatDate(dateString) {
             if (!dateString) return 'N/A';
-            const date = new Date(dateString);
-            return date.toLocaleDateString('en-US', { 
-                month: 'short', 
-                day: 'numeric', 
-                year: 'numeric' 
+            // Date-only strings ("2026-07-05") parse as UTC midnight and
+            // display a day early in Eastern time — build a local date instead
+            const m = String(dateString).match(/^(\d{4})-(\d{2})-(\d{2})$/);
+            const date = m ? new Date(+m[1], +m[2] - 1, +m[3]) : new Date(dateString);
+            return date.toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric'
             });
         }
 

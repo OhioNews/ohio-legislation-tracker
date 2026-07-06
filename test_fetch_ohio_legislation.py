@@ -13,6 +13,7 @@ import shutil
 import sys
 import tempfile
 import unittest
+from datetime import datetime
 from unittest import mock
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -43,6 +44,7 @@ class TempDataDirTestCase(unittest.TestCase):
             mock.patch.object(fetcher, 'HEARINGS_OUTPUT', os.path.join(self.tmp, 'hearings.json')),
             mock.patch.object(fetcher, 'HASH_STORAGE', os.path.join(self.tmp, 'bill_hashes.json')),
             mock.patch.object(fetcher, 'META_OUTPUT', os.path.join(self.tmp, 'meta.json')),
+            mock.patch.object(fetcher, 'CHANGES_OUTPUT', os.path.join(self.tmp, 'changes.json'), create=True),
             mock.patch.object(fetcher, 'LEGISCAN_API_KEY', 'test-key'),
         ]
         for p in self.patches:
@@ -163,6 +165,109 @@ class TestMetaFreshnessStamp(TempDataDirTestCase):
         self.assertIn('last_updated', meta)
         self.assertEqual(meta['bill_count'], 1)
         self.assertEqual(meta['updated_last_run'], 1)
+
+
+class TestChangesFeed(TempDataDirTestCase):
+    """The daily 'what moved' diff written to changes.json."""
+
+    def write_bills(self, bills):
+        with open(os.path.join(self.tmp, 'bills.json'), 'w') as f:
+            json.dump(bills, f)
+
+    def write_changes(self, entries):
+        with open(os.path.join(self.tmp, 'changes.json'), 'w') as f:
+            json.dump(entries, f)
+
+    def read_changes(self):
+        path = os.path.join(self.tmp, 'changes.json')
+        self.assertTrue(os.path.exists(path), 'changes.json was not written')
+        with open(path) as f:
+            return json.load(f)
+
+    def run_main_with(self, master, details_by_id, stored):
+        self.write_hashes(stored)
+        with mock.patch.object(fetcher, 'get_ohio_session_id', return_value=99), \
+             mock.patch.object(fetcher, 'get_master_list', return_value=master), \
+             mock.patch.object(fetcher, 'get_bill_details',
+                               side_effect=lambda bid: details_by_id.get(str(bid))):
+            fetcher.main()
+
+    def existing_hb1(self, status='introduced', action='Introduced', date='2026-06-01'):
+        return {
+            'bill_id': 1, 'number': 'HB1', 'chamber': 'house',
+            'title': 'Test bill HB1', 'description': '', 'status': status,
+            'status_date': date, 'last_action': action, 'last_action_date': date,
+            'sponsor': 'Unknown', 'committee': None, 'subject': 'general',
+            'url': 'https://legiscan.com/OH/bill/HB1/2025',
+        }
+
+    def test_status_change_recorded_with_previous_status(self):
+        self.write_bills([self.existing_hb1(status='introduced')])
+        updated = minimal_bill(1, 'HB1')
+        updated['status'] = 2  # engrossed -> passed-chamber
+        updated['history'] = [{'action': 'Passed House', 'date': '2026-07-05'}]
+        self.run_main_with(
+            {'0': {'bill_id': 1, 'change_hash': 'new'}},
+            {'1': updated},
+            stored={'1': 'old'},
+        )
+        changes = self.read_changes()
+        self.assertEqual(len(changes), 1)
+        entry = changes[0]
+        self.assertEqual(entry['number'], 'HB1')
+        self.assertEqual(entry['prev_status'], 'introduced')
+        self.assertEqual(entry['status'], 'passed-chamber')
+        self.assertEqual(entry['last_action_date'], '2026-07-05')
+        self.assertFalse(entry['is_new'])
+
+    def test_brand_new_bill_recorded_as_new(self):
+        self.write_bills([])
+        self.run_main_with(
+            {'0': {'bill_id': 1, 'change_hash': 'new'}},
+            {'1': minimal_bill(1, 'HB1')},
+            stored={},
+        )
+        changes = self.read_changes()
+        self.assertEqual(len(changes), 1)
+        self.assertTrue(changes[0]['is_new'])
+        self.assertIsNone(changes[0]['prev_status'])
+
+    def test_refetch_without_new_action_or_status_is_not_noise(self):
+        # Hash changed (e.g. new bill text uploaded) but status and last
+        # action are identical -> nothing a daily monitor needs to see
+        self.write_bills([self.existing_hb1(status='introduced',
+                                            action='Introduced', date='2026-06-01')])
+        updated = minimal_bill(1, 'HB1')
+        updated['status'] = 1
+        updated['status_date'] = '2026-06-01'
+        updated['history'] = [{'action': 'Introduced', 'date': '2026-06-01'}]
+        self.run_main_with(
+            {'0': {'bill_id': 1, 'change_hash': 'new'}},
+            {'1': updated},
+            stored={'1': 'old'},
+        )
+        changes = self.read_changes()
+        self.assertEqual(changes, [])
+
+    def test_entries_older_than_14_days_are_pruned(self):
+        self.write_bills([self.existing_hb1()])
+        self.write_changes([
+            {'run_date': '2026-01-01', 'number': 'SB99', 'is_new': False},
+            {'run_date': datetime.now().strftime('%Y-%m-%d'), 'number': 'SB98', 'is_new': False},
+        ])
+        updated = minimal_bill(1, 'HB1')
+        updated['status'] = 2
+        updated['history'] = [{'action': 'Passed House', 'date': '2026-07-05'}]
+        self.run_main_with(
+            {'0': {'bill_id': 1, 'change_hash': 'new'}},
+            {'1': updated},
+            stored={'1': 'old'},
+        )
+        changes = self.read_changes()
+        numbers = [c['number'] for c in changes]
+        self.assertNotIn('SB99', numbers, 'stale entries must be pruned')
+        self.assertIn('SB98', numbers, 'recent entries must survive')
+        self.assertIn('HB1', numbers, 'new entries must be added')
 
 
 class TestApiCallTimeout(unittest.TestCase):

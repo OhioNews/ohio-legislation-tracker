@@ -335,6 +335,26 @@ class TestStatusMapping(unittest.TestCase):
         self.assertEqual(self.formatted('HB1', 4)['status_code'], 4)
 
 
+class TestGovernorActionInventory(unittest.TestCase):
+
+    def test_collects_only_governor_related_actions(self):
+        bill = minimal_bill(1, 'HB1')
+        bill['history'] = [
+            {'action': 'Introduced', 'date': '2026-01-01'},
+            {'action': 'Assigned to Finance Committee', 'date': '2026-01-02'},
+            {'action': 'Signed by Governor', 'date': '2026-06-01'},
+            {'action': 'Vetoed by Governor', 'date': '2026-06-02'},
+            {'action': 'House overrides veto', 'date': '2026-06-10'},
+        ]
+        self.assertEqual(
+            fetcher.governor_actions_in(bill),
+            {'Signed by Governor', 'Vetoed by Governor', 'House overrides veto'},
+        )
+
+    def test_bill_without_history_yields_empty_set(self):
+        self.assertEqual(fetcher.governor_actions_in(minimal_bill(1, 'HB1')), set())
+
+
 class TestApiCallTimeout(unittest.TestCase):
 
     def test_api_calls_use_a_timeout(self):

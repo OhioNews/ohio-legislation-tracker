@@ -342,6 +342,24 @@ def get_bill_type(number):
     return 'bill'
 
 
+# \bsign (not bare "sign") so "Assigned to committee" doesn't match
+GOVERNOR_ACTION_RE = re.compile(r'governor|\bsign|veto|override', re.IGNORECASE)
+
+
+def governor_actions_in(bill):
+    """
+    Returns this bill's history actions that mention the governor or
+    enactment mechanics (signing, vetoes, overrides). Logged each run to
+    build a vocabulary of LegiScan's real Ohio action strings — the input
+    for deciding whether mechanism-specific "Became Law" labels are viable.
+    """
+    return {
+        event.get('action', '')
+        for event in bill.get('history') or []
+        if GOVERNOR_ACTION_RE.search(event.get('action', ''))
+    }
+
+
 def format_bill_for_widget(bill):
     """
     Formats a bill into the structure the widget expects
@@ -544,6 +562,7 @@ def main():
     bills_for_widget = []
     all_hearings = []
     failed_count = 0
+    governor_actions = set()
 
     for i, bill_id in enumerate(bills_to_fetch, 1):
         print(f"   [{i}/{len(bills_to_fetch)}] Fetching bill {bill_id}...", end='')
@@ -558,6 +577,8 @@ def main():
             # Extract hearing information
             hearings = extract_hearing_info(bill)
             all_hearings.extend(hearings)
+
+            governor_actions |= governor_actions_in(bill)
 
             print(" \u2713")
         else:
@@ -625,6 +646,11 @@ def main():
     # Save the daily changes feed
     all_changes = update_changes_feed(change_entries)
     print(f"   \u2713 Saved changes feed to {CHANGES_OUTPUT} ({len(change_entries)} new, {len(all_changes)} total)")
+
+    if governor_actions:
+        print(f"\n7. Governor-related action strings seen this run ({len(governor_actions)}):")
+        for action in sorted(governor_actions):
+            print(f"   \u2022 {action}")
     
     print("\n" + "=" * 70)
     print("SUCCESS! Data fetch complete.")

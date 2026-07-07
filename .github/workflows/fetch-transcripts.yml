@@ -1,0 +1,39 @@
+name: Fetch Statehouse Transcripts
+
+on:
+  schedule:
+    - cron: '30 6 * * *'   # nightly ~2:30am ET
+  workflow_dispatch:
+    inputs:
+      backfill:
+        description: 'Full backfill (paginate to GA start; hours)'
+        required: false
+        default: 'false'
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch new transcripts
+        run: |
+          if [ "${{ github.event.inputs.backfill }}" = "true" ]; then
+            python3 fetch_transcripts.py --backfill
+          else
+            python3 fetch_transcripts.py
+          fi
+
+      - name: Build derived data
+        run: python3 build_transcript_derived.py
+
+      - name: Commit if data changed
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          git add ohio_transcript_data
+          git diff --staged --quiet || git commit -m "Auto-update transcript data [skip ci]"
+          git push

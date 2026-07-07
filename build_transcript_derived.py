@@ -7,7 +7,7 @@ Single pass over the distilled archive; safe to rerun any time.
 import glob
 import json
 import os
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 
 import transcript_distill as dm
 
@@ -29,7 +29,7 @@ def _load(path, default):
 
 
 def build_index_and_topics(programs_dir, state, curated, now=None):
-    now = now or datetime.utcnow().date().isoformat()
+    now = now or datetime.now(timezone.utc).date().isoformat()
     cutoff = (datetime.fromisoformat(now) - timedelta(days=RECENT_DAYS)).date().isoformat()
 
     topics = {t['slug']: {'name': t['name'], 'aliases': t['aliases'],

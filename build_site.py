@@ -11,9 +11,9 @@ import sys
 
 SITE = '_site'
 COPY_FILES = ['index.html', 'ohio-legislation-tracker-LIVE.html',
-              'ohio-committee-hearings-LIVE.html', 'ohio-news-aggregator.html',
+              'ohio-committee-hearings-LIVE.html',
               'transcripts.html']
-COPY_DIRS = ['ohio_legislation_data', 'ohio_news_data']
+COPY_DIRS = ['ohio_legislation_data']
 TRANSCRIPT_JSON = ['programs_index.json', 'topics.json', 'transcripts_meta.json',
                    'transcript_series.json', 'topics_curated.json']
 

@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Statehouse Transcripts — What's being said at the Ohio Statehouse</title>
+<style>
+:root{--ink:#222;--soft:#666;--line:#ddd;--accent:#123b66;--wash:#f3f0e8}
+body{font-family:system-ui,-apple-system,sans-serif;max-width:52rem;margin:0 auto;padding:1rem;color:var(--ink);line-height:1.5}
+h1{font-size:1.35rem} .sub{color:var(--soft);font-size:.9rem;margin-top:-.4rem}
+.searchrow{display:flex;gap:.5rem;margin:1rem 0}
+#q{flex:1;font-size:1.05rem;padding:.55rem .7rem;border:2px solid var(--accent);border-radius:6px}
+button{font-size:1rem;padding:.55rem 1rem;background:var(--accent);color:#fff;border:0;border-radius:6px;cursor:pointer}
+.filters{display:flex;gap:.5rem;flex-wrap:wrap;font-size:.85rem;margin-bottom:1rem;align-items:center}
+select{padding:.3rem;border:1px solid var(--line);border-radius:4px}
+.topics{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0}
+.topics button{background:#fff;color:var(--accent);border:1.5px solid var(--accent);font-size:.9rem;padding:.4rem .8rem}
+.topics button:hover{background:var(--wash)}
+.verdict{background:var(--wash);padding:.9rem 1rem;border-radius:8px;margin:1rem 0}
+.verdict b{font-size:1.05rem}
+.spark{display:flex;align-items:flex-end;gap:2px;height:34px;margin-top:.5rem}
+.spark div{width:14px;background:var(--accent);opacity:.75;border-radius:2px 2px 0 0}
+.spark span{font-size:.65rem;color:var(--soft);align-self:flex-end}
+.bills{margin:1rem 0}
+.bill{border:1px solid var(--line);border-radius:8px;padding:.6rem .8rem;margin:.5rem 0}
+.bill a{color:var(--accent);font-weight:600;text-decoration:none}
+.badge{display:inline-block;font-size:.72rem;padding:.1rem .5rem;border-radius:9px;background:#e8f2e4;color:#2c5f2d;margin-left:.5rem}
+.meeting{border:1px solid var(--line);border-radius:8px;margin:.7rem 0}
+.meeting summary{padding:.6rem .8rem;cursor:pointer;font-weight:600}
+.meeting summary .n{color:var(--soft);font-weight:400}
+.moment{padding:.5rem .8rem;border-top:1px solid var(--line);font-size:.92rem}
+.moment .t{font-size:.78rem;color:var(--soft)}
+.moment mark{background:#ffe9a8}
+.note,.footer{font-size:.8rem;color:var(--soft)}
+.footer{margin-top:3rem;border-top:1px solid var(--line);padding-top:.8rem}
+.nav{font-size:.85rem;margin-bottom:.5rem}
+#status{color:var(--soft);font-size:.9rem;margin:1rem 0}
+</style>
+</head>
+<body>
+<p class="nav"><a href="index.html">&larr; Ohio Legislation Tracker</a> ·
+<a href="transcripts/index.html">Browse all meetings</a></p>
+<h1>Statehouse Transcripts</h1>
+<p class="sub">Search every word spoken in Ohio House and Senate sessions and committee
+hearings, from the Ohio Channel's captions. <span id="fresh"></span></p>
+
+<div class="searchrow">
+  <input id="q" type="search" placeholder="Search an issue — school funding, property taxes, marijuana…" autocomplete="off">
+  <button id="go">Search</button>
+</div>
+<div class="filters">
+  <select id="f-chamber"><option value="">Any chamber</option>
+    <option>HOUSE</option><option>SENATE</option><option>JOINT</option></select>
+  <select id="f-type"><option value="">Sessions + hearings</option>
+    <option>Floor session</option><option>Committee hearing</option></select>
+  <span class="note">Speaker names available for floor sessions only.</span>
+</div>
+
+<div id="topics" class="topics"></div>
+<div id="status"></div>
+<div id="verdict"></div>
+<div id="bills"></div>
+<div id="results"></div>
+
+<div class="footer">Transcripts from Ohio Channel closed captions; not an official record.
+Verify against video before quoting. Every result links to the full video at
+<a href="https://www.ohiochannel.org">ohiochannel.org</a>.</div>
+
+<script>
+(async function () {
+  const $ = id => document.getElementById(id);
+  const esc = s => String(s ?? '').replace(/[&<>"']/g,
+    c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const GA = 136;
+
+  let pagefind = null, topics = {}, bills = null, hearings = null;
+
+  async function loadJSON(url, fallback) {
+    try { const r = await fetch(url); return r.ok ? await r.json() : fallback; }
+    catch { return fallback; }
+  }
+
+  // ---------- startup ----------
+  try { pagefind = await import('./pagefind/pagefind.js'); }
+  catch {
+    $('status').innerHTML = 'Search isn\'t available right now. ' +
+      'You can still <a href="transcripts/index.html">browse every meeting transcript</a>.';
+  }
+  topics = await loadJSON('ohio_transcript_data/topics.json', {});
+  const meta = await loadJSON('ohio_transcript_data/transcripts_meta.json', null);
+  if (meta && meta.last_updated)
+    $('fresh').textContent = 'Cached ' + new Date(meta.last_updated).toLocaleString('en-US',
+      {month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit'});
+
+  // topic buttons (empty state)
+  const tWrap = $('topics');
+  for (const [slug, t] of Object.entries(topics)) {
+    const b = document.createElement('button');
+    b.textContent = t.meeting_count_90d
+      ? `${t.name} · ${t.meeting_count_90d} recent meeting${t.meeting_count_90d === 1 ? '' : 's'}`
+      : t.name;
+    b.onclick = () => { setURL({topic: slug}); runTopic(slug); };
+    tWrap.appendChild(b);
+  }
+
+  function setURL(params) {
+    const u = new URL(location);
+    u.searchParams.delete('q'); u.searchParams.delete('topic');
+    for (const [k, v] of Object.entries(params)) if (v) u.searchParams.set(k, v);
+    history.pushState(null, '', u);
+  }
+
+  // ---------- search plumbing ----------
+  async function pfSearch(term) {
+    if (!pagefind) return [];
+    const filters = {};
+    if ($('f-chamber').value) filters.chamber = $('f-chamber').value;
+    if ($('f-type').value) filters.type = $('f-type').value;
+    const res = await pagefind.search(term, {filters});
+    return await Promise.all(res.results.slice(0, 120).map(r => r.data()));
+  }
+
+  async function runQuery(term) {
+    $('topics').style.display = 'none';
+    $('status').textContent = 'Searching…';
+    const pages = await pfSearch(term);
+    render(term, dedupePages(pages), null);
+  }
+
+  async function runTopic(slug) {
+    const t = topics[slug];
+    if (!t) return runQuery(slug.replace(/-/g, ' '));
+    $('q').value = t.name;
+    $('topics').style.display = 'none';
+    $('status').textContent = 'Searching…';
+    const batches = await Promise.all(t.aliases.map(a => pfSearch(a)));
+    render(t.name, dedupePages(batches.flat()), t);
+  }
+
+  function dedupePages(pages) {
+    const seen = new Map();
+    for (const p of pages) {
+      const id = p.meta.program_id;
+      if (!seen.has(id)) seen.set(id, p);
+      else seen.get(id).sub_results.push(...p.sub_results);
+    }
+    return [...seen.values()];
+  }
+
+  // ---------- rendering ----------
+  function render(label, pages, topic) {
+    $('status').textContent = '';
+    if (!pages.length) {
+      $('verdict').innerHTML = `<div class="verdict"><b>"${esc(label)}"</b> hasn't come up ` +
+        `in archived 136th General Assembly meetings. Try a broader word, or ` +
+        `<a href="transcripts/index.html">browse meetings</a>.</div>`;
+      $('bills').innerHTML = ''; $('results').innerHTML = '';
+      return;
+    }
+    renderVerdict(label, pages);
+    renderBills(label, pages, topic);   // async fill
+    renderMeetings(pages);
+  }
+
+  function renderVerdict(label, pages) {
+    const dates = pages.map(p => p.meta.date).filter(Boolean).sort();
+    const cutoff = new Date(Date.now() - 90 * 864e5).toISOString().slice(0, 10);
+    const recent = dates.filter(d => d >= cutoff).length;
+    // per-month sparkline over the last 8 months
+    const months = {};
+    for (const d of dates) months[d.slice(0, 7)] = (months[d.slice(0, 7)] || 0) + 1;
+    const keys = [...Array(8)].map((_, i) => {
+      const dt = new Date(); dt.setMonth(dt.getMonth() - (7 - i));
+      return dt.toISOString().slice(0, 7);
+    });
+    const max = Math.max(1, ...keys.map(k => months[k] || 0));
+    const bars = keys.map(k =>
+      `<div title="${k}: ${months[k] || 0}" style="height:${Math.max(2, 30 * (months[k] || 0) / max)}px"></div>`
+    ).join('');
+    $('verdict').innerHTML = `<div class="verdict"><b>"${esc(label)}"</b> came up in
+      <b>${pages.length}</b> meeting${pages.length === 1 ? '' : 's'} this General Assembly
+      — ${recent} in the last 90 days.
+      <div class="spark">${bars}<span>last 8 mo</span></div></div>`;
+  }
+
+  async function renderBills(label, pages, topic) {
+    if (!bills) bills = await loadJSON('ohio_legislation_data/bills.json', []);
+    if (!hearings) hearings = await loadJSON('ohio_legislation_data/hearings_live.json', {events: []});
+    const byNum = {};
+    for (const b of bills) byNum[(b.number || '').toLowerCase().replace(/ /g, '')] = b;
+
+    const hits = new Set();
+    // (a) sub-results that land inside a bill's marker segment.
+    // Pagefind stems aggressively ("taxes" also matches "taxpayers"), which is
+    // fine for recall in the moments list but too loose for claiming a bill is
+    // "in this debate" — so attribution requires a literal alias in the excerpt.
+    const terms = (topic ? topic.aliases : [label]).map(a => a.toLowerCase());
+    const excerptHasTerm = sr => {
+      const txt = String(sr.excerpt || '').replace(/<[^>]+>/g, '').toLowerCase();
+      return terms.some(a => txt.includes(a));
+    };
+    for (const p of pages) {
+      let segs = [];
+      try { segs = JSON.parse(p.meta.bill_segments || '[]'); } catch {}
+      if (!segs.length) continue;
+      for (const sr of p.sub_results || []) {
+        if (!excerptHasTerm(sr)) continue;
+        const m = (sr.url || '').match(/#t(\d+)/);
+        if (!m) continue;
+        const t = +m[1];
+        for (const s of segs) if (t >= s.start && t < s.end) hits.add(s.bill);
+      }
+    }
+    // (a2) curated topics carry precomputed bill matches
+    if (topic) for (const b of topic.bills || []) hits.add(b);
+    // (b) tracker title/subject match on the query words
+    const words = label.toLowerCase().split(/\s+/).filter(w => w.length > 3);
+    if (words.length) for (const b of bills) {
+      const hay = ((b.title || '') + ' ' + (b.subject || '')).toLowerCase();
+      if (words.every(w => hay.includes(w))) hits.add(b.number || '');
+    }
+    hits.delete('');
+
+    // upcoming-hearing testimony badges from the hearings feed
+    const upcoming = {};
+    for (const ev of (hearings.events || []))
+      for (const it of (ev.agenda_items || []))
+        if (it.proponent || it.opponent || it.interested_party) upcoming[it.id] = true;
+
+    const cards = [...hits].slice(0, 8).map(num => {
+      const key = num.toLowerCase().replace(/ /g, '');
+      const b = byNum[key];
+      const badge = upcoming[key] ? '<span class="badge">Hearing soon — testimony open</span>' : '';
+      const title = b ? esc(b.title).slice(0, 110) : 'See bill tracker for status';
+      return `<div class="bill"><a href="ohio-legislation-tracker-LIVE.html?bill=${encodeURIComponent(num.replace(/ /g, ''))}&ga=${GA}">${esc(num)}</a>${badge}<br><span class="note">${title}</span></div>`;
+    });
+    $('bills').innerHTML = cards.length
+      ? `<div class="bills"><b>Bills in this debate</b>${cards.join('')}</div>` : '';
+  }
+
+  function renderMeetings(pages) {
+    pages.sort((a, b) => (b.meta.date || '').localeCompare(a.meta.date || ''));
+    $('results').innerHTML = '<b>What was said</b>' + pages.map((p, i) => {
+      const subs = (p.sub_results || []).slice(0, 12).map(sr => {
+        const anchor = (sr.url || '').match(/#t\d+/);
+        const href = `transcripts/${p.meta.program_id}.html${anchor ? anchor[0] : ''}`;
+        return `<div class="moment"><span class="t">${esc(sr.title || '')}</span><br>
+          …${sr.excerpt}… <a href="${href}">read in context ›</a></div>`;
+      }).join('');
+      const n = (p.sub_results || []).length;
+      return `<details class="meeting" ${i === 0 ? 'open' : ''}>
+        <summary>${esc(p.meta.series_name || '')} · ${esc(p.meta.date || '')}
+          <span class="n">· ${esc(p.meta.ptype || '')} · ${n} match${n === 1 ? '' : 'es'}</span></summary>
+        ${subs}</details>`;
+    }).join('');
+  }
+
+  // ---------- wire up ----------
+  $('go').onclick = () => { const v = $('q').value.trim(); if (v) { setURL({q: v}); runQuery(v); } };
+  $('q').addEventListener('keydown', e => { if (e.key === 'Enter') $('go').click(); });
+  for (const id of ['f-chamber', 'f-type'])
+    $(id).onchange = () => { const v = $('q').value.trim(); if (v) runQuery(v); };
+
+  // deep links: ?q= and ?topic=
+  const usp = new URLSearchParams(location.search);
+  if (usp.get('topic')) runTopic(usp.get('topic'));
+  else if (usp.get('q')) { $('q').value = usp.get('q'); runQuery(usp.get('q')); }
+})();
+</script>
+</body>
+</html>

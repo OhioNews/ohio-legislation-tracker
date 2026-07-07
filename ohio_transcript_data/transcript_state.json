@@ -1,0 +1,362 @@
+{
+  "208561": {
+    "status": "archived",
+    "release_date": "2026-06-10",
+    "name": "Ohio Senate - 6-10-2026"
+  },
+  "208172": {
+    "status": "archived",
+    "release_date": "2026-06-03",
+    "name": "Ohio Senate - 6-3-2026"
+  },
+  "207649": {
+    "status": "archived",
+    "release_date": "2026-05-20",
+    "name": "Ohio Senate - 5-20-2026"
+  },
+  "207334": {
+    "status": "archived",
+    "release_date": "2026-05-13",
+    "name": "Ohio Senate - 5-13-2026"
+  },
+  "206613": {
+    "status": "archived",
+    "release_date": "2026-04-15",
+    "name": "Ohio Senate - 4-15-2026"
+  },
+  "205874": {
+    "status": "archived",
+    "release_date": "2026-03-25",
+    "name": "Ohio Senate - 3-25-2026"
+  },
+  "205593": {
+    "status": "archived",
+    "release_date": "2026-03-10",
+    "name": "Ohio Senate - 3-10-2026"
+  },
+  "205571": {
+    "status": "archived",
+    "release_date": "2026-03-10",
+    "name": "Ohio Senate - 3-10-2026 - State of the State Address"
+  },
+  "205327": {
+    "status": "archived",
+    "release_date": "2026-03-04",
+    "name": "Ohio Senate - 3-4-2026"
+  },
+  "205008": {
+    "status": "archived",
+    "release_date": "2026-02-18",
+    "name": "Ohio Senate - 2-18-2026 part 2"
+  },
+  "204839": {
+    "status": "archived",
+    "release_date": "2026-02-18",
+    "name": "Ohio Senate - 2-18-2026"
+  },
+  "204797": {
+    "status": "archived",
+    "release_date": "2026-02-11",
+    "name": "Ohio Senate - 2-11-2026"
+  },
+  "176746": {
+    "status": "archived",
+    "release_date": "2025-12-09",
+    "name": "Ohio Senate - 12-9-2025"
+  },
+  "194437": {
+    "status": "awaiting_captions",
+    "first_seen": "2026-07-07",
+    "release_date": "2025-11-19",
+    "name": "Ohio Senate - Ohio Senate - 11-19-2025 part 4",
+    "program": {
+      "id": 194437,
+      "fullName": "Ohio Senate - Ohio Senate - 11-19-2025 part 4",
+      "releaseDate": "2025-11-19 00:00:00",
+      "duration": 2465,
+      "series": {
+        "id": 25,
+        "name": "Ohio Senate",
+        "chamber": "SENATE"
+      }
+    }
+  },
+  "194436": {
+    "status": "awaiting_captions",
+    "first_seen": "2026-07-07",
+    "release_date": "2025-11-19",
+    "name": "Ohio Senate - Ohio Senate - 11-19-2025 part 3",
+    "program": {
+      "id": 194436,
+      "fullName": "Ohio Senate - Ohio Senate - 11-19-2025 part 3",
+      "releaseDate": "2025-11-19 00:00:00",
+      "duration": 2547,
+      "series": {
+        "id": 25,
+        "name": "Ohio Senate",
+        "chamber": "SENATE"
+      }
+    }
+  },
+  "194396": {
+    "status": "awaiting_captions",
+    "first_seen": "2026-07-07",
+    "release_date": "2025-11-19",
+    "name": "Ohio Senate - Ohio Senate - 11-19-2025 part 2",
+    "program": {
+      "id": 194396,
+      "fullName": "Ohio Senate - Ohio Senate - 11-19-2025 part 2",
+      "releaseDate": "2025-11-19 00:00:00",
+      "duration": 12675,
+      "series": {
+        "id": 25,
+        "name": "Ohio Senate",
+        "chamber": "SENATE"
+      }
+    }
+  },
+  "176287": {
+    "status": "archived",
+    "release_date": "2025-11-19",
+    "name": "Ohio Senate - 11-19-2025"
+  },
+  "175967": {
+    "status": "archived",
+    "release_date": "2025-11-12",
+    "name": "Ohio Senate - 11-12-2025"
+  },
+  "175716": {
+    "status": "archived",
+    "release_date": "2025-11-05",
+    "name": "Ohio Senate - 11-5-2025"
+  },
+  "175454": {
+    "status": "archived",
+    "release_date": "2025-10-29",
+    "name": "Ohio Senate - 10-29-2025"
+  },
+  "175214": {
+    "status": "archived",
+    "release_date": "2025-10-22",
+    "name": "Ohio Senate - 10-22-2025"
+  },
+  "175126": {
+    "status": "archived",
+    "release_date": "2025-10-15",
+    "name": "Ohio Senate - 10-15-2025"
+  },
+  "174847": {
+    "status": "archived",
+    "release_date": "2025-10-08",
+    "name": "Ohio Senate - 10-8-2025"
+  },
+  "174692": {
+    "status": "archived",
+    "release_date": "2025-10-01",
+    "name": "Ohio Senate - 10-1-2025"
+  },
+  "172648": {
+    "status": "archived",
+    "release_date": "2025-06-25",
+    "name": "Ohio Senate - 6-25-2025"
+  },
+  "172646": {
+    "status": "archived",
+    "release_date": "2025-06-18",
+    "name": "Ohio Senate - 6-18-2025"
+  },
+  "172626": {
+    "status": "archived",
+    "release_date": "2025-06-11",
+    "name": "Ohio Senate - 6-11-2025"
+  },
+  "172267": {
+    "status": "archived",
+    "release_date": "2025-06-04",
+    "name": "Ohio Senate - 6-4-2025"
+  },
+  "172026": {
+    "status": "archived",
+    "release_date": "2025-05-28",
+    "name": "Ohio Senate - 5-28-2025"
+  },
+  "171307": {
+    "status": "archived",
+    "release_date": "2025-05-14",
+    "name": "Ohio Senate - 5-14-2025"
+  },
+  "171046": {
+    "status": "archived",
+    "release_date": "2025-05-07",
+    "name": "Ohio Senate - 5-7-2025"
+  },
+  "170712": {
+    "status": "archived",
+    "release_date": "2025-04-30",
+    "name": "Ohio Senate - 4-30-2025"
+  },
+  "170049": {
+    "status": "archived",
+    "release_date": "2025-04-09",
+    "name": "Ohio Senate - 4-9-2025"
+  },
+  "169667": {
+    "status": "archived",
+    "release_date": "2025-04-02",
+    "name": "Ohio Senate - 4-2-2025"
+  },
+  "169406": {
+    "status": "archived",
+    "release_date": "2025-03-26",
+    "name": "Ohio Senate - 3-26-2025"
+  },
+  "169146": {
+    "status": "archived",
+    "release_date": "2025-03-19",
+    "name": "Ohio Senate - 3-19-2025"
+  },
+  "168810": {
+    "status": "archived",
+    "release_date": "2025-03-12",
+    "name": "Ohio Senate - 3-12-2025"
+  },
+  "168517": {
+    "status": "archived",
+    "release_date": "2025-03-05",
+    "name": "Ohio Senate - 3-5-2025"
+  },
+  "168047": {
+    "status": "archived",
+    "release_date": "2025-02-26",
+    "name": "Ohio Senate - 2-26-2025"
+  },
+  "167808": {
+    "status": "archived",
+    "release_date": "2025-02-19",
+    "name": "Ohio Senate - 2-19-2025"
+  },
+  "167446": {
+    "status": "archived",
+    "release_date": "2025-02-12",
+    "name": "Ohio Senate - 2-12-2025"
+  },
+  "166806": {
+    "status": "archived",
+    "release_date": "2025-01-29",
+    "name": "Ohio Senate - 1-29-2025"
+  },
+  "166030": {
+    "status": "archived",
+    "release_date": "2025-01-06",
+    "name": "Ohio Senate - 1-6-2025"
+  },
+  "208928": {
+    "status": "archived",
+    "release_date": "2026-06-10",
+    "name": "Ohio House of Representatives - 6-10-2026 - Part 3"
+  },
+  "208908": {
+    "status": "archived",
+    "release_date": "2026-06-10",
+    "name": "Ohio House of Representatives - 6-10-2026 - Part 2"
+  },
+  "208562": {
+    "status": "archived",
+    "release_date": "2026-06-10",
+    "name": "Ohio House of Representatives - 6-10-2026"
+  },
+  "208552": {
+    "status": "archived",
+    "release_date": "2026-06-09",
+    "name": "Ohio House of Representatives - 6-9-2026"
+  },
+  "208173": {
+    "status": "archived",
+    "release_date": "2026-06-03",
+    "name": "Ohio House of Representatives - 6-3-2026"
+  },
+  "207650": {
+    "status": "awaiting_captions",
+    "first_seen": "2026-07-07",
+    "release_date": "2026-05-20",
+    "name": "Ohio House of Representatives - 5-20-2026",
+    "program": {
+      "id": 207650,
+      "fullName": "Ohio House of Representatives - 5-20-2026",
+      "releaseDate": "2026-05-20 00:00:00",
+      "duration": 6658,
+      "series": {
+        "id": 26,
+        "name": "Ohio House of Representatives",
+        "chamber": "HOUSE"
+      }
+    }
+  },
+  "207335": {
+    "status": "archived",
+    "release_date": "2026-05-13",
+    "name": "Ohio House of Representatives - 5-13-2026"
+  },
+  "205875": {
+    "status": "archived",
+    "release_date": "2026-03-25",
+    "name": "Ohio House of Representatives - 3-25-2026"
+  },
+  "205657": {
+    "status": "archived",
+    "release_date": "2026-03-18",
+    "name": "Ohio House of Representatives - 3-18-2026"
+  },
+  "205570": {
+    "status": "archived",
+    "release_date": "2026-03-10",
+    "name": "Ohio House of Representatives - 3-10-2026 - State of the State Address"
+  },
+  "205328": {
+    "status": "archived",
+    "release_date": "2026-03-04",
+    "name": "Ohio House of Representatives - 3-4-2026"
+  },
+  "205076": {
+    "status": "archived",
+    "release_date": "2026-02-25",
+    "name": "Ohio House of Representatives - 2-25-2026"
+  },
+  "204840": {
+    "status": "archived",
+    "release_date": "2026-02-18",
+    "name": "Ohio House of Representatives - 2-18-2026"
+  },
+  "176486": {
+    "status": "archived",
+    "release_date": "2025-11-20",
+    "name": "Ohio House of Representatives - 11-19-2025 Part 2"
+  },
+  "176288": {
+    "status": "awaiting_captions",
+    "first_seen": "2026-07-07",
+    "release_date": "2025-11-19",
+    "name": "Ohio House of Representatives - 11-19-2025",
+    "program": {
+      "id": 176288,
+      "fullName": "Ohio House of Representatives - 11-19-2025",
+      "releaseDate": "2025-11-19 00:00:00",
+      "duration": 21744,
+      "series": {
+        "id": 26,
+        "name": "Ohio House of Representatives",
+        "chamber": "HOUSE"
+      }
+    }
+  },
+  "175968": {
+    "status": "archived",
+    "release_date": "2025-11-12",
+    "name": "Ohio House of Representatives - 11-12-2025"
+  },
+  "175717": {
+    "status": "archived",
+    "release_date": "2025-11-05",
+    "name": "Ohio House of Representatives - 11-5-2025"
+  }
+}

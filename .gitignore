@@ -3,3 +3,6 @@ __pycache__/
 
 # Planning/strategy docs stay out of this public repo (live in Work folder)
 docs/superpowers/
+
+# Build output (deployed as Pages artifact, never committed)
+_site/

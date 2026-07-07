@@ -111,20 +111,33 @@ Verify against video before quoting. Every result links to the full video at
   }
 
   // ---------- search plumbing ----------
-  async function pfSearch(term) {
+  // Counting matched pages is cheap (no fragment fetch); hydrating a page's
+  // excerpts via r.data() costs a network fetch each. So: count everything,
+  // hydrate only the ~HYDRATE_CAP most relevant pages.
+  const HYDRATE_CAP = 120;
+
+  async function pfSearchRaw(term) {
     if (!pagefind) return [];
     const filters = {};
     if ($('f-chamber').value) filters.chamber = $('f-chamber').value;
     if ($('f-type').value) filters.type = $('f-type').value;
     const res = await pagefind.search(term, {filters});
-    return await Promise.all(res.results.slice(0, 120).map(r => r.data()));
+    return res.results;
+  }
+
+  async function hydrate(rawResults) {
+    const seen = new Set(), unique = [];
+    for (const r of rawResults) if (!seen.has(r.id)) { seen.add(r.id); unique.push(r); }
+    const pages = await Promise.all(unique.slice(0, HYDRATE_CAP).map(r => r.data()));
+    return dedupePages(pages);
   }
 
   async function runQuery(term) {
     $('topics').style.display = 'none';
     $('status').textContent = 'Searching…';
-    const pages = await pfSearch(term);
-    render(term, dedupePages(pages), null);
+    const raw = await pfSearchRaw(term);
+    const pages = await hydrate(raw);
+    render(term, pages, null, new Set(raw.map(r => r.id)).size);
   }
 
   async function runTopic(slug) {
@@ -133,8 +146,15 @@ Verify against video before quoting. Every result links to the full video at
     $('q').value = t.name;
     $('topics').style.display = 'none';
     $('status').textContent = 'Searching…';
-    const batches = await Promise.all(t.aliases.map(a => pfSearch(a)));
-    render(t.name, dedupePages(batches.flat()), t);
+    const batches = await Promise.all(t.aliases.map(pfSearchRaw));
+    const allIds = new Set();
+    for (const b of batches) for (const r of b) allIds.add(r.id);
+    // interleave: each alias contributes its most relevant pages
+    const cap = Math.max(30, Math.ceil(HYDRATE_CAP / Math.max(1, batches.length)));
+    const merged = [];
+    for (const b of batches) merged.push(...b.slice(0, cap));
+    const pages = await hydrate(merged);
+    render(t.name, pages, t, allIds.size);
   }
 
   function dedupePages(pages) {
@@ -148,7 +168,7 @@ Verify against video before quoting. Every result links to the full video at
   }
 
   // ---------- rendering ----------
-  function render(label, pages, topic) {
+  function render(label, pages, topic, total) {
     $('status').textContent = '';
     if (!pages.length) {
       $('verdict').innerHTML = `<div class="verdict"><b>"${esc(label)}"</b> hasn't come up ` +
@@ -157,14 +177,18 @@ Verify against video before quoting. Every result links to the full video at
       $('bills').innerHTML = ''; $('results').innerHTML = '';
       return;
     }
-    renderVerdict(label, pages);
+    renderVerdict(label, pages, total);
     renderBills(label, pages, topic);   // async fill
     renderMeetings(pages);
   }
 
-  function renderVerdict(label, pages) {
+  function renderVerdict(label, pages, total) {
+    total = total || pages.length;
     const dates = pages.map(p => p.meta.date).filter(Boolean).sort();
     const cutoff = new Date(Date.now() - 90 * 864e5).toISOString().slice(0, 10);
+    // recent count and sparkline come from the hydrated (most relevant) pages;
+    // when that's a subset of all matches, say "at least" rather than overclaim
+    const atLeast = total > pages.length ? 'at least ' : '';
     const recent = dates.filter(d => d >= cutoff).length;
     // per-month sparkline over the last 8 months
     const months = {};
@@ -178,8 +202,8 @@ Verify against video before quoting. Every result links to the full video at
       `<div title="${k}: ${months[k] || 0}" style="height:${Math.max(2, 30 * (months[k] || 0) / max)}px"></div>`
     ).join('');
     $('verdict').innerHTML = `<div class="verdict"><b>"${esc(label)}"</b> came up in
-      <b>${pages.length}</b> meeting${pages.length === 1 ? '' : 's'} this General Assembly
-      — ${recent} in the last 90 days.
+      <b>${total}</b> meeting${total === 1 ? '' : 's'} this General Assembly
+      — ${atLeast}${recent} in the last 90 days.
       <div class="spark">${bars}<span>last 8 mo</span></div></div>`;
   }
 

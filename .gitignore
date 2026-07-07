@@ -1,2 +1,5 @@
 __pycache__/
 *.pyc
+
+# Planning/strategy docs stay out of this public repo (live in Work folder)
+docs/superpowers/

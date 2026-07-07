@@ -1,0 +1,14 @@
+[
+  {"slug": "property-taxes", "name": "Property taxes", "aliases": ["property tax", "property taxes", "tax levy", "millage"]},
+  {"slug": "school-funding", "name": "School funding", "aliases": ["school funding", "school voucher", "vouchers", "edchoice", "fair school funding"]},
+  {"slug": "data-centers", "name": "Data centers", "aliases": ["data center", "data centers", "megawatt"]},
+  {"slug": "energy", "name": "Energy & utilities", "aliases": ["energy", "utility rates", "electricity", "natural gas", "solar", "nuclear"]},
+  {"slug": "marijuana", "name": "Marijuana", "aliases": ["marijuana", "cannabis", "dispensary"]},
+  {"slug": "elections", "name": "Elections & voting", "aliases": ["election", "voting", "voter", "ballot"]},
+  {"slug": "housing", "name": "Housing", "aliases": ["housing", "eviction", "landlord", "rent"]},
+  {"slug": "health-care", "name": "Health care", "aliases": ["medicaid", "health care", "healthcare", "hospital", "nursing home"]},
+  {"slug": "guns", "name": "Guns", "aliases": ["firearm", "firearms", "gun", "concealed carry", "second amendment"]},
+  {"slug": "abortion", "name": "Abortion & reproductive rights", "aliases": ["abortion", "reproductive", "heartbeat"]},
+  {"slug": "immigration", "name": "Immigration", "aliases": ["immigration", "immigrant", "sanctuary"]},
+  {"slug": "higher-ed", "name": "Higher education", "aliases": ["higher education", "university", "college tuition", "intellectual diversity"]}
+]

@@ -1,0 +1,780 @@
+{
+  "general_assembly": 136,
+  "ga_start_date": "2025-01-01",
+  "series": [
+    {
+      "id": 25,
+      "name": "Ohio Senate",
+      "chamber": "SENATE",
+      "is_floor": true
+    },
+    {
+      "id": 26,
+      "name": "Ohio House of Representatives",
+      "chamber": "HOUSE",
+      "is_floor": true
+    },
+    {
+      "id": 133,
+      "name": "Ohio Peace Officers Memorial Ceremony",
+      "chamber": "JOINT",
+      "is_floor": false
+    },
+    {
+      "id": 354,
+      "name": "Public Utilities Commission of Ohio",
+      "chamber": "JOINT",
+      "is_floor": false
+    },
+    {
+      "id": 107784,
+      "name": "Ohio Ballot Board",
+      "chamber": "JOINT",
+      "is_floor": false
+    },
+    {
+      "id": 107904,
+      "name": "Ohio House Finance Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 107910,
+      "name": "Ohio Constitutional Modernization Commission",
+      "chamber": "JOINT",
+      "is_floor": false
+    },
+    {
+      "id": 107935,
+      "name": "Ohio Senate Finance Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1000452,
+      "name": "Ohio Senate Transportation, Commerce and Workforce Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1000472,
+      "name": "Ohio Senate Health, Human Services and Medicaid Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1000473,
+      "name": "Ohio Senate Education Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1000533,
+      "name": "Ohio Senate Local Government, Public Safety and Veterans Affairs Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1000632,
+      "name": "Ohio Joint Committee on Agency Rule Review",
+      "chamber": "JOINT",
+      "is_floor": false
+    },
+    {
+      "id": 1000732,
+      "name": "Ohio House Health Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000733,
+      "name": "Ohio House Aging And Long Term Care Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000734,
+      "name": "Ohio House Agriculture and Rural Development Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000735,
+      "name": "Ohio House Armed Services And Veterans Affairs Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000736,
+      "name": "Ohio House Civil Justice Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000737,
+      "name": "Ohio House Commerce and Labor Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000738,
+      "name": "Ohio House Criminal Justice Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000739,
+      "name": "Ohio House Economic And Workforce Development Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000740,
+      "name": "Ohio House Energy And Natural Resources Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000741,
+      "name": "Ohio House Federalism Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000742,
+      "name": "Ohio House Financial Institutions Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000743,
+      "name": "Ohio House Higher Education Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000744,
+      "name": "Ohio House Insurance Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000745,
+      "name": "Ohio House Primary And Secondary Education Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000746,
+      "name": "Ohio House Public Utilities Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000747,
+      "name": "Ohio House Rules And Reference Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000748,
+      "name": "Ohio House State And Local Government Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000749,
+      "name": "Ohio House Transportation And Public Safety Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000750,
+      "name": "Ohio House Ways And Means Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000752,
+      "name": "Ohio House Finance Subcommittee on Higher Education",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000753,
+      "name": "Ohio House Finance Subcommittee on Health and Human Services",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000754,
+      "name": "Ohio House Finance Subcommittee on Primary And Secondary Education",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000772,
+      "name": "Ohio House Energy and Natural Resources Subcommittee on Energy Generation",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000792,
+      "name": "Ohio House Finance Subcommittee on Transportation",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000793,
+      "name": "Ohio House Criminal Justice Subcommittee on Criminal Sentencing",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000794,
+      "name": "Ohio House Finance Subcommittee on Agriculture, Development And Natural Resources",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1000872,
+      "name": "Ohio Aerospace and Aviation Technology Committee",
+      "chamber": "JOINT",
+      "is_floor": false
+    },
+    {
+      "id": 1000972,
+      "name": "Ohio Senate Agriculture and Natural Resources Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1000973,
+      "name": "Ohio Senate Energy and Public Utilities Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1000974,
+      "name": "Ohio Senate General Government and Agency Review Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1000975,
+      "name": "Ohio Senate Government Oversight and Reform Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1000976,
+      "name": "Ohio Senate Higher Education Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1000977,
+      "name": "Ohio Senate Insurance and Financial Institutions Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1000978,
+      "name": "Ohio Senate Judiciary Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1000979,
+      "name": "Ohio Senate Rules and Reference Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1000980,
+      "name": "Ohio Senate Ways and Means Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1000981,
+      "name": "Ohio Senate Finance Subcommittee on Health and Medicaid",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1000982,
+      "name": "Ohio Senate Finance Subcommittee on Primary and Secondary Education",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1001052,
+      "name": "Ohio Controlling Board",
+      "chamber": "JOINT",
+      "is_floor": false
+    },
+    {
+      "id": 1001072,
+      "name": "Ohio House 2020 Economic Recovery Task Force",
+      "chamber": "JOINT",
+      "is_floor": false
+    },
+    {
+      "id": 1001092,
+      "name": "Ohio Correctional Institution Inspection Committee",
+      "chamber": "JOINT",
+      "is_floor": false
+    },
+    {
+      "id": 1001192,
+      "name": "Ohio House Select Committee on Energy Policy and Oversight",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1001292,
+      "name": "Ohio Senate Insurance Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1001293,
+      "name": "Ohio Senate Financial Institutions and Technology Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1001295,
+      "name": "Ohio Senate Local Government and Elections Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1001296,
+      "name": "Ohio Senate Primary and Secondary Education Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1001297,
+      "name": "Ohio Senate Small Business and Economic Opportunity Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1001298,
+      "name": "Ohio Senate Transportation Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1001299,
+      "name": "Ohio Senate Veterans and Public Safety Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1001300,
+      "name": "Ohio Senate Workforce and Higher Education Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1001312,
+      "name": "Ohio House Agriculture and Conservation Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1001313,
+      "name": "Ohio House Behavioral Health and Recovery Supports Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1001314,
+      "name": "Ohio House Families, Aging and Human Services Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1001315,
+      "name": "Ohio House Government Oversight Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1001316,
+      "name": "Ohio House Higher Education and Career Readiness Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1001317,
+      "name": "Ohio House Infrastructure and Rural Development Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1001318,
+      "name": "Ohio House Technology and Innovation Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1001319,
+      "name": "Ohio Senate Select Committee on Gaming",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1001332,
+      "name": "Ohio Joint Medicaid Oversight Committee",
+      "chamber": "JOINT",
+      "is_floor": false
+    },
+    {
+      "id": 1001352,
+      "name": "Ohio Unemployment Compensation Modernization and Improvement Council",
+      "chamber": "JOINT",
+      "is_floor": false
+    },
+    {
+      "id": 1001372,
+      "name": "Ohio Senate Health Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1001373,
+      "name": "Ohio Senate General Government Budget Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1001392,
+      "name": "Ohio Retirement Study Council",
+      "chamber": "JOINT",
+      "is_floor": false
+    },
+    {
+      "id": 1001432,
+      "name": "Ohio Redistricting Commission",
+      "chamber": "JOINT",
+      "is_floor": false
+    },
+    {
+      "id": 1001452,
+      "name": "Ohio Joint Committee on Congressional Redistricting",
+      "chamber": "JOINT",
+      "is_floor": false
+    },
+    {
+      "id": 1001472,
+      "name": "State Committee on Computer Science",
+      "chamber": "JOINT",
+      "is_floor": false
+    },
+    {
+      "id": 1001552,
+      "name": "Ohio Senate Addiction and Community Revitalization Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1001592,
+      "name": "Ohio Nursing Facility Payment Commission",
+      "chamber": "JOINT",
+      "is_floor": false
+    },
+    {
+      "id": 1001612,
+      "name": "Ohio Joint Committee to Examine the Protection and Advocacy System",
+      "chamber": "JOINT",
+      "is_floor": false
+    },
+    {
+      "id": 1001652,
+      "name": "Ohio Senate Community Revitalization Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1001653,
+      "name": "Ohio Senate General Government Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1001654,
+      "name": "Ohio Senate Government Oversight Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1001655,
+      "name": "Ohio Senate Local Government Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1001656,
+      "name": "Ohio Senate Medicaid Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1001672,
+      "name": "Ohio House Agriculture Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1001674,
+      "name": "Ohio House Aviation and Aerospace Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1001675,
+      "name": "Ohio House Behavioral Health Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1001676,
+      "name": "Ohio House Constitutional Resolutions Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1001677,
+      "name": "Ohio House Families and Aging Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1001678,
+      "name": "Ohio House Finance Subcommittee on Public Safety",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1001679,
+      "name": "Ohio House Finance Subcommittee on Infrastructure and American Rescue Plan",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1001680,
+      "name": "Ohio House Health Provider Services Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1001681,
+      "name": "Ohio House Homeland Security Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1001682,
+      "name": "Ohio House Infrastructure Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1001683,
+      "name": "Ohio House Pensions Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1001684,
+      "name": "Ohio House Transportation Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1001692,
+      "name": "Ohio House Public Health Policy Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1001712,
+      "name": "Ohio Senate Select Committee on Rail Safety",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1001792,
+      "name": "Ohio Joint Agriculture Committee",
+      "chamber": "JOINT",
+      "is_floor": false
+    },
+    {
+      "id": 1001812,
+      "name": "Ohio Senate Select Committee on Housing",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1001852,
+      "name": "Ohio Joint Committee on Property Tax Review and Reform",
+      "chamber": "JOINT",
+      "is_floor": false
+    },
+    {
+      "id": 1001872,
+      "name": "Study Commission on the Future of Gaming in Ohio",
+      "chamber": "JOINT",
+      "is_floor": false
+    },
+    {
+      "id": 1001912,
+      "name": "Ohio Sunset Review Committee",
+      "chamber": "JOINT",
+      "is_floor": false
+    },
+    {
+      "id": 1002052,
+      "name": "Ohio Senate Armed Services, Veterans Affairs and Public Safety Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1002053,
+      "name": "Ohio Senate Energy Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1002054,
+      "name": "Ohio Senate Financial Institutions, Insurance and Technology Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1002055,
+      "name": "Ohio Senate Housing Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1002056,
+      "name": "Ohio Senate Public Utilities Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1002057,
+      "name": "Ohio Senate Workforce Development Committee",
+      "chamber": "SENATE",
+      "is_floor": false
+    },
+    {
+      "id": 1002058,
+      "name": "Ohio House Arts, Athletics and Tourism Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1002059,
+      "name": "Ohio House Children and Human Services Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1002060,
+      "name": "Ohio House Community Revitalization Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1002061,
+      "name": "Ohio House Development Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1002062,
+      "name": "Ohio House Education Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1002063,
+      "name": "Ohio House Energy Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1002064,
+      "name": "Ohio House General Government Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1002065,
+      "name": "Ohio House Judiciary Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1002066,
+      "name": "Ohio House Local Government Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1002067,
+      "name": "Ohio House Medicaid Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1002068,
+      "name": "Ohio House Natural Resources Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1002069,
+      "name": "Ohio House Public Insurance and Pensions Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1002070,
+      "name": "Ohio House Public Safety Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1002071,
+      "name": "Ohio House Small Business Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1002072,
+      "name": "Ohio House Veterans and Military Development Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1002073,
+      "name": "Ohio House Workforce and Higher Education Committee",
+      "chamber": "HOUSE",
+      "is_floor": false
+    },
+    {
+      "id": 1004473,
+      "name": "Ohio House and Senate Select Committees on Data Centers",
+      "chamber": "JOINT",
+      "is_floor": false
+    }
+  ]
+}

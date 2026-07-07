@@ -668,7 +668,12 @@
         // Transform Ohio Legislature API event into widget format
         function transformEvent(event) {
             const title = event.title || '';
-            const dateStr = event.start.split('T')[0];
+            // Keep only a strict ISO date. dateStr flows into element ids and an
+            // inline onclick handler, so pinning it to YYYY-MM-DD neutralizes any
+            // injection at the source (HTML-escaping alone can't protect an inline
+            // JS-string context).
+            const rawDate = (event.start || '').split('T')[0];
+            const dateStr = /^\d{4}-\d{2}-\d{2}$/.test(rawDate) ? rawDate : '';
 
             // Parse time from ISO start string
             let timeDisplay = 'TBA';
@@ -908,7 +913,7 @@
             for (const [committee, hearings] of Object.entries(grouped)) {
                 html += `
                     <div class="committee-section">
-                        <div class="committee-header">${committee}</div>
+                        <div class="committee-header">${escapeHtml(committee)}</div>
                         ${hearings.map(h => createHearingHTML(h, true)).join('')}
                     </div>
                 `;
@@ -919,11 +924,19 @@
             renderDateChips();
         }
 
+        // Escape untrusted API strings (committee names, agenda headlines,
+        // titles, statuses) before they enter innerHTML. Safe in text and
+        // quoted-attribute contexts.
+        function escapeHtml(s) {
+            return String(s ?? '').replace(/[&<>"']/g,
+                c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+        }
+
         // Create HTML for a single hearing
         function createHearingHTML(hearing, showDate = false) {
             const dateDisplay = showDate ? `
                 <div style="font-size: 14px; color: var(--text-light); margin-bottom: 8px;">
-                    📅 ${formatDate(hearing.date)} at ${hearing.time}
+                    📅 ${formatDate(hearing.date)} at ${escapeHtml(hearing.time)}
                 </div>
             ` : '';
 
@@ -932,23 +945,23 @@
                 <div class="hearing-item">
                     ${showDate ? dateDisplay : ''}
                     <div class="hearing-header">
-                        ${!showDate ? `<div class="hearing-time">${hearing.time}</div>` : ''}
+                        ${!showDate ? `<div class="hearing-time">${escapeHtml(hearing.time)}</div>` : ''}
                         <div class="hearing-info">
-                            <div class="committee-name">${hearing.committee_full}</div>
-                            <span class="hearing-type">${hearing.type}</span>
+                            <div class="committee-name">${escapeHtml(hearing.committee_full)}</div>
+                            <span class="hearing-type">${escapeHtml(hearing.type)}</span>
                             ${hearing.status && hearing.status !== 'Scheduled' ? `
-                            <span class="hearing-type" style="background: #fee; color: #900;">${hearing.status}</span>
+                            <span class="hearing-type" style="background: #fee; color: #900;">${escapeHtml(hearing.status)}</span>
                             ` : ''}
                         </div>
                     </div>
 
                     <div class="bills-being-heard">
-                        <a href="${hearing.eventUrl}" target="_blank" class="view-agenda-link">
+                        <a href="${encodeURI(hearing.eventUrl)}" target="_blank" class="view-agenda-link">
                             📋 View full agenda &amp; notice on legislature.ohio.gov →
                         </a>
                     </div>
 
-                    <div class="agenda-section" id="agenda-${hearing.meetingId || ''}">
+                    <div class="agenda-section" id="agenda-${escapeHtml(hearing.meetingId || '')}">
                         ${hearing.agenda_items && hearing.agenda_items.length > 0 ? (() => {
                             const summary = getTestimonySummary(hearing.agenda_items);
                             return (summary ? `<div class="testimony-summary ${summary.cls}">${summary.cls === 'open' ? '✓' : '—'} ${summary.text}</div>` : '') +
@@ -963,7 +976,7 @@
                             Share your perspective with Ohio legislators. Written and oral testimony typically due 24 hours before the hearing.
                         </div>
                         <div class="testify-buttons">
-                            <a href="${hearing.eventUrl}" target="_blank" class="testify-button primary">
+                            <a href="${encodeURI(hearing.eventUrl)}" target="_blank" class="testify-button primary">
                                 📋 View Agenda &amp; Testify
                             </a>
                         </div>
@@ -1009,10 +1022,12 @@
                 .slice(0, 12);
             if (!matches.length) { hideSuggestions(); return; }
             committeeAutocomplete.innerHTML = matches.map(c => {
-                const display = c.full;
-                const re = new RegExp(`(${q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`, 'gi');
+                // Escape first, then apply the <mark> highlight so committee
+                // names can't inject markup while search highlighting still works
+                const display = escapeHtml(c.full);
+                const re = new RegExp(`(${escapeHtml(q).replace(/[.*+?^${}()|[\]\\]/g,'\\$&')})`, 'gi');
                 const highlighted = display.replace(re, '<mark>$1</mark>');
-                return `<div class="autocomplete-item" data-slug="${c.slug}" data-full="${c.full}">${highlighted}</div>`;
+                return `<div class="autocomplete-item" data-slug="${escapeHtml(c.slug)}" data-full="${escapeHtml(c.full)}">${highlighted}</div>`;
             }).join('');
             committeeAutocomplete.querySelectorAll('.autocomplete-item').forEach(item => {
                 item.addEventListener('mousedown', () => addChip(item.dataset.slug, item.dataset.full));
@@ -1061,7 +1076,7 @@
             committeeStatus.style.color = 'var(--signal-dark)';
             committeeStatus.style.fontWeight = '600';
             const chips = Array.from(selectedCommittees.entries()).map(([slug, full]) =>
-                `<span class="committee-chip">${full}<button class="chip-remove" data-slug="${slug}" title="Remove">×</button></span>`
+                `<span class="committee-chip">${escapeHtml(full)}<button class="chip-remove" data-slug="${escapeHtml(slug)}" title="Remove">×</button></span>`
             ).join('');
             const clearBtn = `<button class="chips-clear" id="clearAllChips">Clear all</button>`;
             chipsRow.innerHTML = chips + clearBtn;
@@ -1192,7 +1207,7 @@
             if (item.possible_vote) badgeClass = 'vote-stage';
             else if (hearingNum >= 3) badgeClass = 'late-stage';
             const statusText = item.status
-                ? `${item.status}${item.possible_vote ? ' • Vote possible' : ''}`
+                ? `${escapeHtml(item.status)}${item.possible_vote ? ' • Vote possible' : ''}`
                 : (item.possible_vote ? 'Vote possible' : '');
 
             // Link to the official bill page on legislature.ohio.gov
@@ -1203,12 +1218,12 @@
                 ? `https://www.legislature.ohio.gov/legislation/136/${item.id}`
                 : null;
             const headline = billHref
-                ? `<a href="${billHref}" target="_blank" class="agenda-bill-number">${item.headline}</a>`
-                : `<span class="agenda-bill-number">${item.headline}</span>`;
+                ? `<a href="${billHref}" target="_blank" class="agenda-bill-number">${escapeHtml(item.headline)}</a>`
+                : `<span class="agenda-bill-number">${escapeHtml(item.headline)}</span>`;
 
             // Title is pre-baked into agenda data by the GitHub Actions fetch
             const titleLine = item.title
-                ? `<div class="agenda-bill-title">${item.title}</div>`
+                ? `<div class="agenda-bill-title">${escapeHtml(item.title)}</div>`
                 : '';
 
             // Testify badges
@@ -1226,7 +1241,7 @@
             }
 
             const subjectTag = item.subject
-                ? `<span class="bill-subject-tag">${item.subject.replace(/-/g, ' ')}</span>`
+                ? `<span class="bill-subject-tag">${escapeHtml(item.subject.replace(/-/g, ' '))}</span>`
                 : '';
 
             return `

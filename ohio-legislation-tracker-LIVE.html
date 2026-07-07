@@ -1318,11 +1318,11 @@
                 const count = filteredBills.length;
                 
                 if (count === 0) {
-                    searchFeedback.innerHTML = `<strong>No bills found</strong> matching "${searchTerm}" — try different keywords`;
+                    searchFeedback.innerHTML = `<strong>No bills found</strong> matching "${escapeHtml(searchTerm)}" — try different keywords`;
                     searchFeedback.className = 'search-feedback show no-results';
                 } else {
                     const billWord = count === 1 ? 'bill' : 'bills';
-                    searchFeedback.innerHTML = `Found <strong>${count} ${billWord}</strong> matching "${searchTerm}"`;
+                    searchFeedback.innerHTML = `Found <strong>${count} ${billWord}</strong> matching "${escapeHtml(searchTerm)}"`;
                     searchFeedback.className = 'search-feedback show';
                 }
             } else {
@@ -1403,10 +1403,10 @@
 
             const createChip = (mover) => {
                 return `
-                    <div class="new-bill-chip" onclick="jumpToBill('${mover.number}')">
-                        <span class="new-bill-number">${mover.number}</span>
-                        <span class="new-bill-title">${mover.title}<br>
-                            <span style="font-size:12px; color:var(--text-light);">${mover.detail}</span></span>
+                    <div class="new-bill-chip" onclick="jumpToBill('${escapeHtml(mover.number)}')">
+                        <span class="new-bill-number">${escapeHtml(mover.number)}</span>
+                        <span class="new-bill-title">${escapeHtml(mover.title)}<br>
+                            <span style="font-size:12px; color:var(--text-light);">${escapeHtml(mover.detail)}</span></span>
                         <span class="new-bill-arrow">→</span>
                     </div>
                 `;
@@ -1610,6 +1610,13 @@
             updateDisplay();
         }
 
+        // Escape untrusted API strings (bill titles, sponsors, actions, etc.)
+        // before they enter innerHTML. Safe in text and quoted-attribute contexts.
+        function escapeHtml(s) {
+            return String(s ?? '').replace(/[&<>"']/g,
+                c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+        }
+
         // Create progress bar HTML — four tracks depending on legislation type
         function createProgressBar(status, billType) {
             const isResolution = billType !== 'bill';
@@ -1724,20 +1731,20 @@
             return `
                 <div class="bill-item ${isPriority ? 'highlighted' : ''} ${isInNewSection ? 'new-this-week-item' : ''}" id="${billId}">
                     <div class="bill-header">
-                        <a href="${bill.url}" target="_blank" class="bill-number">${bill.number}</a>
+                        <a href="${encodeURI(bill.url)}" target="_blank" class="bill-number">${escapeHtml(bill.number)}</a>
                         <div class="bill-badges">
                             ${isPriority ? '<span class="badge badge-priority">⭐ PRIORITY</span>' : ''}
                             ${isNew ? '<span class="badge badge-new">🆕 NEW</span>' : ''}
                             <span class="badge badge-chamber">${chamberText}</span>
                             ${typeBadge}
-                            <button class="copy-link-btn" onclick="copyBillLink('${bill.number}', this)" aria-label="Copy link to ${bill.number}">🔗 Copy link</button>
+                            <button class="copy-link-btn" onclick="copyBillLink('${escapeHtml(bill.number)}', this)" aria-label="Copy link to ${escapeHtml(bill.number)}">🔗 Copy link</button>
                         </div>
                     </div>
 
-                    <h3 class="bill-title">${bill.title}</h3>
+                    <h3 class="bill-title">${escapeHtml(bill.title)}</h3>
                     ${hasDescription ? `
                         <button class="description-toggle" onclick="toggleDescription('${descId}', this)">Read more ▼</button>
-                        <p class="bill-description collapsed" id="${descId}">${bill.description}</p>
+                        <p class="bill-description collapsed" id="${descId}">${escapeHtml(bill.description)}</p>
                     ` : ''}
 
                     ${createProgressBar(bill.status, billType)}
@@ -1745,12 +1752,12 @@
                     <div class="bill-meta">
                         <div class="meta-item">
                             <span class="meta-label">Sponsor:</span>
-                            <span>${bill.sponsor}</span>
+                            <span>${escapeHtml(bill.sponsor)}</span>
                         </div>
                         ${bill.committee ? `
                         <div class="meta-item">
                             <span class="meta-label">Committee:</span>
-                            <span>${bill.committee}</span>
+                            <span>${escapeHtml(bill.committee)}</span>
                         </div>
                         ` : ''}
                         <div class="meta-item">
@@ -1760,8 +1767,8 @@
                     </div>
                     
                     <div class="bill-footer">
-                        <strong>Last Action (${formatDate(bill.last_action_date)}):</strong> ${translateAction(bill.last_action)}
-                        ${translateAction(bill.last_action) !== bill.last_action ? `<span style="color: var(--text-light); font-size: 12px; display: block; margin-top: 4px;">Official language: "${bill.last_action}"</span>` : ''}
+                        <strong>Last Action (${formatDate(bill.last_action_date)}):</strong> ${escapeHtml(translateAction(bill.last_action))}
+                        ${translateAction(bill.last_action) !== bill.last_action ? `<span style="color: var(--text-light); font-size: 12px; display: block; margin-top: 4px;">Official language: "${escapeHtml(bill.last_action)}"</span>` : ''}
                     </div>
                 </div>
             `;
@@ -1803,7 +1810,7 @@
             )].sort();
 
             committeeFilter.innerHTML = '<option value="all">All Committees</option>' +
-                committees.map(committee => `<option value="${committee}">${committee}</option>`).join('');
+                committees.map(committee => `<option value="${escapeHtml(committee)}">${escapeHtml(committee)}</option>`).join('');
         }
 
         // Populate sponsor filter
@@ -1814,7 +1821,7 @@
             }))].sort();
 
             sponsorFilter.innerHTML = '<option value="all">All Sponsors</option>' +
-                sponsors.map(sponsor => `<option value="${sponsor}">${sponsor}</option>`).join('');
+                sponsors.map(sponsor => `<option value="${escapeHtml(sponsor)}">${escapeHtml(sponsor)}</option>`).join('');
         }
 
         // Populate subject filter from actual bill data
@@ -1826,7 +1833,7 @@
             if (subjects.length === 0) return;
 
             subjectFilter.innerHTML = '<option value="all">All Subjects</option>' +
-                subjects.map(s => `<option value="${s}">${s}</option>`).join('');
+                subjects.map(s => `<option value="${escapeHtml(s)}">${escapeHtml(s)}</option>`).join('');
         }
 
         // Translate legislative jargon to plain language

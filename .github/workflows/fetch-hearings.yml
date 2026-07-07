@@ -122,6 +122,9 @@ jobs:
                           'opponent': item.get('opponent', False),
                           'interested_party': item.get('interested_party', False),
                           'sponsor': item.get('sponsor', False),
+                          'possible_vote': item.get('possible_vote', False),
+                          'possible_sub_bill': item.get('possible_sub_bill', False),
+                          'item_type': item.get('type', 'hearing'),
                           'index': item.get('index', 0),
                       }
                       for item in (items if isinstance(items, list) else [])

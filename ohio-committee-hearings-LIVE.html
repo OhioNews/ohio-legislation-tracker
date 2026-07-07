@@ -466,10 +466,12 @@
         .testify-badge.opponent { background: #fee2e2; color: #991b1b; }
         .testify-badge.interested { background: #dbeafe; color: #1e40af; }
         .testify-badge.closed { background: var(--signal-light); color: var(--signal-dark); }
+        .testify-badge.unknown { background: #fef3c7; color: #92400e; }
         .agenda-none { font-size: 13px; color: var(--text-light); font-style: italic; padding: 4px 0; }
         .testimony-summary { display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; padding: 5px 10px; border-radius: 6px; margin-bottom: 12px; }
         .testimony-summary.open { background: #dcfce7; color: #166534; }
         .testimony-summary.closed { background: var(--signal-light); color: var(--signal-dark); }
+        .testimony-summary.unknown { background: #fef3c7; color: #92400e; }
         .bill-subject-tag { font-size: 11px; font-weight: 600; padding: 2px 7px; border-radius: 10px; background: #e0f2fe; color: #075985; text-transform: capitalize; }
     </style>
 </head>
@@ -1161,26 +1163,43 @@
 
         // Render a single agenda item row
         // Returns a summary of testimony availability across all agenda items
+        // An item with no testimony flags is only known-closed when the API
+        // gives a reason (vote, sub bill, pending introduction). Otherwise the
+        // notice may use a notation the flags don't capture (e.g. "All
+        // Testimony") — say so rather than asserting closed.
+        function isKnownClosed(item) {
+            return item.possible_vote || item.possible_sub_bill || item.item_type === 'pending_intro';
+        }
+
         function getTestimonySummary(agendaItems) {
             if (!agendaItems || !agendaItems.length) return null;
             const open = agendaItems.filter(i => !i.sponsor && (i.proponent || i.opponent || i.interested_party));
+            const unknown = agendaItems.filter(i => !i.sponsor && !i.proponent && !i.opponent && !i.interested_party && !isKnownClosed(i));
             const total = agendaItems.length;
-            if (open.length === 0) return { text: 'No public testimony this hearing', cls: 'closed' };
             if (open.length === total) return { text: `All ${total} bill${total === 1 ? '' : 's'} open for public testimony`, cls: 'open' };
-            return { text: `${open.length} of ${total} bills open for public testimony`, cls: 'open' };
+            if (open.length > 0) return { text: `${open.length} of ${total} bills open for public testimony`, cls: 'open' };
+            if (unknown.length > 0) return { text: 'Testimony status not listed for this hearing — check the official notice', cls: 'unknown' };
+            return { text: 'No public testimony this hearing', cls: 'closed' };
         }
 
         function renderAgendaItem(item) {
-            // Parse hearing number from status like "4th Hearing"
+            // Vote signal comes from the API's possible_vote when present
+            // (authoritative — a vote can come as early as the 1st hearing);
+            // hearing count is only a late-stage styling fallback
             const numMatch = (item.status || '').match(/^(\d+)/);
             const hearingNum = numMatch ? parseInt(numMatch[1]) : 0;
             let badgeClass = '';
-            if (hearingNum >= 4) badgeClass = 'vote-stage';
+            if (item.possible_vote) badgeClass = 'vote-stage';
             else if (hearingNum >= 3) badgeClass = 'late-stage';
+            const statusText = item.status
+                ? `${item.status}${item.possible_vote ? ' • Vote possible' : ''}`
+                : (item.possible_vote ? 'Vote possible' : '');
 
             // Link to the official bill page on legislature.ohio.gov
-            // item.id is like "hb504" or "sb328" — maps directly to the URL pattern
-            const billHref = item.id
+            // item.id is like "hb504" or "sb328" — maps directly to the URL
+            // pattern. pending_intro items carry raw "S. B. No. 450"-style
+            // ids that would make broken URLs, so only link clean slugs.
+            const billHref = item.id && /^[a-z]{2,3}\d+$/.test(item.id)
                 ? `https://www.legislature.ohio.gov/legislation/136/${item.id}`
                 : null;
             const headline = billHref
@@ -1200,8 +1219,10 @@
                 if (item.proponent) badges += '<span class="testify-badge proponent">✓ Proponent testimony open</span>';
                 if (item.opponent) badges += '<span class="testify-badge opponent">✓ Opponent testimony open</span>';
                 if (item.interested_party) badges += '<span class="testify-badge interested">✓ Interested party welcome</span>';
-            } else {
+            } else if (isKnownClosed(item)) {
                 badges = '<span class="testify-badge closed">No public testimony this hearing</span>';
+            } else {
+                badges = '<span class="testify-badge unknown">Testimony status not listed — check the official notice</span>';
             }
 
             const subjectTag = item.subject
@@ -1212,7 +1233,7 @@
                 <div class="agenda-item">
                     <div class="agenda-item-top">
                         ${headline}
-                        ${item.status ? `<span class="agenda-hearing-badge ${badgeClass}">${item.status}</span>` : ''}
+                        ${statusText ? `<span class="agenda-hearing-badge ${badgeClass}">${statusText}</span>` : ''}
                         ${subjectTag}
                     </div>
                     ${titleLine}
@@ -1240,6 +1261,9 @@
                         opponent: item.opponent || false,
                         interested_party: item.interested_party || false,
                         sponsor: item.sponsor || false,
+                        possible_vote: item.possible_vote || false,
+                        possible_sub_bill: item.possible_sub_bill || false,
+                        item_type: item.type || 'hearing',
                         index: item.index || 0,
                     })).sort((a, b) => a.index - b.index);
                     const agendaDiv = document.getElementById('agenda-' + hearing.meetingId);

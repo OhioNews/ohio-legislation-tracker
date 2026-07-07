@@ -12,7 +12,10 @@ import transcript_distill as dm
 
 CHUNK_SECONDS = 60
 FLOOR_SERIES = (25, 26)
+# The player reads ?start={seconds} from the URL (verified in the site's own
+# share/embed code, July 2026) — links can seek straight to a moment.
 VIDEO_URL_TEMPLATE = 'https://www.ohiochannel.org/program-details/{pid}'
+VIDEO_TIME_PARAM = '?start={seconds}'
 FOOTER_TEXT = ('Transcripts from Ohio Channel closed captions; not an official record. '
                'Verify against video before quoting.')
 SPEAKER_NOTE = 'Speaker names available for floor sessions only.'
@@ -80,7 +83,8 @@ def render_program(d):
         parts.append(f'<h2 id="t{int(s["start"])}">{hms(s["start"])} · {e(s["label"])}</h2>')
         for chunk in _chunks(d['captions'], s['start'], s['end']):
             ts = int(chunk['start'])
-            parts.append(f'<h3 id="t{ts}"><a href="{video}" title="Watch from {hms(ts)}">'
+            seek = video + VIDEO_TIME_PARAM.format(seconds=ts)
+            parts.append(f'<h3 id="t{ts}"><a href="{seek}" title="Watch from {hms(ts)}">'
                          f'{hms(ts)}</a></h3>')
             parts.append(f"<p>{e(' '.join(chunk['lines']))}</p>")
 

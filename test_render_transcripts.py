@@ -54,6 +54,9 @@ class RenderProgramTests(unittest.TestCase):
     def test_video_link_present(self):
         self.assertIn('https://www.ohiochannel.org/program-details/208562', self.html)
 
+    def test_chunk_links_seek_video(self):
+        self.assertIn('program-details/208562?start=65', self.html)
+
 
 class RenderAllTests(unittest.TestCase):
     def test_render_all_writes_pages_and_index(self):

@@ -118,6 +118,18 @@ section{margin-bottom:1.8rem} section>h2{font-size:1.12rem;margin:0 0 .3rem}
   var meta=await loadJSON('ohio_transcript_data/transcripts_meta.json',null);
   if(meta&&meta.last_updated)$('fresh').textContent='Cached '+new Date(meta.last_updated).toLocaleString('en-US',{month:'short',day:'numeric',hour:'numeric',minute:'2-digit'});
 
+  // A typed query that IS a curated topic (or one of its aliases) goes straight to
+  // the fast, clean topic view — Pagefind is slow and noisy on common words like
+  // "data center" (it stems to databases/centered). Pagefind is the novel-query fallback.
+  var aliasIndex={};
+  Object.keys(topics).forEach(function(slug){var t=topics[slug];
+    aliasIndex[(t.name||'').toLowerCase()]=slug;
+    (t.aliases||[]).forEach(function(a){aliasIndex[a.toLowerCase()]=slug})});
+  function findTopic(term){var q=(term||'').toLowerCase().trim();
+    return aliasIndex[q]||aliasIndex[q.replace(/s$/,'')]||aliasIndex[q+'s']||null}
+  function routeOrSearch(term){var slug=findTopic(term);
+    if(slug){setURL({topic:slug});showTopic(slug)}else{setURL({q:term});runQuery(term)}}
+
   // ----- landing grid (sorted by recent activity) -----
   var entries=Object.keys(topics).map(function(slug){return[slug,topics[slug]]});
   entries.sort(function(a,b){return (b[1].recent||0)-(a[1].recent||0)});
@@ -193,6 +205,8 @@ section{margin-bottom:1.8rem} section>h2{font-size:1.12rem;margin:0 0 .3rem}
     var t=String(h==null?'':h).replace(/<[^>]+>/g,'').toLowerCase();
     return (t.match(/\b(yes|no|aye|nay|present|absent)\b/g)||[]).length>=3;
   }
+  // never let a search hang forever on "Searching…"
+  function withTimeout(p,ms){return Promise.race([p,new Promise(function(_,rej){setTimeout(function(){rej(new Error('timeout'))},ms)})])}
 
   // ----- free-text search (Pagefind fallback) -----
   async function runQuery(term){
@@ -200,8 +214,13 @@ section{margin-bottom:1.8rem} section>h2{font-size:1.12rem;margin:0 0 .3rem}
     $('svTitle').textContent='“'+term+'”'; $('svResults').innerHTML=''; $('status').textContent='Searching…';
     if(!pagefind){try{pagefind=await import('./pagefind/pagefind.js')}catch(e){
       $('status').innerHTML='Search isn\'t available right now. You can <a href="transcripts/index.html">browse every meeting transcript</a>.';return}}
-    var res=await pagefind.search(term);
-    var pages=await Promise.all(res.results.slice(0,60).map(function(r){return r.data()}));
+    var res,pages;
+    try{
+      res=await withTimeout(pagefind.search(term),15000);
+      pages=await withTimeout(Promise.all(res.results.slice(0,25).map(function(r){return r.data()})),15000);
+    }catch(e){
+      $('status').innerHTML='That search is taking too long — try a more specific phrase, or <a href="transcripts/index.html">browse every meeting transcript</a>.';return;
+    }
     // group results by program so it's a handful of meetings, not a flat flood
     var byProg={};
     pages.forEach(function(p){var id=p.meta.program_id; if(!byProg[id])byProg[id]=p; else byProg[id].sub_results=byProg[id].sub_results.concat(p.sub_results)});
@@ -223,11 +242,11 @@ section{margin-bottom:1.8rem} section>h2{font-size:1.12rem;margin:0 0 .3rem}
   }
 
   // wire up
-  $('go').onclick=function(){var v=$('q').value.trim();if(v){setURL({q:v});runQuery(v)}};
+  $('go').onclick=function(){var v=$('q').value.trim();if(v)routeOrSearch(v)};
   $('q').addEventListener('keydown',function(e){if(e.key==='Enter')$('go').click()});
   var usp=new URLSearchParams(location.search);
   if(usp.get('topic'))showTopic(usp.get('topic'));
-  else if(usp.get('q')){$('q').value=usp.get('q');runQuery(usp.get('q'))}
+  else if(usp.get('q')){$('q').value=usp.get('q');routeOrSearch(usp.get('q'))}
 })();
 </script>
 </body>

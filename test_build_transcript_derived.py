@@ -59,15 +59,27 @@ class DerivedTests(unittest.TestCase):
         self.assertEqual(topics['marijuana']['total'], 2)
         self.assertEqual(topics['marijuana']['recent'], 1)
 
-    def test_meeting_has_excerpt_and_bill(self):
+    def test_meeting_has_excerpt_and_title_matched_bill(self):
         make_distilled(self.tmp, 1, '2026-06-10',
-                       rich_lines('data centers', 10), bills=['HB 15'])
+                       rich_lines('data centers', 10), bills=['HB 646'])
         curated = [{'slug': 'data-centers', 'name': 'D', 'brief': '', 'aliases': ['data centers']}]
-        _, topics = bd.build_index_and_topics(self.tmp, {}, curated, now='2026-07-06')
+        titles = {'hb646': 'create the data centers study commission'}  # title names the topic
+        _, topics = bd.build_index_and_topics(self.tmp, {}, curated, now='2026-07-06', bill_titles=titles)
         m = topics['data-centers']['meetings'][0]
         self.assertTrue(m['excerpt'])
-        self.assertIn('HB 15', m['bills'])
-        self.assertIn('HB 15', topics['data-centers']['bills'])
+        self.assertIn('HB 646', m['bills'])
+        self.assertIn('HB 646', topics['data-centers']['bills'])
+
+    def test_offtopic_bill_title_not_attributed(self):
+        # HB 578 is on a data-centers-heavy meeting's agenda, but its TITLE is about
+        # tick disease -> it must NOT earn a data-centers card (no false authority).
+        make_distilled(self.tmp, 1, '2026-06-10',
+                       rich_lines('data centers', 10), bills=['HB 578'])
+        curated = [{'slug': 'data-centers', 'name': 'D', 'brief': '', 'aliases': ['data centers']}]
+        titles = {'hb578': 'require tick-related disease reporting to department of health'}
+        _, topics = bd.build_index_and_topics(self.tmp, {}, curated, now='2026-07-06', bill_titles=titles)
+        self.assertEqual(topics['data-centers']['total'], 1)         # meeting included
+        self.assertNotIn('HB 578', topics['data-centers']['bills'])  # but bill not attributed
 
     def test_word_boundary_no_substring_inflation(self):
         # "rent" must NOT match "current/parent/different"

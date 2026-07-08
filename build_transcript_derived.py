@@ -13,12 +13,12 @@ from datetime import datetime, timedelta, timezone
 
 import transcript_distill as dm
 import transcript_relevance as rel
-import transcript_slop as slop
 
 DATA_DIR = 'ohio_transcript_data'
 PROGRAMS_DIR = os.path.join(DATA_DIR, 'programs')
 STATE_FILE = os.path.join(DATA_DIR, 'transcript_state.json')
 CURATED_FILE = os.path.join(DATA_DIR, 'topics_curated.json')
+BILLS_FILE = os.path.join('ohio_legislation_data', 'bills.json')
 INDEX_OUT = os.path.join(DATA_DIR, 'programs_index.json')
 TOPICS_OUT = os.path.join(DATA_DIR, 'topics.json')
 RECENT_DAYS = 90
@@ -33,9 +33,33 @@ def _load(path, default):
     return default
 
 
-def build_index_and_topics(programs_dir, state, curated, now=None):
+def _norm_num(n):
+    return (n or '').lower().replace(' ', '')
+
+
+def load_bill_titles(path=BILLS_FILE):
+    """Map normalized bill number -> lowercase 'title subject' for topic matching."""
+    out = {}
+    for b in _load(path, []):
+        num = _norm_num(b.get('number'))
+        if num:
+            out[num] = ((b.get('title') or '') + ' ' + (b.get('subject') or '')).lower()
+    return out
+
+
+def _bill_matches_topic(num, patterns, bill_titles):
+    """A bill belongs to a topic only if its own title/subject names the topic.
+    This is precise: a tick-disease bill that a floor section briefly drifts past
+    does not earn a data-centers card just because the caption said 'data center'."""
+    text = bill_titles.get(_norm_num(num), '')
+    return bool(text) and rel.line_matches(text, patterns) > 0
+
+
+def build_index_and_topics(programs_dir, state, curated, now=None, bill_titles=None):
     now = now or datetime.now(timezone.utc).date().isoformat()
     cutoff = (datetime.fromisoformat(now) - timedelta(days=RECENT_DAYS)).date().isoformat()
+    if bill_titles is None:
+        bill_titles = load_bill_titles()
 
     compiled = {t['slug']: rel.compile_aliases(t['aliases']) for t in curated}
     topics = {t['slug']: {'name': t['name'], 'brief': t.get('brief', ''),
@@ -46,12 +70,12 @@ def build_index_and_topics(programs_dir, state, curated, now=None):
     for path in sorted(glob.glob(os.path.join(programs_dir, '*.json.gz'))):
         d = dm.load_distilled(path)
         p = d['program']
-        bills = sorted({b for s in d['sections'] for b in s['bills']})
+        marker_bills = sorted({b for s in d['sections'] for b in s['bills']})
         speakers = sorted({n for s in d['sections'] for n in s['persons']})
         index.append({'id': p['id'], 'name': p['name'], 'date': p['release_date'],
                       'series_name': p['series_name'], 'chamber': p['chamber'],
                       'is_floor': p['series_id'] in FLOOR_SERIES,
-                      'duration': p['duration'], 'bills': bills,
+                      'duration': p['duration'], 'bills': marker_bills,
                       'speakers': speakers, 'captions': True})
 
         for slug, patterns in compiled.items():
@@ -62,17 +86,9 @@ def build_index_and_topics(programs_dir, state, curated, now=None):
             entry['total'] += 1
             if (p['release_date'] or '') >= cutoff:
                 entry['recent'] += 1
-            # bills whose own marker-section carries a substantive (non-procedural) topic hit
-            mtg_bills = []
-            for s in d['sections']:
-                if not s['bills']:
-                    continue
-                for st, text in d['captions']:
-                    if s['start'] <= st < s['end'] and not slop.is_procedural(text) \
-                            and rel.line_matches(text, patterns):
-                        mtg_bills.extend(s['bills'])
-                        break
-            mtg_bills = sorted(set(mtg_bills))
+            # bills on this meeting's agenda whose OWN title/subject names the topic
+            mtg_bills = sorted({b for b in marker_bills
+                                if _bill_matches_topic(b, patterns, bill_titles)})
             entry['bills'].update(mtg_bills)
             entry['meetings'].append({
                 'id': p['id'], 'name': p['name'], 'date': p['release_date'],

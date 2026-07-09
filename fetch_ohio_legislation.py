@@ -138,6 +138,13 @@ def build_change_entries(existing_bills, new_bills, run_date):
            old.get('last_action') == b.get('last_action') and \
            old.get('last_action_date') == b.get('last_action_date'):
             continue
+        # Migration guard: records written before effective-date handling stored
+        # the scheduled 'Effective' row as the last action, dated in the future.
+        # Reformatting an already-enacted bill to its real signing action is
+        # bookkeeping, not news, so long as it took no action past that date.
+        if old and is_effective_action(old.get('last_action')) and \
+           b.get('last_action_date', '') <= old.get('last_action_date', ''):
+            continue
         entries.append({
             'run_date': run_date,
             'number': b['number'],
@@ -346,6 +353,16 @@ def get_bill_type(number):
 GOVERNOR_ACTION_RE = re.compile(r'governor|\bsign|veto|override', re.IGNORECASE)
 
 
+def is_effective_action(action):
+    """True for LegiScan's 'Effective ...' history rows.
+
+    Those rows log a law's effective date, which in Ohio is typically ~90 days
+    after enactment. That scheduled date is not a legislative action, so it must
+    not become a bill's last action or drive 'most recent activity' sorting.
+    """
+    return (action or '').strip().lower().startswith('effective')
+
+
 def governor_actions_in(bill):
     """
     Returns this bill's history actions that mention the governor or
@@ -435,15 +452,27 @@ def format_bill_for_widget(bill):
     if status == 'introduced' and committee:
         status = 'in-committee'
     
-    # Get last action
+    # Get last action. A law's final history row is its scheduled 'Effective'
+    # date, not a real action — so pull the effective date out separately and
+    # let the newest *non-effective* row stand as the last action. This keeps a
+    # bill signed months ago from floating to the top of "most recent activity"
+    # on a future effective date.
     last_action = 'No recent action'
     last_action_date = bill.get('status_date', '')
-    
-    if bill.get('history') and len(bill['history']) > 0:
-        last_history = bill['history'][-1]
-        last_action = last_history.get('action', 'No recent action')
-        last_action_date = last_history.get('date', last_action_date)
-    
+    effective_date = ''
+    history = bill.get('history') or []
+
+    for event in reversed(history):
+        if is_effective_action(event.get('action')):
+            effective_date = event.get('date', '')
+            break
+
+    for event in reversed(history):
+        if not is_effective_action(event.get('action')):
+            last_action = event.get('action', 'No recent action')
+            last_action_date = event.get('date', last_action_date)
+            break
+
     return {
         'bill_id': bill['bill_id'],
         'number': bill['bill_number'],
@@ -455,6 +484,7 @@ def format_bill_for_widget(bill):
         'status_date': bill.get('status_date', ''),
         'last_action': last_action,
         'last_action_date': last_action_date,
+        'effective_date': effective_date,
         'sponsor': sponsor,
         'committee': committee,
         'subject': subject,

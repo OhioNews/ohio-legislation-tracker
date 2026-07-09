@@ -1769,6 +1769,7 @@
                     <div class="bill-footer">
                         <strong>Last Action (${formatDate(bill.last_action_date)}):</strong> ${escapeHtml(translateAction(bill.last_action))}
                         ${translateAction(bill.last_action) !== bill.last_action ? `<span style="color: var(--text-light); font-size: 12px; display: block; margin-top: 4px;">Official language: "${escapeHtml(bill.last_action)}"</span>` : ''}
+                        ${bill.effective_date ? `<div style="margin-top: 6px;"><strong>Effective:</strong> ${formatDate(bill.effective_date)}</div>` : ''}
                     </div>
                 </div>
             `;

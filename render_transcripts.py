@@ -9,6 +9,7 @@ import json
 import os
 
 import transcript_distill as dm
+import bill_refs as brefs
 import roster_match as rmatch
 import roster_enrich as renrich
 
@@ -30,6 +31,9 @@ h3 a{color:#8a8a8a;text-decoration:none} h3 a:hover{text-decoration:underline}
 p{margin:.3rem 0} .meta{font-family:system-ui,sans-serif;font-size:.85rem;color:#555}
 .footer{margin-top:3rem;padding-top:1rem;border-top:1px solid #ddd;font-family:system-ui,sans-serif;font-size:.8rem;color:#777}
 .watch{font-family:system-ui,sans-serif;font-size:.8rem} :target{background:#fff7d6}
+.bills{margin:1.2rem 0;font-family:system-ui,sans-serif;font-size:.9rem}
+.bills h2{font-size:.95rem} .bills ul{list-style:none;padding:0;margin:.4rem 0}
+.bills li{padding:.15rem 0} .bills .track{color:#555;font-size:.8rem}
 .speakers{margin:1.2rem 0;font-family:system-ui,sans-serif;font-size:.9rem}
 .speakers h2{font-size:.95rem} .speakers ul{list-style:none;padding:0;margin:.4rem 0}
 .speakers li{padding:.15rem 0}
@@ -55,6 +59,32 @@ def _chunks(captions, start, end):
     return chunks
 
 
+def bills_in_context(d, known_bills=None):
+    """The bills this meeting was about — marker agenda bills plus bills spoken
+    in the captions — each resolved to the section anchor where it comes up."""
+    sections = d.get('sections') or []
+    times = {}  # canonical bill -> earliest time
+    for s in sections:
+        for b in s.get('bills') or []:
+            t = s.get('start') or 0
+            if b not in times or t < times[b]:
+                times[b] = t
+    marker_bills = set(times)
+    for ref in brefs.scan_bill_refs(d):
+        b, t = ref['bill'], ref['time']
+        if known_bills is not None and b not in known_bills and b not in marker_bills:
+            continue
+        if b not in times or t < times[b]:
+            times[b] = t
+    out = []
+    for b, t in times.items():
+        sec = dm.section_for(sections, t) if sections else None
+        anchor = int(sec['start']) if sec else 0
+        out.append({'bill': b, 'anchor': anchor})
+    out.sort(key=lambda x: x['anchor'])
+    return out
+
+
 def render_program(d, roster=None):
     p = d['program']
     e = html.escape
@@ -67,6 +97,19 @@ def render_program(d, roster=None):
     bill_segments = [{'bill': b, 'start': s['start'], 'end': s['end']}
                      for s in d['sections'] for b in s['bills']]
     video = VIDEO_URL_TEMPLATE.format(pid=p['id'])
+
+    bic = bills_in_context(d)
+
+    def _bill_line(item):
+        num = item['bill']
+        compact = num.replace(' ', '')
+        tracker = f'../ohio-legislation-tracker-LIVE.html?bill={e(compact)}&ga=136'
+        return (f'<li><a href="#t{item["anchor"]}">{e(num)}</a> '
+                f'<a class="track" href="{tracker}" target="_blank" rel="noopener">tracker &#8599;</a></li>')
+
+    bills_panel = ('<section class="bills"><h2>Bills discussed</h2><ul>'
+                   + ''.join(_bill_line(b) for b in bic)
+                   + '</ul></section>') if bic else ''
 
     def _speaker_line(s):
         if not s['matched']:
@@ -101,7 +144,8 @@ def render_program(d, roster=None):
 <p class="meta">{e(p['release_date'])} · {e(p['series_name'])} · {ptype}
  · <a href="{video}">Watch on ohiochannel.org</a></p>
 {f'<p class="meta">{SPEAKER_NOTE}</p>' if not is_floor else ''}
-{speaker_panel}"""]
+{speaker_panel}
+{bills_panel}"""]
 
     for s in d['sections']:
         parts.append(f'<h2 id="t{int(s["start"])}">{hms(s["start"])} · {e(s["label"])}</h2>')

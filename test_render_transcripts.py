@@ -68,6 +68,20 @@ class RenderProgramTests(unittest.TestCase):
         out = rt.bills_in_context(d, known_bills={'HB 15'})
         self.assertEqual(out, [{'bill': 'HB 15', 'anchor': 0}])
 
+    def test_enriched_speakers_rendered(self):
+        roster = [{'people_id': 1, 'name': 'Robert McColley', 'first': 'Robert',
+                   'last': 'McColley', 'middle': '', 'nickname': '', 'suffix': '',
+                   'party': 'R', 'chamber': 'senate', 'district': 1}]
+        d = {'program': {'id': 5, 'name': 'P5', 'release_date': '2026-06-10',
+                         'duration': 200, 'series_id': 26, 'series_name': 'Senate',
+                         'chamber': 'SENATE'},
+             'captions': [],
+             'sections': [{'start': 0, 'end': 200, 'type': 'Resolution', 'label': 'x',
+                           'bills': [], 'persons': ['Robert McColley']}]}
+        out = rt.render_program(d, roster=roster)
+        self.assertIn('data-pagefind-filter="speaker">Robert McColley</span>', out)
+        self.assertIn('R-1', out)  # party-district shown in the visible panel
+
     def test_video_link_present(self):
         self.assertIn('https://www.ohiochannel.org/program-details/208562', self.html)
 

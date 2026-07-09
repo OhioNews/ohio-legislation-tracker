@@ -10,6 +10,8 @@ import os
 
 import transcript_distill as dm
 import bill_refs as brefs
+import roster_match as rmatch
+import roster_enrich as renrich
 
 CHUNK_SECONDS = 60
 FLOOR_SERIES = (25, 26)
@@ -32,6 +34,10 @@ p{margin:.3rem 0} .meta{font-family:system-ui,sans-serif;font-size:.85rem;color:
 .bills{margin:1.2rem 0;font-family:system-ui,sans-serif;font-size:.9rem}
 .bills h2{font-size:.95rem} .bills ul{list-style:none;padding:0;margin:.4rem 0}
 .bills li{padding:.15rem 0} .bills .track{color:#555;font-size:.8rem}
+.speakers{margin:1.2rem 0;font-family:system-ui,sans-serif;font-size:.9rem}
+.speakers h2{font-size:.95rem} .speakers ul{list-style:none;padding:0;margin:.4rem 0}
+.speakers li{padding:.15rem 0}
+.speakers .pd{color:#555} .speakers .src{color:#888;font-style:italic;font-size:.8rem}
 """
 
 
@@ -79,12 +85,15 @@ def bills_in_context(d, known_bills=None):
     return out
 
 
-def render_program(d):
+def render_program(d, roster=None):
     p = d['program']
     e = html.escape
     is_floor = p['series_id'] in FLOOR_SERIES
     ptype = 'Floor session' if is_floor else 'Committee hearing'
-    speakers = sorted({n for s in d['sections'] for n in s['persons']})
+    if roster is None:
+        roster = rmatch.load_roster()
+    speakers = renrich.enrich_speakers(d, roster)
+    speaker_names = [s['name'] for s in speakers]
     bill_segments = [{'bill': b, 'start': s['start'], 'end': s['end']}
                      for s in d['sections'] for b in s['bills']]
     video = VIDEO_URL_TEMPLATE.format(pid=p['id'])
@@ -102,6 +111,20 @@ def render_program(d):
                    + ''.join(_bill_line(b) for b in bic)
                    + '</ul></section>') if bic else ''
 
+    def _speaker_line(s):
+        if not s['matched']:
+            return f"<li>{e(s['name'])}</li>"
+        loc = (f"{s['party']}-{s['district']}" if s['party'] and s['district']
+               else (s['party'] or ''))
+        pd = f' <span class="pd">({e(loc)})</span>' if loc else ''
+        tag = (' <span class="src">heard in introductions</span>'
+               if s['source'] == 'intro-scan' else '')
+        return f"<li>{e(s['name'])}{pd}{tag}</li>"
+
+    speaker_panel = ('<section class="speakers"><h2>On the record</h2><ul>'
+                     + ''.join(_speaker_line(s) for s in speakers)
+                     + '</ul></section>') if speakers else ''
+
     parts = [f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(p['name'])} — transcript</title><style>{PAGE_CSS}</style></head>
@@ -109,7 +132,7 @@ def render_program(d):
 <div style="display:none">
 <span data-pagefind-filter="chamber">{e(p['chamber'] or '')}</span>
 <span data-pagefind-filter="type">{ptype}</span>
-{''.join(f'<span data-pagefind-filter="speaker">{e(n)}</span>' for n in speakers)}
+{''.join(f'<span data-pagefind-filter="speaker">{e(n)}</span>' for n in speaker_names)}
 <span data-pagefind-meta="date">{e(p['release_date'])}</span>
 <span data-pagefind-meta="program_id">{p['id']}</span>
 <span data-pagefind-meta="series_name">{e(p['series_name'])}</span>
@@ -121,6 +144,7 @@ def render_program(d):
 <p class="meta">{e(p['release_date'])} · {e(p['series_name'])} · {ptype}
  · <a href="{video}">Watch on ohiochannel.org</a></p>
 {f'<p class="meta">{SPEAKER_NOTE}</p>' if not is_floor else ''}
+{speaker_panel}
 {bills_panel}"""]
 
     for s in d['sections']:
@@ -157,12 +181,13 @@ def render_index(programs_index):
 
 def render_all(programs_dir, index_path, out_dir):
     os.makedirs(out_dir, exist_ok=True)
+    roster = rmatch.load_roster()
     count = 0
     for path in sorted(glob.glob(os.path.join(programs_dir, '*.json.gz'))):
         d = dm.load_distilled(path)
         out = os.path.join(out_dir, f"{d['program']['id']}.html")
         with open(out, 'w', encoding='utf-8') as f:
-            f.write(render_program(d))
+            f.write(render_program(d, roster=roster))
         count += 1
     with open(index_path, encoding='utf-8') as f:
         programs_index = json.load(f)

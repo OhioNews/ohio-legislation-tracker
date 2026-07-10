@@ -60,6 +60,10 @@ section{margin-bottom:1.8rem} section>h2{font-size:1.12rem;margin:0 0 .3rem}
 .meeting .said mark{background:#ffe9a8}
 .meeting .watch{grid-column:2;margin-top:.4rem;font-size:.82rem}
 .meeting .watch a{color:var(--accent);text-decoration:none;font-weight:600}
+.sr-head{position:sticky;top:0;background:var(--paper);z-index:3;margin:1.3rem 0 0;padding:.55rem 0;
+border-bottom:2px solid var(--line);font-size:1.02rem;display:flex;align-items:center;gap:.55rem}
+.sr-head:first-child{margin-top:0}
+.sr-head .date{color:var(--muted);font-size:.82rem;font-weight:400;margin-left:auto}
 .note,.footer{font-size:.8rem;color:var(--muted)}
 .footer{margin-top:2.5rem;border-top:1px solid var(--line);padding-top:.9rem}
 #status{color:var(--muted);font-size:.9rem;margin:1rem 0}
@@ -209,6 +213,8 @@ section{margin-bottom:1.8rem} section>h2{font-size:1.12rem;margin:0 0 .3rem}
     var list=Object.keys(byProg).map(function(k){var p=byProg[k];
       p.sub_results=(p.sub_results||[]).filter(function(sr){return !looksProcedural(sr.excerpt)});return p})
       .filter(function(p){return p.sub_results.length});
+    // newest meetings first — someone searching is usually chasing something recent
+    list.sort(function(a,b){return (b.meta.date||'').localeCompare(a.meta.date||'')});
     if(!list.length){$('status').textContent='';$('svResults').innerHTML='<p>No matches. Try a broader word, or <a href="transcripts/index.html">browse meetings</a>.</p>';return}
     $('status').textContent='';
     $('svResults').innerHTML='<section>'+list.map(function(p){
@@ -217,7 +223,11 @@ section{margin-bottom:1.8rem} section>h2{font-size:1.12rem;margin:0 0 .3rem}
         var href='transcripts/'+p.meta.program_id+'.html?find='+encodeURIComponent(term)+(anchor?anchor[0]:'');
         return '<div class="meeting"><div class="count"></div><div class="said">…'+sr.excerpt+'… <a href="'+href+'">read in context ›</a></div></div>';
       }).join('');
-      return '<h2 style="font-size:1rem">'+esc(p.meta.series_name||'')+' · '+esc(p.meta.date||'')+'</h2>'+subs;
+      var chamber=((p.filters&&p.filters.chamber)||[])[0]||'';
+      var ch=chamber.toLowerCase();
+      var chClass=ch.indexOf('house')>=0?'house':ch.indexOf('senate')>=0?'senate':'joint';
+      return '<h2 class="sr-head"><span class="chamber '+chClass+'">'+esc(chamber)+'</span>'+
+        esc(p.meta.series_name||'')+' <span class="date">'+esc(p.meta.date||'')+'</span></h2>'+subs;
     }).join('')+'</section>';
     scrollTop();
   }

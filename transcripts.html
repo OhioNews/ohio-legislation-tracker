@@ -233,7 +233,7 @@ section{margin-bottom:1.8rem} section>h2{font-size:1.12rem;margin:0 0 .3rem}
     $('svResults').innerHTML='<section>'+list.map(function(p){
       var subs=p.sub_results.slice(0,8).map(function(sr){
         var anchor=(sr.url||'').match(/#t\d+/);
-        var href='transcripts/'+p.meta.program_id+'.html'+(anchor?anchor[0]:'');
+        var href='transcripts/'+p.meta.program_id+'.html?find='+encodeURIComponent(term)+(anchor?anchor[0]:'');
         return '<div class="meeting"><div class="count"></div><div class="said">…'+sr.excerpt+'… <a href="'+href+'">read in context ›</a></div></div>';
       }).join('');
       return '<h2 style="font-size:1rem">'+esc(p.meta.series_name||'')+' · '+esc(p.meta.date||'')+'</h2>'+subs;

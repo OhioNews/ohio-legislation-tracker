@@ -57,6 +57,11 @@ class RenderProgramTests(unittest.TestCase):
     def test_chunk_links_seek_video(self):
         self.assertIn('program-details/208562?start=65', self.html)
 
+    def test_find_widget_present_and_ignored_by_pagefind(self):
+        self.assertIn('id="findInput"', self.html)
+        self.assertIn('class="findbar" data-pagefind-ignore', self.html)
+        self.assertIn("get('find')", self.html)
+
 
 class RenderAllTests(unittest.TestCase):
     def test_render_all_writes_pages_and_index(self):

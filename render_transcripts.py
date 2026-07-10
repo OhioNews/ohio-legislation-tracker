@@ -28,7 +28,74 @@ h3 a{color:#8a8a8a;text-decoration:none} h3 a:hover{text-decoration:underline}
 p{margin:.3rem 0} .meta{font-family:system-ui,sans-serif;font-size:.85rem;color:#555}
 .footer{margin-top:3rem;padding-top:1rem;border-top:1px solid #ddd;font-family:system-ui,sans-serif;font-size:.8rem;color:#777}
 .watch{font-family:system-ui,sans-serif;font-size:.8rem} :target{background:#fff7d6}
+.findbar{font-family:system-ui,sans-serif;font-size:.85rem;display:flex;align-items:center;gap:.4rem;
+margin:.8rem 0;padding:.5rem .6rem;background:#f7f5f0;border:1px solid #e2ded2;border-radius:.4rem;
+position:sticky;top:0;z-index:5}
+.findbar input{flex:1;font:inherit;padding:.3rem .5rem;border:1px solid #ccc;border-radius:.3rem;min-width:0}
+.findbar button{font:inherit;border:1px solid #ccc;background:#fff;border-radius:.3rem;padding:.2rem .55rem;cursor:pointer}
+.findbar button:hover{background:#eee}
+.findcount{color:#666;min-width:4.2rem;text-align:center;white-space:nowrap}
+mark.find-hit{background:#ffe58a;color:inherit;padding:0 1px;border-radius:2px}
+mark.find-hit.current{background:#ff8c00;color:#fff}
 """
+
+# Highlight-and-skip-through find widget for a single transcript page. Runs
+# entirely client-side over the already-rendered <p> text (no data/build
+# changes). Scoped to `p:not(.meta)` so it only touches caption text, never
+# the date/series/speaker meta lines. ?find= in the URL pre-loads a term
+# (wired up from the free-text search results page, where the term is a
+# confirmed literal match).
+FIND_WIDGET_SCRIPT = """<script>
+(function(){
+  var paras=Array.prototype.slice.call(document.querySelectorAll('p:not(.meta)'));
+  var originals=paras.map(function(p){return p.textContent});
+  var hits=[],current=-1;
+  var input=document.getElementById('findInput'),countEl=document.getElementById('findCount');
+  function escapeRe(s){return s.replace(/[.*+?^${}()|[\\]\\\\]/g,'\\\\$&')}
+  function clearHighlights(){paras.forEach(function(p,i){p.textContent=originals[i]});hits=[];current=-1}
+  function updateCount(){countEl.textContent=hits.length?(current+1)+' of '+hits.length:(input.value?'0 of 0':'')}
+  function markCurrent(){
+    hits.forEach(function(h,i){h.classList.toggle('current',i===current)});
+    if(current>=0)hits[current].scrollIntoView({block:'center',behavior:'smooth'});
+  }
+  function runFind(term){
+    clearHighlights();
+    if(!term){updateCount();return}
+    var re=new RegExp('('+escapeRe(term)+')','gi');
+    paras.forEach(function(p,i){
+      var text=originals[i];
+      re.lastIndex=0;
+      if(!re.test(text))return;
+      re.lastIndex=0;
+      var frag=document.createDocumentFragment(),last=0,m;
+      while((m=re.exec(text))){
+        if(m[0].length===0){re.lastIndex++;continue}
+        frag.appendChild(document.createTextNode(text.slice(last,m.index)));
+        var mark=document.createElement('mark');
+        mark.className='find-hit';mark.textContent=m[0];
+        frag.appendChild(mark);hits.push(mark);
+        last=m.index+m[0].length;
+      }
+      frag.appendChild(document.createTextNode(text.slice(last)));
+      p.textContent='';p.appendChild(frag);
+    });
+    current=hits.length?0:-1;
+    markCurrent();updateCount();
+  }
+  function next(){if(!hits.length)return;current=(current+1)%hits.length;markCurrent();updateCount()}
+  function prev(){if(!hits.length)return;current=(current-1+hits.length)%hits.length;markCurrent();updateCount()}
+  input.addEventListener('input',function(){runFind(input.value.trim())});
+  input.addEventListener('keydown',function(e){
+    if(e.key==='Enter'){e.preventDefault();e.shiftKey?prev():next()}
+    else if(e.key==='Escape'){input.value='';runFind('');input.blur()}
+  });
+  document.getElementById('findNext').onclick=next;
+  document.getElementById('findPrev').onclick=prev;
+  document.getElementById('findClear').onclick=function(){input.value='';runFind('');input.focus()};
+  var q=new URLSearchParams(location.search).get('find');
+  if(q){input.value=q;runFind(q)}
+})();
+</script>"""
 
 
 def hms(t):
@@ -77,7 +144,14 @@ def render_program(d):
 <h1>{e(p['name'])}</h1>
 <p class="meta">{e(p['release_date'])} · {e(p['series_name'])} · {ptype}
  · <a href="{video}">Watch on ohiochannel.org</a></p>
-{f'<p class="meta">{SPEAKER_NOTE}</p>' if not is_floor else ''}"""]
+{f'<p class="meta">{SPEAKER_NOTE}</p>' if not is_floor else ''}
+<div class="findbar" data-pagefind-ignore>
+<input id="findInput" type="text" placeholder="Find in this transcript…" aria-label="Find in transcript" autocomplete="off">
+<button id="findPrev" type="button" title="Previous match (Shift+Enter)">&uarr;</button>
+<button id="findNext" type="button" title="Next match (Enter)">&darr;</button>
+<span id="findCount" class="findcount"></span>
+<button id="findClear" type="button" title="Clear">&times;</button>
+</div>"""]
 
     for s in d['sections']:
         parts.append(f'<h2 id="t{int(s["start"])}">{hms(s["start"])} · {e(s["label"])}</h2>')
@@ -88,7 +162,9 @@ def render_program(d):
                          f'{hms(ts)}</a></h3>')
             parts.append(f"<p>{e(' '.join(chunk['lines']))}</p>")
 
-    parts.append(f'<div class="footer" data-pagefind-ignore>{FOOTER_TEXT}</div></body></html>')
+    parts.append(f'<div class="footer" data-pagefind-ignore>{FOOTER_TEXT}</div>')
+    parts.append(FIND_WIDGET_SCRIPT)
+    parts.append('</body></html>')
     return '\n'.join(parts)
 
 

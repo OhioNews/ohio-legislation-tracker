@@ -90,7 +90,6 @@ section{margin-bottom:1.8rem} section>h2{font-size:1.12rem;margin:0 0 .3rem}
     <p class="lede">What Ohio lawmakers actually said — from the Ohio Channel's captions. <span class="note">Speaker names available for floor sessions only.</span></p>
     <div id="tvBrief"></div>
     <div id="tvActivity"></div>
-    <div id="tvBills"></div>
     <div id="tvMeetings"></div>
   </div>
 
@@ -109,8 +108,8 @@ section{margin-bottom:1.8rem} section>h2{font-size:1.12rem;margin:0 0 .3rem}
 (async function(){
   var $=function(id){return document.getElementById(id)};
   function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
-  var GA=136, VIDEO='https://www.ohiochannel.org/program-details/';
-  var topics={}, bills=null, hearings=null, pagefind=null;
+  var VIDEO='https://www.ohiochannel.org/program-details/';
+  var topics={}, pagefind=null;
 
   async function loadJSON(u,fb){try{var r=await fetch(u);return r.ok?await r.json():fb}catch(e){return fb}}
 
@@ -165,7 +164,6 @@ section{margin-bottom:1.8rem} section>h2{font-size:1.12rem;margin:0 0 .3rem}
     $('tvActivity').innerHTML='<div class="activity"><div><div class="bignum">'+(t.total||0)+'</div><div class="eyebrow">meetings</div></div>'+
       '<div class="say">discussed it this General Assembly — '+(t.recent||0)+' in the last 90 days.</div>'+
       '<div class="spark">'+bars+'<small>last 8&nbsp;mo</small></div></div>';
-    renderBills(t);
     // meetings
     var html='<section><h2>Meeting by meeting</h2><p class="sub">The rooms where it came up, most substantive first — the quote is a real line from that meeting.</p>';
     (t.meetings||[]).slice(0,25).forEach(function(m){
@@ -182,23 +180,6 @@ section{margin-bottom:1.8rem} section>h2{font-size:1.12rem;margin:0 0 .3rem}
     $('tvMeetings').innerHTML=html;
     scrollTop();
   };
-
-  async function renderBills(t){
-    if(!bills)bills=await loadJSON('ohio_legislation_data/bills.json',[]);
-    if(!hearings)hearings=await loadJSON('ohio_legislation_data/hearings_live.json',{events:[]});
-    var byNum={}; bills.forEach(function(b){byNum[(b.number||'').toLowerCase().replace(/ /g,'')]=b});
-    var hits={}; (t.bills||[]).forEach(function(b){hits[b]=1});
-    // upcoming-hearing testimony badges
-    var upcoming={}; (hearings.events||[]).forEach(function(ev){(ev.agenda_items||[]).forEach(function(it){
-      if(it.proponent||it.opponent||it.interested_party)upcoming[it.id]=1})});
-    var cards=Object.keys(hits).slice(0,8).map(function(num){
-      var key=num.toLowerCase().replace(/ /g,''); var b=byNum[key];
-      var badge=upcoming[key]?'<span class="badge">Hearing soon — testimony open</span>':'';
-      var title=b?esc(b.title).slice(0,110):'See bill tracker for status';
-      return '<div class="bill"><a href="ohio-legislation-tracker-LIVE.html?bill='+encodeURIComponent(num.replace(/ /g,''))+'&ga='+GA+'">'+esc(num)+'</a>'+badge+'<br><span class="note">'+title+'</span></div>';
-    });
-    $('tvBills').innerHTML=cards.length?('<section><h2>Bills in this debate</h2><p class="sub">Status from the bill tracker.</p>'+cards.join('')+'</section>'):'';
-  }
 
   // light client-side slop suppression for search excerpts (roll-call signature)
   function looksProcedural(h){

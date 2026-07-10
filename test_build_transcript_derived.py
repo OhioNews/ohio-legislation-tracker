@@ -32,6 +32,23 @@ class DerivedTests(unittest.TestCase):
         self.tmp = tempfile.mkdtemp()
         self.addCleanup(shutil.rmtree, self.tmp, True)
 
+    def test_speakers_are_enriched_objects(self):
+        roster = [{'people_id': 1, 'name': 'Robert McColley', 'first': 'Robert',
+                   'last': 'McColley', 'middle': '', 'nickname': '', 'suffix': '',
+                   'party': 'R', 'chamber': 'senate', 'district': 1}]
+        d = {'program': {'id': 5, 'name': 'P5', 'release_date': '2026-06-10',
+                         'duration': 3600, 'series_id': 26, 'series_name': 'Senate',
+                         'chamber': 'SENATE'},
+             'captions': [],
+             'sections': [{'start': 0, 'end': 3600, 'type': 'Resolution', 'label': 'x',
+                           'bills': [], 'persons': ['Robert McColley']}]}
+        dm.save_distilled(d, self.tmp)
+        index, _ = bd.build_index_and_topics(self.tmp, {}, [], bill_titles={}, roster=roster)
+        speaker = index[0]['speakers'][0]
+        self.assertEqual(speaker['name'], 'Robert McColley')
+        self.assertEqual(speaker['party'], 'R')
+        self.assertTrue(speaker['matched'])
+
     def test_topic_included_only_above_threshold(self):
         make_distilled(self.tmp, 1, '2026-06-10', rich_lines('data centers', 10))  # >=8 -> in
         make_distilled(self.tmp, 2, '2026-06-11', rich_lines('data centers', 3))   # <8 -> out

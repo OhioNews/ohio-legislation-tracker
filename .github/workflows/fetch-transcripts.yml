@@ -27,6 +27,11 @@ jobs:
             python3 fetch_transcripts.py
           fi
 
+      - name: Build roster
+        env:
+          LEGISCAN_API_KEY: ${{ secrets.LEGISCAN_API_KEY }}
+        run: python3 build_roster.py
+
       - name: Build derived data
         run: python3 build_transcript_derived.py
 

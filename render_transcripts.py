@@ -9,6 +9,9 @@ import json
 import os
 
 import transcript_distill as dm
+import bill_refs as brefs
+import roster_match as rmatch
+import roster_enrich as renrich
 
 CHUNK_SECONDS = 60
 FLOOR_SERIES = (25, 26)
@@ -37,6 +40,13 @@ position:sticky;top:0;z-index:5}
 .findcount{color:#666;min-width:4.2rem;text-align:center;white-space:nowrap}
 mark.find-hit{background:#ffe58a;color:inherit;padding:0 1px;border-radius:2px}
 mark.find-hit.current{background:#ff8c00;color:#fff}
+.bills{margin:1.2rem 0;font-family:system-ui,sans-serif;font-size:.9rem}
+.bills h2{font-size:.95rem} .bills ul{list-style:none;padding:0;margin:.4rem 0}
+.bills li{padding:.15rem 0} .bills .track{color:#555;font-size:.8rem}
+.speakers{margin:1.2rem 0;font-family:system-ui,sans-serif;font-size:.9rem}
+.speakers h2{font-size:.95rem} .speakers ul{list-style:none;padding:0;margin:.4rem 0}
+.speakers li{padding:.15rem 0}
+.speakers .pd{color:#555} .speakers .src{color:#888;font-style:italic;font-size:.8rem}
 """
 
 # Highlight-and-skip-through find widget for a single transcript page. Runs
@@ -116,15 +126,71 @@ def _chunks(captions, start, end):
     return chunks
 
 
-def render_program(d):
+def bills_in_context(d, known_bills=None):
+    """The bills this meeting was about — marker agenda bills plus bills spoken
+    in the captions — each resolved to the section anchor where it comes up."""
+    sections = d.get('sections') or []
+    times = {}  # canonical bill -> earliest time
+    for s in sections:
+        for b in s.get('bills') or []:
+            t = s.get('start') or 0
+            if b not in times or t < times[b]:
+                times[b] = t
+    marker_bills = set(times)
+    for ref in brefs.scan_bill_refs(d):
+        b, t = ref['bill'], ref['time']
+        if known_bills is not None and b not in known_bills and b not in marker_bills:
+            continue
+        if b not in times or t < times[b]:
+            times[b] = t
+    out = []
+    for b, t in times.items():
+        sec = dm.section_for(sections, t) if sections else None
+        anchor = int(sec['start']) if sec else 0
+        out.append({'bill': b, 'anchor': anchor})
+    out.sort(key=lambda x: x['anchor'])
+    return out
+
+
+def render_program(d, roster=None):
     p = d['program']
     e = html.escape
     is_floor = p['series_id'] in FLOOR_SERIES
     ptype = 'Floor session' if is_floor else 'Committee hearing'
-    speakers = sorted({n for s in d['sections'] for n in s['persons']})
+    if roster is None:
+        roster = rmatch.load_roster()
+    speakers = renrich.enrich_speakers(d, roster)
+    speaker_names = [s['name'] for s in speakers]
     bill_segments = [{'bill': b, 'start': s['start'], 'end': s['end']}
                      for s in d['sections'] for b in s['bills']]
     video = VIDEO_URL_TEMPLATE.format(pid=p['id'])
+
+    bic = bills_in_context(d)
+
+    def _bill_line(item):
+        num = item['bill']
+        compact = num.replace(' ', '')
+        tracker = f'../ohio-legislation-tracker-LIVE.html?bill={e(compact)}&ga=136'
+        return (f'<li><a href="#t{item["anchor"]}">{e(num)}</a> '
+                f'<a class="track" href="{tracker}" target="_blank" rel="noopener">tracker &#8599;</a></li>')
+
+    bills_panel = ('<section class="bills"><h2>Bills discussed</h2><ul>'
+                   + ''.join(_bill_line(b) for b in bic)
+                   + '</ul></section>') if bic else ''
+
+    def _speaker_line(s):
+        if not s['matched']:
+            return f"<li>{e(s['name'])}</li>"
+        loc = (f"{s['party']}-{s['district']}" if s['party'] and s['district']
+               else (s['party'] or ''))
+        pd = f' <span class="pd">({e(loc)})</span>' if loc else ''
+        tag = (' <span class="src">heard in introductions</span>'
+               if s['source'] == 'intro-scan' else '')
+        return f"<li>{e(s['name'])}{pd}{tag}</li>"
+
+    speaker_panel = ('<section class="speakers"><h2>On the record</h2><ul>'
+                     + ''.join(_speaker_line(s) for s in speakers)
+                     + '</ul></section>') if speakers else ''
 
     parts = [f"""<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -133,7 +199,7 @@ def render_program(d):
 <div style="display:none">
 <span data-pagefind-filter="chamber">{e(p['chamber'] or '')}</span>
 <span data-pagefind-filter="type">{ptype}</span>
-{''.join(f'<span data-pagefind-filter="speaker">{e(n)}</span>' for n in speakers)}
+{''.join(f'<span data-pagefind-filter="speaker">{e(n)}</span>' for n in speaker_names)}
 <span data-pagefind-meta="date">{e(p['release_date'])}</span>
 <span data-pagefind-meta="program_id">{p['id']}</span>
 <span data-pagefind-meta="series_name">{e(p['series_name'])}</span>
@@ -151,7 +217,9 @@ def render_program(d):
 <button id="findNext" type="button" title="Next match (Enter)">&darr;</button>
 <span id="findCount" class="findcount"></span>
 <button id="findClear" type="button" title="Clear">&times;</button>
-</div>"""]
+</div>
+{speaker_panel}
+{bills_panel}"""]
 
     for s in d['sections']:
         parts.append(f'<h2 id="t{int(s["start"])}">{hms(s["start"])} · {e(s["label"])}</h2>')
@@ -189,12 +257,13 @@ def render_index(programs_index):
 
 def render_all(programs_dir, index_path, out_dir):
     os.makedirs(out_dir, exist_ok=True)
+    roster = rmatch.load_roster()
     count = 0
     for path in sorted(glob.glob(os.path.join(programs_dir, '*.json.gz'))):
         d = dm.load_distilled(path)
         out = os.path.join(out_dir, f"{d['program']['id']}.html")
         with open(out, 'w', encoding='utf-8') as f:
-            f.write(render_program(d))
+            f.write(render_program(d, roster=roster))
         count += 1
     with open(index_path, encoding='utf-8') as f:
         programs_index = json.load(f)

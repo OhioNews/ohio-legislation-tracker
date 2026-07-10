@@ -13,6 +13,8 @@ from datetime import datetime, timedelta, timezone
 
 import transcript_distill as dm
 import transcript_relevance as rel
+import roster_match as rmatch
+import roster_enrich as renrich
 
 DATA_DIR = 'ohio_transcript_data'
 PROGRAMS_DIR = os.path.join(DATA_DIR, 'programs')
@@ -55,11 +57,13 @@ def _bill_matches_topic(num, patterns, bill_titles):
     return bool(text) and rel.line_matches(text, patterns) > 0
 
 
-def build_index_and_topics(programs_dir, state, curated, now=None, bill_titles=None):
+def build_index_and_topics(programs_dir, state, curated, now=None, bill_titles=None, roster=None):
     now = now or datetime.now(timezone.utc).date().isoformat()
     cutoff = (datetime.fromisoformat(now) - timedelta(days=RECENT_DAYS)).date().isoformat()
     if bill_titles is None:
         bill_titles = load_bill_titles()
+    if roster is None:
+        roster = rmatch.load_roster()
 
     compiled = {t['slug']: rel.compile_aliases(t['aliases']) for t in curated}
     topics = {t['slug']: {'name': t['name'], 'brief': t.get('brief', ''),
@@ -71,7 +75,7 @@ def build_index_and_topics(programs_dir, state, curated, now=None, bill_titles=N
         d = dm.load_distilled(path)
         p = d['program']
         marker_bills = sorted({b for s in d['sections'] for b in s['bills']})
-        speakers = sorted({n for s in d['sections'] for n in s['persons']})
+        speakers = renrich.enrich_speakers(d, roster)
         index.append({'id': p['id'], 'name': p['name'], 'date': p['release_date'],
                       'series_name': p['series_name'], 'chamber': p['chamber'],
                       'is_floor': p['series_id'] in FLOOR_SERIES,

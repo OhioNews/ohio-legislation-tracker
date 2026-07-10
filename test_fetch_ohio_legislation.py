@@ -265,6 +265,26 @@ class TestChangesFeed(TempDataDirTestCase):
         )
         self.assertEqual(self.read_changes(), [])
 
+    def test_effective_date_reclassification_is_not_news(self):
+        # Pre-fix records stored the scheduled 'Effective' row as the last
+        # action, dated at the future effective date. After the fix the same
+        # enacted bill formats to its real signing action — a one-time
+        # bookkeeping change the daily monitor should not surface.
+        self.write_bills([self.existing_hb1(status='became-law',
+                                            action='Effective', date='2026-09-23')])
+        updated = minimal_bill(1, 'HB1')
+        updated['status'] = 4
+        updated['history'] = [
+            {'action': 'Signed by Governor', 'date': '2026-06-20'},
+            {'action': 'Effective', 'date': '2026-09-23'},
+        ]
+        self.run_main_with(
+            {'0': {'bill_id': 1, 'change_hash': 'new'}},
+            {'1': updated},
+            stored={'1': 'old'},
+        )
+        self.assertEqual(self.read_changes(), [])
+
     def test_real_enactment_with_new_action_is_recorded(self):
         self.write_bills([self.existing_hb1(status='passed',
                                             action='Sent to Governor', date='2026-06-20')])
@@ -300,6 +320,58 @@ class TestChangesFeed(TempDataDirTestCase):
         self.assertNotIn('SB99', numbers, 'stale entries must be pruned')
         self.assertIn('SB98', numbers, 'recent entries must survive')
         self.assertIn('HB1', numbers, 'new entries must be added')
+
+
+class TestEffectiveDateHandling(unittest.TestCase):
+    """A law's scheduled 'Effective' history row records its effective date,
+    not a real legislative action. In Ohio that date is often ~90 days out, so
+    it must not become the bill's last action or drive recency sorting."""
+
+    def formatted_with_history(self, history, status_date='2026-01-01'):
+        b = minimal_bill(1, 'HB1')
+        b['status'] = 4
+        b['status_date'] = status_date
+        b['history'] = history
+        return fetcher.format_bill_for_widget(b)
+
+    def test_effective_row_becomes_effective_date_not_last_action(self):
+        out = self.formatted_with_history([
+            {'action': 'Signed by Governor', 'date': '2026-06-20'},
+            {'action': 'Effective', 'date': '2026-09-23'},
+        ])
+        self.assertEqual(out['effective_date'], '2026-09-23')
+        self.assertEqual(out['last_action'], 'Signed by Governor')
+        self.assertEqual(out['last_action_date'], '2026-06-20')
+
+    def test_history_without_effective_row_is_unchanged(self):
+        out = self.formatted_with_history([
+            {'action': 'Passed House', 'date': '2026-07-05'},
+        ])
+        self.assertEqual(out['effective_date'], '')
+        self.assertEqual(out['last_action'], 'Passed House')
+        self.assertEqual(out['last_action_date'], '2026-07-05')
+
+    def test_only_effective_row_falls_back_to_status_date(self):
+        out = self.formatted_with_history(
+            [{'action': 'Effective', 'date': '2026-09-23'}],
+            status_date='2026-09-23')
+        self.assertEqual(out['effective_date'], '2026-09-23')
+        self.assertEqual(out['last_action'], 'No recent action')
+        self.assertEqual(out['last_action_date'], '2026-09-23')
+
+    def test_effective_appropriations_variant_detected(self):
+        out = self.formatted_with_history([
+            {'action': 'Signed by Governor', 'date': '2026-06-18'},
+            {'action': 'Effective Appropriations effective June 18, 2026',
+             'date': '2026-09-17'},
+        ])
+        self.assertEqual(out['effective_date'], '2026-09-17')
+        self.assertEqual(out['last_action'], 'Signed by Governor')
+        self.assertEqual(out['last_action_date'], '2026-06-18')
+
+    def test_bill_without_history_has_empty_effective_date(self):
+        out = fetcher.format_bill_for_widget(minimal_bill(1, 'HB1'))
+        self.assertEqual(out['effective_date'], '')
 
 
 class TestStatusMapping(unittest.TestCase):

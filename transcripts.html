@@ -127,7 +127,7 @@ section{margin-bottom:1.8rem} section>h2{font-size:1.12rem;margin:0 0 .3rem}
   function findTopic(term){var q=(term||'').toLowerCase().trim();
     return aliasIndex[q]||aliasIndex[q.replace(/s$/,'')]||aliasIndex[q+'s']||null}
   function routeOrSearch(term){var slug=findTopic(term);
-    if(slug){setURL({topic:slug});showTopic(slug)}else{setURL({q:term});runQuery(term)}}
+    if(slug){setURL({topic:slug,find:term});showTopic(slug,term)}else{setURL({q:term});runQuery(term)}}
 
   // ----- landing grid (sorted by recent activity) -----
   var entries=Object.keys(topics).map(function(slug){return[slug,topics[slug]]});
@@ -145,13 +145,13 @@ section{margin-bottom:1.8rem} section>h2{font-size:1.12rem;margin:0 0 .3rem}
     grid.appendChild(b);
   });
 
-  function setURL(p){var u=new URL(location);u.searchParams.delete('q');u.searchParams.delete('topic');
+  function setURL(p){var u=new URL(location);u.searchParams.delete('q');u.searchParams.delete('topic');u.searchParams.delete('find');
     Object.keys(p).forEach(function(k){if(p[k])u.searchParams.set(k,p[k])});history.pushState(null,'',u)}
   function scrollTop(){window.scrollTo({top:0,behavior:'auto'})}
   window.showLanding=function(){$('landing').classList.remove('hidden');$('topicView').classList.add('hidden');$('searchView').classList.add('hidden');scrollTop()}
 
   // ----- topic view -----
-  window.showTopic=function(slug){
+  window.showTopic=function(slug,findTerm){
     var t=topics[slug]; if(!t){return runQuery(slug.replace(/-/g,' '))}
     $('landing').classList.add('hidden');$('searchView').classList.add('hidden');$('topicView').classList.remove('hidden');
     $('tvName').textContent=t.name;
@@ -173,7 +173,7 @@ section{margin-bottom:1.8rem} section>h2{font-size:1.12rem;margin:0 0 .3rem}
         '<div><div class="head"><span class="chamber '+chClass+'">'+esc(m.chamber||'')+'</span>'+
         '<span class="name">'+esc(m.series_name||m.name||'')+'</span><span class="date">'+esc(m.date||'')+'</span></div></div>'+
         '<div class="said">…'+m.excerpt+'…</div>'+
-        '<div class="watch"><a href="'+VIDEO+m.id+'">▶ Watch on ohiochannel.org</a> · <a href="transcripts/'+m.id+'.html">read transcript</a></div></div>';
+        '<div class="watch"><a href="'+VIDEO+m.id+'">▶ Watch on ohiochannel.org</a> · <a href="transcripts/'+m.id+'.html'+(findTerm?('?find='+encodeURIComponent(findTerm)):'')+'">read transcript</a></div></div>';
     });
     if((t.meetings||[]).length>25)html+='<p class="note" style="padding-top:1rem">+ '+((t.meetings.length)-25)+' more meetings</p>';
     html+='</section>';
@@ -226,7 +226,7 @@ section{margin-bottom:1.8rem} section>h2{font-size:1.12rem;margin:0 0 .3rem}
   $('go').onclick=function(){var v=$('q').value.trim();if(v)routeOrSearch(v)};
   $('q').addEventListener('keydown',function(e){if(e.key==='Enter')$('go').click()});
   var usp=new URLSearchParams(location.search);
-  if(usp.get('topic'))showTopic(usp.get('topic'));
+  if(usp.get('topic'))showTopic(usp.get('topic'),usp.get('find'));
   else if(usp.get('q')){$('q').value=usp.get('q');routeOrSearch(usp.get('q'))}
 })();
 </script>

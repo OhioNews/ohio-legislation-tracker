@@ -1,5 +1,115 @@
 [
   {
+    "run_date": "2026-07-14",
+    "number": "HB455",
+    "title": "Regards the operation of public schools and the DEW",
+    "status": "became-law",
+    "prev_status": "passed",
+    "is_new": false,
+    "last_action": "Signed By The Governor",
+    "last_action_date": "2026-07-10",
+    "url": "https://legiscan.com/OH/bill/HB455/2025"
+  },
+  {
+    "run_date": "2026-07-14",
+    "number": "HR500",
+    "title": "Honoring the Village of Meyers Lake on its One Hundredth Anniversary.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-07-13",
+    "url": "https://legiscan.com/OH/bill/HR500/2025"
+  },
+  {
+    "run_date": "2026-07-14",
+    "number": "HR501",
+    "title": "Honoring the Streetsboro High School boys 4x200-meter relay team as the 2026 Division III State Champion.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-07-13",
+    "url": "https://legiscan.com/OH/bill/HR501/2025"
+  },
+  {
+    "run_date": "2026-07-14",
+    "number": "HR502",
+    "title": "Honoring Riley Jones as a 2026 Division I State Track and Field Champion.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-07-13",
+    "url": "https://legiscan.com/OH/bill/HR502/2025"
+  },
+  {
+    "run_date": "2026-07-14",
+    "number": "HR503",
+    "title": "Honoring Dominic Knapp as the 2026 Division III State Champion in the boys pole vault.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-07-13",
+    "url": "https://legiscan.com/OH/bill/HR503/2025"
+  },
+  {
+    "run_date": "2026-07-14",
+    "number": "HR504",
+    "title": "Honoring Anthony Bontempo as the 2026 Division II State Champion in the high jump.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-07-13",
+    "url": "https://legiscan.com/OH/bill/HR504/2025"
+  },
+  {
+    "run_date": "2026-07-14",
+    "number": "HR505",
+    "title": "Honoring Samantha Elder as the 2026 Mrs. Ohio America.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-07-13",
+    "url": "https://legiscan.com/OH/bill/HR505/2025"
+  },
+  {
+    "run_date": "2026-07-14",
+    "number": "SR410",
+    "title": "Honoring the Archbishop Alter High School boys 4x400-meter relay team on winning the 2026 Division III State Championship.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-07-13",
+    "url": "https://legiscan.com/OH/bill/SR410/2025"
+  },
+  {
+    "run_date": "2026-07-14",
+    "number": "SR411",
+    "title": "Honoring Ethan Ireland as the 2026 Division I State Champion in the boys pole vault.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-07-13",
+    "url": "https://legiscan.com/OH/bill/SR411/2025"
+  },
+  {
+    "run_date": "2026-07-14",
+    "number": "SR412",
+    "title": "Honoring the Chaminade Julienne High School girls track and field team on winning the 2026 Division II State Championship.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-07-13",
+    "url": "https://legiscan.com/OH/bill/SR412/2025"
+  },
+  {
     "run_date": "2026-07-10",
     "number": "SB162",
     "title": "Regards timing of health insurer recoupment from providers",

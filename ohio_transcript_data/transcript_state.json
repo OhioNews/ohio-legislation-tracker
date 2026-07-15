@@ -7083,20 +7083,13 @@
     "name": "Ohio House and Senate Select Committees on Data Centers - 5-27-2026"
   },
   "209768": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-07-14",
+    "status": "archived",
     "release_date": "2026-07-13",
-    "name": "Ohio Controlling Board - 7-13-2026",
-    "program": {
-      "id": 209768,
-      "fullName": "Ohio Controlling Board - 7-13-2026",
-      "releaseDate": "2026-07-13 00:00:00",
-      "duration": 4482,
-      "series": {
-        "id": 1001052,
-        "name": "Ohio Controlling Board",
-        "chamber": "JOINT"
-      }
-    }
+    "name": "Ohio Controlling Board - 7-13-2026"
+  },
+  "209788": {
+    "status": "archived",
+    "release_date": "2026-07-14",
+    "name": "Ohio Joint Committee on Agency Rule Review - 7-14-2026"
   }
 }

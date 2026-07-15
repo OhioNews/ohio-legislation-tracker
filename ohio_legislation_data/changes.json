@@ -1,5 +1,49 @@
 [
   {
+    "run_date": "2026-07-15",
+    "number": "HB973",
+    "title": "Create emergency vehicle access routes across railroads",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-07-13",
+    "url": "https://legiscan.com/OH/bill/HB973/2025"
+  },
+  {
+    "run_date": "2026-07-15",
+    "number": "HB974",
+    "title": "Designate LCpl Richard O. Fisher Memorial Highway",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-07-13",
+    "url": "https://legiscan.com/OH/bill/HB974/2025"
+  },
+  {
+    "run_date": "2026-07-15",
+    "number": "HB975",
+    "title": "Allow officer to petition for removal from a Brady-Giglio list",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-07-13",
+    "url": "https://legiscan.com/OH/bill/HB975/2025"
+  },
+  {
+    "run_date": "2026-07-15",
+    "number": "SB463",
+    "title": "Regards threat assessment team, behavioral threat assessment plan",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-07-13",
+    "url": "https://legiscan.com/OH/bill/SB463/2025"
+  },
+  {
     "run_date": "2026-07-14",
     "number": "HB455",
     "title": "Regards the operation of public schools and the DEW",

@@ -1,19 +1,6 @@
 {
-  "fetched_at": "2026-07-15T02:56:44.233907Z",
+  "fetched_at": "2026-07-15T08:25:32.068708Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
-  "events": [
-    {
-      "allDay": null,
-      "backgroundColor": "#ad3838",
-      "start": "2026-07-14T11:00:00",
-      "end": "T",
-      "id": null,
-      "title": "House Joint Committee on Agency Rule Review Committee Meeting",
-      "textColor": "#ffffff",
-      "url": "calendar/events/cmte_j_jcarr_1_2026-07-14-1100_1444",
-      "status": "Scheduled",
-      "agenda_items": []
-    }
-  ]
+  "events": []
 }

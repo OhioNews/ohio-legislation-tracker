@@ -65,55 +65,19 @@
     "name": "Ohio Senate - 12-9-2025"
   },
   "194437": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-07-07",
+    "status": "archived",
     "release_date": "2025-11-19",
-    "name": "Ohio Senate - Ohio Senate - 11-19-2025 part 4",
-    "program": {
-      "id": 194437,
-      "fullName": "Ohio Senate - Ohio Senate - 11-19-2025 part 4",
-      "releaseDate": "2025-11-19 00:00:00",
-      "duration": 2465,
-      "series": {
-        "id": 25,
-        "name": "Ohio Senate",
-        "chamber": "SENATE"
-      }
-    }
+    "name": "Ohio Senate - Ohio Senate - 11-19-2025 part 4"
   },
   "194436": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-07-07",
+    "status": "archived",
     "release_date": "2025-11-19",
-    "name": "Ohio Senate - Ohio Senate - 11-19-2025 part 3",
-    "program": {
-      "id": 194436,
-      "fullName": "Ohio Senate - Ohio Senate - 11-19-2025 part 3",
-      "releaseDate": "2025-11-19 00:00:00",
-      "duration": 2547,
-      "series": {
-        "id": 25,
-        "name": "Ohio Senate",
-        "chamber": "SENATE"
-      }
-    }
+    "name": "Ohio Senate - Ohio Senate - 11-19-2025 part 3"
   },
   "194396": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-07-07",
+    "status": "archived",
     "release_date": "2025-11-19",
-    "name": "Ohio Senate - Ohio Senate - 11-19-2025 part 2",
-    "program": {
-      "id": 194396,
-      "fullName": "Ohio Senate - Ohio Senate - 11-19-2025 part 2",
-      "releaseDate": "2025-11-19 00:00:00",
-      "duration": 12675,
-      "series": {
-        "id": 25,
-        "name": "Ohio Senate",
-        "chamber": "SENATE"
-      }
-    }
+    "name": "Ohio Senate - Ohio Senate - 11-19-2025 part 2"
   },
   "176287": {
     "status": "archived",
@@ -365,21 +329,9 @@
     "name": "Ohio House of Representatives - 10-29-2025"
   },
   "175215": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-07-07",
+    "status": "archived",
     "release_date": "2025-10-22",
-    "name": "Ohio House of Representatives - 10-22-2025",
-    "program": {
-      "id": 175215,
-      "fullName": "Ohio House of Representatives - 10-22-2025",
-      "releaseDate": "2025-10-22 00:00:00",
-      "duration": 8405,
-      "series": {
-        "id": 26,
-        "name": "Ohio House of Representatives",
-        "chamber": "HOUSE"
-      }
-    }
+    "name": "Ohio House of Representatives - 10-22-2025"
   },
   "175127": {
     "status": "archived",
@@ -657,21 +609,9 @@
     "name": "Ohio House Finance Committee - 3-13-2025"
   },
   "169106": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-07-07",
+    "status": "archived",
     "release_date": "2025-03-12",
-    "name": "Ohio House Finance Committee - 3-12-2025 Part 2",
-    "program": {
-      "id": 169106,
-      "fullName": "Ohio House Finance Committee - 3-12-2025 Part 2",
-      "releaseDate": "2025-03-12 00:00:00",
-      "duration": 12311,
-      "series": {
-        "id": 107904,
-        "name": "Ohio House Finance Committee",
-        "chamber": "HOUSE"
-      }
-    }
+    "name": "Ohio House Finance Committee - 3-12-2025 Part 2"
   },
   "168811": {
     "status": "archived",
@@ -714,21 +654,9 @@
     "name": "Ohio House Finance Committee - 2-6-2025"
   },
   "167386": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-07-07",
+    "status": "archived",
     "release_date": "2025-02-05",
-    "name": "Ohio House Finance Committee - 2-5-2025 Part 2",
-    "program": {
-      "id": 167386,
-      "fullName": "Ohio House Finance Committee - 2-5-2025 Part 2",
-      "releaseDate": "2025-02-05 00:00:00",
-      "duration": 9763,
-      "series": {
-        "id": 107904,
-        "name": "Ohio House Finance Committee",
-        "chamber": "HOUSE"
-      }
-    }
+    "name": "Ohio House Finance Committee - 2-5-2025 Part 2"
   },
   "167151": {
     "status": "archived",
@@ -811,21 +739,9 @@
     "name": "Ohio Senate Finance Committee - 6-10-2025"
   },
   "172766": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-07-07",
+    "status": "archived",
     "release_date": "2025-06-06",
-    "name": "Ohio Senate Finance Committee - 6-6-2025 Part 2",
-    "program": {
-      "id": 172766,
-      "fullName": "Ohio Senate Finance Committee - 6-6-2025 Part 2",
-      "releaseDate": "2025-06-06 00:00:00",
-      "duration": 3181,
-      "series": {
-        "id": 107935,
-        "name": "Ohio Senate Finance Committee",
-        "chamber": "SENATE"
-      }
-    }
+    "name": "Ohio Senate Finance Committee - 6-6-2025 Part 2"
   },
   "172428": {
     "status": "archived",
@@ -858,38 +774,14 @@
     "name": "Ohio Senate Finance Committee - 5-29-2025"
   },
   "172247": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-07-07",
+    "status": "archived",
     "release_date": "2025-05-28",
-    "name": "Ohio Senate Finance Committee - 5-28-2025 Part 3",
-    "program": {
-      "id": 172247,
-      "fullName": "Ohio Senate Finance Committee - 5-28-2025 Part 3",
-      "releaseDate": "2025-05-28 00:00:00",
-      "duration": 9462,
-      "series": {
-        "id": 107935,
-        "name": "Ohio Senate Finance Committee",
-        "chamber": "SENATE"
-      }
-    }
+    "name": "Ohio Senate Finance Committee - 5-28-2025 Part 3"
   },
   "172246": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-07-07",
+    "status": "archived",
     "release_date": "2025-05-28",
-    "name": "Ohio Senate Finance Committee - 5-28-2025 Part 2",
-    "program": {
-      "id": 172246,
-      "fullName": "Ohio Senate Finance Committee - 5-28-2025 Part 2",
-      "releaseDate": "2025-05-28 00:00:00",
-      "duration": 5076,
-      "series": {
-        "id": 107935,
-        "name": "Ohio Senate Finance Committee",
-        "chamber": "SENATE"
-      }
-    }
+    "name": "Ohio Senate Finance Committee - 5-28-2025 Part 2"
   },
   "172071": {
     "status": "archived",
@@ -897,21 +789,9 @@
     "name": "Ohio Senate Finance Committee - 5-28-2025"
   },
   "172166": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-07-07",
+    "status": "archived",
     "release_date": "2025-05-27",
-    "name": "Ohio Senate Finance Committee - 5-27-2025 part 2",
-    "program": {
-      "id": 172166,
-      "fullName": "Ohio Senate Finance Committee - 5-27-2025 part 2",
-      "releaseDate": "2025-05-27 00:00:00",
-      "duration": 9745,
-      "series": {
-        "id": 107935,
-        "name": "Ohio Senate Finance Committee",
-        "chamber": "SENATE"
-      }
-    }
+    "name": "Ohio Senate Finance Committee - 5-27-2025 part 2"
   },
   "172067": {
     "status": "archived",
@@ -1054,21 +934,9 @@
     "name": "Ohio Senate Education Committee - 6-10-2025"
   },
   "171646": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-07-07",
+    "status": "archived",
     "release_date": "2025-05-14",
-    "name": "Ohio Senate Education Committee - 5-14-2025 Part 2",
-    "program": {
-      "id": 171646,
-      "fullName": "Ohio Senate Education Committee - 5-14-2025 Part 2",
-      "releaseDate": "2025-05-14 00:00:00",
-      "duration": 26051,
-      "series": {
-        "id": 1000473,
-        "name": "Ohio Senate Education Committee",
-        "chamber": "SENATE"
-      }
-    }
+    "name": "Ohio Senate Education Committee - 5-14-2025 Part 2"
   },
   "171371": {
     "status": "archived",
@@ -2741,21 +2609,9 @@
     "name": "Ohio Controlling Board - 2-12-2025"
   },
   "166546": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-07-07",
+    "status": "archived",
     "release_date": "2025-01-13",
-    "name": "Ohio Controlling Board - 1-13-2024",
-    "program": {
-      "id": 166546,
-      "fullName": "Ohio Controlling Board - 1-13-2024",
-      "releaseDate": "2025-01-13 00:00:00",
-      "duration": 1672,
-      "series": {
-        "id": 1001052,
-        "name": "Ohio Controlling Board",
-        "chamber": "JOINT"
-      }
-    }
+    "name": "Ohio Controlling Board - 1-13-2024"
   },
   "208249": {
     "status": "archived",
@@ -2868,21 +2724,9 @@
     "name": "Ohio Senate Transportation Committee - 3-26-2025"
   },
   "169346": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-07-07",
+    "status": "archived",
     "release_date": "2025-03-18",
-    "name": "Ohio Senate Transportation Committee - 3-18-2025 Part 2",
-    "program": {
-      "id": 169346,
-      "fullName": "Ohio Senate Transportation Committee - 3-18-2025 Part 2",
-      "releaseDate": "2025-03-18 00:00:00",
-      "duration": 342,
-      "series": {
-        "id": 1001298,
-        "name": "Ohio Senate Transportation Committee",
-        "chamber": "SENATE"
-      }
-    }
+    "name": "Ohio Senate Transportation Committee - 3-18-2025 Part 2"
   },
   "169307": {
     "status": "archived",
@@ -3315,21 +3159,9 @@
     "name": "Ohio Senate Health Committee - 5-14-2025"
   },
   "171566": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-07-07",
+    "status": "archived",
     "release_date": "2025-05-13",
-    "name": "Ohio Senate Health Committee - 5-13-2025 Part 2",
-    "program": {
-      "id": 171566,
-      "fullName": "Ohio Senate Health Committee - 5-13-2025 Part 2",
-      "releaseDate": "2025-05-13 00:00:00",
-      "duration": 10782,
-      "series": {
-        "id": 1001372,
-        "name": "Ohio Senate Health Committee",
-        "chamber": "SENATE"
-      }
-    }
+    "name": "Ohio Senate Health Committee - 5-13-2025 Part 2"
   },
   "171369": {
     "status": "archived",
@@ -3417,21 +3249,9 @@
     "name": "Ohio Retirement Study Council - 10-9-2025"
   },
   "174986": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-07-07",
+    "status": "archived",
     "release_date": "2025-10-09",
-    "name": "Ohio Retirement Study Council - 10-9-2025 - Subcommittee",
-    "program": {
-      "id": 174986,
-      "fullName": "Ohio Retirement Study Council - 10-9-2025 - Subcommittee",
-      "releaseDate": "2025-10-09 00:00:00",
-      "duration": 69,
-      "series": {
-        "id": 1001392,
-        "name": "Ohio Retirement Study Council",
-        "chamber": "JOINT"
-      }
-    }
+    "name": "Ohio Retirement Study Council - 10-9-2025 - Subcommittee"
   },
   "173946": {
     "status": "archived",
@@ -3844,21 +3664,9 @@
     "name": "Ohio Senate Medicaid Committee - 5-6-2025"
   },
   "170866": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-07-07",
+    "status": "archived",
     "release_date": "2025-04-29",
-    "name": "Ohio Senate Medicaid Committee - 4-29-2025 Part 2",
-    "program": {
-      "id": 170866,
-      "fullName": "Ohio Senate Medicaid Committee - 4-29-2025 Part 2",
-      "releaseDate": "2025-04-29 00:00:00",
-      "duration": 3765,
-      "series": {
-        "id": 1001656,
-        "name": "Ohio Senate Medicaid Committee",
-        "chamber": "SENATE"
-      }
-    }
+    "name": "Ohio Senate Medicaid Committee - 4-29-2025 Part 2"
   },
   "170746": {
     "status": "archived",
@@ -4991,21 +4799,9 @@
     "name": "Ohio House Children and Human Services Committee - 3-4-2025"
   },
   "194524": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-07-07",
+    "status": "archived",
     "release_date": "2025-02-27",
-    "name": "Ohio House Children and Human Services Committee - Ohio House Children and Human Services Committee - 2-27-2025 Part 2",
-    "program": {
-      "id": 194524,
-      "fullName": "Ohio House Children and Human Services Committee - Ohio House Children and Human Services Committee - 2-27-2025 Part 2",
-      "releaseDate": "2025-02-27 00:00:00",
-      "duration": 4390,
-      "series": {
-        "id": 1002059,
-        "name": "Ohio House Children and Human Services Committee",
-        "chamber": "HOUSE"
-      }
-    }
+    "name": "Ohio House Children and Human Services Committee - Ohio House Children and Human Services Committee - 2-27-2025 Part 2"
   },
   "168158": {
     "status": "archived",
@@ -6550,21 +6346,9 @@
     "name": "Ohio House Public Safety Committee - 2-17-2026"
   },
   "176446": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-07-07",
+    "status": "archived",
     "release_date": "2025-11-19",
-    "name": "Ohio House Public Safety Committee - 11-19-2025",
-    "program": {
-      "id": 176446,
-      "fullName": "Ohio House Public Safety Committee - 11-19-2025",
-      "releaseDate": "2025-11-19 00:00:00",
-      "duration": 606,
-      "series": {
-        "id": 1002070,
-        "name": "Ohio House Public Safety Committee",
-        "chamber": "HOUSE"
-      }
-    }
+    "name": "Ohio House Public Safety Committee - 11-19-2025"
   },
   "176106": {
     "status": "archived",
@@ -6622,21 +6406,9 @@
     "name": "Ohio House Public Safety Committee - 5-28-2025"
   },
   "171926": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-07-07",
+    "status": "archived",
     "release_date": "2025-05-20",
-    "name": "Ohio House Public Safety Committee - 5-20-2025 Part 2",
-    "program": {
-      "id": 171926,
-      "fullName": "Ohio House Public Safety Committee - 5-20-2025 Part 2",
-      "releaseDate": "2025-05-20 00:00:00",
-      "duration": 3710,
-      "series": {
-        "id": 1002070,
-        "name": "Ohio House Public Safety Committee",
-        "chamber": "HOUSE"
-      }
-    }
+    "name": "Ohio House Public Safety Committee - 5-20-2025 Part 2"
   },
   "171747": {
     "status": "archived",

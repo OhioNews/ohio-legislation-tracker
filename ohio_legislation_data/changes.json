@@ -1,5 +1,71 @@
 [
   {
+    "run_date": "2026-07-22",
+    "number": "HB646",
+    "title": "Create the Data Center Study Commission",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Recommitted: Energy",
+    "last_action_date": "2026-06-10",
+    "url": "https://legiscan.com/OH/bill/HB646/2025"
+  },
+  {
+    "run_date": "2026-07-22",
+    "number": "SB464",
+    "title": "Allow a tax credit for compensation to skilled trades instructors",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-07-21",
+    "url": "https://legiscan.com/OH/bill/SB464/2025"
+  },
+  {
+    "run_date": "2026-07-22",
+    "number": "SB465",
+    "title": "Update the Ohio Coordinate System re: National Spatial References",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-07-21",
+    "url": "https://legiscan.com/OH/bill/SB465/2025"
+  },
+  {
+    "run_date": "2026-07-22",
+    "number": "SB466",
+    "title": "Increase sentence reduction credit a prisoner may receive",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-07-21",
+    "url": "https://legiscan.com/OH/bill/SB466/2025"
+  },
+  {
+    "run_date": "2026-07-22",
+    "number": "SR417",
+    "title": "Honoring Ella Bouton as a 2026 Division IV State Track and Field Champion.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-07-21",
+    "url": "https://legiscan.com/OH/bill/SR417/2025"
+  },
+  {
+    "run_date": "2026-07-22",
+    "number": "SR418",
+    "title": "Honoring the Lancaster High School softball team as the 2026 Division I State runner-up.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-07-21",
+    "url": "https://legiscan.com/OH/bill/SR418/2025"
+  },
+  {
     "run_date": "2026-07-19",
     "number": "HB976",
     "title": "Regards filing false claims with the state, defrauding the state",
@@ -537,49 +603,5 @@
     "last_action": "Adopted",
     "last_action_date": "2026-07-07",
     "url": "https://legiscan.com/OH/bill/HR499/2025"
-  },
-  {
-    "run_date": "2026-07-07",
-    "number": "SR404",
-    "title": "Honoring the Toledo Museum of Art on its One Hundred Twenty-fifth Anniversary.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-06",
-    "url": "https://legiscan.com/OH/bill/SR404/2025"
-  },
-  {
-    "run_date": "2026-07-07",
-    "number": "SR405",
-    "title": "Honoring the Perkins High School baseball team on winning the 2026 Division IV State Championship.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-06",
-    "url": "https://legiscan.com/OH/bill/SR405/2025"
-  },
-  {
-    "run_date": "2026-07-07",
-    "number": "SR406",
-    "title": "Honoring Mark Lorson on winning the 2026 Division III State Championship in the high jump.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-06",
-    "url": "https://legiscan.com/OH/bill/SR406/2025"
-  },
-  {
-    "run_date": "2026-07-07",
-    "number": "SR407",
-    "title": "Honoring Maryn Erdman as a 2026 Division V State Track and Field Champion.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-06",
-    "url": "https://legiscan.com/OH/bill/SR407/2025"
   }
 ]

@@ -240,21 +240,10 @@
     "name": "Ohio House of Representatives - 6-3-2026"
   },
   "207650": {
-    "status": "awaiting_captions",
+    "status": "captions_unavailable",
     "first_seen": "2026-07-07",
     "release_date": "2026-05-20",
-    "name": "Ohio House of Representatives - 5-20-2026",
-    "program": {
-      "id": 207650,
-      "fullName": "Ohio House of Representatives - 5-20-2026",
-      "releaseDate": "2026-05-20 00:00:00",
-      "duration": 6658,
-      "series": {
-        "id": 26,
-        "name": "Ohio House of Representatives",
-        "chamber": "HOUSE"
-      }
-    }
+    "name": "Ohio House of Representatives - 5-20-2026"
   },
   "207335": {
     "status": "archived",
@@ -297,21 +286,10 @@
     "name": "Ohio House of Representatives - 11-19-2025 Part 2"
   },
   "176288": {
-    "status": "awaiting_captions",
+    "status": "captions_unavailable",
     "first_seen": "2026-07-07",
     "release_date": "2025-11-19",
-    "name": "Ohio House of Representatives - 11-19-2025",
-    "program": {
-      "id": 176288,
-      "fullName": "Ohio House of Representatives - 11-19-2025",
-      "releaseDate": "2025-11-19 00:00:00",
-      "duration": 21744,
-      "series": {
-        "id": 26,
-        "name": "Ohio House of Representatives",
-        "chamber": "HOUSE"
-      }
-    }
+    "name": "Ohio House of Representatives - 11-19-2025"
   },
   "175968": {
     "status": "archived",
@@ -5284,21 +5262,10 @@
     "name": "Ohio House Education Committee - 3-11-2025"
   },
   "168666": {
-    "status": "awaiting_captions",
+    "status": "captions_unavailable",
     "first_seen": "2026-07-07",
     "release_date": "2025-03-05",
-    "name": "Ohio House Education Committee - 3-4-2025 Part 2",
-    "program": {
-      "id": 168666,
-      "fullName": "Ohio House Education Committee - 3-4-2025 Part 2",
-      "releaseDate": "2025-03-05 00:00:00",
-      "duration": 11025,
-      "series": {
-        "id": 1002062,
-        "name": "Ohio House Education Committee",
-        "chamber": "HOUSE"
-      }
-    }
+    "name": "Ohio House Education Committee - 3-4-2025 Part 2"
   },
   "168512": {
     "status": "archived",
@@ -6806,38 +6773,16 @@
     "name": "Ohio House and Senate Select Committees on Data Centers - 6-8-2026"
   },
   "208428": {
-    "status": "awaiting_captions",
+    "status": "captions_unavailable",
     "first_seen": "2026-07-07",
     "release_date": "2026-06-04",
-    "name": "Ohio House and Senate Select Committees on Data Centers - 6-4-2026 Part 3",
-    "program": {
-      "id": 208428,
-      "fullName": "Ohio House and Senate Select Committees on Data Centers - 6-4-2026 Part 3",
-      "releaseDate": "2026-06-04 00:00:00",
-      "duration": null,
-      "series": {
-        "id": 1004473,
-        "name": "Ohio House and Senate Select Committees on Data Centers",
-        "chamber": "JOINT"
-      }
-    }
+    "name": "Ohio House and Senate Select Committees on Data Centers - 6-4-2026 Part 3"
   },
   "208408": {
-    "status": "awaiting_captions",
+    "status": "captions_unavailable",
     "first_seen": "2026-07-07",
     "release_date": "2026-06-04",
-    "name": "Ohio House and Senate Select Committees on Data Centers - 6-4-2026 Part 2",
-    "program": {
-      "id": 208408,
-      "fullName": "Ohio House and Senate Select Committees on Data Centers - 6-4-2026 Part 2",
-      "releaseDate": "2026-06-04 00:00:00",
-      "duration": null,
-      "series": {
-        "id": 1004473,
-        "name": "Ohio House and Senate Select Committees on Data Centers",
-        "chamber": "JOINT"
-      }
-    }
+    "name": "Ohio House and Senate Select Committees on Data Centers - 6-4-2026 Part 2"
   },
   "208389": {
     "status": "archived",

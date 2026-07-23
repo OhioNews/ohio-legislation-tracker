@@ -1,5 +1,71 @@
 [
   {
+    "run_date": "2026-07-23",
+    "number": "HB979",
+    "title": "Regards broadband service infrastructure in a public right-of-way",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-07-22",
+    "url": "https://legiscan.com/OH/bill/HB979/2025"
+  },
+  {
+    "run_date": "2026-07-23",
+    "number": "HB980",
+    "title": "Enact the Rideshare Sexual Assault Prevention Act",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-07-22",
+    "url": "https://legiscan.com/OH/bill/HB980/2025"
+  },
+  {
+    "run_date": "2026-07-23",
+    "number": "HB981",
+    "title": "Regards income tax levied in joint economic development district",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-07-22",
+    "url": "https://legiscan.com/OH/bill/HB981/2025"
+  },
+  {
+    "run_date": "2026-07-23",
+    "number": "HR508",
+    "title": "Honoring the Village of Hamden on its Sesquicentennial.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-07-22",
+    "url": "https://legiscan.com/OH/bill/HR508/2025"
+  },
+  {
+    "run_date": "2026-07-23",
+    "number": "HR509",
+    "title": "Honoring Kylah Meyer on securing first place at the 2026 Division II State Track and Field Championship.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-07-22",
+    "url": "https://legiscan.com/OH/bill/HR509/2025"
+  },
+  {
+    "run_date": "2026-07-23",
+    "number": "HR510",
+    "title": "Honoring the Lake Center Christian School baseball team as the 2026 Division VI State Champion.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-07-22",
+    "url": "https://legiscan.com/OH/bill/HR510/2025"
+  },
+  {
     "run_date": "2026-07-22",
     "number": "HB646",
     "title": "Create the Data Center Study Commission",
@@ -482,126 +548,5 @@
     "last_action": "Adopted",
     "last_action_date": "2026-07-08",
     "url": "https://legiscan.com/OH/bill/SR409/2025"
-  },
-  {
-    "run_date": "2026-07-08",
-    "number": "HR489",
-    "title": "Honoring Ava Schmitmeyer as a 2026 Division IV State Track and Field Champion.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-07",
-    "url": "https://legiscan.com/OH/bill/HR489/2025"
-  },
-  {
-    "run_date": "2026-07-08",
-    "number": "HR490",
-    "title": "Honoring the Minster High School girls 4x800-meter relay team on winning the 2026 Division V State Championship.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-07",
-    "url": "https://legiscan.com/OH/bill/HR490/2025"
-  },
-  {
-    "run_date": "2026-07-08",
-    "number": "HR491",
-    "title": "Honoring Scouting America Scouts BSA Troop 201 on its One Hundredth Anniversary.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-07",
-    "url": "https://legiscan.com/OH/bill/HR491/2025"
-  },
-  {
-    "run_date": "2026-07-08",
-    "number": "HR492",
-    "title": "Honoring Annamarie Montle as a 2026 Division V State Track and Field Champion.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-07",
-    "url": "https://legiscan.com/OH/bill/HR492/2025"
-  },
-  {
-    "run_date": "2026-07-08",
-    "number": "HR493",
-    "title": "Honoring the Scott High School boys 4x200-meter relay team on securing the 2026 Division II State Championship.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-07",
-    "url": "https://legiscan.com/OH/bill/HR493/2025"
-  },
-  {
-    "run_date": "2026-07-08",
-    "number": "HR494",
-    "title": "Honoring Shenandoah Christian Church on its One Hundred Fiftieth Anniversary.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-07",
-    "url": "https://legiscan.com/OH/bill/HR494/2025"
-  },
-  {
-    "run_date": "2026-07-08",
-    "number": "HR495",
-    "title": "Honoring the Bloom-Carroll High School softball team on winning the 2026 Division III State Championship.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-07",
-    "url": "https://legiscan.com/OH/bill/HR495/2025"
-  },
-  {
-    "run_date": "2026-07-08",
-    "number": "HR496",
-    "title": "Honoring Kade Schweikhardt on winning a 2026 Division III State Track and Field Championship.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-07",
-    "url": "https://legiscan.com/OH/bill/HR496/2025"
-  },
-  {
-    "run_date": "2026-07-08",
-    "number": "HR497",
-    "title": "Honoring Carson Holtvogt as a 2026 Division II State Track and Field Champion.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-07",
-    "url": "https://legiscan.com/OH/bill/HR497/2025"
-  },
-  {
-    "run_date": "2026-07-08",
-    "number": "HR498",
-    "title": "In memory of Sergeant Scott Ries.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-07",
-    "url": "https://legiscan.com/OH/bill/HR498/2025"
-  },
-  {
-    "run_date": "2026-07-08",
-    "number": "HR499",
-    "title": "Honoring Brittany Nolletti on winning the 2026 Adidas Middle School National Championship in the pole vault.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-07",
-    "url": "https://legiscan.com/OH/bill/HR499/2025"
   }
 ]

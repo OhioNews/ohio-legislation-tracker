@@ -1,8 +1,20 @@
 {
-  "fetched_at": "2026-07-30T08:38:39.210360Z",
+  "fetched_at": "2026-07-30T14:20:13.126929Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-08-05T11:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Agriculture Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_agriculture_1_2026-08-05-0800_1447",
+      "status": "Scheduled",
+      "agenda_items": []
+    },
     {
       "allDay": null,
       "backgroundColor": "#ad3838",

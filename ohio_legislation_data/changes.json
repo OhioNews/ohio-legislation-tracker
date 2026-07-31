@@ -1,5 +1,49 @@
 [
   {
+    "run_date": "2026-07-31",
+    "number": "SR419",
+    "title": "Honoring the Avon High School 7-on-7 football team as the 2026 Ohio High School Football Coaches Association Division I State Champion.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-07-27",
+    "url": "https://legiscan.com/OH/bill/SR419/2025"
+  },
+  {
+    "run_date": "2026-07-31",
+    "number": "SR420",
+    "title": "Honoring the Danville High School softball team on winning the 2026 Division VI State Championship.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-07-27",
+    "url": "https://legiscan.com/OH/bill/SR420/2025"
+  },
+  {
+    "run_date": "2026-07-31",
+    "number": "SR421",
+    "title": "Honoring the McGuffey Centre on its Centennial.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-07-27",
+    "url": "https://legiscan.com/OH/bill/SR421/2025"
+  },
+  {
+    "run_date": "2026-07-31",
+    "number": "SR422",
+    "title": "In memory of Kenneth R. Cox.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-07-27",
+    "url": "https://legiscan.com/OH/bill/SR422/2025"
+  },
+  {
     "run_date": "2026-07-29",
     "number": "HB982",
     "title": "Enact the Ohio Business Investment Act",
@@ -207,93 +251,5 @@
     "last_action": "Adopted",
     "last_action_date": "2026-07-16",
     "url": "https://legiscan.com/OH/bill/HR506/2025"
-  },
-  {
-    "run_date": "2026-07-16",
-    "number": "SR413",
-    "title": "Honoring the Our Lady of Mount Carmel Italian Festival on its one hundredth year.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-15",
-    "url": "https://legiscan.com/OH/bill/SR413/2025"
-  },
-  {
-    "run_date": "2026-07-16",
-    "number": "SR414",
-    "title": "Honoring Fairfield County as the recipient of two National Association of Counties Achievement Awards.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-15",
-    "url": "https://legiscan.com/OH/bill/SR414/2025"
-  },
-  {
-    "run_date": "2026-07-16",
-    "number": "SR415",
-    "title": "Honoring Dominic Knapp on securing the 2026 Division III State Track and Field Championship in the pole vault.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-15",
-    "url": "https://legiscan.com/OH/bill/SR415/2025"
-  },
-  {
-    "run_date": "2026-07-16",
-    "number": "SR416",
-    "title": "Honoring Alexis Miller as the 2026 Miss Ohio.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-15",
-    "url": "https://legiscan.com/OH/bill/SR416/2025"
-  },
-  {
-    "run_date": "2026-07-15",
-    "number": "HB973",
-    "title": "Create emergency vehicle access routes across railroads",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-07-13",
-    "url": "https://legiscan.com/OH/bill/HB973/2025"
-  },
-  {
-    "run_date": "2026-07-15",
-    "number": "HB974",
-    "title": "Designate LCpl Richard O. Fisher Memorial Highway",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-07-13",
-    "url": "https://legiscan.com/OH/bill/HB974/2025"
-  },
-  {
-    "run_date": "2026-07-15",
-    "number": "HB975",
-    "title": "Allow officer to petition for removal from a Brady-Giglio list",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-07-13",
-    "url": "https://legiscan.com/OH/bill/HB975/2025"
-  },
-  {
-    "run_date": "2026-07-15",
-    "number": "SB463",
-    "title": "Regards threat assessment team, behavioral threat assessment plan",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-07-13",
-    "url": "https://legiscan.com/OH/bill/SB463/2025"
   }
 ]

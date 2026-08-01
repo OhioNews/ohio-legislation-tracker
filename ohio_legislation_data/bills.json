@@ -39490,5 +39490,39 @@
     "committee": null,
     "subject": "general",
     "url": "https://legiscan.com/OH/bill/SR422/2025"
+  },
+  {
+    "bill_id": 2156691,
+    "number": "SR423",
+    "chamber": "senate",
+    "title": "Honoring the Denison University baseball team as the 2026 NCAA Division III National Champion.",
+    "description": "Honoring the Denison University baseball team as the 2026 NCAA Division III National Champion.",
+    "status": "passed",
+    "status_code": 4,
+    "status_date": "2026-07-30",
+    "last_action": "Adopted",
+    "last_action_date": "2026-07-30",
+    "effective_date": "",
+    "sponsor": "Sen. Timothy Schaffer (R-SD-020)",
+    "committee": null,
+    "subject": "general",
+    "url": "https://legiscan.com/OH/bill/SR423/2025"
+  },
+  {
+    "bill_id": 2156714,
+    "number": "SR424",
+    "chamber": "senate",
+    "title": "Honoring The Wooster Brush Company on its One Hundred Seventy-fifth Anniversary.",
+    "description": "Honoring The Wooster Brush Company on its One Hundred Seventy-fifth Anniversary.",
+    "status": "passed",
+    "status_code": 4,
+    "status_date": "2026-07-30",
+    "last_action": "Adopted",
+    "last_action_date": "2026-07-30",
+    "effective_date": "",
+    "sponsor": "Sen. Al Landis (R-SD-031)",
+    "committee": null,
+    "subject": "general",
+    "url": "https://legiscan.com/OH/bill/SR424/2025"
   }
 ]

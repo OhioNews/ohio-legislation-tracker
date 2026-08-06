@@ -1,5 +1,49 @@
 [
   {
+    "run_date": "2026-08-06",
+    "number": "SB467",
+    "title": "Modify when marked police car used for traffic law enforcement",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-08-05",
+    "url": "https://legiscan.com/OH/bill/SB467/2025"
+  },
+  {
+    "run_date": "2026-08-06",
+    "number": "SR425",
+    "title": "Honoring Ra'Ny Hands as a 2026 OHSAA 7th & 8th Grade Division B State Champion in track and field.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-08-05",
+    "url": "https://legiscan.com/OH/bill/SR425/2025"
+  },
+  {
+    "run_date": "2026-08-06",
+    "number": "SR426",
+    "title": "Honoring W.T. Young III as a 2026 Division II State Champion in track and field.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-08-05",
+    "url": "https://legiscan.com/OH/bill/SR426/2025"
+  },
+  {
+    "run_date": "2026-08-06",
+    "number": "SR427",
+    "title": "Honoring the Ohio Mutual Insurance Group on its Quasquicentennial.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-08-05",
+    "url": "https://legiscan.com/OH/bill/SR427/2025"
+  },
+  {
     "run_date": "2026-08-04",
     "number": "HR512",
     "title": "Honoring Taggart Law Firm, L.P.A. on its Sesquicentennial.",
@@ -196,71 +240,5 @@
     "last_action": "Adopted",
     "last_action_date": "2026-07-22",
     "url": "https://legiscan.com/OH/bill/HR510/2025"
-  },
-  {
-    "run_date": "2026-07-22",
-    "number": "HB646",
-    "title": "Create the Data Center Study Commission",
-    "status": "passed-chamber",
-    "prev_status": "passed-chamber",
-    "is_new": false,
-    "last_action": "Recommitted: Energy",
-    "last_action_date": "2026-06-10",
-    "url": "https://legiscan.com/OH/bill/HB646/2025"
-  },
-  {
-    "run_date": "2026-07-22",
-    "number": "SB464",
-    "title": "Allow a tax credit for compensation to skilled trades instructors",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-07-21",
-    "url": "https://legiscan.com/OH/bill/SB464/2025"
-  },
-  {
-    "run_date": "2026-07-22",
-    "number": "SB465",
-    "title": "Update the Ohio Coordinate System re: National Spatial References",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-07-21",
-    "url": "https://legiscan.com/OH/bill/SB465/2025"
-  },
-  {
-    "run_date": "2026-07-22",
-    "number": "SB466",
-    "title": "Increase sentence reduction credit a prisoner may receive",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-07-21",
-    "url": "https://legiscan.com/OH/bill/SB466/2025"
-  },
-  {
-    "run_date": "2026-07-22",
-    "number": "SR417",
-    "title": "Honoring Ella Bouton as a 2026 Division IV State Track and Field Champion.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-21",
-    "url": "https://legiscan.com/OH/bill/SR417/2025"
-  },
-  {
-    "run_date": "2026-07-22",
-    "number": "SR418",
-    "title": "Honoring the Lancaster High School softball team as the 2026 Division I State runner-up.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-21",
-    "url": "https://legiscan.com/OH/bill/SR418/2025"
   }
 ]

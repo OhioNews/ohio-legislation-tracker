@@ -1,31 +1,6 @@
 {
-  "fetched_at": "2026-08-06T03:17:48.744759Z",
+  "fetched_at": "2026-08-06T08:47:00.698307Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
-  "events": [
-    {
-      "allDay": null,
-      "backgroundColor": "#476b9c",
-      "start": "2026-08-05T11:00:00",
-      "end": "T",
-      "id": null,
-      "title": "Senate Agriculture and Natural Resources Committee Meeting",
-      "textColor": "#ffffff",
-      "url": "calendar/events/cmte_s_ag_nat_res_1_2026-08-05-1100_1448",
-      "status": "Scheduled",
-      "agenda_items": []
-    },
-    {
-      "allDay": null,
-      "backgroundColor": "#ad3838",
-      "start": "2026-08-05T11:00:00",
-      "end": "T",
-      "id": null,
-      "title": "House Agriculture Committee Meeting",
-      "textColor": "#ffffff",
-      "url": "calendar/events/cmte_h_agriculture_1_2026-08-05-0800_1447",
-      "status": "Scheduled",
-      "agenda_items": []
-    }
-  ]
+  "events": []
 }

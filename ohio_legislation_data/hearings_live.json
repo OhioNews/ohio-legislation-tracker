@@ -1,6 +1,19 @@
 {
-  "fetched_at": "2026-08-06T14:26:41.848509Z",
+  "fetched_at": "2026-08-07T00:07:52.474551Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
-  "events": []
+  "events": [
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-08-13T10:00:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate Ohio Retirement Study Council Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_j_orsc_1_2026-08-13-1000_1449",
+      "status": "Scheduled",
+      "agenda_items": []
+    }
+  ]
 }

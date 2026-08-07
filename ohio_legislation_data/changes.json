@@ -1,5 +1,71 @@
 [
   {
+    "run_date": "2026-08-07",
+    "number": "HB984",
+    "title": "Require DCY to set foster care reimbursement rates",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-08-06",
+    "url": "https://legiscan.com/OH/bill/HB984/2025"
+  },
+  {
+    "run_date": "2026-08-07",
+    "number": "HB985",
+    "title": "Modify local referenda and initiative signature requirements",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-08-06",
+    "url": "https://legiscan.com/OH/bill/HB985/2025"
+  },
+  {
+    "run_date": "2026-08-07",
+    "number": "HR515",
+    "title": "Honoring Cohen Reer as a 2026 Division III State Wrestling Champion.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-08-06",
+    "url": "https://legiscan.com/OH/bill/HR515/2025"
+  },
+  {
+    "run_date": "2026-08-07",
+    "number": "HR516",
+    "title": "Honoring Trinity Lutheran Church on its Centennial.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-08-06",
+    "url": "https://legiscan.com/OH/bill/HR516/2025"
+  },
+  {
+    "run_date": "2026-08-07",
+    "number": "HR517",
+    "title": "Honoring the Kinsman Volunteer Fire Department on its Centennial.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-08-06",
+    "url": "https://legiscan.com/OH/bill/HR517/2025"
+  },
+  {
+    "run_date": "2026-08-07",
+    "number": "HR518",
+    "title": "Honoring Sink's Flower Shop on its Centennial.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-08-06",
+    "url": "https://legiscan.com/OH/bill/HR518/2025"
+  },
+  {
     "run_date": "2026-08-06",
     "number": "SB467",
     "title": "Modify when marked police car used for traffic law enforcement",
@@ -174,71 +240,5 @@
     "last_action": "Adopted",
     "last_action_date": "2026-07-28",
     "url": "https://legiscan.com/OH/bill/HR511/2025"
-  },
-  {
-    "run_date": "2026-07-23",
-    "number": "HB979",
-    "title": "Regards broadband service infrastructure in a public right-of-way",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-07-22",
-    "url": "https://legiscan.com/OH/bill/HB979/2025"
-  },
-  {
-    "run_date": "2026-07-23",
-    "number": "HB980",
-    "title": "Enact the Rideshare Sexual Assault Prevention Act",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-07-22",
-    "url": "https://legiscan.com/OH/bill/HB980/2025"
-  },
-  {
-    "run_date": "2026-07-23",
-    "number": "HB981",
-    "title": "Regards income tax levied in joint economic development district",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-07-22",
-    "url": "https://legiscan.com/OH/bill/HB981/2025"
-  },
-  {
-    "run_date": "2026-07-23",
-    "number": "HR508",
-    "title": "Honoring the Village of Hamden on its Sesquicentennial.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-22",
-    "url": "https://legiscan.com/OH/bill/HR508/2025"
-  },
-  {
-    "run_date": "2026-07-23",
-    "number": "HR509",
-    "title": "Honoring Kylah Meyer on securing first place at the 2026 Division II State Track and Field Championship.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-22",
-    "url": "https://legiscan.com/OH/bill/HR509/2025"
-  },
-  {
-    "run_date": "2026-07-23",
-    "number": "HR510",
-    "title": "Honoring the Lake Center Christian School baseball team as the 2026 Division VI State Champion.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-22",
-    "url": "https://legiscan.com/OH/bill/HR510/2025"
   }
 ]

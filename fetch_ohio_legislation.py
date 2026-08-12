@@ -14,6 +14,7 @@ import json
 import re
 import os
 import sys
+import time
 from datetime import datetime, timedelta, timezone
 
 # ============================================================================
@@ -38,6 +39,12 @@ CHANGES_KEEP_DAYS = 14
 # Seconds before an API call is abandoned (a hung call would otherwise
 # hang the GitHub Actions job until its own timeout)
 REQUEST_TIMEOUT = 30
+
+# LegiScan intermittently refuses connections for a few seconds at a time.
+# A single attempt is why a whole run dies on a momentary blip, so retry
+# network failures with a widening pause: 2s, then 4s.
+MAX_ATTEMPTS = 3
+RETRY_BASE_WAIT = 2
 
 # How many days ahead to show committee hearings (14 = 2 weeks)
 HEARING_DAYS_AHEAD = 14
@@ -69,26 +76,38 @@ def call_legiscan_api(operation, params=None):
     if params:
         request_params.update(params)
     
-    try:
-        print(f"  \u2192 Calling LegiScan API: {operation}")
-        response = requests.get(base_url, params=request_params, timeout=REQUEST_TIMEOUT)
-        response.raise_for_status()  # Raise error for bad status codes
-        
-        data = response.json()
-        
-        # Check if the API returned an error
-        if data.get('status') != 'OK':
-            print(f"  \u2717 API Error: {data.get('alert', {}).get('message', 'Unknown error')}")
-            return None
-        
-        return data
-        
-    except requests.exceptions.RequestException as e:
-        print(f"  \u2717 Network Error: {e}")
-        return None
-    except json.JSONDecodeError as e:
-        print(f"  \u2717 JSON Decode Error: {e}")
-        return None
+    print(f"  \u2192 Calling LegiScan API: {operation}")
+
+    last_error = None
+
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        try:
+            response = requests.get(base_url, params=request_params, timeout=REQUEST_TIMEOUT)
+            response.raise_for_status()  # Raise error for bad status codes
+
+            data = response.json()
+
+            # Check if the API returned an error. This is LegiScan answering,
+            # not the network failing, so retrying won't change the answer.
+            if data.get('status') != 'OK':
+                print(f"  \u2717 API Error: {data.get('alert', {}).get('message', 'Unknown error')}")
+                return None
+
+            if attempt > 1:
+                print(f"  \u2713 Succeeded on attempt {attempt}")
+
+            return data
+
+        except (requests.exceptions.RequestException, json.JSONDecodeError) as e:
+            last_error = e
+
+            if attempt < MAX_ATTEMPTS:
+                wait = RETRY_BASE_WAIT * (2 ** (attempt - 1))
+                print(f"  \u26a0 {type(e).__name__} on attempt {attempt} of {MAX_ATTEMPTS}; retrying in {wait}s")
+                time.sleep(wait)
+
+    print(f"  \u2717 Failed after {MAX_ATTEMPTS} attempts: {last_error}")
+    return None
 
 
 def load_stored_hashes():

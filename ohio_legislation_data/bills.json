@@ -40037,5 +40037,39 @@
     "committee": null,
     "subject": "general",
     "url": "https://legiscan.com/OH/bill/HB989/2025"
+  },
+  {
+    "bill_id": 2157435,
+    "number": "SR431",
+    "chamber": "senate",
+    "title": "Honoring the Archbold Fire Department on its One Hundred Fiftieth Anniversary.",
+    "description": "Honoring the Archbold Fire Department on its One Hundred Fiftieth Anniversary.",
+    "status": "passed",
+    "status_code": 4,
+    "status_date": "2026-08-17",
+    "last_action": "Adopted",
+    "last_action_date": "2026-08-17",
+    "effective_date": "",
+    "sponsor": "Sen. Robert McColley (R-SD-001)",
+    "committee": null,
+    "subject": "general",
+    "url": "https://legiscan.com/OH/bill/SR431/2025"
+  },
+  {
+    "bill_id": 2157436,
+    "number": "SR432",
+    "chamber": "senate",
+    "title": "Honoring Firelands Health on its One Hundred Fiftieth Anniversary.",
+    "description": "Honoring Firelands Health on its One Hundred Fiftieth Anniversary.",
+    "status": "passed",
+    "status_code": 4,
+    "status_date": "2026-08-17",
+    "last_action": "Adopted",
+    "last_action_date": "2026-08-17",
+    "effective_date": "",
+    "sponsor": "Sen. Theresa Gavarone (R-SD-002)",
+    "committee": null,
+    "subject": "general",
+    "url": "https://legiscan.com/OH/bill/SR432/2025"
   }
 ]

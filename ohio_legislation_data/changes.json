@@ -1,5 +1,27 @@
 [
   {
+    "run_date": "2026-08-18",
+    "number": "SR431",
+    "title": "Honoring the Archbold Fire Department on its One Hundred Fiftieth Anniversary.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-08-17",
+    "url": "https://legiscan.com/OH/bill/SR431/2025"
+  },
+  {
+    "run_date": "2026-08-18",
+    "number": "SR432",
+    "title": "Honoring Firelands Health on its One Hundred Fiftieth Anniversary.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-08-17",
+    "url": "https://legiscan.com/OH/bill/SR432/2025"
+  },
+  {
     "run_date": "2026-08-13",
     "number": "HB986",
     "title": "Prohibit credit union from acquiring Ohio bank",
@@ -273,71 +295,5 @@
     "last_action": "Adopted",
     "last_action_date": "2026-08-03",
     "url": "https://legiscan.com/OH/bill/HR514/2025"
-  },
-  {
-    "run_date": "2026-08-01",
-    "number": "SR423",
-    "title": "Honoring the Denison University baseball team as the 2026 NCAA Division III National Champion.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-30",
-    "url": "https://legiscan.com/OH/bill/SR423/2025"
-  },
-  {
-    "run_date": "2026-08-01",
-    "number": "SR424",
-    "title": "Honoring The Wooster Brush Company on its One Hundred Seventy-fifth Anniversary.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-30",
-    "url": "https://legiscan.com/OH/bill/SR424/2025"
-  },
-  {
-    "run_date": "2026-07-31",
-    "number": "SR419",
-    "title": "Honoring the Avon High School 7-on-7 football team as the 2026 Ohio High School Football Coaches Association Division I State Champion.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-27",
-    "url": "https://legiscan.com/OH/bill/SR419/2025"
-  },
-  {
-    "run_date": "2026-07-31",
-    "number": "SR420",
-    "title": "Honoring the Danville High School softball team on winning the 2026 Division VI State Championship.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-27",
-    "url": "https://legiscan.com/OH/bill/SR420/2025"
-  },
-  {
-    "run_date": "2026-07-31",
-    "number": "SR421",
-    "title": "Honoring the McGuffey Centre on its Centennial.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-27",
-    "url": "https://legiscan.com/OH/bill/SR421/2025"
-  },
-  {
-    "run_date": "2026-07-31",
-    "number": "SR422",
-    "title": "In memory of Kenneth R. Cox.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-07-27",
-    "url": "https://legiscan.com/OH/bill/SR422/2025"
   }
 ]

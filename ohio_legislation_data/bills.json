@@ -40122,5 +40122,39 @@
     "committee": null,
     "subject": "general",
     "url": "https://legiscan.com/OH/bill/HR523/2025"
+  },
+  {
+    "bill_id": 2157455,
+    "number": "SR433",
+    "chamber": "senate",
+    "title": "Honoring the Toledo Fence & Supply Company on its Centennial.",
+    "description": "Honoring the Toledo Fence & Supply Company on its Centennial.",
+    "status": "passed",
+    "status_code": 4,
+    "status_date": "2026-08-19",
+    "last_action": "Adopted",
+    "last_action_date": "2026-08-19",
+    "effective_date": "",
+    "sponsor": "Sen. Paula Hicks-Hudson (D-SD-011)",
+    "committee": null,
+    "subject": "general",
+    "url": "https://legiscan.com/OH/bill/SR433/2025"
+  },
+  {
+    "bill_id": 2157456,
+    "number": "SR434",
+    "chamber": "senate",
+    "title": "Honoring Clay High School on its Centennial.",
+    "description": "Honoring Clay High School on its Centennial.",
+    "status": "passed",
+    "status_code": 4,
+    "status_date": "2026-08-19",
+    "last_action": "Adopted",
+    "last_action_date": "2026-08-19",
+    "effective_date": "",
+    "sponsor": "Sen. Paula Hicks-Hudson (D-SD-011)",
+    "committee": null,
+    "subject": "general",
+    "url": "https://legiscan.com/OH/bill/SR434/2025"
   }
 ]

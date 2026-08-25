@@ -1,5 +1,49 @@
 [
   {
+    "run_date": "2026-08-25",
+    "number": "HR524",
+    "title": "Honoring Good Shepherd United Methodist Church on its Centennial.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-08-24",
+    "url": "https://legiscan.com/OH/bill/HR524/2025"
+  },
+  {
+    "run_date": "2026-08-25",
+    "number": "HR525",
+    "title": "Honoring Marcus Adelman on winning the 3,200-meter run at the 2026 Division II State Track and Field Championships.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-08-24",
+    "url": "https://legiscan.com/OH/bill/HR525/2025"
+  },
+  {
+    "run_date": "2026-08-25",
+    "number": "HR526",
+    "title": "Honoring Bradlee Keehn as a 2026 Division IV OHSAA State Track and Field Champion.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-08-24",
+    "url": "https://legiscan.com/OH/bill/HR526/2025"
+  },
+  {
+    "run_date": "2026-08-25",
+    "number": "HR527",
+    "title": "Honoring St. Columban School on its One Hundredth Anniversary.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-08-24",
+    "url": "https://legiscan.com/OH/bill/HR527/2025"
+  },
+  {
     "run_date": "2026-08-20",
     "number": "SR433",
     "title": "Honoring the Toledo Fence & Supply Company on its Centennial.",
@@ -207,115 +251,5 @@
     "last_action": "Adopted",
     "last_action_date": "2026-08-11",
     "url": "https://legiscan.com/OH/bill/SR430/2025"
-  },
-  {
-    "run_date": "2026-08-07",
-    "number": "HB984",
-    "title": "Require DCY to set foster care reimbursement rates",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-08-06",
-    "url": "https://legiscan.com/OH/bill/HB984/2025"
-  },
-  {
-    "run_date": "2026-08-07",
-    "number": "HB985",
-    "title": "Modify local referenda and initiative signature requirements",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-08-06",
-    "url": "https://legiscan.com/OH/bill/HB985/2025"
-  },
-  {
-    "run_date": "2026-08-07",
-    "number": "HR515",
-    "title": "Honoring Cohen Reer as a 2026 Division III State Wrestling Champion.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-08-06",
-    "url": "https://legiscan.com/OH/bill/HR515/2025"
-  },
-  {
-    "run_date": "2026-08-07",
-    "number": "HR516",
-    "title": "Honoring Trinity Lutheran Church on its Centennial.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-08-06",
-    "url": "https://legiscan.com/OH/bill/HR516/2025"
-  },
-  {
-    "run_date": "2026-08-07",
-    "number": "HR517",
-    "title": "Honoring the Kinsman Volunteer Fire Department on its Centennial.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-08-06",
-    "url": "https://legiscan.com/OH/bill/HR517/2025"
-  },
-  {
-    "run_date": "2026-08-07",
-    "number": "HR518",
-    "title": "Honoring Sink's Flower Shop on its Centennial.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-08-06",
-    "url": "https://legiscan.com/OH/bill/HR518/2025"
-  },
-  {
-    "run_date": "2026-08-06",
-    "number": "SB467",
-    "title": "Modify when marked police car used for traffic law enforcement",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-08-05",
-    "url": "https://legiscan.com/OH/bill/SB467/2025"
-  },
-  {
-    "run_date": "2026-08-06",
-    "number": "SR425",
-    "title": "Honoring Ra'Ny Hands as a 2026 OHSAA 7th & 8th Grade Division B State Champion in track and field.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-08-05",
-    "url": "https://legiscan.com/OH/bill/SR425/2025"
-  },
-  {
-    "run_date": "2026-08-06",
-    "number": "SR426",
-    "title": "Honoring W.T. Young III as a 2026 Division II State Champion in track and field.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-08-05",
-    "url": "https://legiscan.com/OH/bill/SR426/2025"
-  },
-  {
-    "run_date": "2026-08-06",
-    "number": "SR427",
-    "title": "Honoring the Ohio Mutual Insurance Group on its Quasquicentennial.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-08-05",
-    "url": "https://legiscan.com/OH/bill/SR427/2025"
   }
 ]

@@ -40224,5 +40224,39 @@
     "committee": null,
     "subject": "general",
     "url": "https://legiscan.com/OH/bill/HR527/2025"
+  },
+  {
+    "bill_id": 2157528,
+    "number": "SCR21",
+    "chamber": "senate",
+    "title": "Condemn Russian Federation regarding Ukrainian children",
+    "description": "To condemn the Russian Federation for the wrongful and illegal abduction, forcible transfer, and subsequent illegal adoption and indoctrination of children from Ukraine.",
+    "status": "introduced",
+    "status_code": 1,
+    "status_date": "2026-08-11",
+    "last_action": "Offered",
+    "last_action_date": "2026-08-11",
+    "effective_date": "",
+    "sponsor": "Sen. Thomas Patton (R-HD-017)",
+    "committee": null,
+    "subject": "general",
+    "url": "https://legiscan.com/OH/bill/SCR21/2025"
+  },
+  {
+    "bill_id": 2157530,
+    "number": "HB993",
+    "chamber": "house",
+    "title": "Establish requirements for surrogacy agreements",
+    "description": "To enact section 3111.98 of the Revised Code to establish requirements for surrogacy agreements.",
+    "status": "introduced",
+    "status_code": 1,
+    "status_date": "2026-08-24",
+    "last_action": "Introduced",
+    "last_action_date": "2026-08-24",
+    "effective_date": "",
+    "sponsor": "Rep. Adam Mathews (R-HD-056)",
+    "committee": null,
+    "subject": "general",
+    "url": "https://legiscan.com/OH/bill/HB993/2025"
   }
 ]

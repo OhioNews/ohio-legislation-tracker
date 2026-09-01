@@ -1,5 +1,49 @@
 [
   {
+    "run_date": "2026-09-01",
+    "number": "HB994",
+    "title": "Enact the Joining-Opportunities Business and Schools (JOBS) Act",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-08-27",
+    "url": "https://legiscan.com/OH/bill/HB994/2025"
+  },
+  {
+    "run_date": "2026-09-01",
+    "number": "HB995",
+    "title": "Prohibit state agency providing free electric vehicle charging",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-08-27",
+    "url": "https://legiscan.com/OH/bill/HB995/2025"
+  },
+  {
+    "run_date": "2026-09-01",
+    "number": "HR528",
+    "title": "Honoring Stebbins Plumbing on its One Hundredth Anniversary.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-08-27",
+    "url": "https://legiscan.com/OH/bill/HR528/2025"
+  },
+  {
+    "run_date": "2026-09-01",
+    "number": "HR529",
+    "title": "Honoring Team Ohio on winning the 2026 Special Olympics U.S.A. Games Division 1 Championship in basketball.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-08-27",
+    "url": "https://legiscan.com/OH/bill/HR529/2025"
+  },
+  {
     "run_date": "2026-08-26",
     "number": "HB993",
     "title": "Establish requirements for surrogacy agreements",

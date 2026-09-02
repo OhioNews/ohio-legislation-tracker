@@ -1,5 +1,27 @@
 [
   {
+    "run_date": "2026-09-02",
+    "number": "SB468",
+    "title": "Require athletic facilities to install and maintain AEDs",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-01",
+    "url": "https://legiscan.com/OH/bill/SB468/2025"
+  },
+  {
+    "run_date": "2026-09-02",
+    "number": "SR435",
+    "title": "Honoring Team Ohio as the 2026 Special Olympics U.S.A. Games Division 1 gold medalist in basketball.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-09-01",
+    "url": "https://legiscan.com/OH/bill/SR435/2025"
+  },
+  {
     "run_date": "2026-09-01",
     "number": "HB994",
     "title": "Enact the Joining-Opportunities Business and Schools (JOBS) Act",
@@ -163,27 +185,5 @@
     "last_action": "Adopted",
     "last_action_date": "2026-08-18",
     "url": "https://legiscan.com/OH/bill/HR523/2025"
-  },
-  {
-    "run_date": "2026-08-18",
-    "number": "SR431",
-    "title": "Honoring the Archbold Fire Department on its One Hundred Fiftieth Anniversary.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-08-17",
-    "url": "https://legiscan.com/OH/bill/SR431/2025"
-  },
-  {
-    "run_date": "2026-08-18",
-    "number": "SR432",
-    "title": "Honoring Firelands Health on its One Hundred Fiftieth Anniversary.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-08-17",
-    "url": "https://legiscan.com/OH/bill/SR432/2025"
   }
 ]

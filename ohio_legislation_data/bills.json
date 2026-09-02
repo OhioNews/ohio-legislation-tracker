@@ -40326,5 +40326,39 @@
     "committee": null,
     "subject": "general",
     "url": "https://legiscan.com/OH/bill/HB994/2025"
+  },
+  {
+    "bill_id": 2157747,
+    "number": "SR435",
+    "chamber": "senate",
+    "title": "Honoring Team Ohio as the 2026 Special Olympics U.S.A. Games Division 1 gold medalist in basketball.",
+    "description": "Honoring Team Ohio as the 2026 Special Olympics U.S.A. Games Division 1 gold medalist in basketball.",
+    "status": "passed",
+    "status_code": 4,
+    "status_date": "2026-09-01",
+    "last_action": "Adopted",
+    "last_action_date": "2026-09-01",
+    "effective_date": "",
+    "sponsor": "Sen. Nickie Antonio (D-SD-023)",
+    "committee": null,
+    "subject": "general",
+    "url": "https://legiscan.com/OH/bill/SR435/2025"
+  },
+  {
+    "bill_id": 2157755,
+    "number": "SB468",
+    "chamber": "senate",
+    "title": "Require athletic facilities to install and maintain AEDs",
+    "description": "To enact section 3701.852 of the Revised Code to require athletic facilities to install and maintain automated external defibrillators.",
+    "status": "introduced",
+    "status_code": 1,
+    "status_date": "2026-09-01",
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-01",
+    "effective_date": "",
+    "sponsor": "Sen. William DeMora (D-SD-025)",
+    "committee": null,
+    "subject": "healthcare",
+    "url": "https://legiscan.com/OH/bill/SB468/2025"
   }
 ]

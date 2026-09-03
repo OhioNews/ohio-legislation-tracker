@@ -1,5 +1,104 @@
 [
   {
+    "run_date": "2026-09-03",
+    "number": "HB996",
+    "title": "Create United States Military Academy West Point license plate",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-02",
+    "url": "https://legiscan.com/OH/bill/HB996/2025"
+  },
+  {
+    "run_date": "2026-09-03",
+    "number": "HB997",
+    "title": "Regards recovery housing residences and zoning",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-02",
+    "url": "https://legiscan.com/OH/bill/HB997/2025"
+  },
+  {
+    "run_date": "2026-09-03",
+    "number": "HB998",
+    "title": "Reimburse county auditors for recent property tax changes",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-02",
+    "url": "https://legiscan.com/OH/bill/HB998/2025"
+  },
+  {
+    "run_date": "2026-09-03",
+    "number": "HB999",
+    "title": "Prohibit property tax exemptions for data centers",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-02",
+    "url": "https://legiscan.com/OH/bill/HB999/2025"
+  },
+  {
+    "run_date": "2026-09-03",
+    "number": "HB1000",
+    "title": "Regulate deceptive synthetic media with intent to affect election",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-02",
+    "url": "https://legiscan.com/OH/bill/HB1000/2025"
+  },
+  {
+    "run_date": "2026-09-03",
+    "number": "HR530",
+    "title": "Honoring the Elite FC U-16 girls soccer team as the 2026 National Cup Super Group Champion.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-09-02",
+    "url": "https://legiscan.com/OH/bill/HR530/2025"
+  },
+  {
+    "run_date": "2026-09-03",
+    "number": "HR531",
+    "title": "Honoring Brice Fuller as a 2026 Division IV State Track and\u00e2\u20ac\u02c6Field Champion.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-09-02",
+    "url": "https://legiscan.com/OH/bill/HR531/2025"
+  },
+  {
+    "run_date": "2026-09-03",
+    "number": "HR532",
+    "title": "Honoring the Fairless High School boys 4x800-meter relay team on winning the 2026 Division IV State Championship.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-09-02",
+    "url": "https://legiscan.com/OH/bill/HR532/2025"
+  },
+  {
+    "run_date": "2026-09-03",
+    "number": "HR533",
+    "title": "Honoring Nick Strimbu, Inc. on its Centennial.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-09-02",
+    "url": "https://legiscan.com/OH/bill/HR533/2025"
+  },
+  {
     "run_date": "2026-09-02",
     "number": "SB468",
     "title": "Require athletic facilities to install and maintain AEDs",
@@ -152,38 +251,5 @@
     "last_action": "Adopted",
     "last_action_date": "2026-08-19",
     "url": "https://legiscan.com/OH/bill/SR434/2025"
-  },
-  {
-    "run_date": "2026-08-19",
-    "number": "HR521",
-    "title": "Honoring Connor Smith as a 2026 NCAA Division III Indoor Track and Field Champion.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-08-18",
-    "url": "https://legiscan.com/OH/bill/HR521/2025"
-  },
-  {
-    "run_date": "2026-08-19",
-    "number": "HR522",
-    "title": "Honoring Carsen Hostetler on winning a 2026 Division III State Track and Field Championship.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-08-18",
-    "url": "https://legiscan.com/OH/bill/HR522/2025"
-  },
-  {
-    "run_date": "2026-08-19",
-    "number": "HR523",
-    "title": "Honoring Wyatt Lendon on winning a 2026 Division II State Track and Field Championship.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-08-18",
-    "url": "https://legiscan.com/OH/bill/HR523/2025"
   }
 ]

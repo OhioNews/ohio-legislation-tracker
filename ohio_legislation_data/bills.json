@@ -40513,5 +40513,22 @@
     "committee": null,
     "subject": "healthcare",
     "url": "https://legiscan.com/OH/bill/HB997/2025"
+  },
+  {
+    "bill_id": 2157811,
+    "number": "SR436",
+    "chamber": "senate",
+    "title": "In memory of I. Ray Miller.",
+    "description": "In memory of I. Ray Miller.",
+    "status": "passed",
+    "status_code": 4,
+    "status_date": "2026-09-03",
+    "last_action": "Adopted",
+    "last_action_date": "2026-09-03",
+    "effective_date": "",
+    "sponsor": "Sen. Hearcel Craig (D-SD-015)",
+    "committee": null,
+    "subject": "general",
+    "url": "https://legiscan.com/OH/bill/SR436/2025"
   }
 ]

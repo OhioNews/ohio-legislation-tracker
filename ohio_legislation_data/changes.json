@@ -1,5 +1,16 @@
 [
   {
+    "run_date": "2026-09-04",
+    "number": "SR436",
+    "title": "In memory of I. Ray Miller.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-09-03",
+    "url": "https://legiscan.com/OH/bill/SR436/2025"
+  },
+  {
     "run_date": "2026-09-03",
     "number": "HB996",
     "title": "Create United States Military Academy West Point license plate",
@@ -229,27 +240,5 @@
     "last_action": "Adopted",
     "last_action_date": "2026-08-24",
     "url": "https://legiscan.com/OH/bill/HR527/2025"
-  },
-  {
-    "run_date": "2026-08-20",
-    "number": "SR433",
-    "title": "Honoring the Toledo Fence & Supply Company on its Centennial.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-08-19",
-    "url": "https://legiscan.com/OH/bill/SR433/2025"
-  },
-  {
-    "run_date": "2026-08-20",
-    "number": "SR434",
-    "title": "Honoring Clay High School on its Centennial.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-08-19",
-    "url": "https://legiscan.com/OH/bill/SR434/2025"
   }
 ]

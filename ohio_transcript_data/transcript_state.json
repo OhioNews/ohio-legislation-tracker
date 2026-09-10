@@ -6845,20 +6845,8 @@
     "name": "Ohio Joint Committee on Agency Rule Review - 8-24-2026"
   },
   "211128": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-09-09",
+    "status": "archived",
     "release_date": "2026-09-08",
-    "name": "Ohio Joint Committee on Agency Rule Review - 9-8-2026",
-    "program": {
-      "id": 211128,
-      "fullName": "Ohio Joint Committee on Agency Rule Review - 9-8-2026",
-      "releaseDate": "2026-09-08 00:00:00",
-      "duration": 1800,
-      "series": {
-        "id": 1000632,
-        "name": "Ohio Joint Committee on Agency Rule Review",
-        "chamber": "JOINT"
-      }
-    }
+    "name": "Ohio Joint Committee on Agency Rule Review - 9-8-2026"
   }
 }

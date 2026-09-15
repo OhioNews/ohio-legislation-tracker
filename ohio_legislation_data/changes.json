@@ -1,5 +1,93 @@
 [
   {
+    "run_date": "2026-09-15",
+    "number": "SB469",
+    "title": "Regulate use of automated license plate recognition systems",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-14",
+    "url": "https://legiscan.com/OH/bill/SB469/2025"
+  },
+  {
+    "run_date": "2026-09-15",
+    "number": "SB470",
+    "title": "Designate First Lieutenant Ronald Yale, USMC, Memorial Bridge",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-14",
+    "url": "https://legiscan.com/OH/bill/SB470/2025"
+  },
+  {
+    "run_date": "2026-09-15",
+    "number": "SB471",
+    "title": "Add two judges to the Franklin County Court of Common Pleas",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-14",
+    "url": "https://legiscan.com/OH/bill/SB471/2025"
+  },
+  {
+    "run_date": "2026-09-15",
+    "number": "SR438",
+    "title": "Honoring The Toledo Clinic on its One Hundredth Anniversary.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-09-14",
+    "url": "https://legiscan.com/OH/bill/SR438/2025"
+  },
+  {
+    "run_date": "2026-09-15",
+    "number": "SR439",
+    "title": "Honoring Brittney Nolletti as a 2026 Adidas Middle School Outdoor National Champion.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-09-14",
+    "url": "https://legiscan.com/OH/bill/SR439/2025"
+  },
+  {
+    "run_date": "2026-09-15",
+    "number": "SR440",
+    "title": "Honoring the Waynedale High School wrestling team as the 2026 Division III State Dual Champion.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-09-14",
+    "url": "https://legiscan.com/OH/bill/SR440/2025"
+  },
+  {
+    "run_date": "2026-09-15",
+    "number": "SR441",
+    "title": "Honoring Yariel Soto Torrado as a gold medalist at the 2026 Central American and Caribbean Games.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-09-14",
+    "url": "https://legiscan.com/OH/bill/SR441/2025"
+  },
+  {
+    "run_date": "2026-09-15",
+    "number": "SR442",
+    "title": "Honoring Kensington Intermediate School on its Centennial.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-09-14",
+    "url": "https://legiscan.com/OH/bill/SR442/2025"
+  },
+  {
     "run_date": "2026-09-11",
     "number": "HB1001",
     "title": "Enact the Private Property Protection Act",

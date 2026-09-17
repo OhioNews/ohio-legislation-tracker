@@ -1,5 +1,60 @@
 [
   {
+    "run_date": "2026-09-17",
+    "number": "HB1007",
+    "title": "Prevent Public Record Law release of clerk of court personal info",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-14",
+    "url": "https://legiscan.com/OH/bill/HB1007/2025"
+  },
+  {
+    "run_date": "2026-09-17",
+    "number": "HB1008",
+    "title": "Regards Medicaid personal needs allowance for certain individuals",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-14",
+    "url": "https://legiscan.com/OH/bill/HB1008/2025"
+  },
+  {
+    "run_date": "2026-09-17",
+    "number": "HB1009",
+    "title": "Enact the Stop Flock Abuse Act",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-14",
+    "url": "https://legiscan.com/OH/bill/HB1009/2025"
+  },
+  {
+    "run_date": "2026-09-17",
+    "number": "HB1010",
+    "title": "Enact the Ohio Freedom from Mass Surveillance Act",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-14",
+    "url": "https://legiscan.com/OH/bill/HB1010/2025"
+  },
+  {
+    "run_date": "2026-09-17",
+    "number": "HB1011",
+    "title": "Enact the 1984 No More Act",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-14",
+    "url": "https://legiscan.com/OH/bill/HB1011/2025"
+  },
+  {
     "run_date": "2026-09-15",
     "number": "SB469",
     "title": "Regulate use of automated license plate recognition systems",
@@ -317,27 +372,5 @@
     "last_action": "Adopted",
     "last_action_date": "2026-09-02",
     "url": "https://legiscan.com/OH/bill/HR533/2025"
-  },
-  {
-    "run_date": "2026-09-02",
-    "number": "SB468",
-    "title": "Require athletic facilities to install and maintain AEDs",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-09-01",
-    "url": "https://legiscan.com/OH/bill/SB468/2025"
-  },
-  {
-    "run_date": "2026-09-02",
-    "number": "SR435",
-    "title": "Honoring Team Ohio as the 2026 Special Olympics U.S.A. Games Division 1 gold medalist in basketball.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-09-01",
-    "url": "https://legiscan.com/OH/bill/SR435/2025"
   }
 ]

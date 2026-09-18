@@ -1,6 +1,19 @@
 {
-  "fetched_at": "2026-09-18T10:58:41.853922Z",
+  "fetched_at": "2026-09-18T16:13:10.378712Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
-  "events": []
+  "events": [
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-09-21T09:30:00",
+      "end": "T",
+      "id": null,
+      "title": "House Study Committee to Evaluate the Placement of Delinquent Children in Residential Facilities Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_spec_delinquent_children_1_2026-09-21-0800_1455",
+      "status": "Scheduled",
+      "agenda_items": []
+    }
+  ]
 }

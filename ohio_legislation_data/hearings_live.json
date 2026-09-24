@@ -1,6 +1,91 @@
 {
-  "fetched_at": "2026-09-24T16:56:46.756924Z",
+  "fetched_at": "2026-09-24T21:23:37.995302Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
-  "events": []
+  "events": [
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-09-29T14:00:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate General Government Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_gen_govt_1_2026-09-29-0200_1461",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "S. B. No. XXX",
+          "headline": "S. B. No. XXX",
+          "title": "",
+          "subject": "",
+          "status": "",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": true,
+          "possible_vote": false,
+          "possible_sub_bill": false,
+          "item_type": "informal_hearing",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#476b9c",
+      "start": "2026-09-30T10:30:00",
+      "end": "T",
+      "id": null,
+      "title": "Senate General Government Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_s_gen_govt_1_2026-09-30-1030_1462",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "S. B. No. XXX",
+          "headline": "S. B. No. XXX",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "possible_vote": true,
+          "possible_sub_bill": false,
+          "item_type": "pending_intro",
+          "index": 0
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-09-30T10:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Finance Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_finance_1_2026-09-30-1000_1460",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "H. B. No. XXX",
+          "headline": "H. B. No. XXX",
+          "title": "",
+          "subject": "",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "possible_vote": false,
+          "possible_sub_bill": false,
+          "item_type": "pending_intro",
+          "index": 0
+        }
+      ]
+    }
+  ]
 }

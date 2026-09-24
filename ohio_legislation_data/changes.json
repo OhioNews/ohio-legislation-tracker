@@ -1,5 +1,93 @@
 [
   {
+    "run_date": "2026-09-24",
+    "number": "HB1013",
+    "title": "Enact the Family Sovereignty Act",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-23",
+    "url": "https://legiscan.com/OH/bill/HB1013/2025"
+  },
+  {
+    "run_date": "2026-09-24",
+    "number": "HB1015",
+    "title": "Designate Sgt. Eli Holsinger Memorial Interchange",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-23",
+    "url": "https://legiscan.com/OH/bill/HB1015/2025"
+  },
+  {
+    "run_date": "2026-09-24",
+    "number": "HB1016",
+    "title": "Designate Army Sgt. Daniel Michael Shepherd Memorial Highway",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-23",
+    "url": "https://legiscan.com/OH/bill/HB1016/2025"
+  },
+  {
+    "run_date": "2026-09-24",
+    "number": "HR541",
+    "title": "Honoring Ashland Church of the Nazarene on its One Hundredth Anniversary.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-09-23",
+    "url": "https://legiscan.com/OH/bill/HR541/2025"
+  },
+  {
+    "run_date": "2026-09-24",
+    "number": "HR542",
+    "title": "Honoring the Hamilton West Side Little League team as the 2026 State Champion.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-09-23",
+    "url": "https://legiscan.com/OH/bill/HR542/2025"
+  },
+  {
+    "run_date": "2026-09-24",
+    "number": "HR543",
+    "title": "Honoring Lakeview Christian Church on its Centennial.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-09-23",
+    "url": "https://legiscan.com/OH/bill/HR543/2025"
+  },
+  {
+    "run_date": "2026-09-24",
+    "number": "SB472",
+    "title": "Designate State Senator I. Ray Miller Jr. Memorial Highway",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-23",
+    "url": "https://legiscan.com/OH/bill/SB472/2025"
+  },
+  {
+    "run_date": "2026-09-24",
+    "number": "SCR22",
+    "title": "Urge Congress to oppose National Historic Preservation Act change",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Offered",
+    "last_action_date": "2026-09-23",
+    "url": "https://legiscan.com/OH/bill/SCR22/2025"
+  },
+  {
     "run_date": "2026-09-18",
     "number": "HB1012",
     "title": "Regards certain school district special education costs",
@@ -284,38 +372,5 @@
     "last_action": "Adopted",
     "last_action_date": "2026-09-08",
     "url": "https://legiscan.com/OH/bill/SR437/2025"
-  },
-  {
-    "run_date": "2026-09-09",
-    "number": "HR534",
-    "title": "Honoring the Olmsted Falls Depot and Model Railroad Museum on its Sesquicentennial.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-09-08",
-    "url": "https://legiscan.com/OH/bill/HR534/2025"
-  },
-  {
-    "run_date": "2026-09-09",
-    "number": "HR535",
-    "title": "Honoring Yariel Soto Torrado as a 2026 Central American and Caribbean Games Champion.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-09-08",
-    "url": "https://legiscan.com/OH/bill/HR535/2025"
-  },
-  {
-    "run_date": "2026-09-09",
-    "number": "HR536",
-    "title": "Honoring Carton Service on its Centennial.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-09-08",
-    "url": "https://legiscan.com/OH/bill/HR536/2025"
   }
 ]

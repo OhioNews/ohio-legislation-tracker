@@ -1,5 +1,38 @@
 [
   {
+    "run_date": "2026-09-25",
+    "number": "HB96",
+    "title": "Make state operating appropriations for FY 2026-27",
+    "status": "became-law",
+    "prev_status": "became-law",
+    "is_new": false,
+    "last_action": "Item passed notwithstanding objections of the Governor",
+    "last_action_date": "2025-10-01",
+    "url": "https://legiscan.com/OH/bill/HB96/2025"
+  },
+  {
+    "run_date": "2026-09-25",
+    "number": "HB1014",
+    "title": "Require bill credits, reimbursements after certain power outages",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-23",
+    "url": "https://legiscan.com/OH/bill/HB1014/2025"
+  },
+  {
+    "run_date": "2026-09-25",
+    "number": "SB152",
+    "title": "Allow wild animal rehab facility to get euthanasia drug permit",
+    "status": "became-law",
+    "prev_status": "became-law",
+    "is_new": false,
+    "last_action": "Sent To The Governor",
+    "last_action_date": "2026-06-12",
+    "url": "https://legiscan.com/OH/bill/SB152/2025"
+  },
+  {
     "run_date": "2026-09-24",
     "number": "HB1013",
     "title": "Enact the Family Sovereignty Act",
@@ -361,16 +394,5 @@
     "last_action": "Introduced",
     "last_action_date": "2026-09-08",
     "url": "https://legiscan.com/OH/bill/HJR10/2025"
-  },
-  {
-    "run_date": "2026-09-10",
-    "number": "SR437",
-    "title": "Honoring Gary Lay for his silver medal at the 2026 Roland E. Schaeffer Culinary Classic.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-09-08",
-    "url": "https://legiscan.com/OH/bill/SR437/2025"
   }
 ]

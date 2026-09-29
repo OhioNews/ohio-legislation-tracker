@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-09-29T12:33:53.159845Z",
+  "fetched_at": "2026-09-29T22:06:43.588550Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -15,8 +15,8 @@
       "status": "Scheduled",
       "agenda_items": [
         {
-          "id": "S. B. No. XXX",
-          "headline": "S. B. No. XXX",
+          "id": "S. B. No. 475",
+          "headline": "S. B. No. 475",
           "title": "",
           "subject": "",
           "status": "",
@@ -43,8 +43,8 @@
       "status": "Scheduled",
       "agenda_items": [
         {
-          "id": "S. B. No. XXX",
-          "headline": "S. B. No. XXX",
+          "id": "S. B. No. 475",
+          "headline": "S. B. No. 475",
           "title": "",
           "subject": "",
           "status": "1st Hearing",
@@ -83,18 +83,18 @@
       "status": "Scheduled",
       "agenda_items": [
         {
-          "id": "H. B. No. XXX",
-          "headline": "H. B. No. XXX",
+          "id": "H. B. No. 1019",
+          "headline": "H. B. No. 1019",
           "title": "",
           "subject": "",
           "status": "1st Hearing",
           "proponent": false,
           "opponent": false,
           "interested_party": false,
-          "sponsor": false,
+          "sponsor": true,
           "possible_vote": false,
           "possible_sub_bill": false,
-          "item_type": "pending_intro",
+          "item_type": "pending_referral",
           "index": 0
         }
       ]

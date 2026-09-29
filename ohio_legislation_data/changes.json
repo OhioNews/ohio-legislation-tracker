@@ -1,5 +1,126 @@
 [
   {
+    "run_date": "2026-09-29",
+    "number": "HB1017",
+    "title": "Designate September as STXBP1 Awareness Month",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-28",
+    "url": "https://legiscan.com/OH/bill/HB1017/2025"
+  },
+  {
+    "run_date": "2026-09-29",
+    "number": "HB1018",
+    "title": "Designate Dolly Parton Imagination Library Reading Day",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-28",
+    "url": "https://legiscan.com/OH/bill/HB1018/2025"
+  },
+  {
+    "run_date": "2026-09-29",
+    "number": "HB1019",
+    "title": "Temporarily reduce motor fuel taxes; levy a temporary tax",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-28",
+    "url": "https://legiscan.com/OH/bill/HB1019/2025"
+  },
+  {
+    "run_date": "2026-09-29",
+    "number": "HR545",
+    "title": "Honoring Sergeant Zachary Cline as the 2026 Non-Commissioned Officer of the Year.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-09-28",
+    "url": "https://legiscan.com/OH/bill/HR545/2025"
+  },
+  {
+    "run_date": "2026-09-29",
+    "number": "HR546",
+    "title": "Honoring Deer Park Community City Schools on its Bicentennial.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-09-28",
+    "url": "https://legiscan.com/OH/bill/HR546/2025"
+  },
+  {
+    "run_date": "2026-09-29",
+    "number": "SB473",
+    "title": "Designate September 25 as Dolly Parton Day",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-28",
+    "url": "https://legiscan.com/OH/bill/SB473/2025"
+  },
+  {
+    "run_date": "2026-09-29",
+    "number": "SB474",
+    "title": "Reduce excise tax rates on beer manufactured in the United States",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-28",
+    "url": "https://legiscan.com/OH/bill/SB474/2025"
+  },
+  {
+    "run_date": "2026-09-29",
+    "number": "SB475",
+    "title": "Temporarily reduce motor fuel taxes; levy a temporary tax",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-28",
+    "url": "https://legiscan.com/OH/bill/SB475/2025"
+  },
+  {
+    "run_date": "2026-09-29",
+    "number": "SR443",
+    "title": "Honoring Christ's Brethren Church on its One Hundredth Anniversary.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-09-28",
+    "url": "https://legiscan.com/OH/bill/SR443/2025"
+  },
+  {
+    "run_date": "2026-09-29",
+    "number": "SR444",
+    "title": "Honoring Union Baptist Church on its Quasquicentennial.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-09-28",
+    "url": "https://legiscan.com/OH/bill/SR444/2025"
+  },
+  {
+    "run_date": "2026-09-29",
+    "number": "SR445",
+    "title": "Honoring the Cleveland Cultural Gardens on its One Hundred Tenth Anniversary.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-09-28",
+    "url": "https://legiscan.com/OH/bill/SR445/2025"
+  },
+  {
     "run_date": "2026-09-28",
     "number": "HB440",
     "title": "Regards the Board of Nursing and criminal records check results",

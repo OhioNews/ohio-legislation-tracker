@@ -1,36 +1,8 @@
 {
-  "fetched_at": "2026-09-29T22:06:43.588550Z",
+  "fetched_at": "2026-09-30T05:08:51.050680Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
-    {
-      "allDay": null,
-      "backgroundColor": "#476b9c",
-      "start": "2026-09-29T14:00:00",
-      "end": "T",
-      "id": null,
-      "title": "Senate General Government Committee Meeting",
-      "textColor": "#ffffff",
-      "url": "calendar/events/cmte_s_gen_govt_1_2026-09-29-0200_1461",
-      "status": "Scheduled",
-      "agenda_items": [
-        {
-          "id": "S. B. No. 475",
-          "headline": "S. B. No. 475",
-          "title": "",
-          "subject": "",
-          "status": "",
-          "proponent": true,
-          "opponent": true,
-          "interested_party": true,
-          "sponsor": true,
-          "possible_vote": false,
-          "possible_sub_bill": false,
-          "item_type": "informal_hearing",
-          "index": 0
-        }
-      ]
-    },
     {
       "allDay": null,
       "backgroundColor": "#476b9c",

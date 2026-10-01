@@ -6880,5 +6880,32 @@
     "status": "archived",
     "release_date": "2026-09-29",
     "name": "Ohio Senate General Government Committee - 9-29-2026"
+  },
+  "211496": {
+    "status": "archived",
+    "release_date": "2026-09-30",
+    "name": "Ohio House of Representatives - 9-30-2026"
+  },
+  "211494": {
+    "status": "awaiting_captions",
+    "first_seen": "2026-10-01",
+    "release_date": "2026-09-30",
+    "name": "Ohio House Finance Committee - 9-30-2026",
+    "program": {
+      "id": 211494,
+      "fullName": "Ohio House Finance Committee - 9-30-2026",
+      "releaseDate": "2026-09-30 00:00:00",
+      "duration": 3248,
+      "series": {
+        "id": 107904,
+        "name": "Ohio House Finance Committee",
+        "chamber": "HOUSE"
+      }
+    }
+  },
+  "211495": {
+    "status": "archived",
+    "release_date": "2026-09-30",
+    "name": "Ohio Senate General Government Committee - 9-30-2026"
   }
 }

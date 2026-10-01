@@ -1,76 +1,8 @@
 {
-  "fetched_at": "2026-09-30T22:06:16.105512Z",
+  "fetched_at": "2026-10-01T05:23:39.459746Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
-    {
-      "allDay": null,
-      "backgroundColor": "#476b9c",
-      "start": "2026-09-30T10:30:00",
-      "end": "T",
-      "id": null,
-      "title": "Senate General Government Committee Meeting",
-      "textColor": "#ffffff",
-      "url": "calendar/events/cmte_s_gen_govt_1_2026-09-30-1030_1462",
-      "status": "Scheduled",
-      "agenda_items": [
-        {
-          "id": "S. B. No. 475",
-          "headline": "S. B. No. 475",
-          "title": "",
-          "subject": "",
-          "status": "1st Hearing",
-          "proponent": false,
-          "opponent": false,
-          "interested_party": false,
-          "sponsor": false,
-          "possible_vote": true,
-          "possible_sub_bill": false,
-          "item_type": "pending_intro",
-          "index": 0
-        }
-      ]
-    },
-    {
-      "allDay": null,
-      "backgroundColor": "#476b9c",
-      "start": "2026-09-30T10:00:00",
-      "end": "T",
-      "id": null,
-      "title": "Senate Rules and Reference Committee Meeting",
-      "textColor": "#ffffff",
-      "url": "calendar/events/cmte_s_rules_ref_1_2026-09-30-1000_1463",
-      "status": "Scheduled",
-      "agenda_items": []
-    },
-    {
-      "allDay": null,
-      "backgroundColor": "#ad3838",
-      "start": "2026-09-30T10:00:00",
-      "end": "T",
-      "id": null,
-      "title": "House Finance Committee Meeting",
-      "textColor": "#ffffff",
-      "url": "calendar/events/cmte_h_finance_1_2026-09-30-1000_1460",
-      "status": "Scheduled",
-      "agenda_items": [
-        {
-          "id": "H. B. No. 1019",
-          "headline": "H. B. No. 1019",
-          "title": "",
-          "subject": "",
-          "status": "1st Hearing",
-          "proponent": false,
-          "opponent": false,
-          "interested_party": false,
-          "sponsor": true,
-          "possible_vote": false,
-          "possible_sub_bill": false,
-          "item_type": "pending_referral",
-          "index": 0
-        }
-      ]
-    },
     {
       "allDay": null,
       "backgroundColor": "#ad3838",

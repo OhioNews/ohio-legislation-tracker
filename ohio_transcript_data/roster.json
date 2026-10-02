@@ -1740,5 +1740,18 @@
   "chamber": "house",
   "district": 26,
   "role": "Rep"
+ },
+ {
+  "people_id": 26685,
+  "name": "Sean Hutson",
+  "first": "Sean",
+  "last": "Hutson",
+  "middle": "",
+  "nickname": "",
+  "suffix": "",
+  "party": "R",
+  "chamber": "house",
+  "district": 66,
+  "role": "Rep"
  }
 ]

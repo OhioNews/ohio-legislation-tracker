@@ -1,5 +1,38 @@
 [
   {
+    "run_date": "2026-10-02",
+    "number": "HB519",
+    "title": "Prohibit specified actions with intent to steal a motor vehicle",
+    "status": "became-law",
+    "prev_status": "passed",
+    "is_new": false,
+    "last_action": "Signed By The Governor",
+    "last_action_date": "2026-10-01",
+    "url": "https://legiscan.com/OH/bill/HB519/2025"
+  },
+  {
+    "run_date": "2026-10-02",
+    "number": "HB585",
+    "title": "Regards DoDD authority re: community capital assistance funds",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Referred to committee: Finance",
+    "last_action_date": "2026-09-30",
+    "url": "https://legiscan.com/OH/bill/HB585/2025"
+  },
+  {
+    "run_date": "2026-10-02",
+    "number": "HB1021",
+    "title": "Designate Deputy Chris Longfellow Memorial Highway",
+    "status": "introduced",
+    "prev_status": "introduced",
+    "is_new": false,
+    "last_action": "Introduced",
+    "last_action_date": "2026-09-30",
+    "url": "https://legiscan.com/OH/bill/HB1021/2025"
+  },
+  {
     "run_date": "2026-10-01",
     "number": "HB3",
     "title": "Enact the School Bus Safety Act",
@@ -812,60 +845,5 @@
     "last_action": "Adopted",
     "last_action_date": "2026-09-17",
     "url": "https://legiscan.com/OH/bill/HR540/2025"
-  },
-  {
-    "run_date": "2026-09-17",
-    "number": "HB1007",
-    "title": "Prevent Public Record Law release of clerk of court personal info",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-09-14",
-    "url": "https://legiscan.com/OH/bill/HB1007/2025"
-  },
-  {
-    "run_date": "2026-09-17",
-    "number": "HB1008",
-    "title": "Regards Medicaid personal needs allowance for certain individuals",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-09-14",
-    "url": "https://legiscan.com/OH/bill/HB1008/2025"
-  },
-  {
-    "run_date": "2026-09-17",
-    "number": "HB1009",
-    "title": "Enact the Stop Flock Abuse Act",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-09-14",
-    "url": "https://legiscan.com/OH/bill/HB1009/2025"
-  },
-  {
-    "run_date": "2026-09-17",
-    "number": "HB1010",
-    "title": "Enact the Ohio Freedom from Mass Surveillance Act",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-09-14",
-    "url": "https://legiscan.com/OH/bill/HB1010/2025"
-  },
-  {
-    "run_date": "2026-09-17",
-    "number": "HB1011",
-    "title": "Enact the 1984 No More Act",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-09-14",
-    "url": "https://legiscan.com/OH/bill/HB1011/2025"
   }
 ]

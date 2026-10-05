@@ -6855,21 +6855,9 @@
     "name": "Ohio Controlling Board - 9-14-2026"
   },
   "211528": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-09-29",
+    "status": "archived",
     "release_date": "2026-09-30",
-    "name": "Ohio Senate - 9-30-2026",
-    "program": {
-      "id": 211528,
-      "fullName": "Ohio Senate - 9-30-2026",
-      "releaseDate": "2026-09-30 00:00:00",
-      "duration": 3600,
-      "series": {
-        "id": 25,
-        "name": "Ohio Senate",
-        "chamber": "SENATE"
-      }
-    }
+    "name": "Ohio Senate - 9-30-2026"
   },
   "211430": {
     "status": "archived",

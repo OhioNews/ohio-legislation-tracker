@@ -1,9 +1,9 @@
 {
-  "last_updated": "2026-10-04T12:46:13.899064+00:00",
-  "archived_total": 1370,
+  "last_updated": "2026-10-05T15:08:49.545115+00:00",
+  "archived_total": 1371,
   "last_run": {
-    "archived": 0,
-    "awaiting_captions": 1,
+    "archived": 1,
+    "awaiting_captions": 0,
     "captions_unavailable": 0
   }
 }

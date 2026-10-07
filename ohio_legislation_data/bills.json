@@ -21295,7 +21295,7 @@
     "status_date": "2026-10-01",
     "last_action": "Signed By The Governor",
     "last_action_date": "2026-10-01",
-    "effective_date": "",
+    "effective_date": "2026-10-01",
     "sponsor": "Rep. Andrea White (R-HD-036)",
     "committee": null,
     "subject": "criminal-justice",
@@ -41664,5 +41664,22 @@
     "committee": null,
     "subject": "general",
     "url": "https://legiscan.com/OH/bill/HB1022/2025"
+  },
+  {
+    "bill_id": 2160077,
+    "number": "HB1023",
+    "chamber": "house",
+    "title": "Establish Early Childhood Ed. Governance and Outcomes Task Force",
+    "description": "To establish the Early Childhood Education Governance and Outcomes Task Force.",
+    "status": "introduced",
+    "status_code": 1,
+    "status_date": "2026-10-07",
+    "last_action": "Introduced",
+    "last_action_date": "2026-10-07",
+    "effective_date": "",
+    "sponsor": "Rep. Josh Williams (R-HD-044)",
+    "committee": null,
+    "subject": "education",
+    "url": "https://legiscan.com/OH/bill/HB1023/2025"
   }
 ]

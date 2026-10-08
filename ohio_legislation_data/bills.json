@@ -41681,5 +41681,39 @@
     "committee": null,
     "subject": "education",
     "url": "https://legiscan.com/OH/bill/HB1023/2025"
+  },
+  {
+    "bill_id": 2160078,
+    "number": "SR446",
+    "chamber": "senate",
+    "title": "Honoring the YWCA of Alliance on its Centennial.",
+    "description": "Honoring the YWCA of Alliance on its Centennial.",
+    "status": "passed",
+    "status_code": 4,
+    "status_date": "2026-10-07",
+    "last_action": "Adopted",
+    "last_action_date": "2026-10-07",
+    "effective_date": "",
+    "sponsor": "Sen. Jane Timken (R-SD-029)",
+    "committee": null,
+    "subject": "general",
+    "url": "https://legiscan.com/OH/bill/SR446/2025"
+  },
+  {
+    "bill_id": 2160085,
+    "number": "SB477",
+    "chamber": "senate",
+    "title": "Revise law regarding electric bicycles, other mobility devices",
+    "description": "To amend sections 4507.11, 4508.02, 4511.01, 4511.20, 4511.514, 4511.522, and 4511.54 and to enact sections 4503.184 and 4508.081 of the Revised Code to revise the law regarding electric bicycles, low-speed micromobility devices, and electric personal assistive mobility devices.",
+    "status": "introduced",
+    "status_code": 1,
+    "status_date": "2026-10-07",
+    "last_action": "Introduced",
+    "last_action_date": "2026-10-07",
+    "effective_date": "",
+    "sponsor": "Sen. William DeMora (D-SD-025)",
+    "committee": null,
+    "subject": "criminal-justice",
+    "url": "https://legiscan.com/OH/bill/SB477/2025"
   }
 ]

@@ -6888,5 +6888,22 @@
     "status": "archived",
     "release_date": "2026-10-05",
     "name": "Ohio Joint Committee on Agency Rule Review - 10-5-2026"
+  },
+  "211848": {
+    "status": "awaiting_captions",
+    "first_seen": "2026-10-08",
+    "release_date": "2026-10-08",
+    "name": "Ohio Retirement Study Council - 10-8-2026 Subcommittee",
+    "program": {
+      "id": 211848,
+      "fullName": "Ohio Retirement Study Council - 10-8-2026 Subcommittee",
+      "releaseDate": "2026-10-08 00:00:00",
+      "duration": 1800,
+      "series": {
+        "id": 1001392,
+        "name": "Ohio Retirement Study Council",
+        "chamber": "JOINT"
+      }
+    }
   }
 }

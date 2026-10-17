@@ -108,38 +108,5 @@
     "last_action": "Introduced",
     "last_action_date": "2026-10-07",
     "url": "https://legiscan.com/OH/bill/HB1023/2025"
-  },
-  {
-    "run_date": "2026-10-02",
-    "number": "HB519",
-    "title": "Prohibit specified actions with intent to steal a motor vehicle",
-    "status": "became-law",
-    "prev_status": "passed",
-    "is_new": false,
-    "last_action": "Signed By The Governor",
-    "last_action_date": "2026-10-01",
-    "url": "https://legiscan.com/OH/bill/HB519/2025"
-  },
-  {
-    "run_date": "2026-10-02",
-    "number": "HB585",
-    "title": "Regards DoDD authority re: community capital assistance funds",
-    "status": "passed-chamber",
-    "prev_status": "passed-chamber",
-    "is_new": false,
-    "last_action": "Referred to committee: Finance",
-    "last_action_date": "2026-09-30",
-    "url": "https://legiscan.com/OH/bill/HB585/2025"
-  },
-  {
-    "run_date": "2026-10-02",
-    "number": "HB1021",
-    "title": "Designate Deputy Chris Longfellow Memorial Highway",
-    "status": "introduced",
-    "prev_status": "introduced",
-    "is_new": false,
-    "last_action": "Introduced",
-    "last_action_date": "2026-09-30",
-    "url": "https://legiscan.com/OH/bill/HB1021/2025"
   }
 ]

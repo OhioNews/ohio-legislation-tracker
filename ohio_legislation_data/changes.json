@@ -1,5 +1,137 @@
 [
   {
+    "run_date": "2026-10-20",
+    "number": "HB1026",
+    "title": "Increase and expand the research and development tax credit",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-10-19",
+    "url": "https://legiscan.com/OH/bill/HB1026/2025"
+  },
+  {
+    "run_date": "2026-10-20",
+    "number": "HB1027",
+    "title": "Require certain standards for parole violation hearings",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-10-19",
+    "url": "https://legiscan.com/OH/bill/HB1027/2025"
+  },
+  {
+    "run_date": "2026-10-20",
+    "number": "HB1028",
+    "title": "Enact the Early Childhood Opportunity and Enrollment Act",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-10-19",
+    "url": "https://legiscan.com/OH/bill/HB1028/2025"
+  },
+  {
+    "run_date": "2026-10-20",
+    "number": "HB1029",
+    "title": "Enact the Take the Dough, We Gotta Know Act",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-10-19",
+    "url": "https://legiscan.com/OH/bill/HB1029/2025"
+  },
+  {
+    "run_date": "2026-10-20",
+    "number": "HB1030",
+    "title": "Regards TechCred, Individual Microcredential Assistance Programs",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-10-19",
+    "url": "https://legiscan.com/OH/bill/HB1030/2025"
+  },
+  {
+    "run_date": "2026-10-20",
+    "number": "HB1031",
+    "title": "Regards jurisdiction over delinquent children from ages 21 to 25",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-10-19",
+    "url": "https://legiscan.com/OH/bill/HB1031/2025"
+  },
+  {
+    "run_date": "2026-10-20",
+    "number": "HR552",
+    "title": "Honoring Fierbaugh Farm on its Bicentennial.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-10-19",
+    "url": "https://legiscan.com/OH/bill/HR552/2025"
+  },
+  {
+    "run_date": "2026-10-20",
+    "number": "HR553",
+    "title": "Honoring Leah Varga on winning a martial arts title at the 2026 ADCC Amateur World Championship.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-10-19",
+    "url": "https://legiscan.com/OH/bill/HR553/2025"
+  },
+  {
+    "run_date": "2026-10-20",
+    "number": "SR447",
+    "title": "Recognize contribution of immigrants; regards workforce shortages",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Offered",
+    "last_action_date": "2026-10-19",
+    "url": "https://legiscan.com/OH/bill/SR447/2025"
+  },
+  {
+    "run_date": "2026-10-20",
+    "number": "SR448",
+    "title": "In memory of Gerald L. Stebelton.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-10-19",
+    "url": "https://legiscan.com/OH/bill/SR448/2025"
+  },
+  {
+    "run_date": "2026-10-20",
+    "number": "SR449",
+    "title": "Recognizing Disability Employment Awareness Month in Ohio, October 2026.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-10-19",
+    "url": "https://legiscan.com/OH/bill/SR449/2025"
+  },
+  {
+    "run_date": "2026-10-20",
+    "number": "SR450",
+    "title": "Honoring Matthew Dietrich on his retirement from the Ohio Rail Development Commission.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-10-19",
+    "url": "https://legiscan.com/OH/bill/SR450/2025"
+  },
+  {
     "run_date": "2026-10-16",
     "number": "HB1024",
     "title": "Revise the Common Sense Initiative Office, admin. rule processes",

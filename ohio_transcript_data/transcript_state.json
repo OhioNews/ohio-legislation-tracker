@@ -6893,5 +6893,22 @@
     "status": "archived",
     "release_date": "2026-10-08",
     "name": "Ohio Retirement Study Council - 10-8-2026 Subcommittee"
+  },
+  "212068": {
+    "status": "awaiting_captions",
+    "first_seen": "2026-10-21",
+    "release_date": "2026-10-19",
+    "name": "Ohio Controlling Board - 10-19-2026",
+    "program": {
+      "id": 212068,
+      "fullName": "Ohio Controlling Board - 10-19-2026",
+      "releaseDate": "2026-10-19 00:00:00",
+      "duration": 6324,
+      "series": {
+        "id": 1001052,
+        "name": "Ohio Controlling Board",
+        "chamber": "JOINT"
+      }
+    }
   }
 }

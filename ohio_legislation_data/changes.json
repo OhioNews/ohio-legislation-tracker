@@ -1,5 +1,38 @@
 [
   {
+    "run_date": "2026-10-23",
+    "number": "HB1032",
+    "title": "Regards AI use by state agencies and in labor and employment",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-10-22",
+    "url": "https://legiscan.com/OH/bill/HB1032/2025"
+  },
+  {
+    "run_date": "2026-10-23",
+    "number": "HR555",
+    "title": "Honoring Seville United Methodist Church on its Two Hundredth Anniversary.",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "No recent action",
+    "last_action_date": null,
+    "url": "https://legiscan.com/OH/bill/HR555/2025"
+  },
+  {
+    "run_date": "2026-10-23",
+    "number": "SB480",
+    "title": "Require coroner to preserve DNA sample for future analysis",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-10-21",
+    "url": "https://legiscan.com/OH/bill/SB480/2025"
+  },
+  {
     "run_date": "2026-10-20",
     "number": "HB1026",
     "title": "Increase and expand the research and development tax credit",
@@ -207,27 +240,5 @@
     "last_action": "Introduced",
     "last_action_date": "2026-10-13",
     "url": "https://legiscan.com/OH/bill/SB479/2025"
-  },
-  {
-    "run_date": "2026-10-08",
-    "number": "SB477",
-    "title": "Revise law regarding electric bicycles, other mobility devices",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-10-07",
-    "url": "https://legiscan.com/OH/bill/SB477/2025"
-  },
-  {
-    "run_date": "2026-10-08",
-    "number": "SR446",
-    "title": "Honoring the YWCA of Alliance on its Centennial.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-10-07",
-    "url": "https://legiscan.com/OH/bill/SR446/2025"
   }
 ]

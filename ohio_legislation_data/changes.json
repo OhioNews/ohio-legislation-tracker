@@ -1,5 +1,27 @@
 [
   {
+    "run_date": "2026-10-29",
+    "number": "HB1033",
+    "title": "Prohibit unlawful dissemination of peace officer's personal info",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-10-28",
+    "url": "https://legiscan.com/OH/bill/HB1033/2025"
+  },
+  {
+    "run_date": "2026-10-29",
+    "number": "HB1034",
+    "title": "Authorize operation of autonomous vehicles on public roads",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-10-28",
+    "url": "https://legiscan.com/OH/bill/HB1034/2025"
+  },
+  {
     "run_date": "2026-10-28",
     "number": "HR556",
     "title": "Honoring Grady Short as the 2026 Division II State Boys Golf Champion.",

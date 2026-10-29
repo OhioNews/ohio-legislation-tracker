@@ -42260,5 +42260,39 @@
     "committee": null,
     "subject": "general",
     "url": "https://legiscan.com/OH/bill/HR557/2025"
+  },
+  {
+    "bill_id": 2161334,
+    "number": "HB1034",
+    "chamber": "house",
+    "title": "Authorize operation of autonomous vehicles on public roads",
+    "description": "To amend sections 3942.01, 3942.02, and 4511.34 and to enact sections 4511.206, 4511.207, 4511.208, 4511.209, 4511.2010, and 4511.2011 of the Revised Code to authorize the operation of autonomous vehicles on public roads and highways.",
+    "status": "introduced",
+    "status_code": 1,
+    "status_date": "2026-10-28",
+    "last_action": "Introduced",
+    "last_action_date": "2026-10-28",
+    "effective_date": "",
+    "sponsor": "Rep. Adam Holmes (R-HD-097)",
+    "committee": null,
+    "subject": "general",
+    "url": "https://legiscan.com/OH/bill/HB1034/2025"
+  },
+  {
+    "bill_id": 2161344,
+    "number": "HB1033",
+    "chamber": "house",
+    "title": "Prohibit unlawful dissemination of peace officer's personal info",
+    "description": "To enact section 2921.26 of the Revised Code to prohibit unlawful dissemination of a peace officer's personally identifying information.",
+    "status": "introduced",
+    "status_code": 1,
+    "status_date": "2026-10-28",
+    "last_action": "Introduced",
+    "last_action_date": "2026-10-28",
+    "effective_date": "",
+    "sponsor": "Rep. Gayle Manning (R-HD-052)",
+    "committee": null,
+    "subject": "criminal-justice",
+    "url": "https://legiscan.com/OH/bill/HB1033/2025"
   }
 ]

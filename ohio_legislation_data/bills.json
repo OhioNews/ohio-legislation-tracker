@@ -42294,5 +42294,39 @@
     "committee": null,
     "subject": "criminal-justice",
     "url": "https://legiscan.com/OH/bill/HB1033/2025"
+  },
+  {
+    "bill_id": 2161417,
+    "number": "SR455",
+    "chamber": "senate",
+    "title": "Honoring the Canton Palace Theatre on its One Hundredth Anniversary.",
+    "description": "Honoring the Canton Palace Theatre on its One Hundredth Anniversary.",
+    "status": "passed",
+    "status_code": 4,
+    "status_date": "2026-10-29",
+    "last_action": "Adopted",
+    "last_action_date": "2026-10-29",
+    "effective_date": "",
+    "sponsor": "Sen. Jane Timken (R-SD-029)",
+    "committee": null,
+    "subject": "general",
+    "url": "https://legiscan.com/OH/bill/SR455/2025"
+  },
+  {
+    "bill_id": 2161520,
+    "number": "SB484",
+    "chamber": "senate",
+    "title": "Change Struthers Municipal Court judge from part- to full-time",
+    "description": "To amend section 1901.08 of the Revised Code to change the status of the judge of the Struthers Municipal Court from part-time to full-time.",
+    "status": "introduced",
+    "status_code": 1,
+    "status_date": "2026-10-29",
+    "last_action": "Introduced",
+    "last_action_date": "2026-10-29",
+    "effective_date": "",
+    "sponsor": "Sen. Alessandro Cutrona (R-SD-033)",
+    "committee": null,
+    "subject": "general",
+    "url": "https://legiscan.com/OH/bill/SB484/2025"
   }
 ]

@@ -1,5 +1,27 @@
 [
   {
+    "run_date": "2026-10-30",
+    "number": "SB484",
+    "title": "Change Struthers Municipal Court judge from part- to full-time",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-10-29",
+    "url": "https://legiscan.com/OH/bill/SB484/2025"
+  },
+  {
+    "run_date": "2026-10-30",
+    "number": "SR455",
+    "title": "Honoring the Canton Palace Theatre on its One Hundredth Anniversary.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-10-29",
+    "url": "https://legiscan.com/OH/bill/SR455/2025"
+  },
+  {
     "run_date": "2026-10-29",
     "number": "HB1033",
     "title": "Prohibit unlawful dissemination of peace officer's personal info",

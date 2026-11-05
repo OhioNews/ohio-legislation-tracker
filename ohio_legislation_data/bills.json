@@ -42430,5 +42430,22 @@
     "committee": null,
     "subject": "general",
     "url": "https://legiscan.com/OH/bill/HR561/2025"
+  },
+  {
+    "bill_id": 2161591,
+    "number": "SR456",
+    "chamber": "senate",
+    "title": "Honoring International Brotherhood of Electrical Workers Local 212 on its One Hundred Twenty-fifth Anniversary.",
+    "description": "Honoring International Brotherhood of Electrical Workers Local 212 on its One Hundred Twenty-fifth Anniversary.",
+    "status": "passed",
+    "status_code": 4,
+    "status_date": "2026-11-04",
+    "last_action": "Adopted",
+    "last_action_date": "2026-11-04",
+    "effective_date": "",
+    "sponsor": "Sen. Catherine Ingram (D-SD-009)",
+    "committee": null,
+    "subject": "general",
+    "url": "https://legiscan.com/OH/bill/SR456/2025"
   }
 ]

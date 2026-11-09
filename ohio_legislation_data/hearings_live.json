@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-09T05:47:42.586335Z",
+  "fetched_at": "2026-11-09T15:52:00.513365Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -495,21 +495,6 @@
           "index": 1
         },
         {
-          "id": "sb290",
-          "headline": "Sub. S. B. No. 290",
-          "title": "Require school building to have an exterior secure master key box",
-          "subject": "education",
-          "status": "1st Hearing",
-          "proponent": false,
-          "opponent": false,
-          "interested_party": false,
-          "sponsor": true,
-          "possible_vote": false,
-          "possible_sub_bill": false,
-          "item_type": "hearing",
-          "index": 2
-        },
-        {
           "id": "hb610",
           "headline": "H. B. No. 610",
           "title": "Dissolve existing academic distress commissions and repeal law",
@@ -522,7 +507,7 @@
           "possible_vote": false,
           "possible_sub_bill": false,
           "item_type": "hearing",
-          "index": 3
+          "index": 2
         },
         {
           "id": "hb669",
@@ -537,7 +522,7 @@
           "possible_vote": false,
           "possible_sub_bill": false,
           "item_type": "hearing",
-          "index": 4
+          "index": 3
         }
       ]
     },
@@ -1475,21 +1460,6 @@
           "index": 0
         },
         {
-          "id": "hb660",
-          "headline": "H. B. No. 660",
-          "title": "Regards the Ohio National Guard Scholarship Program",
-          "subject": "education",
-          "status": "1st Hearing",
-          "proponent": false,
-          "opponent": false,
-          "interested_party": false,
-          "sponsor": true,
-          "possible_vote": false,
-          "possible_sub_bill": false,
-          "item_type": "hearing",
-          "index": 1
-        },
-        {
           "id": "hcr17",
           "headline": "H. C. R. No. 17",
           "title": "Recognize impact of lifeguard shortage; encourage lifeguarding",
@@ -1502,7 +1472,7 @@
           "possible_vote": false,
           "possible_sub_bill": false,
           "item_type": "hearing",
-          "index": 2
+          "index": 1
         }
       ]
     },

@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-08T21:54:28.800373Z",
+  "fetched_at": "2026-11-09T05:47:42.586335Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -907,6 +907,21 @@
           "index": 8
         },
         {
+          "id": "hb662",
+          "headline": "H. B. No. 662",
+          "title": "Increase penalty for disturbing a lawful meeting in certain cases",
+          "subject": "criminal-justice",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "possible_vote": false,
+          "possible_sub_bill": false,
+          "item_type": "hearing",
+          "index": 9
+        },
+        {
           "id": "hb728",
           "headline": "H. B. No. 728",
           "title": "Eliminate informal hearings in certain juvenile delinquency cases",
@@ -919,7 +934,7 @@
           "possible_vote": false,
           "possible_sub_bill": false,
           "item_type": "hearing",
-          "index": 9
+          "index": 10
         },
         {
           "id": "hb808",
@@ -934,7 +949,7 @@
           "possible_vote": false,
           "possible_sub_bill": false,
           "item_type": "hearing",
-          "index": 10
+          "index": 11
         },
         {
           "id": "hb713",
@@ -949,7 +964,7 @@
           "possible_vote": false,
           "possible_sub_bill": false,
           "item_type": "hearing",
-          "index": 11
+          "index": 12
         },
         {
           "id": "hb855",
@@ -964,37 +979,7 @@
           "possible_vote": false,
           "possible_sub_bill": false,
           "item_type": "hearing",
-          "index": 12
-        },
-        {
-          "id": "hb662",
-          "headline": "H. B. No. 662",
-          "title": "Increase penalty for disturbing a lawful meeting in certain cases",
-          "subject": "criminal-justice",
-          "status": "1st Hearing",
-          "proponent": false,
-          "opponent": false,
-          "interested_party": false,
-          "sponsor": true,
-          "possible_vote": false,
-          "possible_sub_bill": false,
-          "item_type": "hearing",
           "index": 13
-        },
-        {
-          "id": "hcr28",
-          "headline": "H. C. R. No. 28",
-          "title": "Rescind portion of Executive Order 2025-05D re: intoxicating hemp",
-          "subject": "",
-          "status": "1st Hearing",
-          "proponent": false,
-          "opponent": false,
-          "interested_party": false,
-          "sponsor": true,
-          "possible_vote": false,
-          "possible_sub_bill": false,
-          "item_type": "hearing",
-          "index": 14
         },
         {
           "id": "hb913",
@@ -1009,7 +994,7 @@
           "possible_vote": false,
           "possible_sub_bill": false,
           "item_type": "hearing",
-          "index": 15
+          "index": 14
         }
       ]
     },

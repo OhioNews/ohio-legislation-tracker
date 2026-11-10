@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-10T14:41:03.371960Z",
+  "fetched_at": "2026-11-10T23:05:05.551086Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -362,9 +362,9 @@
       "status": "Scheduled",
       "agenda_items": [
         {
-          "id": "S. B. No. 294",
-          "headline": "S. B. No. 294",
-          "title": "",
+          "id": "sb294",
+          "headline": "Sub. S. B. No. 294",
+          "title": "Declare the state's energy siting policy",
           "subject": "",
           "status": "1st Hearing",
           "proponent": false,
@@ -373,7 +373,7 @@
           "sponsor": true,
           "possible_vote": false,
           "possible_sub_bill": false,
-          "item_type": "pending_referral",
+          "item_type": "hearing",
           "index": 0
         },
         {
@@ -1017,6 +1017,18 @@
       "title": "House Joint Committee on Agency Rule Review Committee Meeting",
       "textColor": "#ffffff",
       "url": "calendar/events/cmte_j_jcarr_1_2026-11-16-0130_1482",
+      "status": "Scheduled",
+      "agenda_items": []
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-11-16T09:30:00",
+      "end": "T",
+      "id": null,
+      "title": "House Study Committee to Evaluate the Placement of Delinquent Children in Residential Facilities Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_spec_delinquent_children_1_2026-11-16-0800_1491",
       "status": "Scheduled",
       "agenda_items": []
     }

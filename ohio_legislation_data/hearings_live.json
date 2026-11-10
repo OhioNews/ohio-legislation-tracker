@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-09T15:52:00.513365Z",
+  "fetched_at": "2026-11-10T01:23:51.047365Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -347,21 +347,6 @@
           "possible_sub_bill": false,
           "item_type": "hearing",
           "index": 2
-        },
-        {
-          "id": "hb364",
-          "headline": "H. B. No. 364",
-          "title": "Require food service operation note certain allergens on the menu",
-          "subject": "healthcare",
-          "status": "5th Hearing",
-          "proponent": true,
-          "opponent": true,
-          "interested_party": true,
-          "sponsor": false,
-          "possible_vote": false,
-          "possible_sub_bill": true,
-          "item_type": "hearing",
-          "index": 3
         }
       ]
     },
@@ -817,21 +802,6 @@
           "index": 3
         },
         {
-          "id": "hb295",
-          "headline": "H. B. No. 295",
-          "title": "Expedite unauthorized occupant removal; prohibit fraudulent deeds",
-          "subject": "",
-          "status": "1st Hearing",
-          "proponent": false,
-          "opponent": false,
-          "interested_party": false,
-          "sponsor": true,
-          "possible_vote": false,
-          "possible_sub_bill": false,
-          "item_type": "hearing",
-          "index": 4
-        },
-        {
           "id": "sb146",
           "headline": "Sub. S. B. No. 146",
           "title": "Codify the common law action for piercing the corporate veil",
@@ -844,7 +814,7 @@
           "possible_vote": false,
           "possible_sub_bill": false,
           "item_type": "hearing",
-          "index": 5
+          "index": 4
         },
         {
           "id": "sb277",
@@ -859,7 +829,7 @@
           "possible_vote": false,
           "possible_sub_bill": false,
           "item_type": "hearing",
-          "index": 6
+          "index": 5
         },
         {
           "id": "sb224",
@@ -874,13 +844,28 @@
           "possible_vote": false,
           "possible_sub_bill": false,
           "item_type": "hearing",
-          "index": 7
+          "index": 6
         },
         {
           "id": "sb393",
           "headline": "Sub. S. B. No. 393",
           "title": "Regards sexually oriented offenses involving juveniles, animals",
           "subject": "criminal-justice",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "possible_vote": false,
+          "possible_sub_bill": false,
+          "item_type": "hearing",
+          "index": 7
+        },
+        {
+          "id": "hb728",
+          "headline": "H. B. No. 728",
+          "title": "Eliminate informal hearings in certain juvenile delinquency cases",
+          "subject": "",
           "status": "1st Hearing",
           "proponent": false,
           "opponent": false,
@@ -907,9 +892,9 @@
           "index": 9
         },
         {
-          "id": "hb728",
-          "headline": "H. B. No. 728",
-          "title": "Eliminate informal hearings in certain juvenile delinquency cases",
+          "id": "hb295",
+          "headline": "H. B. No. 295",
+          "title": "Expedite unauthorized occupant removal; prohibit fraudulent deeds",
           "subject": "",
           "status": "1st Hearing",
           "proponent": false,
@@ -965,21 +950,6 @@
           "possible_sub_bill": false,
           "item_type": "hearing",
           "index": 13
-        },
-        {
-          "id": "hb913",
-          "headline": "H. B. No. 913",
-          "title": "Expand power of attorney, caretaker authorization affidavit",
-          "subject": "education",
-          "status": "1st Hearing",
-          "proponent": false,
-          "opponent": false,
-          "interested_party": false,
-          "sponsor": true,
-          "possible_vote": false,
-          "possible_sub_bill": false,
-          "item_type": "hearing",
-          "index": 14
         }
       ]
     },
@@ -1473,6 +1443,21 @@
           "possible_sub_bill": false,
           "item_type": "hearing",
           "index": 1
+        },
+        {
+          "id": "hb660",
+          "headline": "H. B. No. 660",
+          "title": "Regards the Ohio National Guard Scholarship Program",
+          "subject": "education",
+          "status": "1st Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "possible_vote": false,
+          "possible_sub_bill": false,
+          "item_type": "hearing",
+          "index": 2
         }
       ]
     },

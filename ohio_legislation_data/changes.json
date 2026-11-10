@@ -1,5 +1,82 @@
 [
   {
+    "run_date": "2026-11-10",
+    "number": "HB1037",
+    "title": "Add a judgeship to the Licking County Court of Common Pleas",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-09",
+    "url": "https://legiscan.com/OH/bill/HB1037/2025"
+  },
+  {
+    "run_date": "2026-11-10",
+    "number": "HB1038",
+    "title": "Revise GA authority to rescind Director of Health actions, orders",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-09",
+    "url": "https://legiscan.com/OH/bill/HB1038/2025"
+  },
+  {
+    "run_date": "2026-11-10",
+    "number": "HB1039",
+    "title": "Designate Specialist Nicolas E. Messmer Memorial Bridge",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-09",
+    "url": "https://legiscan.com/OH/bill/HB1039/2025"
+  },
+  {
+    "run_date": "2026-11-10",
+    "number": "HJR11",
+    "title": "CA: Decrease the number of votes required for a veto override",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-09",
+    "url": "https://legiscan.com/OH/bill/HJR11/2025"
+  },
+  {
+    "run_date": "2026-11-10",
+    "number": "SB306",
+    "title": "Regards insurance transactions, plans, and policies",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Re-referred",
+    "last_action_date": "2026-11-09",
+    "url": "https://legiscan.com/OH/bill/SB306/2025"
+  },
+  {
+    "run_date": "2026-11-10",
+    "number": "SR457",
+    "title": "Honoring Jodie Han on winning the 2026 OHSAA Division I State Championship in girls golf.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-11-09",
+    "url": "https://legiscan.com/OH/bill/SR457/2025"
+  },
+  {
+    "run_date": "2026-11-10",
+    "number": "SR458",
+    "title": "Honoring the River View High School boys golf team on securing the 2026 Division II State Championship.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-11-09",
+    "url": "https://legiscan.com/OH/bill/SR458/2025"
+  },
+  {
     "run_date": "2026-11-05",
     "number": "SR456",
     "title": "Honoring International Brotherhood of Electrical Workers Local 212 on its One Hundred Twenty-fifth Anniversary.",

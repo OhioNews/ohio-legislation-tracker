@@ -6908,5 +6908,59 @@
     "status": "archived",
     "release_date": "2026-11-09",
     "name": "Ohio House Technology and Innovation Committee - 11-9-2026"
+  },
+  "212528": {
+    "status": "archived",
+    "release_date": "2026-11-09",
+    "name": "Ohio Controlling Board - 11-9-2026"
+  },
+  "212670": {
+    "status": "archived",
+    "release_date": "2026-11-09",
+    "name": "Ohio House Government Oversight Committee - 11-9-2026"
+  },
+  "212661": {
+    "status": "archived",
+    "release_date": "2026-11-09",
+    "name": "Ohio House Transportation Committee - 11-9-2026"
+  },
+  "212660": {
+    "status": "awaiting_captions",
+    "first_seen": "2026-11-10",
+    "release_date": "2026-11-09",
+    "name": "Ohio House Children and Human Services Committee - 11-9-2026",
+    "program": {
+      "id": 212660,
+      "fullName": "Ohio House Children and Human Services Committee - 11-9-2026",
+      "releaseDate": "2026-11-09 00:00:00",
+      "duration": 3600,
+      "series": {
+        "id": 1002059,
+        "name": "Ohio House Children and Human Services Committee",
+        "chamber": "HOUSE"
+      }
+    }
+  },
+  "212674": {
+    "status": "awaiting_captions",
+    "first_seen": "2026-11-10",
+    "release_date": "2026-11-09",
+    "name": "Ohio House Education Committee - 11-9-2026",
+    "program": {
+      "id": 212674,
+      "fullName": "Ohio House Education Committee - 11-9-2026",
+      "releaseDate": "2026-11-09 00:00:00",
+      "duration": 3600,
+      "series": {
+        "id": 1002062,
+        "name": "Ohio House Education Committee",
+        "chamber": "HOUSE"
+      }
+    }
+  },
+  "212667": {
+    "status": "archived",
+    "release_date": "2026-11-09",
+    "name": "Ohio House Workforce and Higher Education Committee - 11-9-2026"
   }
 }

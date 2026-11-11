@@ -6925,42 +6925,151 @@
     "name": "Ohio House Transportation Committee - 11-9-2026"
   },
   "212660": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-11-10",
+    "status": "archived",
     "release_date": "2026-11-09",
-    "name": "Ohio House Children and Human Services Committee - 11-9-2026",
-    "program": {
-      "id": 212660,
-      "fullName": "Ohio House Children and Human Services Committee - 11-9-2026",
-      "releaseDate": "2026-11-09 00:00:00",
-      "duration": 3600,
-      "series": {
-        "id": 1002059,
-        "name": "Ohio House Children and Human Services Committee",
-        "chamber": "HOUSE"
-      }
-    }
+    "name": "Ohio House Children and Human Services Committee - 11-9-2026"
   },
   "212674": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-11-10",
+    "status": "archived",
     "release_date": "2026-11-09",
-    "name": "Ohio House Education Committee - 11-9-2026",
-    "program": {
-      "id": 212674,
-      "fullName": "Ohio House Education Committee - 11-9-2026",
-      "releaseDate": "2026-11-09 00:00:00",
-      "duration": 3600,
-      "series": {
-        "id": 1002062,
-        "name": "Ohio House Education Committee",
-        "chamber": "HOUSE"
-      }
-    }
+    "name": "Ohio House Education Committee - 11-9-2026"
   },
   "212667": {
     "status": "archived",
     "release_date": "2026-11-09",
     "name": "Ohio House Workforce and Higher Education Committee - 11-9-2026"
+  },
+  "212712": {
+    "status": "awaiting_captions",
+    "first_seen": "2026-11-11",
+    "release_date": "2026-11-10",
+    "name": "Ohio Senate - 11-10-2026 Part 2",
+    "program": {
+      "id": 212712,
+      "fullName": "Ohio Senate - 11-10-2026 Part 2",
+      "releaseDate": "2026-11-10 00:00:00",
+      "duration": 3600,
+      "series": {
+        "id": 25,
+        "name": "Ohio Senate",
+        "chamber": "SENATE"
+      }
+    }
+  },
+  "212569": {
+    "status": "archived",
+    "release_date": "2026-11-10",
+    "name": "Ohio Senate - 11-10-2026"
+  },
+  "212568": {
+    "status": "awaiting_captions",
+    "first_seen": "2026-11-11",
+    "release_date": "2026-11-10",
+    "name": "Ohio House of Representatives - 11-10-2026",
+    "program": {
+      "id": 212568,
+      "fullName": "Ohio House of Representatives - 11-10-2026",
+      "releaseDate": "2026-11-10 00:00:00",
+      "duration": 3600,
+      "series": {
+        "id": 26,
+        "name": "Ohio House of Representatives",
+        "chamber": "HOUSE"
+      }
+    }
+  },
+  "212677": {
+    "status": "archived",
+    "release_date": "2026-11-10",
+    "name": "Ohio House Health Committee - 11-10-2026"
+  },
+  "212663": {
+    "status": "archived",
+    "release_date": "2026-11-10",
+    "name": "Ohio House Rules And Reference Committee - 11-10-2026"
+  },
+  "212672": {
+    "status": "archived",
+    "release_date": "2026-11-10",
+    "name": "Ohio House Ways And Means Committee - 11-10-2026"
+  },
+  "212676": {
+    "status": "archived",
+    "release_date": "2026-11-10",
+    "name": "Ohio Senate Judiciary Committee - 11-10-2026"
+  },
+  "212679": {
+    "status": "archived",
+    "release_date": "2026-11-10",
+    "name": "Ohio Senate Small Business and Economic Opportunity Committee - 11-10-2026"
+  },
+  "212678": {
+    "status": "archived",
+    "release_date": "2026-11-10",
+    "name": "Ohio Senate Health Committee - 11-10-2026"
+  },
+  "212681": {
+    "status": "archived",
+    "release_date": "2026-11-10",
+    "name": "Ohio Senate General Government Committee - 11-10-2026"
+  },
+  "212671": {
+    "status": "archived",
+    "release_date": "2026-11-10",
+    "name": "Ohio House Agriculture Committee - 11-10-2026"
+  },
+  "212664": {
+    "status": "awaiting_captions",
+    "first_seen": "2026-11-11",
+    "release_date": "2026-11-10",
+    "name": "Ohio House Energy Committee - 11-10-2026",
+    "program": {
+      "id": 212664,
+      "fullName": "Ohio House Energy Committee - 11-10-2026",
+      "releaseDate": "2026-11-10 00:00:00",
+      "duration": 3600,
+      "series": {
+        "id": 1002063,
+        "name": "Ohio House Energy Committee",
+        "chamber": "HOUSE"
+      }
+    }
+  },
+  "212714": {
+    "status": "awaiting_captions",
+    "first_seen": "2026-11-11",
+    "release_date": "2026-11-10",
+    "name": "Ohio House Judiciary Committee - 11-10-2026 - Part 2",
+    "program": {
+      "id": 212714,
+      "fullName": "Ohio House Judiciary Committee - 11-10-2026 - Part 2",
+      "releaseDate": "2026-11-10 00:00:00",
+      "duration": 3600,
+      "series": {
+        "id": 1002065,
+        "name": "Ohio House Judiciary Committee",
+        "chamber": "HOUSE"
+      }
+    }
+  },
+  "212682": {
+    "status": "archived",
+    "release_date": "2026-11-10",
+    "name": "Ohio House Judiciary Committee - 11-10-2026"
+  },
+  "212662": {
+    "status": "archived",
+    "release_date": "2026-11-10",
+    "name": "Ohio House Local Government Committee - 11-10-2026"
+  },
+  "212675": {
+    "status": "archived",
+    "release_date": "2026-11-10",
+    "name": "Ohio House Public Safety Committee - 11-10-2026"
+  },
+  "212680": {
+    "status": "archived",
+    "release_date": "2026-11-10",
+    "name": "Ohio House Veterans and Military Development Committee - 11-10-2026"
   }
 }

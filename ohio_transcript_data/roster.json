@@ -1753,5 +1753,18 @@
   "chamber": "house",
   "district": 66,
   "role": "Rep"
+ },
+ {
+  "people_id": 26730,
+  "name": "Caleb Stidham",
+  "first": "Caleb",
+  "last": "Stidham",
+  "middle": "",
+  "nickname": "",
+  "suffix": "",
+  "party": "R",
+  "chamber": "house",
+  "district": 89,
+  "role": "Rep"
  }
 ]

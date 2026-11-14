@@ -6962,21 +6962,9 @@
     "name": "Ohio Senate - 11-10-2026"
   },
   "212568": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-11-11",
+    "status": "archived",
     "release_date": "2026-11-10",
-    "name": "Ohio House of Representatives - 11-10-2026",
-    "program": {
-      "id": 212568,
-      "fullName": "Ohio House of Representatives - 11-10-2026",
-      "releaseDate": "2026-11-10 00:00:00",
-      "duration": 3600,
-      "series": {
-        "id": 26,
-        "name": "Ohio House of Representatives",
-        "chamber": "HOUSE"
-      }
-    }
+    "name": "Ohio House of Representatives - 11-10-2026"
   },
   "212677": {
     "status": "archived",
@@ -7019,21 +7007,9 @@
     "name": "Ohio House Agriculture Committee - 11-10-2026"
   },
   "212664": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-11-11",
+    "status": "archived",
     "release_date": "2026-11-10",
-    "name": "Ohio House Energy Committee - 11-10-2026",
-    "program": {
-      "id": 212664,
-      "fullName": "Ohio House Energy Committee - 11-10-2026",
-      "releaseDate": "2026-11-10 00:00:00",
-      "duration": 3600,
-      "series": {
-        "id": 1002063,
-        "name": "Ohio House Energy Committee",
-        "chamber": "HOUSE"
-      }
-    }
+    "name": "Ohio House Energy Committee - 11-10-2026"
   },
   "212714": {
     "status": "awaiting_captions",

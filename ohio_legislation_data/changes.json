@@ -1,5 +1,27 @@
 [
   {
+    "run_date": "2026-11-16",
+    "number": "HB304",
+    "title": "Permit certain activities fulfill PE requirement; require recess",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-16",
+    "url": "https://legiscan.com/OH/bill/HB304/2025"
+  },
+  {
+    "run_date": "2026-11-16",
+    "number": "HB762",
+    "title": "Exempt certain vending machine food purchases from sales, use tax",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-16",
+    "url": "https://legiscan.com/OH/bill/HB762/2025"
+  },
+  {
     "run_date": "2026-11-12",
     "number": "HB964",
     "title": "Require names submitted by BMV be included on the jury list",

@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-16T05:56:19.030822Z",
+  "fetched_at": "2026-11-16T15:32:03.864716Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -3482,9 +3482,9 @@
           "title": "Enact the ASSET Act",
           "subject": "",
           "status": "4th Hearing",
-          "proponent": false,
-          "opponent": false,
-          "interested_party": false,
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
           "sponsor": false,
           "possible_vote": false,
           "possible_sub_bill": false,

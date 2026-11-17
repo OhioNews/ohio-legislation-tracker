@@ -7047,5 +7047,56 @@
     "status": "archived",
     "release_date": "2026-11-10",
     "name": "Ohio House Veterans and Military Development Committee - 11-10-2026"
+  },
+  "212748": {
+    "status": "awaiting_captions",
+    "first_seen": "2026-11-17",
+    "release_date": "2026-11-16",
+    "name": "Ohio Joint Committee on Agency Rule Review - 11-16-2026",
+    "program": {
+      "id": 212748,
+      "fullName": "Ohio Joint Committee on Agency Rule Review - 11-16-2026",
+      "releaseDate": "2026-11-16 00:00:00",
+      "duration": 1800,
+      "series": {
+        "id": 1000632,
+        "name": "Ohio Joint Committee on Agency Rule Review",
+        "chamber": "JOINT"
+      }
+    }
+  },
+  "212790": {
+    "status": "awaiting_captions",
+    "first_seen": "2026-11-17",
+    "release_date": "2026-11-17",
+    "name": "Ohio House Insurance Committee - 11-17-2026",
+    "program": {
+      "id": 212790,
+      "fullName": "Ohio House Insurance Committee - 11-17-2026",
+      "releaseDate": "2026-11-17 00:00:00",
+      "duration": 3600,
+      "series": {
+        "id": 1000744,
+        "name": "Ohio House Insurance Committee",
+        "chamber": "HOUSE"
+      }
+    }
+  },
+  "212769": {
+    "status": "awaiting_captions",
+    "first_seen": "2026-11-17",
+    "release_date": "2026-11-17",
+    "name": "Ohio House Technology and Innovation Committee - 11-17-2026",
+    "program": {
+      "id": 212769,
+      "fullName": "Ohio House Technology and Innovation Committee - 11-17-2026",
+      "releaseDate": "2026-11-17 00:00:00",
+      "duration": 3600,
+      "series": {
+        "id": 1001318,
+        "name": "Ohio House Technology and Innovation Committee",
+        "chamber": "HOUSE"
+      }
+    }
   }
 }

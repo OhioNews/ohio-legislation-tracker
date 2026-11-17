@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-17T01:47:54.334769Z",
+  "fetched_at": "2026-11-17T15:49:05.929542Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -1630,21 +1630,6 @@
           "index": 1
         },
         {
-          "id": "hb839",
-          "headline": "H. B. No. 839",
-          "title": "Expand youth access to soccer",
-          "subject": "",
-          "status": "1st Hearing",
-          "proponent": false,
-          "opponent": false,
-          "interested_party": false,
-          "sponsor": true,
-          "possible_vote": false,
-          "possible_sub_bill": false,
-          "item_type": "hearing",
-          "index": 2
-        },
-        {
           "id": "hb866",
           "headline": "H. B. No. 866",
           "title": "Designate Devo Day",
@@ -1657,7 +1642,7 @@
           "possible_vote": false,
           "possible_sub_bill": false,
           "item_type": "hearing",
-          "index": 3
+          "index": 2
         }
       ]
     },
@@ -3668,30 +3653,6 @@
           "index": 0
         }
       ]
-    },
-    {
-      "allDay": null,
-      "backgroundColor": "#ad3838",
-      "start": "2026-11-16T13:30:00",
-      "end": "T",
-      "id": null,
-      "title": "House Joint Committee on Agency Rule Review Committee Meeting",
-      "textColor": "#ffffff",
-      "url": "calendar/events/cmte_j_jcarr_1_2026-11-16-0130_1482",
-      "status": "Scheduled",
-      "agenda_items": []
-    },
-    {
-      "allDay": null,
-      "backgroundColor": "#ad3838",
-      "start": "2026-11-16T09:30:00",
-      "end": "T",
-      "id": null,
-      "title": "House Study Committee to Evaluate the Placement of Delinquent Children in Residential Facilities Committee Meeting",
-      "textColor": "#ffffff",
-      "url": "calendar/events/cmte_spec_delinquent_children_1_2026-11-16-0800_1491",
-      "status": "Scheduled",
-      "agenda_items": []
     }
   ]
 }

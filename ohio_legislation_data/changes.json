@@ -1,5 +1,115 @@
 [
   {
+    "run_date": "2026-11-17",
+    "number": "HB82",
+    "title": "Regards traffic offenses in construction zones",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-16",
+    "url": "https://legiscan.com/OH/bill/HB82/2025"
+  },
+  {
+    "run_date": "2026-11-17",
+    "number": "HB255",
+    "title": "Create the Ohio Sports Commission",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-16",
+    "url": "https://legiscan.com/OH/bill/HB255/2025"
+  },
+  {
+    "run_date": "2026-11-17",
+    "number": "HB452",
+    "title": "Designate 761st Tank Battalion Day",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-16",
+    "url": "https://legiscan.com/OH/bill/HB452/2025"
+  },
+  {
+    "run_date": "2026-11-17",
+    "number": "HB530",
+    "title": "Establish the Long-term Care Workforce Study Commission",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-16",
+    "url": "https://legiscan.com/OH/bill/HB530/2025"
+  },
+  {
+    "run_date": "2026-11-17",
+    "number": "HB1041",
+    "title": "Regards settlements to close electric generating facilities",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-16",
+    "url": "https://legiscan.com/OH/bill/HB1041/2025"
+  },
+  {
+    "run_date": "2026-11-17",
+    "number": "HB1042",
+    "title": "Enact Withholding Illegal Revenue Entering Drug Markets Act",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-16",
+    "url": "https://legiscan.com/OH/bill/HB1042/2025"
+  },
+  {
+    "run_date": "2026-11-17",
+    "number": "HB1043",
+    "title": "Measure the performance of public children services agencies",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-16",
+    "url": "https://legiscan.com/OH/bill/HB1043/2025"
+  },
+  {
+    "run_date": "2026-11-17",
+    "number": "SR463",
+    "title": "Honoring Emma Strickler on placing first at the 2026 National FFA Convention and Expo.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-11-16",
+    "url": "https://legiscan.com/OH/bill/SR463/2025"
+  },
+  {
+    "run_date": "2026-11-17",
+    "number": "SR464",
+    "title": "Honoring Ken Thomas on his service to the OPERS Board of Trustees.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-11-16",
+    "url": "https://legiscan.com/OH/bill/SR464/2025"
+  },
+  {
+    "run_date": "2026-11-17",
+    "number": "SR465",
+    "title": "Honoring Chris Mabe on his service to the OPERS Board of Trustees.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-11-16",
+    "url": "https://legiscan.com/OH/bill/SR465/2025"
+  },
+  {
     "run_date": "2026-11-16",
     "number": "HB304",
     "title": "Permit certain activities fulfill PE requirement; require recess",

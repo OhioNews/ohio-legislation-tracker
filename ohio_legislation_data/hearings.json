@@ -1,1 +1,56 @@
-[]
+[
+  {
+    "id": "2163548_2026-11-18",
+    "date": "2026-11-18",
+    "time": "15:00",
+    "chamber": "house",
+    "committee": "unknown",
+    "committee_full": "Unknown",
+    "type": "Hearing",
+    "location": "Or after session",
+    "description": "House Energy 1st Hearing, Sponsor/Prop Testimony",
+    "bills": [
+      {
+        "number": "HB1041",
+        "title": "Regards settlements to close electric generating facilities",
+        "url": "https://legiscan.com/OH/bill/HB1041/2025"
+      }
+    ]
+  },
+  {
+    "id": "2163537_2026-11-18",
+    "date": "2026-11-18",
+    "time": "09:00",
+    "chamber": "house",
+    "committee": "unknown",
+    "committee_full": "Unknown",
+    "type": "Hearing",
+    "location": "018",
+    "description": "House Local Government Informal Hearing, Sponsor Testimony",
+    "bills": [
+      {
+        "number": "HB1042",
+        "title": "Enact Withholding Illegal Revenue Entering Drug Markets Act",
+        "url": "https://legiscan.com/OH/bill/HB1042/2025"
+      }
+    ]
+  },
+  {
+    "id": "2163558_2026-11-17",
+    "date": "2026-11-17",
+    "time": "10:45",
+    "chamber": "house",
+    "committee": "unknown",
+    "committee_full": "Unknown",
+    "type": "Hearing",
+    "location": "Room 121",
+    "description": "House Children and Human Services Informal Hearing, Sponsor Testimony",
+    "bills": [
+      {
+        "number": "HB1043",
+        "title": "Measure the performance of public children services agencies",
+        "url": "https://legiscan.com/OH/bill/HB1043/2025"
+      }
+    ]
+  }
+]

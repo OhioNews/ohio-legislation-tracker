@@ -1,5 +1,137 @@
 [
   {
+    "run_date": "2026-11-18",
+    "number": "HB13",
+    "title": "Designate Roy Rogers Day",
+    "status": "passed",
+    "prev_status": "passed",
+    "is_new": false,
+    "last_action": "Sent To The Governor",
+    "last_action_date": "2026-11-17",
+    "url": "https://legiscan.com/OH/bill/HB13/2025"
+  },
+  {
+    "run_date": "2026-11-18",
+    "number": "HB397",
+    "title": "Expand allowable uses of profits from jail commissary funds",
+    "status": "passed",
+    "prev_status": "passed",
+    "is_new": false,
+    "last_action": "Sent To The Governor",
+    "last_action_date": "2026-11-17",
+    "url": "https://legiscan.com/OH/bill/HB397/2025"
+  },
+  {
+    "run_date": "2026-11-18",
+    "number": "HB792",
+    "title": "Regards surplus lines insurers",
+    "status": "introduced",
+    "prev_status": "in-committee",
+    "is_new": false,
+    "last_action": "Reported: Insurance",
+    "last_action_date": "2026-11-17",
+    "url": "https://legiscan.com/OH/bill/HB792/2025"
+  },
+  {
+    "run_date": "2026-11-18",
+    "number": "HB1044",
+    "title": "Prohibit state agencies describing GRF-funded programs as \"free\"",
+    "status": "introduced",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-17",
+    "url": "https://legiscan.com/OH/bill/HB1044/2025"
+  },
+  {
+    "run_date": "2026-11-18",
+    "number": "SB202",
+    "title": "Enact the Chief Steven DiSario Act",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Reported: Government Oversight",
+    "last_action_date": "2026-11-17",
+    "url": "https://legiscan.com/OH/bill/SB202/2025"
+  },
+  {
+    "run_date": "2026-11-18",
+    "number": "SB214",
+    "title": "Remove firearm mufflers, suppressors as dangerous ordnance",
+    "status": "passed",
+    "prev_status": "passed",
+    "is_new": false,
+    "last_action": "Sent To The Governor",
+    "last_action_date": "2026-11-17",
+    "url": "https://legiscan.com/OH/bill/SB214/2025"
+  },
+  {
+    "run_date": "2026-11-18",
+    "number": "SB279",
+    "title": "Ban discouraging, barring law enforcement from carrying off duty",
+    "status": "introduced",
+    "prev_status": "in-committee",
+    "is_new": false,
+    "last_action": "Reported - Amended: General Government",
+    "last_action_date": "2026-11-17",
+    "url": "https://legiscan.com/OH/bill/SB279/2025"
+  },
+  {
+    "run_date": "2026-11-18",
+    "number": "SR466",
+    "title": "Honoring Gwen Huddle on her 2026 Division III State Cross Country Championship.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-11-17",
+    "url": "https://legiscan.com/OH/bill/SR466/2025"
+  },
+  {
+    "run_date": "2026-11-18",
+    "number": "SR467",
+    "title": "Honoring the Liberty Center High School girls cross country team as the 2026 Division IV State Champion.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-11-17",
+    "url": "https://legiscan.com/OH/bill/SR467/2025"
+  },
+  {
+    "run_date": "2026-11-18",
+    "number": "SR468",
+    "title": "Honoring the Wilmington FFA Chapter as the 2026 National Model of Excellence.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-11-17",
+    "url": "https://legiscan.com/OH/bill/SR468/2025"
+  },
+  {
+    "run_date": "2026-11-18",
+    "number": "SR469",
+    "title": "Honoring Josie Jennings as the 2026-2027 National FFA President.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-11-17",
+    "url": "https://legiscan.com/OH/bill/SR469/2025"
+  },
+  {
+    "run_date": "2026-11-18",
+    "number": "SR470",
+    "title": "Honoring Robin Thompson on her retirement from the Ohio Legislative Service Commission.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-11-17",
+    "url": "https://legiscan.com/OH/bill/SR470/2025"
+  },
+  {
     "run_date": "2026-11-17",
     "number": "HB82",
     "title": "Regards traffic offenses in construction zones",

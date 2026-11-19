@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-18T15:28:25.330465Z",
+  "fetched_at": "2026-11-19T00:08:44.238104Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -1055,9 +1055,9 @@
       "status": "Scheduled",
       "agenda_items": [
         {
-          "id": "H. B. No. 1041",
+          "id": "hb1041",
           "headline": "H. B. No. 1041",
-          "title": "",
+          "title": "Regards settlements to close electric generating facilities",
           "subject": "",
           "status": "1st Hearing",
           "proponent": true,
@@ -1066,7 +1066,7 @@
           "sponsor": true,
           "possible_vote": false,
           "possible_sub_bill": false,
-          "item_type": "pending_referral",
+          "item_type": "hearing",
           "index": 0
         },
         {

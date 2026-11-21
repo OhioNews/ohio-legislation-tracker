@@ -7084,21 +7084,9 @@
     "name": "Ohio Senate Agriculture and Natural Resources Committee - 11-17-2026"
   },
   "212793": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-11-18",
+    "status": "archived",
     "release_date": "2026-11-18",
-    "name": "Ohio Senate Higher Education Committee - 11-18-2026",
-    "program": {
-      "id": 212793,
-      "fullName": "Ohio Senate Higher Education Committee - 11-18-2026",
-      "releaseDate": "2026-11-18 00:00:00",
-      "duration": 3600,
-      "series": {
-        "id": 1000976,
-        "name": "Ohio Senate Higher Education Committee",
-        "chamber": "SENATE"
-      }
-    }
+    "name": "Ohio Senate Higher Education Committee - 11-18-2026"
   },
   "212803": {
     "status": "archived",
@@ -7168,21 +7156,9 @@
     }
   },
   "212780": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-11-18",
+    "status": "archived",
     "release_date": "2026-11-18",
-    "name": "Ohio House Development Committee - 11-18-2026",
-    "program": {
-      "id": 212780,
-      "fullName": "Ohio House Development Committee - 11-18-2026",
-      "releaseDate": "2026-11-18 00:00:00",
-      "duration": 3600,
-      "series": {
-        "id": 1002061,
-        "name": "Ohio House Development Committee",
-        "chamber": "HOUSE"
-      }
-    }
+    "name": "Ohio House Development Committee - 11-18-2026"
   },
   "212773": {
     "status": "archived",
@@ -7245,21 +7221,9 @@
     "name": "Ohio House Rules And Reference Committee - 11-18-2026"
   },
   "212789": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-11-19",
+    "status": "archived",
     "release_date": "2026-11-18",
-    "name": "Ohio House Ways And Means Committee - 11-18-2026",
-    "program": {
-      "id": 212789,
-      "fullName": "Ohio House Ways And Means Committee - 11-18-2026",
-      "releaseDate": "2026-11-18 00:00:00",
-      "duration": 3600,
-      "series": {
-        "id": 1000750,
-        "name": "Ohio House Ways And Means Committee",
-        "chamber": "HOUSE"
-      }
-    }
+    "name": "Ohio House Ways And Means Committee - 11-18-2026"
   },
   "212781": {
     "status": "archived",
@@ -7277,21 +7241,9 @@
     "name": "Ohio Senate Transportation Committee - 11-18-2026"
   },
   "212784": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-11-19",
+    "status": "archived",
     "release_date": "2026-11-18",
-    "name": "Ohio Senate Health Committee - 11-18-2026",
-    "program": {
-      "id": 212784,
-      "fullName": "Ohio Senate Health Committee - 11-18-2026",
-      "releaseDate": "2026-11-18 00:00:00",
-      "duration": 3600,
-      "series": {
-        "id": 1001372,
-        "name": "Ohio Senate Health Committee",
-        "chamber": "SENATE"
-      }
-    }
+    "name": "Ohio Senate Health Committee - 11-18-2026"
   },
   "212787": {
     "status": "archived",
@@ -7299,21 +7251,9 @@
     "name": "Ohio House Agriculture Committee - 11-18-2026"
   },
   "212788": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-11-19",
+    "status": "archived",
     "release_date": "2026-11-18",
-    "name": "Ohio Senate Armed Services, Veterans Affairs and Public Safety Committee - 11-18-2026",
-    "program": {
-      "id": 212788,
-      "fullName": "Ohio Senate Armed Services, Veterans Affairs and Public Safety Committee - 11-18-2026",
-      "releaseDate": "2026-11-18 00:00:00",
-      "duration": 3600,
-      "series": {
-        "id": 1002052,
-        "name": "Ohio Senate Armed Services, Veterans Affairs and Public Safety Committee",
-        "chamber": "SENATE"
-      }
-    }
+    "name": "Ohio Senate Armed Services, Veterans Affairs and Public Safety Committee - 11-18-2026"
   },
   "212795": {
     "status": "archived",
@@ -7326,21 +7266,9 @@
     "name": "Ohio House Judiciary Committee - 11-18-2026"
   },
   "212778": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-11-19",
+    "status": "archived",
     "release_date": "2026-11-18",
-    "name": "Ohio House Natural Resources Committee - 11-18-2026",
-    "program": {
-      "id": 212778,
-      "fullName": "Ohio House Natural Resources Committee - 11-18-2026",
-      "releaseDate": "2026-11-18 00:00:00",
-      "duration": null,
-      "series": {
-        "id": 1002068,
-        "name": "Ohio House Natural Resources Committee",
-        "chamber": "HOUSE"
-      }
-    }
+    "name": "Ohio House Natural Resources Committee - 11-18-2026"
   },
   "212804": {
     "status": "archived",

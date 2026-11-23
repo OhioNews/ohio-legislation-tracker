@@ -1,5 +1,27 @@
 [
   {
+    "run_date": "2026-11-23",
+    "number": "HR507",
+    "title": "Affirm religious liberty protections for incarcerated individuals",
+    "status": "in-committee",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced and Referred to Committee: General Government",
+    "last_action_date": "2026-11-10",
+    "url": "https://legiscan.com/OH/bill/HR507/2025"
+  },
+  {
+    "run_date": "2026-11-23",
+    "number": "HR554",
+    "title": "Urge Congress to extend visas for Ukrainian refugees",
+    "status": "in-committee",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Introduced and Referred to Committee: Government Oversight",
+    "last_action_date": "2026-11-10",
+    "url": "https://legiscan.com/OH/bill/HR554/2025"
+  },
+  {
     "run_date": "2026-11-20",
     "number": "HB168",
     "title": "Regards motivation or purpose to commit criminal child enticement",

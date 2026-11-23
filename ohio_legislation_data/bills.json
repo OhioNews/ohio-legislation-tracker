@@ -43459,5 +43459,39 @@
     "committee": null,
     "subject": "criminal-justice",
     "url": "https://legiscan.com/OH/bill/SB493/2025"
+  },
+  {
+    "bill_id": 2164438,
+    "number": "HR554",
+    "chamber": "house",
+    "title": "Urge Congress to extend visas for Ukrainian refugees",
+    "description": "To urge the United States Congress to pass legislation to extend visas for Ukrainian refugees through the end of the Russo-Ukrainian war and to require the United States Citizenship and Immigration Services to process pending visa renewal applications.",
+    "status": "in-committee",
+    "status_code": 1,
+    "status_date": "2026-11-10",
+    "last_action": "Introduced and Referred to Committee: Government Oversight",
+    "last_action_date": "2026-11-10",
+    "effective_date": "",
+    "sponsor": "Rep. Joseph Miller (D-HD-053)",
+    "committee": "Government Oversight",
+    "subject": "general",
+    "url": "https://legiscan.com/OH/bill/HR554/2025"
+  },
+  {
+    "bill_id": 2164452,
+    "number": "HR507",
+    "chamber": "house",
+    "title": "Affirm religious liberty protections for incarcerated individuals",
+    "description": "To affirm the importance of religious liberty protections for incarcerated individuals under the Religious Land Use and Institutionalized Persons Act of 2000 and recognize the contributions of Prison Fellowship.",
+    "status": "in-committee",
+    "status_code": 1,
+    "status_date": "2026-11-10",
+    "last_action": "Introduced and Referred to Committee: General Government",
+    "last_action_date": "2026-11-10",
+    "effective_date": "",
+    "sponsor": "Rep. Adam Mathews (R-HD-056)",
+    "committee": "General Government",
+    "subject": "general",
+    "url": "https://legiscan.com/OH/bill/HR507/2025"
   }
 ]

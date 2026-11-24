@@ -7139,21 +7139,9 @@
     "name": "Ohio House Children and Human Services Committee - 11-17-2026"
   },
   "212774": {
-    "status": "awaiting_captions",
-    "first_seen": "2026-11-18",
+    "status": "archived",
     "release_date": "2026-11-17",
-    "name": "Ohio House Community Revitalization Committee - 11-17-2026",
-    "program": {
-      "id": 212774,
-      "fullName": "Ohio House Community Revitalization Committee - 11-17-2026",
-      "releaseDate": "2026-11-17 00:00:00",
-      "duration": 3600,
-      "series": {
-        "id": 1002060,
-        "name": "Ohio House Community Revitalization Committee",
-        "chamber": "HOUSE"
-      }
-    }
+    "name": "Ohio House Community Revitalization Committee - 11-17-2026"
   },
   "212780": {
     "status": "archived",

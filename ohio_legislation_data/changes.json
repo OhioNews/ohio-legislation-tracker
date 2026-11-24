@@ -1,5 +1,82 @@
 [
   {
+    "run_date": "2026-11-24",
+    "number": "HB405",
+    "title": "Regards regulation of consumer goods service contracts",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/HB405/2025"
+  },
+  {
+    "run_date": "2026-11-24",
+    "number": "HB417",
+    "title": "Regards animal abuse offenses and penalties",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/HB417/2025"
+  },
+  {
+    "run_date": "2026-11-24",
+    "number": "HB701",
+    "title": "Regards juvenile offenders, qualification for employment",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/HB701/2025"
+  },
+  {
+    "run_date": "2026-11-24",
+    "number": "HB737",
+    "title": "Require cash payments to the government be rounded to a nickel",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/HB737/2025"
+  },
+  {
+    "run_date": "2026-11-24",
+    "number": "HB750",
+    "title": "Regards PACE program site expansion",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/HB750/2025"
+  },
+  {
+    "run_date": "2026-11-24",
+    "number": "HB792",
+    "title": "Regards surplus lines insurers",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/HB792/2025"
+  },
+  {
+    "run_date": "2026-11-24",
+    "number": "SB340",
+    "title": "Require elector approval for a municipal traffic camera program",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/SB340/2025"
+  },
+  {
     "run_date": "2026-11-23",
     "number": "HR507",
     "title": "Affirm religious liberty protections for incarcerated individuals",

@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-25T08:00:07.085076Z",
+  "fetched_at": "2026-11-25T21:29:55.457551Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -2712,6 +2712,49 @@
     {
       "allDay": null,
       "backgroundColor": "#ad3838",
+      "start": "2026-12-02T12:00:00",
+      "end": "T",
+      "id": null,
+      "title": "House Energy Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_energy_1_2026-12-02-1200_1570",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb1041",
+          "headline": "H. B. No. 1041",
+          "title": "Regards settlements to close electric generating facilities",
+          "subject": "",
+          "status": "2nd Hearing",
+          "proponent": false,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "possible_vote": false,
+          "possible_sub_bill": false,
+          "item_type": "hearing",
+          "index": 0
+        },
+        {
+          "id": "sb151",
+          "headline": "Am. S. B. No. 151",
+          "title": "Allow certain natural gas suppliers to offer carbon offsets",
+          "subject": "",
+          "status": "4th Hearing",
+          "proponent": false,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "possible_vote": true,
+          "possible_sub_bill": false,
+          "item_type": "hearing",
+          "index": 1
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
       "start": "2026-12-01T10:00:00",
       "end": "T",
       "id": null,
@@ -2837,6 +2880,21 @@
           "index": 2
         },
         {
+          "id": "sb111",
+          "headline": "S. B. No. 111",
+          "title": "Designate Henrietta Lacks Day",
+          "subject": "healthcare",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": false,
+          "possible_vote": false,
+          "possible_sub_bill": false,
+          "item_type": "hearing",
+          "index": 3
+        },
+        {
           "id": "sb320",
           "headline": "Am. S. B. No. 320",
           "title": "Enter into the Athletic Trainer Compact",
@@ -2849,7 +2907,7 @@
           "possible_vote": false,
           "possible_sub_bill": false,
           "item_type": "hearing",
-          "index": 3
+          "index": 4
         },
         {
           "id": "sb331",
@@ -2864,7 +2922,7 @@
           "possible_vote": false,
           "possible_sub_bill": false,
           "item_type": "hearing",
-          "index": 4
+          "index": 5
         },
         {
           "id": "hcr45",
@@ -2879,7 +2937,7 @@
           "possible_vote": false,
           "possible_sub_bill": false,
           "item_type": "hearing",
-          "index": 5
+          "index": 6
         },
         {
           "id": "hb558",
@@ -2894,7 +2952,7 @@
           "possible_vote": false,
           "possible_sub_bill": false,
           "item_type": "hearing",
-          "index": 6
+          "index": 7
         },
         {
           "id": "hb700",
@@ -2909,7 +2967,7 @@
           "possible_vote": false,
           "possible_sub_bill": false,
           "item_type": "hearing",
-          "index": 7
+          "index": 8
         },
         {
           "id": "hb752",
@@ -2924,7 +2982,7 @@
           "possible_vote": false,
           "possible_sub_bill": false,
           "item_type": "hearing",
-          "index": 8
+          "index": 9
         },
         {
           "id": "hb834",
@@ -2939,7 +2997,7 @@
           "possible_vote": false,
           "possible_sub_bill": false,
           "item_type": "hearing",
-          "index": 9
+          "index": 10
         },
         {
           "id": "hb887",
@@ -2954,7 +3012,7 @@
           "possible_vote": false,
           "possible_sub_bill": false,
           "item_type": "hearing",
-          "index": 10
+          "index": 11
         },
         {
           "id": "hb893",
@@ -2969,7 +3027,7 @@
           "possible_vote": false,
           "possible_sub_bill": false,
           "item_type": "hearing",
-          "index": 11
+          "index": 12
         }
       ]
     },

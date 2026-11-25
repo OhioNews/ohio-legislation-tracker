@@ -1,5 +1,181 @@
 [
   {
+    "run_date": "2026-11-25",
+    "number": "HB391",
+    "title": "Require tax rate as a true value percentage on tax bills, ballots",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/HB391/2025"
+  },
+  {
+    "run_date": "2026-11-25",
+    "number": "HB463",
+    "title": "Revise driver education requirements",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/HB463/2025"
+  },
+  {
+    "run_date": "2026-11-25",
+    "number": "HB632",
+    "title": "Allow driver's license or ID card to show Gold Star Family status",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/HB632/2025"
+  },
+  {
+    "run_date": "2026-11-25",
+    "number": "HB865",
+    "title": "Regards information on and advertisement of adoptable children",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/HB865/2025"
+  },
+  {
+    "run_date": "2026-11-25",
+    "number": "SB113",
+    "title": "Prohibit diversity, equity, and inclusion in public schools",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/SB113/2025"
+  },
+  {
+    "run_date": "2026-11-25",
+    "number": "SB120",
+    "title": "Establish the Urban Farmer Youth Initiative Pilot Program",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Reported - Re-referred to Rules and Reference: Agriculture",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/SB120/2025"
+  },
+  {
+    "run_date": "2026-11-25",
+    "number": "SB249",
+    "title": "Authorize dispensing of ivermectin without a prescription",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/SB249/2025"
+  },
+  {
+    "run_date": "2026-11-25",
+    "number": "SB279",
+    "title": "Ban discouraging, barring law enforcement from carrying off duty",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/SB279/2025"
+  },
+  {
+    "run_date": "2026-11-25",
+    "number": "SB357",
+    "title": "Expand violent offender database; revise database availability",
+    "status": "passed-chamber",
+    "prev_status": "passed-chamber",
+    "is_new": false,
+    "last_action": "Introduced",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/SB357/2025"
+  },
+  {
+    "run_date": "2026-11-25",
+    "number": "SR472",
+    "title": "Honoring the Oakwood High School girls cross country team on winning the 2026 Division III State Championship.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/SR472/2025"
+  },
+  {
+    "run_date": "2026-11-25",
+    "number": "SR473",
+    "title": "Honoring the Kettering Fairmont High School boys soccer team on winning the 2026 Division I State Championship.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/SR473/2025"
+  },
+  {
+    "run_date": "2026-11-25",
+    "number": "SR474",
+    "title": "Honoring St. Mark's Lodge 7, Prince Hall Free and Accepted Masons on its One Hundred Seventy-fifth Anniversary.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/SR474/2025"
+  },
+  {
+    "run_date": "2026-11-25",
+    "number": "SR475",
+    "title": "Honoring the Tuscarawas County Public Library System on its One Hundred Twenty-fifth Anniversary.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/SR475/2025"
+  },
+  {
+    "run_date": "2026-11-25",
+    "number": "SR476",
+    "title": "Recognizing Military Family Appreciation Month in Ohio, November 2026.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/SR476/2025"
+  },
+  {
+    "run_date": "2026-11-25",
+    "number": "SR477",
+    "title": "Honoring the Hudson High School girls soccer team as the 2026 Division II State Champion.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/SR477/2025"
+  },
+  {
+    "run_date": "2026-11-25",
+    "number": "SR478",
+    "title": "Honoring the Upper Arlington High School field hockey team as the 2026 OHSAA State Champion.",
+    "status": "passed",
+    "prev_status": null,
+    "is_new": true,
+    "last_action": "Adopted",
+    "last_action_date": "2026-11-24",
+    "url": "https://legiscan.com/OH/bill/SR478/2025"
+  },
+  {
     "run_date": "2026-11-24",
     "number": "HB405",
     "title": "Regards regulation of consumer goods service contracts",
@@ -2781,82 +2957,5 @@
     "last_action": "Introduced and Referred to Committee: Energy",
     "last_action_date": "2026-11-10",
     "url": "https://legiscan.com/OH/bill/SCR20/2025"
-  },
-  {
-    "run_date": "2026-11-10",
-    "number": "HB1037",
-    "title": "Add a judgeship to the Licking County Court of Common Pleas",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-11-09",
-    "url": "https://legiscan.com/OH/bill/HB1037/2025"
-  },
-  {
-    "run_date": "2026-11-10",
-    "number": "HB1038",
-    "title": "Revise GA authority to rescind Director of Health actions, orders",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-11-09",
-    "url": "https://legiscan.com/OH/bill/HB1038/2025"
-  },
-  {
-    "run_date": "2026-11-10",
-    "number": "HB1039",
-    "title": "Designate Specialist Nicolas E. Messmer Memorial Bridge",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-11-09",
-    "url": "https://legiscan.com/OH/bill/HB1039/2025"
-  },
-  {
-    "run_date": "2026-11-10",
-    "number": "HJR11",
-    "title": "CA: Decrease the number of votes required for a veto override",
-    "status": "introduced",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Introduced",
-    "last_action_date": "2026-11-09",
-    "url": "https://legiscan.com/OH/bill/HJR11/2025"
-  },
-  {
-    "run_date": "2026-11-10",
-    "number": "SB306",
-    "title": "Regards insurance transactions, plans, and policies",
-    "status": "passed-chamber",
-    "prev_status": "passed-chamber",
-    "is_new": false,
-    "last_action": "Re-referred",
-    "last_action_date": "2026-11-09",
-    "url": "https://legiscan.com/OH/bill/SB306/2025"
-  },
-  {
-    "run_date": "2026-11-10",
-    "number": "SR457",
-    "title": "Honoring Jodie Han on winning the 2026 OHSAA Division I State Championship in girls golf.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-11-09",
-    "url": "https://legiscan.com/OH/bill/SR457/2025"
-  },
-  {
-    "run_date": "2026-11-10",
-    "number": "SR458",
-    "title": "Honoring the River View High School boys golf team on securing the 2026 Division II State Championship.",
-    "status": "passed",
-    "prev_status": null,
-    "is_new": true,
-    "last_action": "Adopted",
-    "last_action_date": "2026-11-09",
-    "url": "https://legiscan.com/OH/bill/SR458/2025"
   }
 ]

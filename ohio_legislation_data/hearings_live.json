@@ -1,5 +1,5 @@
 {
-  "fetched_at": "2026-11-24T22:13:44.887986Z",
+  "fetched_at": "2026-11-25T08:00:07.085076Z",
   "general_assembly": 136,
   "source": "https://www.legislature.ohio.gov/schedules/calendar-data",
   "events": [
@@ -2596,6 +2596,122 @@
     {
       "allDay": null,
       "backgroundColor": "#ad3838",
+      "start": "2026-11-30T15:30:00",
+      "end": "T",
+      "id": null,
+      "title": "House Education Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_education_1_2026-11-30-0330_1571",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "sb34",
+          "headline": "Sub. S. B. No. 34",
+          "title": "Enact the Historical Educational Displays Act",
+          "subject": "education",
+          "status": "1st Hearing",
+          "proponent": true,
+          "opponent": false,
+          "interested_party": false,
+          "sponsor": true,
+          "possible_vote": false,
+          "possible_sub_bill": true,
+          "item_type": "hearing",
+          "index": 1
+        },
+        {
+          "id": "sb311",
+          "headline": "Sub. S. B. No. 311",
+          "title": "Regards the operation of public and chartered nonpublic schools",
+          "subject": "education",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "possible_vote": false,
+          "possible_sub_bill": true,
+          "item_type": "hearing",
+          "index": 2
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
+      "start": "2026-12-01T15:30:00",
+      "end": "T",
+      "id": null,
+      "title": "House Education Committee Meeting",
+      "textColor": "#ffffff",
+      "url": "calendar/events/cmte_h_education_1_2026-12-01-0330_1572",
+      "status": "Scheduled",
+      "agenda_items": [
+        {
+          "id": "hb117",
+          "headline": "H. B. No. 117",
+          "title": "Enact The Pledge of Allegiance Act",
+          "subject": "education",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "possible_vote": true,
+          "possible_sub_bill": false,
+          "item_type": "hearing",
+          "index": 0
+        },
+        {
+          "id": "sb328",
+          "headline": "Sub. S. B. No. 328",
+          "title": "Regards Education and Workforce Return on Investment Initiative",
+          "subject": "education",
+          "status": "4th Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "possible_vote": true,
+          "possible_sub_bill": true,
+          "item_type": "hearing",
+          "index": 1
+        },
+        {
+          "id": "sb34",
+          "headline": "Sub. S. B. No. 34",
+          "title": "Enact the Historical Educational Displays Act",
+          "subject": "education",
+          "status": "2nd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "possible_vote": true,
+          "possible_sub_bill": true,
+          "item_type": "hearing",
+          "index": 2
+        },
+        {
+          "id": "sb311",
+          "headline": "Sub. S. B. No. 311",
+          "title": "Regards the operation of public and chartered nonpublic schools",
+          "subject": "education",
+          "status": "3rd Hearing",
+          "proponent": true,
+          "opponent": true,
+          "interested_party": true,
+          "sponsor": false,
+          "possible_vote": true,
+          "possible_sub_bill": true,
+          "item_type": "hearing",
+          "index": 3
+        }
+      ]
+    },
+    {
+      "allDay": null,
+      "backgroundColor": "#ad3838",
       "start": "2026-12-01T10:00:00",
       "end": "T",
       "id": null,
@@ -2643,7 +2759,7 @@
           "interested_party": false,
           "sponsor": false,
           "possible_vote": true,
-          "possible_sub_bill": false,
+          "possible_sub_bill": true,
           "item_type": "hearing",
           "index": 0
         },
@@ -2658,7 +2774,7 @@
           "interested_party": false,
           "sponsor": false,
           "possible_vote": true,
-          "possible_sub_bill": false,
+          "possible_sub_bill": true,
           "item_type": "hearing",
           "index": 1
         }

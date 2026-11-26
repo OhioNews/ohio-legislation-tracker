@@ -6940,21 +6940,10 @@
     "name": "Ohio House Workforce and Higher Education Committee - 11-9-2026"
   },
   "212712": {
-    "status": "awaiting_captions",
+    "status": "captions_unavailable",
     "first_seen": "2026-11-11",
     "release_date": "2026-11-10",
-    "name": "Ohio Senate - 11-10-2026 Part 2",
-    "program": {
-      "id": 212712,
-      "fullName": "Ohio Senate - 11-10-2026 Part 2",
-      "releaseDate": "2026-11-10 00:00:00",
-      "duration": 3600,
-      "series": {
-        "id": 25,
-        "name": "Ohio Senate",
-        "chamber": "SENATE"
-      }
-    }
+    "name": "Ohio Senate - 11-10-2026 Part 2"
   },
   "212569": {
     "status": "archived",
@@ -7012,21 +7001,10 @@
     "name": "Ohio House Energy Committee - 11-10-2026"
   },
   "212714": {
-    "status": "awaiting_captions",
+    "status": "captions_unavailable",
     "first_seen": "2026-11-11",
     "release_date": "2026-11-10",
-    "name": "Ohio House Judiciary Committee - 11-10-2026 - Part 2",
-    "program": {
-      "id": 212714,
-      "fullName": "Ohio House Judiciary Committee - 11-10-2026 - Part 2",
-      "releaseDate": "2026-11-10 00:00:00",
-      "duration": 3600,
-      "series": {
-        "id": 1002065,
-        "name": "Ohio House Judiciary Committee",
-        "chamber": "HOUSE"
-      }
-    }
+    "name": "Ohio House Judiciary Committee - 11-10-2026 - Part 2"
   },
   "212682": {
     "status": "archived",
